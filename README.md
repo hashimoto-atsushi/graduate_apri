@@ -115,7 +115,8 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
 * kaminari
 * carrierwave
 * mini_magick
-* devise
+* devise (就業termより 1)
+  - ログイン、セッション関連のセキュリティー機能
 * rspec-Rails
 * factory_bot_rails
 * capybara
@@ -123,9 +124,10 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
 * dotenv-rails
 * letter_opener_web
 * faker
-* MailCatcher
-* view_source_map
-* Active_Admin
+* MailCatcher (その他のgem)
+* view_source_map (その他のgem)
+* rails_admin (就業termより 2)
+  - データの閲覧
 
 ## AWSにデプロイ予定
-   作成したアプリをAESにデプロイするように努める
+   作成したアプリをAWSにデプロイするように努める (就業termより 3)
