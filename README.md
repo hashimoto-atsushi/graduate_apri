@@ -95,13 +95,13 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
 
 ## カタログ設計
   下記にディレクトリにあります<br>
-  conftrust/docs/カタログ設計.pdf
+  conftrust/docs/カタログ設計改定ver03.pdf
 ## テーブル定義
   下記にディレクトリにあります<br>
-  conftrust/docs/テーブル定義.pdf
+  conftrust/docs/テーブル定義改定ver02.pdf
 ## ER図
   下記にディレクトリにあります<br>
-  conftrust/docs/ER図.png  
+  conftrust/docs/ER図_改定ver02.png  
 ## 画面遷移図
   下記にディレクトリにあります<br>
   conftrust/docs/画面遷移図.pdf
