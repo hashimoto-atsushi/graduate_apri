@@ -4,6 +4,11 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :employee_number %><br />
+    <%= f.number_field :employee_number, autofocus: true, autocomplete: "employee_number" %>
+  </div>
+
+  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
   </div>
@@ -14,8 +19,28 @@
   </div>
 
   <div class="field">
+    <%= f.label :position %><br />
+    <%= f.select :position, User.positions.keys.to_a, {}, autofocus: true, autocomplete: "position" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :permission %><br />
+    <%= f.select :permission, User.permissions.keys.to_a, {}, autofocus: true, autocomplete: "permission" %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cellphone_number %><br />
+    <%= f.number_field :cellphone_number, autofocus: true, autocomplete: "cellphone_number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stay_or_left %><br />
+    <%= f.select :stay_or_left, User.stay_or_lefts.keys.to_a, {}, autofocus: true, autocomplete: "stay_or_left" %>
   </div>
 
   <div class="field">

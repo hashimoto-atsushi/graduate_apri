@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_11_23_050859) do
     t.integer "department", null: false
     t.integer "position", null: false
     t.boolean "permission", default: false, null: false
-    t.integer "cellphone_number"
+    t.string "cellphone_number", limit: 16
     t.integer "stay_or_left", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
