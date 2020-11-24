@@ -17,6 +17,9 @@ gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
 end
@@ -36,3 +39,5 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
+gem 'cancancan'
+gem 'rails_admin'

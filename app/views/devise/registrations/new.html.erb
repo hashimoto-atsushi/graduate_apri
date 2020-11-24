@@ -25,7 +25,7 @@
 
   <div class="field">
     <%= f.label :permission %><br />
-    <%= f.select :permission, User.permissions.keys.to_a, {}, autofocus: true, autocomplete: "permission" %>
+    <%= f.select :permission, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "permission" %>
   </div>
 
   <div class="field">

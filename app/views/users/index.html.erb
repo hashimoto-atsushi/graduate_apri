@@ -25,9 +25,10 @@
     <td><%= user.email %></td>
     <td><%= user.cellphone_number %></td>
     <td><%= user.stay_or_left %></td>
+    <td><%= link_to "詳細へ", user_path(user.id) %></td>
   </tr>
   <% end %>
 </tbody>
 </table>
-
+<%= link_to "管理者", rails_admin_path %>
 <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
