@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Detail report</th>
+      <th>Name</th>
+      <th>Type name</th>
+      <th>Category</th>
+      <th>List price</th>
+      <th>Stock</th>
+      <th>Release date</th>
+      <th>End of production</th>
+      <th>End of servise</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parts.each do |part| %>
+      <tr>
+        <td><%= part.detail_report %></td>
+        <td><%= part.name %></td>
+        <td><%= part.type_name %></td>
+        <td><%= part.category %></td>
+        <td><%= part.list_price %></td>
+        <td><%= part.stock %></td>
+        <td><%= part.release_date %></td>
+        <td><%= part.end_of_production %></td>
+        <td><%= part.end_of_service %></td>
+        <td><%= link_to 'Show', part %></td>
+        <td><%= link_to 'Edit', edit_part_path(part) %></td>
+        <td><%= link_to 'Destroy', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Part', new_part_path %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Detail report:</strong>
+  <%= @part.detail_report %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @part.name %>
+</p>
+
+<p>
+  <strong>Type name:</strong>
+  <%= @part.type_name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @part.category %>
+</p>
+
+<p>
+  <strong>List price:</strong>
+  <%= @part.list_price %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @part.stock %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @part.release_date %>
+</p>
+
+<p>
+  <strong>End of production:</strong>
+  <%= @part.end_of_production %>
+</p>
+
+<p>
+  <strong>End of servise:</strong>
+  <%= @part.end_of_service %>
+</p>
+
+<%= link_to 'Edit', edit_part_path(@part) %> |
+<%= link_to 'Back', parts_path %>

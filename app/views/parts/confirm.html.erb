@@ -1,0 +1,62 @@
+<%= form_with(model: @part, local: true) do |form| %>
+<div>
+  <%= form.hidden_field :detail_report_id %>
+</div>
+<div>
+  <%= form.hidden_field :name %>
+</div>
+<div>
+  <%= form.hidden_field :type_name %>
+</div>
+<div>
+  <%= form.hidden_field :category %>
+</div>
+<div>
+  <%= form.hidden_field :list_price %>
+</div>
+<div>
+  <%= form.hidden_field :stock %>
+</div>
+<div>
+  <%= form.hidden_field :release_date %>
+</div>
+<div>
+  <%= form.hidden_field :end_of_production %>
+</div>
+<div>
+  <%= form.hidden_field :end_of_service %>
+</div>
+<div>
+  <P>detail_report_id: <%= @part.detail_report_id %></P>
+</div>
+<div>
+  <P>name: <%= @part.name %></P>
+</div>
+<div>
+  <P>type_name: <%= @part.type_name %></P>
+</div>
+<div>
+  <P>category: <%= @part.category %></P>
+</div>
+<div>
+  <P>list_price: <%= @part.list_price %></P>
+</div>
+<div>
+  <P>stock: <%= @part.stock %></P>
+</div>
+<div>
+  <P>release_date: <%= @part.release_date %></P>
+</div>
+<div>
+  <P>end_of_production: <%= @part.end_of_production %></P>
+</div>
+<div>
+  <P>end_of_service: <%= @part.end_of_service %></P>
+</div>
+<div>
+ <%= form.submit "submit"%>
+</div>
+<div>
+  <%= form.submit 'back', name: 'back'%>
+</div>
+<% end %>
