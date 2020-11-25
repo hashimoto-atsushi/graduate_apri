@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-  belongs_to :user_id
+  belongs_to :user
   validates :customer_number, presence: true
   validates :name, presence: true,
                      length: { maximum: 32 }
