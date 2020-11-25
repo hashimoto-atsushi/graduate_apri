@@ -1,0 +1,37 @@
+<%= form_with(model: @installed_product, local: true, url: choose_new_or_edit_installed_product ) do |form| %>
+  <% if installed_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(installed_product.errors.count, "error") %> prohibited this installed_product from being saved:</h2>
+
+      <ul>
+      <% installed_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serial_number %>
+    <%= form.text_field :serial_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :installed_date %>
+    <%= form.date_select :installed_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discount_price %>
+    <%= form.number_field :discount_price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

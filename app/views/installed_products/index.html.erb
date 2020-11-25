@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Installed Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Serial number</th>
+      <th>Installed date</th>
+      <th>Discount price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @installed_products.each do |installed_product| %>
+      <tr>
+        <td><%= installed_product.product %></td>
+        <td><%= installed_product.serial_number %></td>
+        <td><%= installed_product.installed_date %></td>
+        <td><%= installed_product.discount_price %></td>
+        <td><%= link_to 'Show', installed_product %></td>
+        <td><%= link_to 'Edit', edit_installed_product_path(installed_product) %></td>
+        <td><%= link_to 'Destroy', installed_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Installed Product', new_installed_product_path %>

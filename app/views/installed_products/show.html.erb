@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @installed_product.product %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @installed_product.serial_number %>
+</p>
+
+<p>
+  <strong>Installed date:</strong>
+  <%= @installed_product.installed_date %>
+</p>
+
+<p>
+  <strong>Discount price:</strong>
+  <%= @installed_product.discount_price %>
+</p>
+
+<%= link_to 'Edit', edit_installed_product_path(@installed_product) %> |
+<%= link_to 'Back', installed_products_path %>

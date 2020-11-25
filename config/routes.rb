@@ -21,7 +21,12 @@ Rails.application.routes.draw do
   resources :parts do
     collection do
       post :confirm
-      
+
+    end
+  end
+  resources :installed_products do
+    collection do
+      post :confirm
     end
   end
 end
