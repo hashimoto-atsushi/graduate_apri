@@ -17,11 +17,20 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    if params[:back]
+      render :new
+    else
       if @product.save
         redirect_to @product, notice: '作成しました！'
       else
         format.html { render :new }
       end
+    end
+  end
+
+  def confirm
+    @product = Product.new(product_params)
+    render :new if @product.invalid?
   end
 
   def update
