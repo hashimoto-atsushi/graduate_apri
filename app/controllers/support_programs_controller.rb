@@ -17,11 +17,20 @@ class SupportProgramsController < ApplicationController
 
   def create
     @support_program = SupportProgram.new(support_program_params)
+    if params[:back]
+      render :new
+    else
       if @support_program.save
         redirect_to @support_program, notice: '作成しました'
       else
         render :new
       end
+    end
+  end
+
+  def confirm
+    @support_program = SupportProgram.new(support_program_params)
+    render :new if @support_program.invalid?
   end
 
   def update

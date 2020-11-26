@@ -1,0 +1,59 @@
+<%= form_with(model: @support_program, local: true) do |form| %>
+<div>
+  <%= form.hidden_field :customer_id %>
+</div>
+<div>
+  <%= form.hidden_field :user_id %>
+</div>
+<div>
+  <%= form.hidden_field :title_number %>
+</div>
+<div>
+  <%= form.hidden_field :title %>
+</div>
+<div>
+  <%= form.hidden_field :main_work %>
+</div>
+<div>
+  <%= form.hidden_field :planed_or_argent %>
+</div>
+<div>
+  <%= form.hidden_field :order_status %>
+</div>
+<div>
+  <%= form.hidden_field :kick_off_date %>
+</div>
+<div>
+  <%= form.hidden_field :closed %>
+</div>
+<div>
+  <P>customer_id: <%= @support_program.customer_id %></P>
+</div>
+<div>
+  <P>user_id: <%= @support_program.user_id %></P>
+</div>
+<div>
+  <P>title_number: <%= @support_program.title_number %></P>
+</div>
+<div>
+  <P>main_work: <%= @support_program.main_work %></P>
+</div>
+<div>
+  <P>planed_or_argent: <%= @support_program.planed_or_argent %></P>
+</div>
+<div>
+  <P>order_status: <%= @support_program.order_status %></P>
+</div>
+<div>
+  <P>kick_off_date: <%= @support_program.kick_off_date %></P>
+</div>
+<div>
+  <P>closed: <%= @support_program.closed %></P>
+</div>
+<div>
+ <%= form.submit "submit"%>
+</div>
+<div>
+  <%= form.submit 'back', name: 'back'%>
+</div>
+<% end %>
