@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @support_program.customer %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @support_program.user %>
+</p>
+
+<p>
+  <strong>Title number:</strong>
+  <%= @support_program.title_number %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @support_program.title %>
+</p>
+
+<p>
+  <strong>Main work:</strong>
+  <%= @support_program.main_work %>
+</p>
+
+<p>
+  <strong>Planed or argent:</strong>
+  <%= @support_program.planed_or_argent %>
+</p>
+
+<p>
+  <strong>Order status:</strong>
+  <%= @support_program.order_status %>
+</p>
+
+<p>
+  <strong>Kick off date:</strong>
+  <%= @support_program.kick_off_date %>
+</p>
+
+<p>
+  <strong>Closed:</strong>
+  <%= @support_program.closed %>
+</p>
+
+<%= link_to 'Edit', edit_support_program_path(@support_program) %> |
+<%= link_to 'Back', support_programs_path %>
