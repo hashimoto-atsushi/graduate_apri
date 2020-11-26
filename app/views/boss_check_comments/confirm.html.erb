@@ -1,0 +1,56 @@
+<%= form_with(model: @boss_check_comment, local: true) do |form| %>
+<div>
+  <%= form.hidden_field :detail_report_id %>
+</div>
+<div>
+  <%= form.hidden_field :confirmation %>
+</div>
+<div>
+  <%= form.hidden_field :confirmation_date %>
+</div>
+<div>
+  <%= form.hidden_field :positive_comment %>
+</div>
+<div>
+  <%= form.hidden_field :negative_comment %>
+</div>
+<div>
+  <%= form.hidden_field :assistance %>
+</div>
+<div>
+  <%= form.hidden_field :questions %>
+</div>
+<div>
+  <%= form.hidden_field :report_to_sales %>
+</div>
+<div>
+  <P>detail_report_id: <%= @detail_report.detail_report_id %></P>
+</div>
+<div>
+  <P>confirmation: <%= @detail_report.confirmation %></P>
+</div>
+<div>
+  <P>confirmation_date: <%= @detail_report.confirmation_date %></P>
+</div>
+<div>
+  <P>positive_comment: <%= @detail_report.positive_comment %></P>
+</div>
+<div>
+  <P>negative_comment: <%= @detail_report.negative_comment %></P>
+</div>
+<div>
+  <P>assistance: <%= @detail_report.assistance %></P>
+</div>
+<div>
+  <P>questions: <%= @detail_report.questions %></P>
+</div>
+<div>
+  <P>report_to_sales: <%= @detail_report.report_to_sales %></P>
+</div>
+<div>
+ <%= form.submit "submit"%>
+</div>
+<div>
+  <%= form.submit 'back', name: 'back'%>
+</div>
+<% end %>

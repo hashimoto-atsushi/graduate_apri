@@ -17,11 +17,20 @@ class BossCheckCommentsController < ApplicationController
 
   def create
     @boss_check_comment = BossCheckComment.new(boss_check_comment_params)
+    if params[:back]
+      render :new
+    else
       if @boss_check_comment.save
         redirect_to @boss_check_comment, notice: '作成しました！'
       else
         render :new
       end
+    end
+  end
+
+  def confirm
+    @boss_check_comment = BossCheckComment.new(boss_check_comment_params)
+    render :new if @boss_check_comment.invalid?
   end
 
   def update
@@ -34,7 +43,7 @@ class BossCheckCommentsController < ApplicationController
 
   def destroy
     @boss_check_comment.destroy
-      redirect_to boss_check_comments_url, notice: '削除しました！' 
+      redirect_to boss_check_comments_url, notice: '削除しました！'
   end
 
   private
