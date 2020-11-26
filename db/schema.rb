@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_235037) do
+ActiveRecord::Schema.define(version: 2020_11_26_015748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,22 @@ ActiveRecord::Schema.define(version: 2020_11_25_235037) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_customers_on_user_id"
+  end
+
+  create_table "detail_reports", force: :cascade do |t|
+    t.bigint "support_program_id"
+    t.date "ordered_date", null: false
+    t.bigint "ordered_price", null: false
+    t.date "actual_kickoff_date", null: false
+    t.date "actual_complete_date", null: false
+    t.text "service_detail", null: false
+    t.text "photo"
+    t.text "results", null: false
+    t.integer "evaluation", null: false
+    t.text "evaluation_details", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["support_program_id"], name: "index_detail_reports_on_support_program_id"
   end
 
   create_table "installed_products", force: :cascade do |t|
@@ -100,6 +116,7 @@ ActiveRecord::Schema.define(version: 2020_11_25_235037) do
   end
 
   add_foreign_key "customers", "users"
+  add_foreign_key "detail_reports", "support_programs"
   add_foreign_key "installed_products", "products"
   add_foreign_key "support_programs", "customers"
   add_foreign_key "support_programs", "users"
