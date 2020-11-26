@@ -1,0 +1,44 @@
+<%= form_with(model: @sales_check_comment, local: true) do |form| %>
+<div>
+  <%= form.hidden_field :boss_check_comment_id %>
+</div>
+<div>
+  <%= form.hidden_field :confirmation %>
+</div>
+<div>
+  <%= form.hidden_field :confirmation_date %>
+</div>
+<div>
+  <%= form.hidden_field :comments %>
+</div>
+<div>
+  <%= form.hidden_field :discussion_possibility %>
+</div>
+<div>
+  <%= form.hidden_field :matter_closed %>
+</div>
+<div>
+  <P>boss_check_comment_id: <%= @detail_report.boss_check_comment_id %></P>
+</div>
+<div>
+  <P>confirmation: <%= @detail_report.confirmation %></P>
+</div>
+<div>
+  <P>confirmation_date: <%= @detail_report.confirmation_date %></P>
+</div>
+<div>
+  <P>comments: <%= @detail_report.comments %></P>
+</div>
+<div>
+  <P>discussion_possibility: <%= @detail_report.discussion_possibility %></P>
+</div>
+<div>
+  <P>matter_closed: <%= @detail_report.matter_closed %></P>
+</div>
+<div>
+ <%= form.submit "submit"%>
+</div>
+<div>
+  <%= form.submit 'back', name: 'back'%>
+</div>
+<% end %>

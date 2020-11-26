@@ -17,18 +17,27 @@ class SalesCheckCommentsController < ApplicationController
 
   def create
     @sales_check_comment = SalesCheckComment.new(sales_check_comment_params)
+    if params[:back]
+      render :new
+    else
       if @sales_check_comment.save
         redirect_to @sales_check_comment, notice: '作成しました！'
       else
         render :new
       end
+    end
+  end
+
+  def confirm
+    @sales_check_comment = SalesCheckComment.new(sales_check_comment_params)
+    render :new if @sales_check_comment.invalid?
   end
 
   def update
       if @sales_check_comment.update(sales_check_comment_params)
         redirect_to @sales_check_comment, notice: '編集しました！'
       else
-        render :edit 
+        render :edit
       end
   end
 
