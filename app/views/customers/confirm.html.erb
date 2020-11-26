@@ -45,7 +45,7 @@
   <P>phone_number: <%= @customer.phone_number %></P>
 </div>
 <div>
-  <P>employee_in_charge: <%= @customer.user_id %></P>
+  <P>employee_in_charge: <%= @customer.user.name %></P>
 </div>
  <div>
    <%= form.submit "submit"%>

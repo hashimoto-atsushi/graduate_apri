@@ -49,10 +49,6 @@
 
   <div class="field">
     <%= form.label :employee_in_charge %>
-    <%= form.number_field :user_id %>
-  </div>
-
-  <div>
     <%= form.select :user_id, User.all.map{|o| [o.name, o.id]} %>
   </div>
 

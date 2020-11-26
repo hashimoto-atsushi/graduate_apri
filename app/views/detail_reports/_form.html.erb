@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :support_program_id %>
-    <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.name, o.id]} %>
+    <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.title, o.id]} %>
   </div>
 
   <div class="field">

@@ -21,8 +21,8 @@
   <tbody>
     <% @support_programs.each do |support_program| %>
       <tr>
-        <td><%= support_program.customer %></td>
-        <td><%= support_program.user %></td>
+        <td><%= support_program.customer.name %></td>
+        <td><%= support_program.user.name %></td>
         <td><%= support_program.title_number %></td>
         <td><%= support_program.title %></td>
         <td><%= support_program.main_work %></td>

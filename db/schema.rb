@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
   end
 
   create_table "parts", force: :cascade do |t|
+    t.bigint "detail_report_id"
     t.string "name", limit: 32, null: false
     t.string "type_name", limit: 32, null: false
     t.string "category", limit: 32, null: false
@@ -94,6 +95,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
     t.date "end_of_service", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["detail_report_id"], name: "index_parts_on_detail_report_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -159,6 +161,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
   add_foreign_key "customers", "users"
   add_foreign_key "detail_reports", "support_programs"
   add_foreign_key "installed_products", "products"
+  add_foreign_key "parts", "detail_reports"
   add_foreign_key "sales_check_comments", "boss_check_comments"
   add_foreign_key "support_programs", "customers"
   add_foreign_key "support_programs", "users"

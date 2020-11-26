@@ -27,10 +27,10 @@
   <%= form.hidden_field :closed %>
 </div>
 <div>
-  <P>customer_id: <%= @support_program.customer_id %></P>
+  <P>customer_id: <%= @support_program.customer.name %></P>
 </div>
 <div>
-  <P>user_id: <%= @support_program.user_id %></P>
+  <P>user_id: <%= @support_program.user.name %></P>
 </div>
 <div>
   <P>title_number: <%= @support_program.title_number %></P>

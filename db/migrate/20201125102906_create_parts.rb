@@ -1,7 +1,7 @@
 class CreateParts < ActiveRecord::Migration[5.2]
   def change
     create_table :parts do |t|
-      # t.references :detail_report, foreign_key: true
+      t.references :detail_report, foreign_key: true
       t.string :name, null: false, limit: 32
       t.string :type_name, null: false, limit: 32
       t.string :category, null: false, limit: 32

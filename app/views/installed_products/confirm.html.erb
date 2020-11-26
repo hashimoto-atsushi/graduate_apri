@@ -13,16 +13,16 @@
 </div>
 
 <div>
-  <P>name: <%= @installed_product.product_id %></P>
+  <P>product_id: <%= @installed_product.product.name %></P>
 </div>
 <div>
-  <P>type_name: <%= @installed_product.serial_number %></P>
+  <P>serial_number: <%= @installed_product.serial_number %></P>
 </div>
 <div>
-  <P>category: <%= @installed_product.installed_date %></P>
+  <P>installed_date: <%= @installed_product.installed_date %></P>
 </div>
 <div>
-  <P>list_price: <%= @installed_product.discount_price %></P>
+  <P>discout_price: <%= @installed_product.discount_price %></P>
 </div>
 <div>
  <%= form.submit "submit"%>

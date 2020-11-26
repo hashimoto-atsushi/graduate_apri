@@ -18,7 +18,7 @@ class PartsController < ApplicationController
     @part = Part.new(part_params)
     if params[:back]
       render :new
-    else  
+    else
       if @part.save
         redirect_to @part, notice: '作成しました！'
       else
@@ -50,6 +50,6 @@ class PartsController < ApplicationController
     end
 
     def part_params
-      params.require(:part).permit(:detail_report_id, :name, :type_name, :category, :list_price, :stock, :release_date, :end_of_production, :end_of_servise)
+      params.require(:part).permit(:detail_report_id, :name, :type_name, :category, :list_price, :stock, :release_date, :end_of_production, :end_of_service)
     end
 end

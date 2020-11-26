@@ -8,7 +8,6 @@ class SupportProgram < ApplicationRecord
   validates :main_work, presence: true,
                           length: {maximum: 255}
   validates :planed_or_argent, presence: true
-  validates :order_status, presence: true
   validates :kick_off_date, presence:true
   validates :closed, presence:true
   enum planed_or_argent: {planed:0 , argent:1}
