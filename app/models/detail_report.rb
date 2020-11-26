@@ -13,5 +13,5 @@ class DetailReport < ApplicationRecord
                            length: { maximum: 16 }
   validates :evaluation_details, presence:true,
                                    length: { maximum: 6400 }
-  # enum planed_or_argent: {planed:0 , argent:1}
+  enum evaluation: {good:0 , bad:1}
 end

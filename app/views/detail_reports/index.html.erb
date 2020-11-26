@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detail Reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Support program</th>
+      <th>Ordered date</th>
+      <th>Ordered price</th>
+      <th>Actual kickoff date</th>
+      <th>Actual complete date</th>
+      <th>Service detail</th>
+      <th>Photo</th>
+      <th>Results</th>
+      <th>Evaluation</th>
+      <th>Evaluation details</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detail_reports.each do |detail_report| %>
+      <tr>
+        <td><%= detail_report.support_program %></td>
+        <td><%= detail_report.ordered_date %></td>
+        <td><%= detail_report.ordered_price %></td>
+        <td><%= detail_report.actual_kickoff_date %></td>
+        <td><%= detail_report.actual_complete_date %></td>
+        <td><%= detail_report.service_detail %></td>
+        <td><%= detail_report.photo %></td>
+        <td><%= detail_report.results %></td>
+        <td><%= detail_report.evaluation %></td>
+        <td><%= detail_report.evaluation_details %></td>
+        <td><%= link_to 'Show', detail_report %></td>
+        <td><%= link_to 'Edit', edit_detail_report_path(detail_report) %></td>
+        <td><%= link_to 'Destroy', detail_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detail Report', new_detail_report_path %>

@@ -21,7 +21,7 @@ class InstalledProductsController < ApplicationController
       render :new
     else
       if @installed_product.save
-        format.html { redirect_to @installed_product, notice: 'Installed product was successfully created.' }
+        redirect_to @installed_product, notice: '作成しました！'
       else
         format.html { render :new }
       end
@@ -36,7 +36,7 @@ class InstalledProductsController < ApplicationController
 
   def update
       if @installed_product.update(installed_product_params)
-        format.html { redirect_to @installed_product, notice: 'Installed product was successfully updated.' }
+        redirect_to @installed_product, notice: '編集しました！'
       else
         format.html { render :edit }
       end
@@ -44,7 +44,7 @@ class InstalledProductsController < ApplicationController
 
   def destroy
     @installed_product.destroy
-      format.html { redirect_to installed_products_url, notice: 'Installed product was successfully destroyed.' }
+      redirect_to installed_products_url, notice: '削除しました！'
   end
 
   private

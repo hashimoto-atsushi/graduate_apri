@@ -1,0 +1,68 @@
+<%= form_with(model: @detail_report, local: true) do |form| %>
+<div>
+  <%= form.hidden_field :support_program_id %>
+</div>
+<div>
+  <%= form.hidden_field :ordered_date %>
+</div>
+<div>
+  <%= form.hidden_field :ordered_price %>
+</div>
+<div>
+  <%= form.hidden_field :actual_kickoff_date %>
+</div>
+<div>
+  <%= form.hidden_field :actual_complete_date %>
+</div>
+<div>
+  <%= form.hidden_field :service_detail %>
+</div>
+<div>
+  <%= form.hidden_field :photo %>
+</div>
+<div>
+  <%= form.hidden_field :results %>
+</div>
+<div>
+  <%= form.hidden_field :evaluation %>
+</div>
+<div>
+  <%= form.hidden_field :evaluation_details %>
+</div>
+<div>
+  <P>support_program_id: <%= @detail_report.support_program_id %></P>
+</div>
+<div>
+  <P>ordered_date: <%= @detail_report.ordered_date %></P>
+</div>
+<div>
+  <P>ordered_price: <%= @detail_report.ordered_price %></P>
+</div>
+<div>
+  <P>actual_kickoff_date: <%= @detail_report.actual_kickoff_date %></P>
+</div>
+<div>
+  <P>actual_complete_date: <%= @detail_report.actual_complete_date %></P>
+</div>
+<div>
+  <P>service_detail: <%= @detail_report.service_detail %></P>
+</div>
+<div>
+  <P>photo: <%= @detail_report.photo %></P>
+</div>
+<div>
+  <P>results: <%= @detail_report.results %></P>
+</div>
+<div>
+  <P>evaluation: <%= @detail_report.evaluation %></P>
+</div>
+<div>
+  <P>evaluation_details: <%= @detail_report.evaluation_details %></P>
+</div>
+<div>
+ <%= form.submit "submit"%>
+</div>
+<div>
+  <%= form.submit 'back', name: 'back'%>
+</div>
+<% end %>

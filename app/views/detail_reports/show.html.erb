@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Support program:</strong>
+  <%= @detail_report.support_program %>
+</p>
+
+<p>
+  <strong>Ordered date:</strong>
+  <%= @detail_report.ordered_date %>
+</p>
+
+<p>
+  <strong>Ordered price:</strong>
+  <%= @detail_report.ordered_price %>
+</p>
+
+<p>
+  <strong>Actual kickoff date:</strong>
+  <%= @detail_report.actual_kickoff_date %>
+</p>
+
+<p>
+  <strong>Actual complete date:</strong>
+  <%= @detail_report.actual_complete_date %>
+</p>
+
+<p>
+  <strong>Service detail:</strong>
+  <%= @detail_report.service_detail %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @detail_report.photo %>
+</p>
+
+<p>
+  <strong>Results:</strong>
+  <%= @detail_report.results %>
+</p>
+
+<p>
+  <strong>Evaluation:</strong>
+  <%= @detail_report.evaluation %>
+</p>
+
+<p>
+  <strong>Evaluation details:</strong>
+  <%= @detail_report.evaluation_details %>
+</p>
+
+<%= link_to 'Edit', edit_detail_report_path(@detail_report) %> |
+<%= link_to 'Back', detail_reports_path %>

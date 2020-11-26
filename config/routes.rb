@@ -30,13 +30,17 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
-  
+
   resources :support_programs do
     collection do
       post :confirm
     end
   end
-
-
+  
+  resources :detail_reports do
+    collection do
+      post :confirm
+    end
+  end
 
 end

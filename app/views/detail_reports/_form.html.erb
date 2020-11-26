@@ -1,0 +1,67 @@
+<%= form_with(model: @detail_report, local: true, url: choose_new_or_edit_detail_report ) do |form| %>
+  <% if detail_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(detail_report.errors.count, "error") %> prohibited this detail_report from being saved:</h2>
+
+      <ul>
+      <% detail_report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :support_program_id %>
+    <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.name, o.id]} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ordered_date %>
+    <%= form.date_select :ordered_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ordered_price %>
+    <%= form.number_field :ordered_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actual_kickoff_date %>
+    <%= form.date_select :actual_kickoff_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actual_complete_date %>
+    <%= form.date_select :actual_complete_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_detail %>
+    <%= form.text_area :service_detail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.text_area :photo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :results %>
+    <%= form.text_area :results %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evaluation %>
+    <%= form.select :evaluation, DetailReport.evaluations.keys.to_a, {}, autofocus: true, autocomplete: "evaluation" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evaluation_details %>
+    <%= form.text_area :evaluation_details %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
