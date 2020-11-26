@@ -1,0 +1,47 @@
+<%= form_with(model: @sales_check_comment, local: true) do |form| %>
+  <% if sales_check_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sales_check_comment.errors.count, "error") %> prohibited this sales_check_comment from being saved:</h2>
+
+      <ul>
+      <% sales_check_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :boss_check_comment_id %>
+    <%= form.select :boss_check_comment_id, BossCheckComment.all.map{|o| [o.name, o.id]} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confirmation %><br />
+    <%= form.select :confirmation, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "confirmation" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confirmation_date %>
+    <%= form.date_select :confirmation_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comments %>
+    <%= form.text_area :comments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discussion_possibility %><br />
+    <%= form.select :discussion_possibility, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "discussion_possibility" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :matter_closed %><br />
+    <%= form.select :matter_closed, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "matter_closed" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

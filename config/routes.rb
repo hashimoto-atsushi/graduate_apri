@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'sales_check_comments/index'
   get 'boss_check_comments/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
@@ -45,6 +46,12 @@ Rails.application.routes.draw do
   end
 
   resources :boss_check_comments do
+    collection do
+      post :confirm
+    end
+  end
+
+  resources :sales_check_comments do
     collection do
       post :confirm
     end

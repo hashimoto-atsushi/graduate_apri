@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :detail_report_id %>
-    <%= form.select :detail_report_id, BossCheckComment.all.map{|o| [o.name, o.id]} %>
+    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.name, o.id]} %>
   </div>
 
   <div class="field">

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Boss check comment:</strong>
+  <%= @sales_check_comment.boss_check_comment %>
+</p>
+
+<p>
+  <strong>Confirmation:</strong>
+  <%= @sales_check_comment.confirmation %>
+</p>
+
+<p>
+  <strong>Confirmation date:</strong>
+  <%= @sales_check_comment.confirmation_date %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @sales_check_comment.comments %>
+</p>
+
+<p>
+  <strong>Discussion possibility:</strong>
+  <%= @sales_check_comment.discussion_possibility %>
+</p>
+
+<p>
+  <strong>Matter closed:</strong>
+  <%= @sales_check_comment.matter_closed %>
+</p>
+
+<%= link_to 'Edit', edit_sales_check_comment_path(@sales_check_comment) %> |
+<%= link_to 'Back', sales_check_comments_path %>
