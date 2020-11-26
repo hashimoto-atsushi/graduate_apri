@@ -18,22 +18,22 @@
   <%= form.hidden_field :matter_closed %>
 </div>
 <div>
-  <P>boss_check_comment_id: <%= @detail_report.boss_check_comment_id %></P>
+  <P>boss_check_comment_id: <%= @sales_check_comment.boss_check_comment.detail_report.support_program.title %></P>
 </div>
 <div>
-  <P>confirmation: <%= @detail_report.confirmation %></P>
+  <P>confirmation: <%= @sales_check_comment.confirmation %></P>
 </div>
 <div>
-  <P>confirmation_date: <%= @detail_report.confirmation_date %></P>
+  <P>confirmation_date: <%= @sales_check_comment.confirmation_date %></P>
 </div>
 <div>
-  <P>comments: <%= @detail_report.comments %></P>
+  <P>comments: <%= @sales_check_comment.comments %></P>
 </div>
 <div>
-  <P>discussion_possibility: <%= @detail_report.discussion_possibility %></P>
+  <P>discussion_possibility: <%= @sales_check_comment.discussion_possibility %></P>
 </div>
 <div>
-  <P>matter_closed: <%= @detail_report.matter_closed %></P>
+  <P>matter_closed: <%= @sales_check_comment.matter_closed %></P>
 </div>
 <div>
  <%= form.submit "submit"%>

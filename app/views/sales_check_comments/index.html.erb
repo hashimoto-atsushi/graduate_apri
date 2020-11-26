@@ -18,7 +18,7 @@
   <tbody>
     <% @sales_check_comments.each do |sales_check_comment| %>
       <tr>
-        <td><%= sales_check_comment.boss_check_comment %></td>
+        <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.title %></td>
         <td><%= sales_check_comment.confirmation %></td>
         <td><%= sales_check_comment.confirmation_date %></td>
         <td><%= sales_check_comment.comments %></td>

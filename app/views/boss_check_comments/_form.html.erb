@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :detail_report_id %>
-    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.name, o.id]} %>
+    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]} %>
   </div>
 
   <div class="field">
     <%= form.label :confirmation %><br />
-    <%= form.select :confirmation, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "confirmation" %>
+    <%= form.select :confirmation, {"true": "true", "false": "false"}, autofocus: true, autocomplete: "confirmation" %>
   </div>
 
 

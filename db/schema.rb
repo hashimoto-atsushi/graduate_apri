@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
 
   create_table "boss_check_comments", force: :cascade do |t|
     t.bigint "detail_report_id"
-    t.boolean "confirmation", null: false
+    t.boolean "confirmation"
     t.date "confirmation_date", null: false
     t.text "positive_comment", null: false
     t.text "negative_comment", null: false
@@ -112,11 +112,11 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
 
   create_table "sales_check_comments", force: :cascade do |t|
     t.bigint "boss_check_comment_id"
-    t.boolean "confirmation", default: false, null: false
+    t.boolean "confirmation"
     t.date "confirmation_date", null: false
     t.text "comments", null: false
-    t.boolean "discussion_possibility", null: false
-    t.boolean "matter_closed", default: false, null: false
+    t.boolean "discussion_possibility"
+    t.boolean "matter_closed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["boss_check_comment_id"], name: "index_sales_check_comments_on_boss_check_comment_id"

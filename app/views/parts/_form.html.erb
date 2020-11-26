@@ -13,10 +13,6 @@
 
   <div class="field">
     <%= form.label :detail_report_id %>
-    <%= form.number_field :detail_report_id %>
-  </div>
-  <div class="field">
-    <%= form.label :detail_report_id %>
     <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.name, o.id]} %>
   </div>
 
