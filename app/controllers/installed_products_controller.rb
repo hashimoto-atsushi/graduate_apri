@@ -23,7 +23,7 @@ class InstalledProductsController < ApplicationController
       if @installed_product.save
         redirect_to @installed_product, notice: '作成しました！'
       else
-        format.html { render :new }
+        render :new
       end
     end
   end
@@ -38,7 +38,7 @@ class InstalledProductsController < ApplicationController
       if @installed_product.update(installed_product_params)
         redirect_to @installed_product, notice: '編集しました！'
       else
-        format.html { render :edit }
+        render :edit
       end
   end
 

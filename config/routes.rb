@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'boss_check_comments/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   devise_for :users
@@ -36,8 +37,14 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
-  
+
   resources :detail_reports do
+    collection do
+      post :confirm
+    end
+  end
+
+  resources :boss_check_comments do
     collection do
       post :confirm
     end

@@ -1,5 +1,5 @@
 class Part < ApplicationRecord
-  belongs_to :detail_report
+  # belongs_to :detail_report
   validates :name, presence: true,
                      length: { maximum: 32 }
   validates :type_name, presence: true,

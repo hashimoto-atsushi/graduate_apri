@@ -1,0 +1,58 @@
+<%= form_with(model: @boss_check_comment, local: true) do |form| %>
+  <% if boss_check_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(boss_check_comment.errors.count, "error") %> prohibited this boss_check_comment from being saved:</h2>
+
+      <ul>
+      <% boss_check_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :detail_report_id %>
+    <%= form.select :detail_report_id, BossCheckComment.all.map{|o| [o.name, o.id]} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confirmation %><br />
+    <%= form.select :confirmation, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "confirmation" %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :confirmation_date %>
+    <%= form.date_select :confirmation_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :positive_comment %>
+    <%= form.text_area :positive_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :negative_comment %>
+    <%= form.text_area :negative_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assistance %>
+    <%= form.text_area :assistance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :questions %>
+    <%= form.text_area :questions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :report_to_sales %>
+    <%= form.text_area :report_to_sales %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
