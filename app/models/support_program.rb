@@ -1,5 +1,5 @@
 class SupportProgram < ApplicationRecord
-  has_many :detail_reports
+  has_many :detail_reports, dependent: :destroy
   belongs_to :customer
   belongs_to :user
   validates :title_number, presence: true,

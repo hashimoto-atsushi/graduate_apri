@@ -27,9 +27,6 @@
     <%= form.label :user_id %>
     <%= form.select :user_id, User.all.map{|o| [o.name, o.id]} %>
   </div>
-
-
-
   <div class="field">
     <%= form.label :main_work %>
     <%= form.text_area :main_work %>
