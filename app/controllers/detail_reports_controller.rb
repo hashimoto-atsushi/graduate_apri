@@ -9,9 +9,6 @@ class DetailReportsController < ApplicationController
   end
 
   def new
-    customer_id = params[:customer_id]
-    customer = Customer.find(customer_id)
-    @installed_products = customer.installed_products
     @detail_report = DetailReport.new
   end
 
