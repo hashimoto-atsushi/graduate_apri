@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  get 'top/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   devise_for :users
@@ -55,5 +53,9 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
+
+
+  get 'allsupports/index'
+  get 'top/index'
 
 end

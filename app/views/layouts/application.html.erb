@@ -11,7 +11,8 @@
 <header>
   <div>
     <%= link_to 'top', top_index_path%>
-  </div>
+    <%= link_to "管理者", rails_admin_path %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>  </div>
 </header>
   <body>
     <%= yield %>
