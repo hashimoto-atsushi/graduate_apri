@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Customer</th>
       <th>Support program</th>
       <th>Ordered date</th>
       <th>Ordered price</th>
@@ -22,6 +23,7 @@
   <tbody>
     <% @detail_reports.each do |detail_report| %>
       <tr>
+        <td><%= detail_report.support_program.customer.name %></td>
         <td><%= detail_report.support_program.title %></td>
         <td><%= detail_report.ordered_date %></td>
         <td><%= detail_report.ordered_price %></td>

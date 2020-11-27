@@ -50,5 +50,11 @@
   <%= @detail_report.evaluation_details %>
 </p>
 
+<p>
+  <strong>User:</strong>
+  <%= @detail_report.support_program.user.name %>
+</p>
+<%= link_to 'to_boss_check_comment', new_boss_check_comment_path(@boss_check_comment) %> |
+
 <%= link_to 'Edit', edit_detail_report_path(@detail_report) %> |
 <%= link_to 'Back', detail_reports_path %>

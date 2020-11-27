@@ -39,6 +39,7 @@
   <strong>Report to sales:</strong>
   <%= @boss_check_comment.report_to_sales %>
 </p>
+<%= link_to 'to_sales_check_comment', new_sales_check_comment_path(@sales_check_comment) %> |
 
 <%= link_to 'Edit', edit_boss_check_comment_path(@boss_check_comment) %> |
 <%= link_to 'Back', boss_check_comments_path %>

@@ -1,15 +1,15 @@
 <%= form_with(model: @support_program, local: true) do |form| %>
 <div>
-  <%= form.hidden_field :customer_id %>
-</div>
-<div>
-  <%= form.hidden_field :user_id %>
-</div>
-<div>
   <%= form.hidden_field :title_number %>
 </div>
 <div>
+  <%= form.hidden_field :customer_id %>
+</div>
+<div>
   <%= form.hidden_field :title %>
+</div>
+<div>
+  <%= form.hidden_field :user_id %>
 </div>
 <div>
   <%= form.hidden_field :main_work %>
@@ -27,13 +27,16 @@
   <%= form.hidden_field :closed %>
 </div>
 <div>
+  <P>title_number: <%= @support_program.title_number %></P>
+</div>
+<div>
   <P>customer_id: <%= @support_program.customer.name %></P>
 </div>
 <div>
-  <P>user_id: <%= @support_program.user.name %></P>
+  <P>title: <%= @support_program.title %></P>
 </div>
 <div>
-  <P>title_number: <%= @support_program.title_number %></P>
+  <P>user_id: <%= @support_program.user.name %></P>
 </div>
 <div>
   <P>main_work: <%= @support_program.main_work %></P>
