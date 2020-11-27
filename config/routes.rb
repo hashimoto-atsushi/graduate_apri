@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'sales_check_comments/index'
-  get 'boss_check_comments/index'
+  get 'top/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   devise_for :users

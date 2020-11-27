@@ -8,8 +8,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<header>
+  <div>
+    <%= link_to 'top', top_index_path%>
+  </div>
+</header>
   <body>
     <%= yield %>
   </body>
+  <footer>
+
+  </footer>
 </html>
