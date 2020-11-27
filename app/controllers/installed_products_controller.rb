@@ -53,6 +53,6 @@ class InstalledProductsController < ApplicationController
     end
 
     def installed_product_params
-      params.require(:installed_product).permit(:product_id, :serial_number, :installed_date, :discount_price)
+      params.require(:installed_product).permit(:product_id, :customer_id, :serial_number, :installed_date, :discount_price)
     end
 end

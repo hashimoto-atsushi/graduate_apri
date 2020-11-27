@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @customer.user.name %>
-</p>
 
 <p>
   <strong>Customer number:</strong>
@@ -15,10 +11,6 @@
   <%= @customer.name %>
 </p>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @customer.phone_number %>
-</p>
 
 <p>
   <strong>Profession:</strong>
@@ -38,6 +30,24 @@
 <p>
   <strong>Position:</strong>
   <%= @customer.position %>
+</p>
+<p>
+  <strong>Phone number:</strong>
+  <%= @customer.phone_number %>
+</p>
+<p>
+  <strong>Installed_product:</strong>
+  <% @customer.installed_products.each do | installed_product | %>
+  <ul>
+    <li><%= installed_product.product.name %></li>
+  </ul>
+  <% end %>
+</p>
+
+
+<p>
+  <strong>User:</strong>
+  <%= @customer.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |

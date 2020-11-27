@@ -3,6 +3,9 @@
   <%= form.hidden_field :product_id %>
 </div>
 <div>
+  <%= form.hidden_field :customer_id %>
+</div>
+<div>
   <%= form.hidden_field :serial_number %>
 </div>
 <div>
@@ -14,6 +17,9 @@
 
 <div>
   <P>product_id: <%= @installed_product.product.name %></P>
+</div>
+<div>
+  <P>product_id: <%= @installed_product.customer.name %></P>
 </div>
 <div>
   <P>serial_number: <%= @installed_product.serial_number %></P>

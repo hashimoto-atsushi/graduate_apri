@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Product</th>
+      <th>Customer</th>
       <th>Serial number</th>
       <th>Installed date</th>
       <th>Discount price</th>
@@ -17,6 +18,7 @@
     <% @installed_products.each do |installed_product| %>
       <tr>
         <td><%= installed_product.product.name %></td>
+        <td><%= installed_product.customer.name %></td>
         <td><%= installed_product.serial_number %></td>
         <td><%= installed_product.installed_date %></td>
         <td><%= installed_product.discount_price %></td>

@@ -68,11 +68,13 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
 
   create_table "installed_products", force: :cascade do |t|
     t.bigint "product_id"
+    t.bigint "customer_id"
     t.string "serial_number", limit: 4, null: false
     t.date "installed_date", null: false
     t.integer "discount_price", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_installed_products_on_customer_id"
     t.index ["product_id"], name: "index_installed_products_on_product_id"
   end
 
@@ -160,6 +162,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
   add_foreign_key "boss_check_comments", "detail_reports"
   add_foreign_key "customers", "users"
   add_foreign_key "detail_reports", "support_programs"
+  add_foreign_key "installed_products", "customers"
   add_foreign_key "installed_products", "products"
   add_foreign_key "parts", "detail_reports"
   add_foreign_key "sales_check_comments", "boss_check_comments"

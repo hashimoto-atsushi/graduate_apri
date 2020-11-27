@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  has_many :installed_products
   validates :name, presence: true,
                      length: { maximum: 32 }
   validates :type_name, presence: true,

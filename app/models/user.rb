@@ -16,4 +16,5 @@ class User < ApplicationRecord
   enum position: {manager:0, chief:1, staff:2}
   enum stay_or_left: {stay:0 , left:1}
   has_many :customers
+  has_many :support_programs
 end

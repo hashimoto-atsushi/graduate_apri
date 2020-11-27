@@ -1,4 +1,5 @@
 class SupportProgram < ApplicationRecord
+  has_many :detail_reports
   belongs_to :customer
   belongs_to :user
   validates :title_number, presence: true,

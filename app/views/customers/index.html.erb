@@ -2,7 +2,7 @@
 
 <h1>Customers</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>Customer number</th>
@@ -12,6 +12,8 @@
       <th>Department</th>
       <th>Position</th>
       <th>Phone number</th>
+      <th>installed_products</th>
+      <th>support_programs</th>
       <th>Employee_in_charge</th>
       <th colspan="3"></th>
     </tr>
@@ -27,6 +29,18 @@
         <td><%= customer.department %></td>
         <td><%= customer.position %></td>
         <td><%= customer.phone_number %></td>
+        <td><% customer.installed_products.each do | installed_product | %>
+          <ul>
+            <li><%= installed_product.product.name %></li>
+          </ul>
+          <% end %>
+        </td>
+        <td><% customer.support_programs.each do | support_program | %>
+          <ul>
+            <li><%= support_program.title %></li>
+          </ul>
+          <% end %>
+        </td>
         <td><%= customer.user.name %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
