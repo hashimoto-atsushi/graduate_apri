@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :installed_product_id %>
+    <%= form.select :installed_product_id, @installed_products.all.map{|o| [o.product.name, o.id]} %>
+  </div>
+
+  <div class="field">
     <%= form.label :ordered_date %>
     <%= form.date_select :ordered_date %>
   </div>

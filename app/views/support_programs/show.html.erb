@@ -35,6 +35,6 @@
   <strong>Closed:</strong>
   <%= @support_program.closed %>
 </p>
-<%= link_to 'Detail_report', new_detail_report_path(@Detail_report) %> |
+<%= link_to 'Detail_report', new_detail_report_path(customer_id: @support_program.customer_id) %>
 <%= link_to 'Edit', edit_support_program_path(@support_program) %> |
 <%= link_to 'Back', support_programs_path %>
