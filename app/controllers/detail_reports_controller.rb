@@ -30,6 +30,7 @@ class DetailReportsController < ApplicationController
   end
 
   def confirm
+    @support_program = SupportProgram.find(params[:support_program_id])
     @detail_report = DetailReport.new(detail_report_params)
     render :new if @detail_report.invalid?
   end
