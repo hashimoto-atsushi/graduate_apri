@@ -9,7 +9,7 @@ class BossCheckCommentsController < ApplicationController
   end
 
   def new
-    @detail_report = DetailReport.find(params[:detail_report])
+    @detail_report = DetailReport.find(params[:detail_report_id])
     @boss_check_comment = BossCheckComment.new
   end
 

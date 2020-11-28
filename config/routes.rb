@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   resources :parts do
     collection do
       post :confirm
-
     end
   end
 
@@ -34,21 +33,24 @@ Rails.application.routes.draw do
     collection do
       post :confirm
     end
-    resources :detail_reports, only:[:new, :confirm] do
+     resources :detail_reports, only:[:new, :confirm] do
       collection do
         post :confirm
       end
-    end
+        resources :boss_check_comments, only:[:new, :confirm] do
+          collection do
+           post :confirm
+          end
+       end
+     end
   end
 
   resources :detail_reports, only:[:index, :edit, :show, :update, :destroy, :create]
 
 
-  resources :boss_check_comments do
-    collection do
-      post :confirm
-    end
-  end
+  resources :boss_check_comments, only:[:index, :edit, :show, :update, :destroy, :create]
+
+
 
   resources :sales_check_comments do
     collection do

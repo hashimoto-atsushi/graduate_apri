@@ -6,6 +6,7 @@ class DetailReportsController < ApplicationController
   end
 
   def show
+    @support_program = @detail_report.support_program.id
   end
 
   def new
