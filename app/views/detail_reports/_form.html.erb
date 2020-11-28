@@ -11,43 +11,10 @@
     </div>
   <% end %>
 
+<div>
+  <%= @support_program.title %>
+</div>
 
-
-  <div>
-    <p>Title number: <%= @support_program.title_number %></p>
-
-  </div>
-  <div>
-    <p>Customer:<%= @support_program.customer.name %></p>
-
-  </div>
-  <div>
-    <p>Title:<%= @support_program.title %></p>
-
-  </div>
-  <div>
-    <p>User: <%= @support_program.user.name %></p>
-
-  </div>
-  <div>
-    <p>Main work: <%= @support_program.main_work %></p>
-
-  </div>
-  <div>
-    <p>Planed or argent: <%= @support_program.planed_or_argent %></p>
-
-  </div>
-  <div>
-    <p>Order status: <%= @support_program.order_status %></p>
-
-  </div>
-  <div>
-    <p>Kick off date: <%= @support_program.kick_off_date %></p>
-
-  </div>
-  <div>
-    <p>Closed: <%= @support_program.closed %></p>
-  </div>
 
   <div class="field">
     <%= form.label :support_program_id %>

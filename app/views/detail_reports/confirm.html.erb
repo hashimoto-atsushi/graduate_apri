@@ -1,4 +1,4 @@
-<%= form_with(model: @detail_report, local: true) do |form| %>
+<%= form_with(model: @detail_report, local: true ) do |form| %>
 <div>
   <%= form.hidden_field :support_program_id %>
 </div>
@@ -63,6 +63,6 @@
  <%= form.submit "submit"%>
 </div>
 <div>
-  <%= form.submit 'back', name: 'back'%>
+  <%= link_to 'back', new_support_program_detail_report_path, name: 'back'%>
 </div>
 <% end %>

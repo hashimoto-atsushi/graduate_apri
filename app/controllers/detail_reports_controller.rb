@@ -9,7 +9,7 @@ class DetailReportsController < ApplicationController
   end
 
   def new
-    @support_program = SupportProgram.find(params[:support_program])
+    @support_program = SupportProgram.find(params[:support_program_id])
     @detail_report = DetailReport.new
   end
 
