@@ -11,6 +11,132 @@
     </div>
   <% end %>
 
+  <p>
+    <strong>Title number:</strong>
+    <%= @boss_check_comment.detail_report.support_program.title_number %>
+  </p>
+  <p>
+    <strong>Customer:</strong>
+    <%= @boss_check_comment.detail_report.support_program.customer.name %>
+  </p>
+  <p>
+    <strong>Title:</strong>
+    <%= @boss_check_comment.detail_report.support_program.title %>
+  </p>
+  <p>
+    <strong>User:</strong>
+    <%= @boss_check_comment.detail_report.support_program.user.name %>
+  </p>
+  <p>
+    <strong>Main work:</strong>
+    <%= @boss_check_comment.detail_report.support_program.main_work %>
+  </p>
+  <p>
+    <strong>Planed or argent:</strong>
+    <%= @boss_check_comment.detail_report.support_program.planed_or_argent %>
+  </p>
+  <p>
+    <strong>Order status:</strong>
+    <%= @boss_check_comment.detail_report.support_program.order_status %>
+  </p>
+  <p>
+    <strong>Kick off date:</strong>
+    <%= @boss_check_comment.detail_report.support_program.kick_off_date %>
+  </p>
+  <p>
+    <strong>Closed:</strong>
+    <%= @boss_check_comment.detail_report.support_program.closed %>
+  </p>
+
+
+  <p>
+    <strong>Support program:</strong>
+    <%= @boss_check_comment.detail_report.support_program.title %>
+  </p>
+
+  <p>
+    <strong>Ordered date:</strong>
+    <%= @boss_check_comment.detail_report.ordered_date %>
+  </p>
+
+  <p>
+    <strong>Ordered price:</strong>
+    <%= @boss_check_comment.detail_report.ordered_price %>
+  </p>
+
+  <p>
+    <strong>Actual kickoff date:</strong>
+    <%= @boss_check_comment.detail_report.actual_kickoff_date %>
+  </p>
+
+  <p>
+    <strong>Actual complete date:</strong>
+    <%= @boss_check_comment.detail_report.actual_complete_date %>
+  </p>
+
+  <p>
+    <strong>Service detail:</strong>
+    <%= @boss_check_comment.detail_report.service_detail %>
+  </p>
+
+  <p>
+    <strong>Photo:</strong>
+    <%= @boss_check_comment.detail_report.photo %>
+  </p>
+  <p>
+    <strong>Results:</strong>
+    <%= @boss_check_comment.detail_report.results %>
+  </p>
+
+  <p>
+    <strong>Evaluation:</strong>
+    <%= @boss_check_comment.detail_report.evaluation %>
+  </p>
+
+  <p>
+    <strong>Evaluation details:</strong>
+    <%= @boss_check_comment.detail_report.evaluation_details %>
+  </p>
+  <p>
+    <strong>Detail report:</strong>
+    <%= @boss_check_comment.detail_report.support_program.title %>
+  </p>
+
+  <p>
+    <strong>Confirmation:</strong>
+    <%= @boss_check_comment.confirmation %>
+  </p>
+
+  <p>
+    <strong>Confirmation date:</strong>
+    <%= @boss_check_comment.confirmation_date %>
+  </p>
+
+  <p>
+    <strong>Positive comment:</strong>
+    <%= @boss_check_comment.positive_comment %>
+  </p>
+
+  <p>
+    <strong>Negative comment:</strong>
+    <%= @boss_check_comment.negative_comment %>
+  </p>
+
+  <p>
+    <strong>Assistance:</strong>
+    <%= @boss_check_comment.assistance %>
+  </p>
+
+  <p>
+    <strong>Questions:</strong>
+    <%= @boss_check_comment.questions %>
+  </p>
+
+  <p>
+    <strong>Report to sales:</strong>
+    <%= @boss_check_comment.report_to_sales %>
+  </p>
+
   <div class="field">
     <%= form.label :boss_check_comment_id %>
     <%= form.select :boss_check_comment_id, BossCheckComment.all.map{|o| [o.detail_report.support_program.title, o.id]} %>

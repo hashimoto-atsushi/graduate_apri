@@ -11,6 +11,67 @@
     </div>
   <% end %>
 
+  <div>
+    <p>Title number:<%= @detail_report.support_program.title_number %></p>
+  </div>
+  <div>
+    <p>Customer:<%= @detail_report.support_program.customer.name %></p>
+  </div>
+  <div>
+    <p>Title:<%= @detail_report.support_program.title %></p>
+  </div>
+  <div>
+    <p>User:<%= @detail_report.support_program.user.name %></p>
+  </div>
+  <div>
+    <p>Main work:<%= @detail_report.support_program.main_work %></p>
+  </div>
+  <div>
+    <p>Planed or argent:<%= @detail_report.support_program.planed_or_argent %></p>
+  </div>
+  <div>
+    <p>Order status:<%= @detail_report.support_program.order_status %></p>
+  </div>
+  <div>
+    <p>Kick off date:<%= @detail_report.support_program.kick_off_date %></p>
+  </div>
+  <div>
+    <p>Closed:<%= @detail_report.support_program.closed %></p>
+  </div>
+  <div>
+    <p>Support program:<%= @detail_report.support_program.title %></p>
+  </div>
+  <div>
+    <p>Ordered date:<%= @detail_report.ordered_date %></p>
+  </div>
+  <div>
+    <p>Ordered price:<%= @detail_report.ordered_price %></p>
+  </div>
+  <div>
+    <p>Actual kickoff date:<%= @detail_report.actual_kickoff_date %></p>
+  </div>
+  <div>
+    <p>Actual complete date:<%= @detail_report.actual_complete_date %></p>
+  </div>
+  <div>
+    <p>Service detail:<%= @detail_report.service_detail %></p>
+  </div>
+  <div>
+    <p>Photo:<%= @detail_report.photo %></p>
+  </div>
+  <div>
+    <p>Results:<%= @detail_report.results %></p>
+  </div>
+  <div>
+    <p>Evaluation:<%= @detail_report.evaluation %></p>
+  </div>
+  <div>
+    <p>Evaluation details:<%= @detail_report.evaluation_details %></p>
+  </div>
+  <div>
+    <p>User:<%= @detail_report.support_program.user.name %></p>
+  </div>
+
   <div class="field">
     <%= form.label :detail_report_id %>
     <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]} %>

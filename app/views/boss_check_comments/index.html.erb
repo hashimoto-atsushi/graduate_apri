@@ -2,9 +2,10 @@
 
 <h1>Boss Check Comments</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
+      <th>Customer</th>
       <th>Detail report</th>
       <th>Confirmation</th>
       <th>Confirmation date</th>
@@ -20,6 +21,7 @@
   <tbody>
     <% @boss_check_comments.each do |boss_check_comment| %>
       <tr>
+        <td><%= boss_check_comment.detail_report.support_program.customer.name %></td>
         <td><%= boss_check_comment.detail_report.support_program.title %></td>
         <td><%= boss_check_comment.confirmation %></td>
         <td><%= boss_check_comment.confirmation_date %></td>
