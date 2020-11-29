@@ -206,17 +206,17 @@ ja:
     pm: 午後
   view:
     users:
-      index:
-        id: 'ID'
-        number: '社員番号'
-        name: '名前'
-        department: '部署'
-        position: '役職'
-        permission: '権限'
-        email: 'Eメール'
-        cellphone_number: '携帯電話'
-        stay_or_left: '在籍'
-        show: '詳細'
-        edit: '編集'
-        delete: '削除'
-        sale: '営業部'
+      id: 'ID'
+      number: '社員番号'
+      name: '名前'
+      department: '部署'
+      sale: "test"
+      position: '役職'
+      permission: '権限'
+      email: 'Eメール'
+      cellphone_number: '携帯電話'
+      stay_or_left: '在籍'
+      show: '詳細'
+      edit: '編集'
+      delete: '削除'
+      sale: '営業部'

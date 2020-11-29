@@ -2,15 +2,15 @@
 <table border="1">
 <thead>
   <tr>
-    <th><%= t('view.users.index.id') %></th>
-    <th><%= t('view.users.index.number') %></th>
-    <th><%= t('view.users.index.name') %></th>
-    <th><%= t('view.users.index.department') %></th>
-    <th><%= t('view.users.index.position') %></th>
-    <th><%= t('view.users.index.permission') %></th>
-    <th><%= t('view.users.index.email') %></th>
-    <th><%= t('view.users.index.cellphone_number') %></th>
-    <th><%= t('view.users.index.stay_or_left') %></th>
+    <th><%= t('view.users.id') %></th>
+    <th><%= t('view.users.number') %></th>
+    <th><%= t('view.users.name') %></th>
+    <th><%= t('view.users.department') %></th>
+    <th><%= t('view.users.position') %></th>
+    <th><%= t('view.users.permission') %></th>
+    <th><%= t('view.users.email') %></th>
+    <th><%= t('view.users.cellphone_number') %></th>
+    <th><%= t('view.users.stay_or_left') %></th>
   </tr>
 </thead>
 <tbody>
@@ -25,7 +25,7 @@
     <td><%= user.email %></td>
     <td><%= user.cellphone_number %></td>
     <td><%= user.stay_or_left %></td>
-    <td><%= link_to "詳細へ", user_path(user.id) %></td>
+    <td><%= link_to t('view.users.show'), user_path(user.id) %></td>
   </tr>
   <% end %>
 </tbody>
