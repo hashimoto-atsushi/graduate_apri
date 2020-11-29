@@ -217,6 +217,18 @@ ja:
       products: '製品情報'
       parts: '保守パーツ情報'
       users: '社員情報'
+    support_programs:
+      title_number: '保守案件番号'
+      customer: '顧客名'
+      title: '保守案件名'
+      user: '技術担当者'
+      main_work: '作業内容'
+      planed_or_argent: '計画/緊急'
+      order_status: '受注状況'
+      kick_off_date: '予定作業日'
+      closed: '案件完了'
+
+
 
 
     users:

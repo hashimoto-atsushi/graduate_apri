@@ -11,7 +11,7 @@ class SupportProgram < ApplicationRecord
   validates :planed_or_argent, presence: true
   validates :kick_off_date, presence:true
   validates :closed, presence:true
-  enum planed_or_argent: {planed:0 , argent:1}
-  enum closed: {notyet:0 , closed:1}
+  enum planed_or_argent: {計画:0 , 緊急:1}
+  enum closed: {未完了:0 , 完了:1}
 
 end
