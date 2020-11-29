@@ -1,2 +1,41 @@
-<h1>Allsupports#index</h1>
-<p>Find me in app/views/allsupports/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Allsupports</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Title number</th>
+      <th>Customer</th>
+      <th>Title</th>
+      <th>User</th>
+      <th>Main work</th>
+      <th>Planed or argent</th>
+      <th>Order status</th>
+      <th>Kick off date</th>
+      <th>Closed</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @support_programs.each do |support_program| %>
+    <% if support_program.closed == "closed"%>
+      <tr>
+        <td><%= support_program.title_number %></td>
+        <td><%= support_program.customer.name %></td>
+        <td><%= support_program.title %></td>
+        <td><%= support_program.user.name %></td>
+        <td><%= support_program.main_work %></td>
+        <td><%= support_program.planed_or_argent %></td>
+        <td><%= support_program.order_status %></td>
+        <td><%= support_program.kick_off_date %></td>
+        <td><%= support_program.closed %></td>
+        <% support_program.detail_reports.ids.each do |id| %>
+        <td><%= link_to "show", detail_report_path(id) %></td>
+        <% end %>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
