@@ -205,6 +205,20 @@ ja:
       short: "%m/%d %H:%M"
     pm: 午後
   view:
+    tops:
+      allsupports: '完了案件情報'
+      support_programs: '保守案件情報'
+      detail_reports: '作業内容報告'
+      boss_check_comments: '上長確認済リスト'
+      sales_check_comments: '営業確認済リスト'
+      customers: '顧客情報'
+      installed_products: '納入機器情報'
+
+      products: '製品情報'
+      parts: '保守パーツ情報'
+      users: '社員情報'
+
+
     users:
       id: 'ID'
       number: '社員番号'
@@ -216,7 +230,11 @@ ja:
       email: 'Eメール'
       cellphone_number: '携帯電話'
       stay_or_left: '在籍'
+      password: 'パスワード'
+      password_confirmation: 'パスワード確認'
+      sign_up: '新規登録'
+      remember_me: 'ログインを記憶する'
+      log_in: 'ログイン'
       show: '詳細'
       edit: '編集'
       delete: '削除'
-      sale: '営業部'

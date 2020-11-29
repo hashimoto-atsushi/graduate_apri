@@ -4,60 +4,60 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :employee_number %><br />
+    <%= f.label t('view.users.number') %><br />
     <%= f.number_field :employee_number, autofocus: true, autocomplete: "employee_number" %>
   </div>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label t('view.users.name') %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
   </div>
 
   <div class="field">
-    <%= f.label :department %><br />
+    <%= f.label t('view.users.department') %><br />
     <%= f.select :department, User.departments.keys.to_a, {}, autofocus: true, autocomplete: "department" %>
   </div>
 
   <div class="field">
-    <%= f.label :position %><br />
+    <%= f.label t('view.users.position') %><br />
     <%= f.select :position, User.positions.keys.to_a, {}, autofocus: true, autocomplete: "position" %>
   </div>
 
   <div class="field">
-    <%= f.label :permission %><br />
+    <%= f.label t('view.users.permission') %><br />
     <%= f.select :permission, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "permission" %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label t('view.users.email') %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :cellphone_number %><br />
+    <%= f.label t('view.users.cellphone_number') %><br />
     <%= f.number_field :cellphone_number, autofocus: true, autocomplete: "cellphone_number" %>
   </div>
 
   <div class="field">
-    <%= f.label :stay_or_left %><br />
+    <%= f.label t('view.users.stay_or_left') %><br />
     <%= f.select :stay_or_left, User.stay_or_lefts.keys.to_a, {}, autofocus: true, autocomplete: "stay_or_left" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label t('view.users.password') %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em><%= @minimum_password_length %>文字以上</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label t('view.users.password_confirmation') %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit t('view.users.sign_up') %>
   </div>
 <% end %>
 
