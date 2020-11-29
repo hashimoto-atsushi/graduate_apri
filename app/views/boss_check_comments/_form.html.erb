@@ -33,12 +33,6 @@
     <p>Order status:<%= @detail_report.support_program.order_status %></p>
   </div>
   <div>
-    <p>Kick off date:<%= @detail_report.support_program.kick_off_date %></p>
-  </div>
-  <div>
-    <p>Closed:<%= @detail_report.support_program.closed %></p>
-  </div>
-  <div>
     <p>Support program:<%= @detail_report.support_program.title %></p>
   </div>
   <div>
@@ -47,8 +41,14 @@
   <div>
     <p>Ordered price:<%= @detail_report.ordered_price %></p>
   </div>
+    <div>
+      <p>Kick off date:<%= @detail_report.support_program.kick_off_date %></p>
+    </div>
   <div>
     <p>Actual kickoff date:<%= @detail_report.actual_kickoff_date %></p>
+  </div>
+  <div>
+    <p>Closed:<%= @detail_report.support_program.closed %></p>
   </div>
   <div>
     <p>Actual complete date:<%= @detail_report.actual_complete_date %></p>

@@ -39,13 +39,6 @@
     <p>Order status: <%= @support_program.order_status %></p>
 
   </div>
-  <div>
-    <p>Kick off date: <%= @support_program.kick_off_date %></p>
-
-  </div>
-  <div>
-    <p>Closed: <%= @support_program.closed %></p>
-  </div>
 
 
   <div class="field">
@@ -62,12 +55,16 @@
     <%= form.label :ordered_price %>
     <%= form.number_field :ordered_price %>
   </div>
-
+  <div>
+    <p>Kick off date: <%= @support_program.kick_off_date %></p>
+  </div>
   <div class="field">
     <%= form.label :actual_kickoff_date %>
     <%= form.date_select :actual_kickoff_date %>
   </div>
-
+  <div>
+    <p>Closed: <%= @support_program.closed %></p>
+  </div>
   <div class="field">
     <%= form.label :actual_complete_date %>
     <%= form.date_select :actual_complete_date %>

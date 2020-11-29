@@ -29,21 +29,6 @@
   <%= @boss_check_comment.detail_report.support_program.order_status %>
 </p>
 <p>
-  <strong>Kick off date:</strong>
-  <%= @boss_check_comment.detail_report.support_program.kick_off_date %>
-</p>
-<p>
-  <strong>Closed:</strong>
-  <%= @boss_check_comment.detail_report.support_program.closed %>
-</p>
-
-
-<p>
-  <strong>Support program:</strong>
-  <%= @boss_check_comment.detail_report.support_program.title %>
-</p>
-
-<p>
   <strong>Ordered date:</strong>
   <%= @boss_check_comment.detail_report.ordered_date %>
 </p>
@@ -52,12 +37,18 @@
   <strong>Ordered price:</strong>
   <%= @boss_check_comment.detail_report.ordered_price %>
 </p>
-
+<p>
+  <strong>Kick off date:</strong>
+  <%= @boss_check_comment.detail_report.support_program.kick_off_date %>
+</p>
 <p>
   <strong>Actual kickoff date:</strong>
   <%= @boss_check_comment.detail_report.actual_kickoff_date %>
 </p>
-
+<p>
+  <strong>Closed:</strong>
+  <%= @boss_check_comment.detail_report.support_program.closed %>
+</p>
 <p>
   <strong>Actual complete date:</strong>
   <%= @boss_check_comment.detail_report.actual_complete_date %>
@@ -85,10 +76,6 @@
 <p>
   <strong>Evaluation details:</strong>
   <%= @boss_check_comment.detail_report.evaluation_details %>
-</p>
-<p>
-  <strong>Detail report:</strong>
-  <%= @boss_check_comment.detail_report.support_program.title %>
 </p>
 
 <p>
@@ -125,7 +112,9 @@
   <strong>Report to sales:</strong>
   <%= @boss_check_comment.report_to_sales %>
 </p>
-<%= link_to 'to_sales_check_comment',  new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@support_program, @detail_report, @boss_check_comment.id) %> |
-
-<%= link_to 'Edit', edit_boss_check_comment_path(@boss_check_comment) %> |
-<%= link_to 'Back', boss_check_comments_path %>
+<div>
+  <%= link_to 'to_sales_check_comment',  new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@support_program, @detail_report, @boss_check_comment.id) %>
+</div>
+<div>
+  <%= link_to 'to_sales_check_comment_index', boss_check_comments_path %>
+</div>

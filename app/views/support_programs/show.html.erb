@@ -35,6 +35,12 @@
   <strong>Closed:</strong>
   <%= @support_program.closed %>
 </p>
-<%= link_to 'Detail_report', new_support_program_detail_report_path(@support_program.id) %>
-<%= link_to 'Edit', edit_support_program_path(@support_program) %> 
-<%= link_to 'Back', support_programs_path %>
+<div>
+  <%= link_to 'Detail_report', new_support_program_detail_report_path(@support_program.id) %>
+</div>
+<div>
+  <%= link_to 'Edit', edit_support_program_path(@support_program) %>
+</div>
+<div>
+  <%= link_to 'to_support_program_index', support_programs_path %>
+</div>

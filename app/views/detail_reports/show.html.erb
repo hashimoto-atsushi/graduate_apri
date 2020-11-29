@@ -24,14 +24,6 @@
   <strong>Order status:</strong>
   <%= @detail_report.support_program.order_status %>
 </p>
-<p>
-  <strong>Kick off date:</strong>
-  <%= @detail_report.support_program.kick_off_date %>
-</p>
-<p>
-  <strong>Closed:</strong>
-  <%= @detail_report.support_program.closed %>
-</p>
 
 
 <p>
@@ -43,6 +35,10 @@
   <strong>Ordered price:</strong>
   <%= @detail_report.ordered_price %>
 </p>
+<p>
+  <strong>Kick off date:</strong>
+  <%= @detail_report.support_program.kick_off_date %>
+</p>
 
 <p>
   <strong>Actual kickoff date:</strong>
@@ -50,6 +46,10 @@
 </p>
 
 <p>
+  <p>
+    <strong>Closed:</strong>
+    <%= @detail_report.support_program.closed %>
+  </p>
   <strong>Actual complete date:</strong>
   <%= @detail_report.actual_complete_date %>
 </p>
@@ -82,6 +82,9 @@
   <strong>User:</strong>
   <%= @detail_report.support_program.user.name %>
 </p>
-<%= link_to 'to_boss_check_comment', new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id)%>
-<%= link_to 'Edit', edit_detail_report_path(@detail_report) %>
-<%= link_to 'Back', detail_reports_path %>
+<div>
+  <%= link_to 'to_boss_check_comment', new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id)%>
+</div>
+<div>
+  <%= link_to 'to_boss_check_comment_index', detail_reports_path %>
+</div>
