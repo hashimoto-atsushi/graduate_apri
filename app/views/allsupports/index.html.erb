@@ -14,9 +14,9 @@
       <th>Order status</th>
       <th>Kick off date</th>
       <th>Closed</th>
+      <th>show</th>
     </tr>
   </thead>
-
   <tbody>
     <% @support_programs.each do |support_program| %>
     <% if support_program.closed == "closed"%>
@@ -30,9 +30,17 @@
         <td><%= support_program.order_status %></td>
         <td><%= support_program.kick_off_date %></td>
         <td><%= support_program.closed %></td>
-        <% support_program.detail_reports.ids.each do |id| %>
-        <td><%= link_to "show", detail_report_path(id) %></td>
+        <td>
+        <% support_program.detail_reports.each do |detail_report| %>
+          <% detail_report.boss_check_comments.each do |boss_check_comment|%>
+            <% boss_check_comment.sales_check_comments.each do |sales_check_comment|%>
+                <ol>
+                  <li><%= link_to "show", sales_check_comment_path(sales_check_comment.id) %></li>
+                </ol>
+            <% end %>
+          <% end %>
         <% end %>
+      </td>
     <% end %>
     <% end %>
   </tbody>

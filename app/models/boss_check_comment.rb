@@ -1,6 +1,6 @@
 class BossCheckComment < ApplicationRecord
   belongs_to :detail_report
-  has_many :sales_check_comment, dependent: :destroy
+  has_many :sales_check_comments, dependent: :destroy
   validates :confirmation_date, presence: true
   validates :positive_comment, presence: true,
                              length: { maximum: 6400 }
