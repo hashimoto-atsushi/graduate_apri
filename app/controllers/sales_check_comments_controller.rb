@@ -9,7 +9,7 @@ class SalesCheckCommentsController < ApplicationController
   end
 
   def new
-    @boss_check_comment = BossCheckComment.find(params[:boss_check_comment])
+    @boss_check_comment = BossCheckComment.find(params[:boss_check_comment_id])
     @sales_check_comment = SalesCheckComment.new
   end
 

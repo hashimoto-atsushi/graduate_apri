@@ -6,6 +6,8 @@ class BossCheckCommentsController < ApplicationController
   end
 
   def show
+    @support_program = @boss_check_comment.detail_report.support_program.id
+    @detail_report = @boss_check_comment.detail_report.id
   end
 
   def new
@@ -30,6 +32,7 @@ class BossCheckCommentsController < ApplicationController
   end
 
   def confirm
+    @detail_report = DetailReport.find(params[:detail_report_id])
     @boss_check_comment = BossCheckComment.new(boss_check_comment_params)
     render :new if @boss_check_comment.invalid?
   end
