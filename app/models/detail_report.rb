@@ -14,5 +14,5 @@ class DetailReport < ApplicationRecord
                            length: { maximum: 16 }
   validates :evaluation_details, presence:true,
                                    length: { maximum: 6400 }
-  enum evaluation: {good:0 , bad:1}
+  enum evaluation: { 高評価:0 , 低評価:1}
 end

@@ -26,7 +26,7 @@
 </p>
 <p>
   <strong><%= t('view.support_programs.order_status') %>:</strong>
-  <%= @support_program.order_status %>
+  <%= @support_program.order_status == true ? "受注済" : "未受注" %>
 </p>
 <p>
   <strong><%= t('view.support_programs.kick_off_date') %>:</strong>

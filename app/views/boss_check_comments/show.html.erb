@@ -27,7 +27,7 @@
 </p>
 <p>
   <strong><%= t('view.support_programs.order_status') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.order_status %>
+  <%= @boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %>
 </p>
 <p>
   <strong><%= t('view.detail_reports.ordered_date') %>:</strong>
@@ -81,7 +81,7 @@
 
 <p>
   <strong><%= t('view.boss_check_comments.confirmation')%>:</strong>
-  <%= @boss_check_comment.confirmation %>
+  <%= @boss_check_comment.confirmation == true ? "承認済" : "未承認" %>
 </p>
 
 <p>

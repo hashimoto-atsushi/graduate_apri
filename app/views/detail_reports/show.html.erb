@@ -23,7 +23,7 @@
 </p>
 <p>
   <strong><%= t('view.support_programs.order_status') %>:</strong>
-  <%= @detail_report.support_program.order_status %>
+  <%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %>
 </p>
 
 

@@ -142,7 +142,7 @@
 
   <div class="field">
     <%= form.label t('view.sales_check_comments.confirmation') %><br />
-    <%= form.select :confirmation, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "confirmation" %>
+    <%= form.select :confirmation, {"確認済": "ture", "未確認": "false"}, autofocus: true, autocomplete: "confirmation" %>
   </div>
 
   <div class="field">
@@ -157,12 +157,12 @@
 
   <div class="field">
     <%= form.label t('view.sales_check_comments.discussion_possibility') %><br />
-    <%= form.select :discussion_possibility, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "discussion_possibility" %>
+    <%= form.select :discussion_possibility, {"有り": "ture", "無し": "false"}, autofocus: true, autocomplete: "discussion_possibility" %>
   </div>
 
   <div class="field">
     <%= form.label t('view.sales_check_comments.matter_closed') %><br />
-    <%= form.select :matter_closed, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "matter_closed" %>
+    <%= form.select :matter_closed, {"承認済": "ture", "未承認": "false"}, autofocus: true, autocomplete: "matter_closed" %>
   </div>
 
   <div class="actions">

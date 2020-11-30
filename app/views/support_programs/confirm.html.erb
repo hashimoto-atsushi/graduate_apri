@@ -46,7 +46,7 @@
   <P><%= t('view.support_programs.planed_or_argent') %>: <%= @support_program.planed_or_argent %></P>
 </div>
 <div>
-  <P><%= t('view.support_programs.order_status') %>: <%= @support_program.order_status %></P>
+  <P><%= t('view.support_programs.order_status') %>: <%= @support_program.order_status == true ? "受注済" : "未受注" %></P>
 </div>
 <div>
   <P><%= t('view.support_programs.kick_off_date') %>: <%= @support_program.kick_off_date %></P>

@@ -23,7 +23,8 @@
       <tr>
         <td><%= boss_check_comment.detail_report.support_program.customer.name %></td>
         <td><%= boss_check_comment.detail_report.support_program.title %></td>
-        <td><%= boss_check_comment.confirmation %></td>
+        <td><%= boss_check_comment.confirmation == true ? "承認済" : "未承認" %></td>
+        <!-- <td><%= boss_check_comment.confirmation %></td> -->
         <td><%= boss_check_comment.confirmation_date %></td>
         <td><%= boss_check_comment.positive_comment %></td>
         <td><%= boss_check_comment.negative_comment %></td>

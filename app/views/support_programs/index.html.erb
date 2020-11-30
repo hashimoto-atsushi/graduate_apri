@@ -27,7 +27,8 @@
         <td><%= support_program.user.name %></td>
         <td><%= support_program.main_work %></td>
         <td><%= support_program.planed_or_argent %></td>
-        <td><%= support_program.order_status %></td>
+        <td><%= support_program.order_status == true ? "受注済" : "未受注" %></td>
+        <!-- <td><%= support_program.order_status %></td> -->
         <td><%= support_program.kick_off_date %></td>
         <td><%= support_program.closed %></td>
         <td><%= link_to t('view.support_programs.show'), support_program %></td>
