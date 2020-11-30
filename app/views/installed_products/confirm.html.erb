@@ -15,19 +15,19 @@
   <%= form.hidden_field :discount_price %>
 </div>
 <div>
-  <P>customer_id: <%= @installed_product.customer.name %></P>
+  <P><%= t('view.customers.customer') %>: <%= @installed_product.customer.name %></P>
 </div>
 <div>
-  <P>product_id: <%= @installed_product.product.name %></P>
+  <P><%= t('view.products.name') %>: <%= @installed_product.product.name %></P>
 </div>
 <div>
-  <P>serial_number: <%= @installed_product.serial_number %></P>
+  <P><%= t('view.installed_products.serial_number') %>: <%= @installed_product.serial_number %></P>
 </div>
 <div>
-  <P>installed_date: <%= @installed_product.installed_date %></P>
+  <P><%= t('view.installed_products.installed_date') %>: <%= @installed_product.installed_date %></P>
 </div>
 <div>
-  <P>discout_price: <%= @installed_product.discount_price %></P>
+  <P><%= t('view.installed_products.discount_price') %>: <%= @installed_product.discount_price %></P>
 </div>
 <div>
  <%= form.submit "submit"%>

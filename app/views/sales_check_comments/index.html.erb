@@ -5,13 +5,13 @@
 <table border="1">
   <thead>
     <tr>
-      <th>Customer</th>
-      <th>Boss check comment</th>
-      <th>Confirmation</th>
-      <th>Confirmation date</th>
-      <th>Comments</th>
-      <th>Discussion possibility</th>
-      <th>Matter closed</th>
+      <th><%= t('view.customers.customer') %></th>
+      <th><%= t('view.support_programs.title') %></th>
+      <th><%= t('view.sales_check_comments.confirmation') %></th>
+      <th><%= t('view.sales_check_comments.confirmation_date') %></th>
+      <th><%= t('view.sales_check_comments.comment') %></th>
+      <th><%= t('view.sales_check_comments.discussion_possibility') %></th>
+      <th><%= t('view.sales_check_comments.matter_closed') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,8 +26,8 @@
         <td><%= sales_check_comment.comments %></td>
         <td><%= sales_check_comment.discussion_possibility %></td>
         <td><%= sales_check_comment.matter_closed %></td>
-        <td><%= link_to 'Show', sales_check_comment %></td>
-        <td><%= link_to 'Destroy', sales_check_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('view.sales_check_comments.show'), sales_check_comment %></td>
+        <td><%= link_to t('view.sales_check_comments.delete'), sales_check_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

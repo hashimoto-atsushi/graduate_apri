@@ -5,21 +5,21 @@
 <table border="1">
   <thead>
     <tr>
-      <th>Title number</th>
-      <th>Customer</th>
-      <th>Title</th>
-      <th>User</th>
-      <th>Main work</th>
-      <th>Planed or argent</th>
-      <th>Order status</th>
-      <th>Kick off date</th>
-      <th>Closed</th>
-      <th>show</th>
+      <th><%= t('view.support_programs.title_number') %></th>
+      <th><%= t('view.support_programs.customer') %></th>
+      <th><%= t('view.support_programs.title') %></th>
+      <th><%= t('view.support_programs.user') %></th>
+      <th><%= t('view.support_programs.main_work') %></th>
+      <th><%= t('view.support_programs.planed_or_argent') %></th>
+      <th><%= t('view.support_programs.order_status') %></th>
+      <th><%= t('view.support_programs.kick_off_date') %></th>
+      <th><%= t('view.support_programs.closed') %></th>
+      <th><%= t('view.allsupports.shows') %></th>
     </tr>
   </thead>
   <tbody>
     <% @support_programs.each do |support_program| %>
-    <% if support_program.closed == "closed"%>
+    <% if support_program.closed == "完了"%>
       <tr>
         <td><%= support_program.title_number %></td>
         <td><%= support_program.customer.name %></td>
@@ -35,7 +35,7 @@
           <% detail_report.boss_check_comments.each do |boss_check_comment|%>
             <% boss_check_comment.sales_check_comments.each do |sales_check_comment|%>
                 <ol>
-                  <li><%= link_to "show", sales_check_comment_path(sales_check_comment.id) %></li>
+                  <li><%= link_to  t('view.allsupports.to_show'), sales_check_comment_path(sales_check_comment.id) %></li>
                 </ol>
             <% end %>
           <% end %>

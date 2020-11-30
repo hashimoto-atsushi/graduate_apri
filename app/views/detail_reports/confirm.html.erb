@@ -30,34 +30,34 @@
   <%= form.hidden_field :evaluation_details %>
 </div>
 <div>
-  <P>support_program_id: <%= @detail_report.support_program.title %></P>
+  <P><%= t('view.support_programs.title') %>: <%= @detail_report.support_program.title %></P>
 </div>
 <div>
-  <P>ordered_date: <%= @detail_report.ordered_date %></P>
+  <P><%= t('view.detail_reports.ordered_date') %>: <%= @detail_report.ordered_date %></P>
 </div>
 <div>
-  <P>ordered_price: <%= @detail_report.ordered_price %></P>
+  <P><%= t('view.detail_reports.ordered_price') %>: <%= @detail_report.ordered_price %></P>
 </div>
 <div>
-  <P>actual_kickoff_date: <%= @detail_report.actual_kickoff_date %></P>
+  <P><%= t('view.detail_reports.actual_kickoff_date') %>: <%= @detail_report.actual_kickoff_date %></P>
 </div>
 <div>
-  <P>actual_complete_date: <%= @detail_report.actual_complete_date %></P>
+  <P><%= t('view.detail_reports.actual_complete_date')%>: <%= @detail_report.actual_complete_date %></P>
 </div>
 <div>
-  <P>service_detail: <%= @detail_report.service_detail %></P>
+  <P><%= t('view.detail_reports.service_detail') %>: <%= @detail_report.service_detail %></P>
 </div>
 <div>
-  <P>photo: <%= @detail_report.photo %></P>
+  <P><%= t('view.detail_reports.photo') %>: <%= @detail_report.photo %></P>
 </div>
 <div>
-  <P>results: <%= @detail_report.results %></P>
+  <P><%= t('view.detail_reports.results') %>: <%= @detail_report.results %></P>
 </div>
 <div>
-  <P>evaluation: <%= @detail_report.evaluation %></P>
+  <P><%= t('view.detail_reports.evaluation') %>: <%= @detail_report.evaluation %></P>
 </div>
 <div>
-  <P>evaluation_details: <%= @detail_report.evaluation_details %></P>
+  <P><%= t('view.detail_reports.evaluation_details') %>: <%= @detail_report.evaluation_details %></P>
 </div>
 <div>
  <%= form.submit "submit"%>

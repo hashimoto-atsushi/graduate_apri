@@ -24,28 +24,28 @@
   <%= form.hidden_field :user_id %>
 </div>
 <div>
-  <P>customer_number: <%= @customer.customer_number %></P>
+  <P><%= t('view.customers.customer_number') %>: <%= @customer.customer_number %></P>
 </div>
 <div>
-  <P>name: <%= @customer.name %></P>
+  <P><%= t('view.customers.customer') %>: <%= @customer.name %></P>
 </div>
 <div>
-  <P>profession: <%= @customer.profession %></P>
+  <P><%= t('view.customers.profession') %>: <%= @customer.profession %></P>
 </div>
 <div>
-  <P>customer_in_charge: <%= @customer.customer_in_charge %></P>
+  <P><%= t('view.customers.customer_in_charge') %>: <%= @customer.customer_in_charge %></P>
 </div>
 <div>
-  <P>department: <%= @customer.department %></P>
+  <P><%= t('view.customers.department') %>: <%= @customer.department %></P>
 </div>
 <div>
-  <P>position: <%= @customer.position %></P>
+  <P><%= t('view.customers.position') %>: <%= @customer.position %></P>
 </div>
 <div>
-  <P>phone_number: <%= @customer.phone_number %></P>
+  <P><%= t('view.customers.phone_number') %>: <%= @customer.phone_number %></P>
 </div>
 <div>
-  <P>employee_in_charge: <%= @customer.user.name %></P>
+  <P><%= t('view.customers.employee_in_charge') %>: <%= @customer.user.name %></P>
 </div>
  <div>
    <%= form.submit "submit"%>
