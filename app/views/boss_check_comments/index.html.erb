@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Boss Check Comments</h1>
+<h1>上長確認 一覧</h1>
 
 <table border="1">
   <thead>
     <tr>
-      <th>Customer</th>
-      <th>Detail report</th>
-      <th>Confirmation</th>
-      <th>Confirmation date</th>
-      <th>Positive comment</th>
-      <th>Negative comment</th>
-      <th>Assistance</th>
-      <th>Questions</th>
-      <th>Report to sales</th>
+      <th><%= t('view.customers.customer')%></th>
+      <th><%= t('view.support_programs.title')%></th>
+      <th><%= t('view.boss_check_comments.confirmation')%></th>
+      <th><%= t('view.boss_check_comments.confirmation_date')%></th>
+      <th><%= t('view.boss_check_comments.positive_comment')%></th>
+      <th><%= t('view.boss_check_comments.negative_comment')%></th>
+      <th><%= t('view.boss_check_comments.assistance')%></th>
+      <th><%= t('view.boss_check_comments.questions')%></th>
+      <th><%= t('view.boss_check_comments.report_to_sales')%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,8 +30,8 @@
         <td><%= boss_check_comment.assistance %></td>
         <td><%= boss_check_comment.questions %></td>
         <td><%= boss_check_comment.report_to_sales %></td>
-        <td><%= link_to 'Show', boss_check_comment %></td>
-        <td><%= link_to 'Destroy', boss_check_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('view.boss_check_comments.show'), boss_check_comment %></td>
+        <td><%= link_to t('view.boss_check_comments.delete'), boss_check_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

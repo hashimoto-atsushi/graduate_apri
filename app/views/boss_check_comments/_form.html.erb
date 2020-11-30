@@ -12,104 +12,104 @@
   <% end %>
 
   <div>
-    <p>Title number:<%= @detail_report.support_program.title_number %></p>
+    <p><%= t('view.support_programs.title_number') %>:<%= @detail_report.support_program.title_number %></p>
   </div>
   <div>
-    <p>Customer:<%= @detail_report.support_program.customer.name %></p>
+    <p><%= t('view.support_programs.customer') %>:<%= @detail_report.support_program.customer.name %></p>
   </div>
   <div>
-    <p>Title:<%= @detail_report.support_program.title %></p>
+    <p><%= t('view.support_programs.title') %>:<%= @detail_report.support_program.title %></p>
   </div>
   <div>
-    <p>User:<%= @detail_report.support_program.user.name %></p>
+    <p><%= t('view.support_programs.user') %>:<%= @detail_report.support_program.user.name %></p>
   </div>
   <div>
-    <p>Main work:<%= @detail_report.support_program.main_work %></p>
+    <p><%= t('view.support_programs.main_work') %>:<%= @detail_report.support_program.main_work %></p>
   </div>
   <div>
-    <p>Planed or argent:<%= @detail_report.support_program.planed_or_argent %></p>
+    <p><%= t('view.support_programs.planed_or_argent') %>:<%= @detail_report.support_program.planed_or_argent %></p>
   </div>
   <div>
-    <p>Order status:<%= @detail_report.support_program.order_status %></p>
+    <p><%= t('view.support_programs.order_status') %>:<%= @detail_report.support_program.order_status %></p>
+  </div>
+  <!-- <div>
+    <p>Supportprogram:<%= @detail_report.support_program.title %></p>
+  </div> -->
+  <div>
+    <p><%= t('view.detail_reports.ordered_date') %>:<%= @detail_report.ordered_date %></p>
   </div>
   <div>
-    <p>Support program:<%= @detail_report.support_program.title %></p>
-  </div>
-  <div>
-    <p>Ordered date:<%= @detail_report.ordered_date %></p>
-  </div>
-  <div>
-    <p>Ordered price:<%= @detail_report.ordered_price %></p>
+    <p><%= t('view.detail_reports.ordered_price') %>:<%= @detail_report.ordered_price %></p>
   </div>
     <div>
-      <p>Kick off date:<%= @detail_report.support_program.kick_off_date %></p>
+      <p><%= t('view.support_programs.kick_off_date') %>:<%= @detail_report.support_program.kick_off_date %></p>
     </div>
   <div>
-    <p>Actual kickoff date:<%= @detail_report.actual_kickoff_date %></p>
+    <p><%= t('view.detail_reports.actual_kickoff_date') %>:<%= @detail_report.actual_kickoff_date %></p>
   </div>
   <div>
-    <p>Closed:<%= @detail_report.support_program.closed %></p>
+    <p><%= t('view.support_programs.closed') %>:<%= @detail_report.support_program.closed %></p>
   </div>
   <div>
-    <p>Actual complete date:<%= @detail_report.actual_complete_date %></p>
+    <p><%= t('view.detail_reports.actual_complete_date') %>:<%= @detail_report.actual_complete_date %></p>
   </div>
   <div>
-    <p>Service detail:<%= @detail_report.service_detail %></p>
+    <p><%= t('view.detail_reports.service_detail') %>:<%= @detail_report.service_detail %></p>
   </div>
   <div>
-    <p>Photo:<%= @detail_report.photo %></p>
+    <p><%= t('view.detail_reports.photo') %>:<%= @detail_report.photo %></p>
   </div>
   <div>
-    <p>Results:<%= @detail_report.results %></p>
+    <p><%= t('view.detail_reports.results') %>:<%= @detail_report.results %></p>
   </div>
   <div>
-    <p>Evaluation:<%= @detail_report.evaluation %></p>
+    <p><%= t('view.detail_reports.evaluation') %>:<%= @detail_report.evaluation %></p>
   </div>
   <div>
-    <p>Evaluation details:<%= @detail_report.evaluation_details %></p>
+    <p><%= t('view.detail_reports.evaluation_details') %>:<%= @detail_report.evaluation_details %></p>
   </div>
   <div>
-    <p>User:<%= @detail_report.support_program.user.name %></p>
+    <p><%= t('view.support_programs.user') %>:<%= @detail_report.support_program.user.name %></p>
   </div>
 
   <div class="field">
-    <%= form.label :detail_report_id %>
+    <%= form.label t('view.detail_reports.id') %>
     <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]} %>
   </div>
 
   <div class="field">
-    <%= form.label :confirmation %><br />
+    <%= form.label t('view.boss_check_comments.confirmation') %><br />
     <%= form.select :confirmation, {"true": "true", "false": "false"}, autofocus: true, autocomplete: "confirmation" %>
   </div>
 
 
   <div class="field">
-    <%= form.label :confirmation_date %>
+    <%= form.label t('view.boss_check_comments.confirmation_date') %>
     <%= form.date_select :confirmation_date %>
   </div>
 
   <div class="field">
-    <%= form.label :positive_comment %>
+    <%= form.label t('view.boss_check_comments.positive_comment') %>
     <%= form.text_area :positive_comment %>
   </div>
 
   <div class="field">
-    <%= form.label :negative_comment %>
+    <%= form.label t('view.boss_check_comments.negative_comment') %>
     <%= form.text_area :negative_comment %>
   </div>
 
   <div class="field">
-    <%= form.label :assistance %>
+    <%= form.label t('view.boss_check_comments.assistance') %>
     <%= form.text_area :assistance %>
   </div>
 
   <div class="field">
-    <%= form.label :questions %>
+    <%= form.label t('view.boss_check_comments.questions') %>
     <%= form.text_area :questions %>
   </div>
 
   <div class="field">
-    <%= form.label :report_to_sales %>
+    <%= form.label t('view.boss_check_comments.report_to_sales') %>
     <%= form.text_area :report_to_sales %>
   </div>
 
