@@ -10,8 +10,8 @@
   </head>
 <header>
   <div>
-    <%= link_to 'top', top_index_path%>
-    <%= link_to "管理者", rails_admin_path %>
+    <%= link_to t('view.layouts.to_top'), top_index_path%>
+    <%= link_to t('view.layouts.admin'), rails_admin_path %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>  </div>
 </header>
   <body>
