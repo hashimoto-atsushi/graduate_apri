@@ -12,86 +12,86 @@
   <% end %>
 
   <div>
-    <p>Title number: <%= @support_program.title_number %></p>
+    <p><%= t('view.support_programs.title_number') %>: <%= @support_program.title_number %></p>
 
   </div>
   <div>
-    <p>Customer:<%= @support_program.customer.name %></p>
+    <p><%= t('view.support_programs.customer') %>:<%= @support_program.customer.name %></p>
 
   </div>
   <div>
-    <p>Title:<%= @support_program.title %></p>
+    <p><%= t('view.support_programs.title') %>:<%= @support_program.title %></p>
 
   </div>
   <div>
-    <p>User: <%= @support_program.user.name %></p>
+    <p><%= t('view.support_programs.user') %>: <%= @support_program.user.name %></p>
 
   </div>
   <div>
-    <p>Main work: <%= @support_program.main_work %></p>
+    <p><%= t('view.support_programs.main_work') %>: <%= @support_program.main_work %></p>
 
   </div>
   <div>
-    <p>Planed or argent: <%= @support_program.planed_or_argent %></p>
+    <p><%= t('view.support_programs.planed_or_argent') %>: <%= @support_program.planed_or_argent %></p>
 
   </div>
   <div>
-    <p>Order status: <%= @support_program.order_status %></p>
+    <p><%= t('view.support_programs.order_status') %>: <%= @support_program.order_status %></p>
 
   </div>
 
 
   <div class="field">
-    <%= form.label :support_program_id %>
+    <%= form.label t('view.support_programs.title')  %>
     <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.title, o.id]} %>
   </div>
 
   <div class="field">
-    <%= form.label :ordered_date %>
+    <%= form.label t('view.detail_reports.ordered_date') %>
     <%= form.date_select :ordered_date %>
   </div>
 
   <div class="field">
-    <%= form.label :ordered_price %>
+    <%= form.label t('view.detail_reports.ordered_price') %>
     <%= form.number_field :ordered_price %>
   </div>
   <div>
-    <p>Kick off date: <%= @support_program.kick_off_date %></p>
+    <p><%= t('view.support_programs.kick_off_date')%>: <%= @support_program.kick_off_date %></p>
   </div>
   <div class="field">
-    <%= form.label :actual_kickoff_date %>
+    <%= form.label t('view.detail_reports.actual_kickoff_date') %>
     <%= form.date_select :actual_kickoff_date %>
   </div>
   <div>
-    <p>Closed: <%= @support_program.closed %></p>
+    <p><%= t('view.support_programs.closed')%>: <%= @support_program.closed %></p>
   </div>
   <div class="field">
-    <%= form.label :actual_complete_date %>
+    <%= form.label t('view.detail_reports.actual_complete_date') %>
     <%= form.date_select :actual_complete_date %>
   </div>
 
   <div class="field">
-    <%= form.label :service_detail %>
+    <%= form.label t('view.detail_reports.service_detail') %>
     <%= form.text_area :service_detail %>
   </div>
 
   <div class="field">
-    <%= form.label :photo %>
+    <%= form.label t('view.detail_reports.photo') %>
     <%= form.text_area :photo %>
   </div>
 
   <div class="field">
-    <%= form.label :results %>
+    <%= form.label t('view.detail_reports.results') %>
     <%= form.text_area :results %>
   </div>
 
   <div class="field">
-    <%= form.label :evaluation %>
+    <%= form.label t('view.detail_reports.evaluation') %>
     <%= form.select :evaluation, DetailReport.evaluations.keys.to_a, {}, autofocus: true, autocomplete: "evaluation" %>
   </div>
 
   <div class="field">
-    <%= form.label :evaluation_details %>
+    <%= form.label t('view.detail_reports.evaluation_details') %>
     <%= form.text_area :evaluation_details %>
   </div>
 

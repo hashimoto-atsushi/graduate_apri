@@ -14,28 +14,28 @@
 
 
   <div class="field">
-    <%= form.label :customer_id %>
+    <%= form.label t('view.customers.customer') %>
     <%= form.select :customer_id, Customer.all.map{|o| [o.name, o.id]} %>
   </div>
 
   <div class="field">
-    <%= form.label :product_id %>
+    <%= form.label t('view.products.name') %>
     <%= form.select :product_id, Product.all.map{|o| [o.name, o.id]} %>
   </div>
 
 
   <div class="field">
-    <%= form.label :serial_number %>
+    <%= form.label t('view.installed_products.serial_number') %>
     <%= form.text_field :serial_number %>
   </div>
 
   <div class="field">
-    <%= form.label :installed_date %>
+    <%= form.label t('view.installed_products.installed_date') %>
     <%= form.date_select :installed_date %>
   </div>
 
   <div class="field">
-    <%= form.label :discount_price %>
+    <%= form.label t('view.installed_products.discount_price') %>
     <%= form.number_field :discount_price %>
   </div>
 

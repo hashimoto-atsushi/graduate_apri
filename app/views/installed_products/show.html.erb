@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 <p>
-  <strong>Customer:</strong>
+  <strong><%= t('view.customers.customer') %>:</strong>
   <%= @installed_product.customer.name %>
 </p>
 <p>
-  <strong>Product:</strong>
+  <strong><%= t('view.products.name') %>:</strong>
   <%= @installed_product.product.name %>
 </p>
 <p>
-  <strong>Serial number:</strong>
+  <strong><%= t('view.installed_products.serial_number') %>:</strong>
   <%= @installed_product.serial_number %>
 </p>
 <p>
-  <strong>Installed date:</strong>
+  <strong><%= t('view.installed_products.installed_date') %>:</strong>
   <%= @installed_product.installed_date %>
 </p>
 <p>
-  <strong>Discount price:</strong>
+  <strong><%= t('view.installed_products.discount_price') %>:</strong>
   <%= @installed_product.discount_price %>
 </p>
 
-<%= link_to 'Edit', edit_installed_product_path(@installed_product) %> |
-<%= link_to 'Back', installed_products_path %>
+<%= link_to t('view.installed_products.edit'), edit_installed_product_path(@installed_product) %> |
+<%= link_to t('view.installed_products.to_index'), installed_products_path %>

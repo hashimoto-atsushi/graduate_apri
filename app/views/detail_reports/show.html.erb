@@ -1,90 +1,90 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title number:</strong>
+  <strong><%= t('view.support_programs.title_number') %>:</strong>
   <%= @detail_report.support_program.title_number %>
 </p>
 <p>
-  <strong>Customer:</strong>
+  <strong><%= t('view.support_programs.customer') %>::</strong>
   <%= @detail_report.support_program.customer.name %>
 </p>
 <p>
-  <strong>Support program:</strong>
+  <strong><%= t('view.support_programs.title') %>:</strong>
   <%= @detail_report.support_program.title %>
 </p>
 <p>
-  <strong>Main work:</strong>
+  <strong><%= t('view.support_programs.main_work') %>:</strong>
   <%= @detail_report.support_program.main_work %>
 </p>
 <p>
-  <strong>Planed or argent:</strong>
+  <strong><%= t('view.support_programs.planed_or_argent') %>:</strong>
   <%= @detail_report.support_program.planed_or_argent %>
 </p>
 <p>
-  <strong>Order status:</strong>
+  <strong><%= t('view.support_programs.order_status') %>:</strong>
   <%= @detail_report.support_program.order_status %>
 </p>
 
 
 <p>
-  <strong>Ordered date:</strong>
+  <strong><%= t('view.detail_reports.ordered_date') %>:</strong>
   <%= @detail_report.ordered_date %>
 </p>
 
 <p>
-  <strong>Ordered price:</strong>
+  <strong><%= t('view.detail_reports.ordered_price') %>:</strong>
   <%= @detail_report.ordered_price %>
 </p>
 <p>
-  <strong>Kick off date:</strong>
+  <strong><%= t('view.support_programs.kick_off_date') %>:</strong>
   <%= @detail_report.support_program.kick_off_date %>
 </p>
 
 <p>
-  <strong>Actual kickoff date:</strong>
+  <strong><%= t('view.detail_reports.actual_kickoff_date') %>:</strong>
   <%= @detail_report.actual_kickoff_date %>
 </p>
 
 <p>
   <p>
-    <strong>Closed:</strong>
+    <strong><%= t('view.support_programs.closed')%>:</strong>
     <%= @detail_report.support_program.closed %>
   </p>
-  <strong>Actual complete date:</strong>
+  <strong><%= t('view.detail_reports.actual_complete_date')%>:</strong>
   <%= @detail_report.actual_complete_date %>
 </p>
 
 <p>
-  <strong>Service detail:</strong>
+  <strong><%= t('view.detail_reports.service_detail') %>:</strong>
   <%= @detail_report.service_detail %>
 </p>
 
 <p>
-  <strong>Photo:</strong>
+  <strong><%= t('view.detail_reports.photo') %>:</strong>
   <%= @detail_report.photo %>
 </p>
 
 <p>
-  <strong>Results:</strong>
+  <strong><%= t('view.detail_reports.results') %>:</strong>
   <%= @detail_report.results %>
 </p>
 
 <p>
-  <strong>Evaluation:</strong>
+  <strong><%= t('view.detail_reports.evaluation') %>:</strong>
   <%= @detail_report.evaluation %>
 </p>
 
 <p>
-  <strong>Evaluation details:</strong>
+  <strong><%= t('view.detail_reports.evaluation_details') %>:</strong>
   <%= @detail_report.evaluation_details %>
 </p>
 <p>
-  <strong>User:</strong>
+  <strong><%= t('view.support_programs.user') %>:</strong>
   <%= @detail_report.support_program.user.name %>
 </p>
 <div>
-  <%= link_to 'to_boss_check_comment', new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id)%>
+  <%= link_to t('view.detail_reports.to_boss_check_comment'), new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id)%>
 </div>
 <div>
-  <%= link_to 'to_boss_check_comment_index', detail_reports_path %>
+  <%= link_to t('view.detail_reports.to_index'), detail_reports_path %>
 </div>
