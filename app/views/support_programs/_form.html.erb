@@ -12,44 +12,44 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title_number %>
+    <%= form.label t('view.support_programs.title_number') %>
     <%= form.number_field :title_number %>
   </div>
   <div class="field">
-    <%= form.label :customer_id %>
+    <%= form.label t('view.support_programs.customer')  %>
     <%= form.select :customer_id, Customer.all.map{|o| [o.name, o.id]} %>
   </div>
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label t('view.support_programs.title') %>
     <%= form.text_field :title %>
   </div>
   <div class="field">
-    <%= form.label :user_id %>
+    <%= form.label t('view.support_programs.user')  %>
     <%= form.select :user_id, User.all.map{|o| [o.name, o.id]} %>
   </div>
   <div class="field">
-    <%= form.label :main_work %>
+    <%= form.label t('view.support_programs.main_work') %>
     <%= form.text_area :main_work %>
   </div>
 
   <div class="field">
-    <%= form.label :planed_or_argent %><br />
+    <%= form.label t('view.support_programs.planed_or_argent') %><br />
     <%= form.select :planed_or_argent, SupportProgram.planed_or_argents.keys.to_a, {}, autofocus: true, autocomplete: "planed_or_argent" %>
   </div>
 
   <div class="field">
-    <%= form.label :order_status %><br />
-    <%= form.select :order_status, {"true": "true", "false": "false"}, autofocus: true, autocomplete: "order_status" %>
+    <%= form.label t('view.support_programs.order_status') %><br />
+    <%= form.select :order_status, {"受注済": "true", "未受注": "false"}, autofocus: true, autocomplete: "order_status" %>
   </div>
 
 
   <div class="field">
-    <%= form.label :kick_off_date %>
+    <%= form.label t('view.support_programs.kick_off_date') %>
     <%= form.date_select :kick_off_date %>
   </div>
 
   <div class="field">
-    <%= form.label :closed %><br />
+    <%= form.label t('view.support_programs.closed') %><br />
     <%= form.select :closed, SupportProgram.closeds.keys.to_a, {}, autofocus: true, autocomplete: "closed" %>
   </div>
 

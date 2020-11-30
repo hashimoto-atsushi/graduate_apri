@@ -1,46 +1,46 @@
 <p id="notice"><%= notice %></p>
 <p>
-  <strong>Title number:</strong>
+  <strong><%= t('view.support_programs.title_number') %>: </strong>
   <%= @support_program.title_number %>
 </p>
 <p>
-  <strong>Customer:</strong>
+  <strong><%= t('view.support_programs.customer') %>: </strong>
   <%= @support_program.customer.name %>
 </p>
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('view.support_programs.title') %>:</strong>
   <%= @support_program.title %>
 </p>
 <p>
-  <strong>User:</strong>
+  <strong><%= t('view.support_programs.user') %>:</strong>
   <%= @support_program.user.name %>
 </p>
 <p>
-  <strong>Main work:</strong>
+  <strong><%= t('view.support_programs.main_work') %>:</strong>
   <%= @support_program.main_work %>
 </p>
 <p>
-  <strong>Planed or argent:</strong>
+  <strong><%= t('view.support_programs.planed_or_argent') %>:</strong>
   <%= @support_program.planed_or_argent %>
 </p>
 <p>
-  <strong>Order status:</strong>
+  <strong><%= t('view.support_programs.order_status') %>:</strong>
   <%= @support_program.order_status %>
 </p>
 <p>
-  <strong>Kick off date:</strong>
+  <strong><%= t('view.support_programs.kick_off_date') %>:</strong>
   <%= @support_program.kick_off_date %>
 </p>
 <p>
-  <strong>Closed:</strong>
+  <strong><%= t('view.support_programs.closed') %>:</strong>
   <%= @support_program.closed %>
 </p>
 <div>
-  <%= link_to 'Detail_report', new_support_program_detail_report_path(@support_program.id) %>
+  <%= link_to t('view.support_programs.to_detail_new'), new_support_program_detail_report_path(@support_program.id) %>
 </div>
 <div>
-  <%= link_to 'Edit', edit_support_program_path(@support_program) %>
+  <%= link_to t('view.support_programs.edit'), edit_support_program_path(@support_program) %>
 </div>
 <div>
-  <%= link_to 'to_support_program_index', support_programs_path %>
+  <%= link_to t('view.support_programs.to_index'), support_programs_path %>
 </div>

@@ -2,41 +2,41 @@
 
 
 <p>
-  <strong>Customer number:</strong>
+  <strong><%= t('view.customers.customer_number') %>:</strong>
   <%= @customer.customer_number %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('view.customers.customer') %>:</strong>
   <%= @customer.name %>
 </p>
 
 
 <p>
-  <strong>Profession:</strong>
+  <strong><%= t('view.customers.profession') %>:</strong>
   <%= @customer.profession %>
 </p>
 
 <p>
-  <strong>Customer in charge:</strong>
+  <strong><%= t('view.customers.customer_in_charge') %>:</strong>
   <%= @customer.customer_in_charge %>
 </p>
 
 <p>
-  <strong>Department:</strong>
+  <strong><%= t('view.customers.department') %>:</strong>
   <%= @customer.department %>
 </p>
 
 <p>
-  <strong>Position:</strong>
+  <strong><%= t('view.customers.position') %>:</strong>
   <%= @customer.position %>
 </p>
 <p>
-  <strong>Phone number:</strong>
+  <strong><%= t('view.customers.phone_number') %>:</strong>
   <%= @customer.phone_number %>
 </p>
 <p>
-  <strong>Installed_products:</strong>
+  <strong><%= t('view.customers.installed_products') %>:</strong>
   <% @customer.installed_products.each do | installed_product | %>
   <ul>
     <li><%= installed_product.product.name %></li>
@@ -45,7 +45,7 @@
 </p>
 
 <p>
-  <strong>Suppprt_programs:</strong>
+  <strong><%= t('view.customers.support_programs') %>:</strong>
   <% @customer.support_programs.each do | support_program | %>
   <ul>
     <li><%= support_program.title %></li>
@@ -55,7 +55,7 @@
 
 
 <p>
-  <strong>User:</strong>
+  <strong><%= t('view.customers.employee_in_charge') %>:</strong>
   <%= @customer.user.name %>
 </p>
 

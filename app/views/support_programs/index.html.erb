@@ -30,9 +30,9 @@
         <td><%= support_program.order_status %></td>
         <td><%= support_program.kick_off_date %></td>
         <td><%= support_program.closed %></td>
-        <td><%= link_to 'Show', support_program %></td>
-        <td><%= link_to 'Edit', edit_support_program_path(support_program) %></td>
-        <td><%= link_to 'Destroy', support_program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('view.support_programs.show'), support_program %></td>
+        <td><%= link_to t('view.support_programs.edit'), edit_support_program_path(support_program) %></td>
+        <td><%= link_to t('view.support_programs.delete'), support_program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Support Program', new_support_program_path %>
+<%= link_to t('view.support_programs.to_new'), new_support_program_path %>

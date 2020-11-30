@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>製品情報</h1>
 
 <table border="1">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Type_name</th>
-      <th>Category</th>
-      <th>List price</th>
-      <th>Release date</th>
-      <th>End of production</th>
-      <th>End of service</th>
+      <th><%= t('view.products.name')%></th>
+      <th><%= t('view.products.type_name')%></th>
+      <th><%= t('view.products.categroy')%></th>
+      <th><%= t('view.products.list_price')%></th>
+      <th><%= t('view.products.release_date')%></th>
+      <th><%= t('view.products.end_of_production')%></th>
+      <th><%= t('view.products.end_of_service')%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,9 +26,9 @@
         <td><%= product.release_date %></td>
         <td><%= product.end_of_production %></td>
         <td><%= product.end_of_service %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to  t('view.support_programs.show'), product %></td>
+        <td><%= link_to  t('view.support_programs.edit'), edit_product_path(product) %></td>
+        <td><%= link_to  t('view.support_programs.delete'), product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to t('view.support_programs.to_new'), new_product_path %>

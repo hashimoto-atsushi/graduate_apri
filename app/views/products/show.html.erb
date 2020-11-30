@@ -1,39 +1,39 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('view.products.name') %>:</strong>
   <%= @product.name %>
 </p>
 
 <p>
-  <strong>Type:</strong>
+  <strong><%= t('view.products.type_name') %>:</strong>
   <%= @product.type_name %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong><%= t('view.products.category') %>:</strong>
   <%= @product.category %>
 </p>
 
 <p>
-  <strong>List price:</strong>
+  <strong><%= t('view.products.list_price') %>:</strong>
   <%= @product.list_price %>
 </p>
 
 <p>
-  <strong>Release date:</strong>
+  <strong><%= t('view.products.release_date') %>:</strong>
   <%= @product.release_date %>
 </p>
 
 <p>
-  <strong>End of production:</strong>
+  <strong><%= t('view.products.end_of_production') %>:</strong>
   <%= @product.end_of_production %>
 </p>
 
 <p>
-  <strong>End of service:</strong>
+  <strong><%= t('view.products.end_of_service') %>:</strong>
   <%= @product.end_of_service %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to t('view.products.edit'), edit_product_path(@product) %> |
+<%= link_to t('view.products.to_index'), products_path %>

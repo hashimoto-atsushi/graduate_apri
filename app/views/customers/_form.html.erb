@@ -13,42 +13,42 @@
 
 
   <div class="field">
-    <%= form.label :customer_number %>
+    <%= form.label t('view.customers.customer_number') %>
     <%= form.number_field :customer_number %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label t('view.customers.customer')%>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :profession %>
+    <%= form.label t('view.customers.profession') %>
     <%= form.text_field :profession %>
   </div>
 
   <div class="field">
-    <%= form.label :customer_in_charge %>
+    <%= form.label t('view.customers.customer_in_charge') %>
     <%= form.text_field :customer_in_charge %>
   </div>
 
   <div class="field">
-    <%= form.label :department %>
+    <%= form.label t('view.customers.department') %>
     <%= form.text_field :department %>
   </div>
 
   <div class="field">
-    <%= form.label :position %>
+    <%= form.label t('view.customers.position') %>
     <%= form.text_field :position %>
   </div>
 
   <div class="field">
-    <%= form.label :phone_number %>
+    <%= form.label t('view.customers.phone_number') %>
     <%= form.text_field :phone_number %>
   </div>
 
   <div class="field">
-    <%= form.label :employee_in_charge %>
+    <%= form.label t('view.customers.employee_in_charge')  %>
     <%= form.select :user_id, User.all.map{|o| [o.name, o.id]} %>
   </div>
 

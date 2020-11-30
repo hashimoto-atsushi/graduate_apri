@@ -1,49 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Detail report:</strong>
+  <strong><%= t('view.parts.detail_report_id')%>:</strong>
   <%= @part.detail_report_id %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('view.parts.name')%>:</strong>
   <%= @part.name %>
 </p>
 
 <p>
-  <strong>Type name:</strong>
+  <strong><%= t('view.parts.type_name')%>:</strong>
   <%= @part.type_name %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong><%= t('view.parts.category')%>:</strong>
   <%= @part.category %>
 </p>
 
 <p>
-  <strong>List price:</strong>
+  <strong><%= t('view.parts.list_price')%>:</strong>
   <%= @part.list_price %>
 </p>
 
 <p>
-  <strong>Stock:</strong>
+  <strong><%= t('view.parts.stock')%>:</strong>
   <%= @part.stock %>
 </p>
 
 <p>
-  <strong>Release date:</strong>
+  <strong><%= t('view.parts.release_date')%>:</strong>
   <%= @part.release_date %>
 </p>
 
 <p>
-  <strong>End of production:</strong>
+  <strong><%= t('view.parts.end_of_production')%>:</strong>
   <%= @part.end_of_production %>
 </p>
 
 <p>
-  <strong>End of servise:</strong>
+  <strong><%= t('view.parts.end_of_service')%>:</strong>
   <%= @part.end_of_service %>
 </p>
 
-<%= link_to 'Edit', edit_part_path(@part) %> |
-<%= link_to 'Back', parts_path %>
+<%= link_to t('view.parts.edit'), edit_part_path(@part) %> |
+<%= link_to t('view.parts.to_index'), parts_path %>
