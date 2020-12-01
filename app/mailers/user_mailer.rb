@@ -3,5 +3,4 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: @user.email, subject: "承認済連絡です。"
   end
-
 end

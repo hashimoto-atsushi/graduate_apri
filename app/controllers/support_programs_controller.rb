@@ -1,5 +1,6 @@
 class SupportProgramsController < ApplicationController
   before_action :set_support_program, only: [:show, :edit, :update, :destroy]
+  before_action :mail_to_systems, only: [:create]
 
   def index
     @search = SupportProgram.search(params[:q])
@@ -23,6 +24,9 @@ class SupportProgramsController < ApplicationController
     else
       if @support_program.save
         UserMailer.inside_info_mail(@support_program.user).deliver
+        mail_to_systems.each do | mail_to_system |
+        UserMailer.inside_info_mail(mail_to_system).deliver
+        end
         redirect_to @support_program, notice: '作成しました'
       else
         render :new
@@ -55,5 +59,9 @@ class SupportProgramsController < ApplicationController
 
     def support_program_params
       params.require(:support_program).permit(:customer_id, :user_id, :title_number, :title, :main_work, :planed_or_argent, :order_status, :kick_off_date, :closed)
+    end
+
+    def mail_to_systems
+      @user = User.where(department: 2)
     end
 end
