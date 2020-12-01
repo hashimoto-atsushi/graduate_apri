@@ -5,10 +5,10 @@
 <table border="1">
   <thead>
     <tr>
-      <th><%= t('view.customers.customer') %></th>
-      <th><%= t('view.products.name') %></th>
+      <th><%= sort_link @search, :customer_id, t('view.customers.customer') %></th>
+      <th><%= sort_link @search, :product_id, t('view.products.name') %></th>
       <th><%= t('view.installed_products.serial_number') %></th>
-      <th><%= t('view.installed_products.installed_date') %></th>
+      <th><%= sort_link @search, :installed_date, t('view.installed_products.installed_date') %></th>
       <th><%= t('view.installed_products.discount_price') %></th>
       <th colspan="3"></th>
     </tr>

@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all
+    @search = Product.search(params[:q])
+    @products = @search.result(distinct: true)
   end
 
   def show

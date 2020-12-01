@@ -2,16 +2,33 @@
 
 <h1>製品情報 一覧</h1>
 
+<%= search_form_for @search do |form| %>
+<div class="field">
+  <%= form.label :name_cont, "製品名 検索:" %>
+  <%= form.text_field :name_cont %>
+</div>
+<div class="field">
+  <%= form.label :type_name_cont, "型式名 検索:" %>
+  <%= form.text_field :type_name_cont %>
+</div>
+<div class="field">
+  <%= form.label :category_cont, "機器種類 検索:" %>
+  <%= form.text_field :category_cont %>
+</div>
+<div class="action"><%= form.submit "Search" %></div>
+  <% end %>
+</div>
+
 <table border="1">
   <thead>
     <tr>
       <th><%= t('view.products.name')%></th>
       <th><%= t('view.products.type_name')%></th>
-      <th><%= t('view.products.categroy')%></th>
+      <th><%= sort_link @search, :category, t('view.products.category')%></th>
       <th><%= t('view.products.list_price')%></th>
-      <th><%= t('view.products.release_date')%></th>
-      <th><%= t('view.products.end_of_production')%></th>
-      <th><%= t('view.products.end_of_service')%></th>
+      <th><%= sort_link @search, :release_date, t('view.products.release_date')%></th>
+      <th><%= sort_link @search, :end_of_production, t('view.products.end_of_production')%></th>
+      <th><%= sort_link @search, :end_of_service, t('view.products.end_of_service')%></th>
       <th colspan="3"></th>
     </tr>
   </thead>

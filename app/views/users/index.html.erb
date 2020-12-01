@@ -3,25 +3,17 @@
 <%= search_form_for @search do |form| %>
 <div class="field">
   <%= form.label :employee_number_eq, "社員番号 検索: " %>
-  <%= form.number_field :employee_number_eq %>
+  <%= form.text_field :employee_number_eq %>
 </div>
 <div class="field">
   <%= form.label :name_cont, "名前 検索: " %>
   <%= form.text_field :name_cont %>
 </div>
-<!--
-<div>
-  <%= form.label :department_eq, "部署 検索: " %>
-  <P>技術部:<%= form.radio_button :department_eq, 0 %>   営業部:<%= form.radio_button :department_eq, 1 %>   システム部: <%= form.radio_button :department_eq, 2 %></p>
-</div>     -->
-
 <div>
   <%= form.label :department_eq, "部署 検索: " %>
   <%= form.select :department_eq, [['営業部', 0], ['技術部', 1], ['システム部', 2]],
    {include_blank: '選択なし'}, class: 'sample' %></div>
 </div>
-
-
 <div class="action"><%= form.submit "Search" %></div>
 <% end %>
 
@@ -29,9 +21,9 @@
 <thead>
   <tr>
     <th><%= t('view.users.id') %></th>
-    <th><%= t('view.users.number') %></th>
-    <th><%= t('view.users.name') %></th>
-    <th><%= t('view.users.department') %></th>
+    <th><%= sort_link @search, :employee_number, t('view.users.number') %></th>
+    <th><%= sort_link @search, :name, t('view.users.name') %></th>
+    <th><%= sort_link @search, :department, t('view.users.department') %></th>
     <th><%= t('view.users.position') %></th>
     <th><%= t('view.users.permission') %></th>
     <th><%= t('view.users.email') %></th>

@@ -2,18 +2,36 @@
 
 <h1>保守パーツ情報 一覧</h1>
 
+<%= search_form_for @search do |form| %>
+<div class="field">
+  <%= form.label :name_cont, "保守パーツ名 検索:" %>
+  <%= form.text_field :name_cont %>
+</div>
+<div class="field">
+  <%= form.label :type_name_cont, "保守パーツ型式名 検索:" %>
+  <%= form.text_field :type_name_cont %>
+</div>
+<div class="field">
+  <%= form.label :category_cont, "保守パーツ種類 検索:" %>
+  <%= form.text_field :category_cont %>
+</div>
+<div class="action"><%= form.submit "Search" %></div>
+  <% end %>
+</div>
+
+
 <table border="1">
   <thead>
     <tr>
       <th><%= t('view.parts.detail_report_id')%></th>
       <th><%= t('view.parts.name')%></th>
       <th><%= t('view.parts.type_name')%></th>
-      <th><%= t('view.parts.category')%></th>
+      <th><%= sort_link @search, :category, t('view.parts.category')%></th>
       <th><%= t('view.parts.list_price')%></th>
       <th><%= t('view.parts.stock')%></th>
-      <th><%= t('view.parts.release_date')%></th>
-      <th><%= t('view.parts.end_of_production')%></th>
-      <th><%= t('view.parts.end_of_service')%></th>
+      <th><%= sort_link @search, :release_date, t('view.parts.release_date')%></th>
+      <th><%= sort_link @search, :end_of_production, t('view.parts.end_of_production')%></th>
+      <th><%= sort_link @search, :end_of_service, t('view.parts.end_of_service')%></th>
       <th colspan="3"></th>
     </tr>
   </thead>

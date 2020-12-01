@@ -2,7 +2,8 @@ class InstalledProductsController < ApplicationController
   before_action :set_installed_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @installed_products = InstalledProduct.all
+    @search = InstalledProduct.search(params[:q])
+    @installed_products = @search.result(distinct:true)
   end
 
   def show

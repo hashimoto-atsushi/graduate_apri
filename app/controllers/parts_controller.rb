@@ -1,7 +1,8 @@
 class PartsController < ApplicationController
   before_action :set_part, only: [:show, :edit, :update, :destroy]
   def index
-    @parts = Part.all
+    @search = Part.search(params[:q])
+    @parts = @search.result(distinct:true)
   end
 
   def show

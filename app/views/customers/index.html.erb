@@ -1,13 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <h1>顧客情報 一覧</h1>
+<%= search_form_for @search do |form| %>
+<div class="field">
+  <%= form.label :customer_number_eq, "顧客番号 検索:" %>
+  <%= form.text_field :customer_number_eq %>
+</div>
+<div class="field">
+  <%= form.label :department_cont, "顧客名 検索: " %>
+  <%= form.text_field :department_cont %>
+</div>
+  <div class="action"><%= form.submit "Search" %></div>
+  <% end %>
+
 
 <table border="1">
   <thead>
     <tr>
-      <th><%= t('view.customers.customer_number') %></th>
+      <th><%= sort_link @search, :customer_number, t('view.customers.customer_number') %></th>
       <th><%= t('view.customers.customer') %></th>
-      <th><%= t('view.customers.profession') %></th>
+      <th><%= sort_link @search, :profession, t('view.customers.profession') %></th>
       <th><%= t('view.customers.customer_in_charge') %></th>
       <th><%= t('view.customers.department') %></th>
       <th><%= t('view.customers.position') %></th>
