@@ -28,7 +28,6 @@ class SupportProgramsController < ApplicationController
         systems_members.each do | systems_member |
           UserMailer.mail_to_system(@support_program, systems_member).deliver
         end
-
         redirect_to @support_program, notice: '作成しました'
       else
         render :new
