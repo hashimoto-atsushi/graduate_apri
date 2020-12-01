@@ -45,7 +45,13 @@ class UserMailer < ApplicationMailer
   def sales_check_comment_mail_to_tech(sales_check_comment)
     @sales_check_comment = sales_check_comment
     @user = @sales_check_comment.boss_check_comment.detail_report.support_program.user
-    mail to: @user.email, subject: "【技術担当】【技術担当】営業確認終了の連絡です。"
+    mail to: @user.email, subject: "【技術担当】【新規】営業確認終了の連絡です。"
+  end
+
+  def sales_check_comment_mail_to_tech_boss(sales_check_comment, tech_boss)
+    @sales_check_comment = sales_check_comment
+    @user = tech_boss
+    mail to: @user.email, subject: "【技術部長】【新規】営業確認終了の連絡です。"
   end
 
 end

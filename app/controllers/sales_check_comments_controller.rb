@@ -24,6 +24,7 @@ class SalesCheckCommentsController < ApplicationController
     else
       if @sales_check_comment.save
         UserMailer.sales_check_comment_mail_to_tech(@sales_check_comment).deliver
+        UserMailer.sales_check_comment_mail_to_tech_boss(@sales_check_comment, tech_boss).deliver
         redirect_to @sales_check_comment, notice: '作成しました！'
       else
         render :new
