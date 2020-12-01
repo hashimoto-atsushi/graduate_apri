@@ -1,6 +1,40 @@
 <p id="notice"><%= notice %></p>
 
 <h1>保守案件 一覧</h1>
+<%= search_form_for @search do |form| %>
+<div class="field">
+  <%= form.label :title_number_eq, "保守案件番号 検索:" %>
+  <%= form.text_field :title_number_eq %>
+</div>
+<div class="field">
+  <%= form.label :customer_name_cont, "顧客名 検索:" %>
+  <%= form.text_field :customer_name_cont %>
+</div>
+<div class="field">
+  <%= form.label :title_cont, "保守案件名 検索:" %>
+  <%= form.text_field :title_cont %>
+</div>
+<div class="field">
+  <%= form.label :user_name_cont, "担当者名 検索:" %>
+  <%= form.text_field :user_name_cont %>
+</div>
+<div>
+  <%= form.label :planed_or_argent_eq, "計画/緊急 検索: " %>
+  <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
+   {include_blank: '選択なし'}, class: 'sample' %>
+</div>
+<div>
+  <%= form.label :order_status_eq, "受注状況 検索: " %>
+  <%= form.select :order_status_eq, [['受注済', true], ['未受注', false]],
+   {include_blank: '選択なし'}, class: 'sample' %>
+</div>
+<div>
+  <%= form.label :closed_eq, "案件完了状態 検索: " %>
+  <%= form.select :closed_eq, [['未完了', 0], ['完了', 1]],
+   {include_blank: '選択なし'}, class: 'sample' %>
+</div>
+<div class="action"><%= form.submit "Search" %></div>
+<% end %>
 
 <table border="1">
   <thead>

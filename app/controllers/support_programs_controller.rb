@@ -2,7 +2,8 @@ class SupportProgramsController < ApplicationController
   before_action :set_support_program, only: [:show, :edit, :update, :destroy]
 
   def index
-    @support_programs = SupportProgram.all
+    @search = SupportProgram.search(params[:q])
+    @support_programs = @search.result(distinct:true)
   end
 
   def show

@@ -2,7 +2,8 @@ class SalesCheckCommentsController < ApplicationController
   before_action :set_sales_check_comment, only: [:show, :edit, :update, :destroy]
 
   def index
-    @sales_check_comments = SalesCheckComment.all
+    @search = SalesCheckComment.search(params[:q])
+    @sales_check_comments = @search.result(distinct:true)
   end
 
   def show
