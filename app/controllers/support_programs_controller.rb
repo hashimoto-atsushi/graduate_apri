@@ -23,8 +23,8 @@ class SupportProgramsController < ApplicationController
       render :new
     else
       if @support_program.save
-        UserMailer.mail_to_tech(@support_program).deliver
-        UserMailer.mail_to_sales(@support_program).deliver
+        UserMailer.support_program_mail_to_tech(@support_program).deliver
+        UserMailer.support_program_mail_to_sales(@support_program).deliver
         systems_members.each do | systems_member |
           UserMailer.mail_to_system(@support_program, systems_member).deliver
         end
