@@ -24,4 +24,10 @@ class UserMailer < ApplicationMailer
     mail to: @user.email, subject: "【技術担当】【新規】作業報告登録の連絡です。"
   end
 
+  def detail_report_mail_to_tech_boss(detail_report, tech_boss)
+    @detail_report = detail_report
+    @tech_boss = tech_boss
+    mail to: @tech_boss.email, subject: "【技術部長】【新規】作業報告登録の連絡です。"
+  end
+
 end

@@ -22,4 +22,8 @@ class ApplicationController < ActionController::Base
     @user = User.where(department: 2)
   end
 
+  def tech_boss
+    @user = User.where(position: 0).find_by(department: 1)
+  end
+
 end
