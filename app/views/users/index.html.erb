@@ -1,4 +1,30 @@
 <h1>社員情報 一覧</h1>
+
+<%= search_form_for @search do |form| %>
+<div class="field">
+  <%= form.label :employee_number_eq, "社員番号 検索: " %>
+  <%= form.number_field :employee_number_eq %>
+</div>
+<div class="field">
+  <%= form.label :name_cont, "名前 検索: " %>
+  <%= form.text_field :name_cont %>
+</div>
+<!--
+<div>
+  <%= form.label :department_eq, "部署 検索: " %>
+  <P>技術部:<%= form.radio_button :department_eq, 0 %>   営業部:<%= form.radio_button :department_eq, 1 %>   システム部: <%= form.radio_button :department_eq, 2 %></p>
+</div>     -->
+
+<div>
+  <%= form.label :department_eq, "部署 検索: " %>
+  <%= form.select :department_eq, [['営業部', 0], ['技術部', 1], ['システム部', 2]],
+   {include_blank: '選択なし'}, class: 'sample' %></div>
+</div>
+
+
+<div class="action"><%= form.submit "Search" %></div>
+<% end %>
+
 <table border="1">
 <thead>
   <tr>
