@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label t('view.parts.detail_report_id') %>
-    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.id, o.id]} %>
+    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.id, o.id]}, include_blank: "紐付け無" %>
   </div>
 
   <div class="field">
