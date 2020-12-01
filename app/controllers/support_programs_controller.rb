@@ -23,10 +23,12 @@ class SupportProgramsController < ApplicationController
       render :new
     else
       if @support_program.save
-        UserMailer.inside_info_mail(@support_program.user).deliver
-        mail_to_systems.each do | mail_to_system |
-        UserMailer.inside_info_mail(mail_to_system).deliver
+        UserMailer.mail_to_tech(@support_program).deliver
+        UserMailer.mail_to_sales(@support_program).deliver
+        systems_members.each do | systems_member |
+          UserMailer.mail_to_system(@support_program, systems_member).deliver
         end
+
         redirect_to @support_program, notice: '作成しました'
       else
         render :new
