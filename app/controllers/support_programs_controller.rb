@@ -22,6 +22,7 @@ class SupportProgramsController < ApplicationController
       render :new
     else
       if @support_program.save
+        UserMailer.inside_info_mail(@support_program.user).deliver
         redirect_to @support_program, notice: '作成しました'
       else
         render :new
