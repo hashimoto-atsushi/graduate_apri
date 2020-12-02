@@ -206,8 +206,14 @@ ja:
     pm: 午後
   view:
     layouts:
-      to_top: 'トップ・ページ'
+      to_top: 'トップページ'
       admin: '管理ページ(システム部)'
+      login: 'ログイン'
+      logout: 'ログアウト'
+    devise:
+      log_in: 'ログイン画面へ'
+      sign_up: '新規 社員情報登録画面へ'
+      Sign_up: '登録'
     tops:
       allsupports: '完了保守案件 一覧'
       support_programs: '保守案件 一覧'
@@ -344,7 +350,6 @@ ja:
       stay_or_left: '在籍'
       password: 'パスワード'
       password_confirmation: 'パスワード確認'
-      sign_up: '新規登録'
       remember_me: 'ログインを記憶する'
       log_in: 'ログイン'
       show: '詳細'

@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount LetterOpenerWeb::Engine, at: "/inbox" if Rails.env.development?
 
+  devise_scope :user do
+  root :to => "devise/sessions#new"
+  end
+
   devise_for :users
 
   resources :users, only:[:index, :show]

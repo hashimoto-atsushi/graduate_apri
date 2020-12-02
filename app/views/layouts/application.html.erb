@@ -10,9 +10,16 @@
   </head>
 <header>
   <div>
+    <% if user_signed_in? %>
     <%= link_to t('view.layouts.to_top'), top_index_path%>
+    <%= link_to t('view.layouts.logout'), destroy_user_session_path, method: :delete %>
+    <% else %>
+    <%= link_to t('view.layouts.login'), new_user_session_path %>  </div>
+    <% end %>
+    <% if user_signed_in? && current_user.permission %>
     <%= link_to t('view.layouts.admin'), rails_admin_path %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>  </div>
+    <% end %>
+  </div>
 </header>
   <body>
     <%= yield %>
