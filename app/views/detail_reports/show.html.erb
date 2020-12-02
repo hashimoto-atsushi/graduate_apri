@@ -84,7 +84,9 @@
   <%= @detail_report.support_program.user.name %>
 </p>
 <div>
+  <% if boss_and_admin_display %>
   <%= link_to t('view.detail_reports.to_boss_check_comment'), new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id)%>
+  <% end %>
 </div>
 <div>
   <%= link_to t('view.detail_reports.to_index'), detail_reports_path %>

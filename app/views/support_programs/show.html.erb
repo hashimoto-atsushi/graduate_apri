@@ -37,10 +37,9 @@
   <%= @support_program.closed %>
 </p>
 <div>
+  <% if tech_in_charge_and_admin_display %>
   <%= link_to t('view.support_programs.to_detail_new'), new_support_program_detail_report_path(@support_program.id) %>
-</div>
-<div>
-  <%= link_to t('view.support_programs.edit'), edit_support_program_path(@support_program) %>
+  <% end %>
 </div>
 <div>
   <%= link_to t('view.support_programs.to_index'), support_programs_path %>

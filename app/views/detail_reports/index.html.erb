@@ -35,7 +35,9 @@
         <td><%= detail_report.evaluation %></td>
         <td><%= detail_report.evaluation_details %></td>
         <td><%= link_to t('view.detail_reports.show'), detail_report %></td>
-        <td><%= link_to t('view.detail_reports.delete'), detail_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.permission %>
+          <td><%= link_to t('view.detail_reports.delete'), detail_report, method: :delete, data: { confirm: '削除しますか?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

@@ -32,7 +32,9 @@
         <td><%= boss_check_comment.questions %></td>
         <td><%= boss_check_comment.report_to_sales %></td>
         <td><%= link_to t('view.boss_check_comments.show'), boss_check_comment %></td>
-        <td><%= link_to t('view.boss_check_comments.delete'), boss_check_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if boss_and_admin_display %>
+          <td><%= link_to t('view.boss_check_comments.delete'), boss_check_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>  
       </tr>
     <% end %>
   </tbody>

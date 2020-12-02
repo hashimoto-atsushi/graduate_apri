@@ -1,7 +1,7 @@
 class DetailReportsController < ApplicationController
   before_action :set_detail_report, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
+  before_action :tech_in_charge_and_admin_login, only: [:create, :update, :destroy]
 
   def index
     @detail_reports = DetailReport.all
