@@ -68,5 +68,6 @@
 </table>
 
 <br>
-
+<% if admin_and_sales_display %>
 <%= link_to t('view.customers.to_new'), new_customer_path %>
+<% end %>
