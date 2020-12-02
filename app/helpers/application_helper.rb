@@ -16,4 +16,9 @@ module ApplicationHelper
     boss_status = current_user.position == "部長" && current_user.department == "技術部"
     boss_status || current_user.permission
   end
+
+  def sales_in_charge_and_admin_display
+    current_user == @boss_check_comment.detail_report.support_program.customer.user || current_user.permission
+  end
+
 end

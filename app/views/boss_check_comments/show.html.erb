@@ -114,7 +114,9 @@
   <%= @boss_check_comment.report_to_sales %>
 </p>
 <div>
+  <% if sales_in_charge_and_admin_display %>
   <%= link_to t('view.boss_check_comments.to_sales_check_comment'),  new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@support_program, @detail_report, @boss_check_comment.id) %>
+  <% end %>
 </div>
 <div>
   <%= link_to t('view.boss_check_comments.to_index'), boss_check_comments_path %>
