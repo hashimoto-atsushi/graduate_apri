@@ -149,10 +149,10 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
     t.integer "employee_number", null: false
     t.string "name", limit: 32, null: false
     t.integer "department", null: false
-    t.integer "position", null: false
+    t.integer "position", default: 2, null: false
     t.boolean "permission", default: false, null: false
     t.string "cellphone_number", limit: 16
-    t.integer "stay_or_left", null: false
+    t.integer "stay_or_left", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

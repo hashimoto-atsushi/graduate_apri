@@ -35,10 +35,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.integer :employee_number, null: false, limit: 4
       t.string :name, null: false, limit: 32
       t.integer :department, null: false, limit: 4
-      t.integer :position, null: false, limit: 4
+      t.integer :position, null: false, limit: 4, default: 2
       t.boolean :permission, null: false, default: false
       t.string :cellphone_number, limit: 16
-      t.integer :stay_or_left, null: false, limit: 4
+      t.integer :stay_or_left, null: false, limit: 4, default: 0
       t.timestamps null: false
     end
 
