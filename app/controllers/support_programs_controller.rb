@@ -1,6 +1,8 @@
 class SupportProgramsController < ApplicationController
   before_action :set_support_program, only: [:show, :edit, :update, :destroy]
   before_action :mail_to_systems, only: [:create]
+  before_action :authenticate_user!
+
 
   def index
     @search = SupportProgram.search(params[:q])

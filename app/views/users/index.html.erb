@@ -48,5 +48,6 @@
   <% end %>
 </tbody>
 </table>
-<%= link_to "管理者", rails_admin_path %>
-<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% if current_user.permission? %>
+<%= link_to t('view.users.edit_users'), rails_admin_path %>
+<% end %>

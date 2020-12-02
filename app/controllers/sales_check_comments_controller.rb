@@ -1,5 +1,6 @@
 class SalesCheckCommentsController < ApplicationController
   before_action :set_sales_check_comment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @search = SalesCheckComment.search(params[:q])

@@ -1,5 +1,7 @@
 class InstalledProductsController < ApplicationController
   before_action :set_installed_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
 
   def index
     @search = InstalledProduct.search(params[:q])

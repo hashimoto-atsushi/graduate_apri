@@ -1,5 +1,7 @@
 class DetailReportsController < ApplicationController
   before_action :set_detail_report, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
 
   def index
     @detail_reports = DetailReport.all

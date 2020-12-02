@@ -1,5 +1,6 @@
 class BossCheckCommentsController < ApplicationController
   before_action :set_boss_check_comment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @boss_check_comments = BossCheckComment.all

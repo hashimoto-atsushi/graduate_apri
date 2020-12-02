@@ -18,15 +18,15 @@
     <%= f.select :department, User.departments.keys.to_a, {}, autofocus: true, autocomplete: "department" %>
   </div>
 
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label t('view.users.position') %><br />
     <%= f.select :position, User.positions.keys.to_a, {}, autofocus: true, autocomplete: "position" %>
-  </div>
+  </div> -->
 
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label t('view.users.permission') %><br />
     <%= f.select :permission, {"true": "ture", "false": "false"}, autofocus: true, autocomplete: "permission" %>
-  </div>
+  </div> -->
 
   <div class="field">
     <%= f.label t('view.users.email') %><br />
@@ -38,10 +38,10 @@
     <%= f.number_field :cellphone_number, autofocus: true, autocomplete: "cellphone_number" %>
   </div>
 
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label t('view.users.stay_or_left') %><br />
     <%= f.select :stay_or_left, User.stay_or_lefts.keys.to_a, {}, autofocus: true, autocomplete: "stay_or_left" %>
-  </div>
+  </div> -->
 
   <div class="field">
     <%= f.label t('view.users.password') %>

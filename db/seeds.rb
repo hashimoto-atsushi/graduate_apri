@@ -8,7 +8,7 @@ User.create!(
       permission: 'true',
       email: 'admin@example.com',
       cellphone_number: '999999999',
-      stay_or_left: 1,
+      stay_or_left: 0,
       password: 'adminadmin',
       password_confirmation: 'adminadmin',
     }

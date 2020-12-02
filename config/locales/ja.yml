@@ -207,12 +207,13 @@ ja:
   view:
     layouts:
       to_top: 'トップページ'
-      admin: '管理ページ(システム部)'
+      admin: 'システム部管理ページ'
       login: 'ログイン'
       logout: 'ログアウト'
+      my_page: 'さんのページ'
     devise:
       log_in: 'ログイン画面へ'
-      sign_up: '新規 社員情報登録画面へ'
+      sign_up: '新規ユーザー登録へ'
       Sign_up: '登録'
     tops:
       allsupports: '完了保守案件 一覧'
@@ -352,6 +353,7 @@ ja:
       password_confirmation: 'パスワード確認'
       remember_me: 'ログインを記憶する'
       log_in: 'ログイン'
+      edit_users: '社員情報 編集画面(システム部)'
       show: '詳細'
       edit: '編集'
       delete: '削除'
