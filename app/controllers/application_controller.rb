@@ -44,6 +44,7 @@ class ApplicationController < ActionController::Base
   end
 
   def sales_in_charge_and_admin_login
+    
   end
 
 
