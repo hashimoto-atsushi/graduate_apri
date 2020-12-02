@@ -30,6 +30,7 @@ class CustomersController < ApplicationController
       render :new
     else
       if @customer.save
+        UserMailer.customer_mail_to_sales(@customer).deliver
         redirect_to @customer, notice: '作成しました!'
       else
         render :new

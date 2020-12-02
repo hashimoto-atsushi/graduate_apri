@@ -24,6 +24,7 @@ class InstalledProductsController < ApplicationController
       render :new
     else
       if @installed_product.save
+        UserMailer.installed_product_mail_to_sales(@installed_product, current_user).deliver
         redirect_to @installed_product, notice: '作成しました！'
       else
         render :new

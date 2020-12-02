@@ -1,5 +1,30 @@
 class UserMailer < ApplicationMailer
 
+  def installed_product_mail_to_sales(installed_product, current_user)
+    @installed_product = installed_product
+    @current_user = current_user
+    mail to: @current_user.email, subject: "【担当】【新規】納入機器の情報登録の連絡です。"
+  end
+
+  def part_mail_to_sales(part, current_user)
+    @part = part
+    @current_user = current_user
+    mail to: @current_user.email, subject: "【担当】【新規】保守パーツ情報登録の連絡です。"
+  end
+
+  def product_mail_to_sales(product, current_user)
+    @product = product
+    @current_user = current_user
+    mail to: @current_user.email, subject: "【担当】【新規】製品情報登録の連絡です。"
+  end
+
+  def customer_mail_to_sales(customer)
+    @customer = customer
+    @user = @customer.user
+    mail to: @user.email, subject: "【営業担当】【新規】顧客情報登録の連絡です。"
+  end
+
+
   def support_program_mail_to_tech(support_program)
     @support_program = support_program
     @user = @support_program.user

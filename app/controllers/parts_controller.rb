@@ -24,6 +24,7 @@ class PartsController < ApplicationController
       render :new
     else
       if @part.save
+        UserMailer.part_mail_to_sales(@part, current_user).deliver
         redirect_to @part, notice: '作成しました！'
       else
         render :new
