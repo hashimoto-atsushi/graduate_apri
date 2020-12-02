@@ -49,13 +49,16 @@
         <td><%= part.end_of_production %></td>
         <td><%= part.end_of_service %></td>
         <td><%= link_to t('view.parts.show'), part %></td>
-        <td><%= link_to t('view.parts.edit'), edit_part_path(part) %></td>
-        <td><%= link_to t('view.parts.delete'), part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if tech_and_admin_display %>
+          <td><%= link_to t('view.parts.edit'), edit_part_path(part) %></td>
+          <td><%= link_to t('view.parts.delete'), part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if tech_and_admin_display %>
 <%= link_to t('view.parts.to_new'), new_part_path %>
+<% end %>

@@ -44,13 +44,16 @@
         <td><%= product.end_of_production %></td>
         <td><%= product.end_of_service %></td>
         <td><%= link_to  t('view.support_programs.show'), product %></td>
+        <% if sales_and_admin_display %>
         <td><%= link_to  t('view.support_programs.edit'), edit_product_path(product) %></td>
         <td><%= link_to  t('view.support_programs.delete'), product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if sales_and_admin_display %>
 <%= link_to t('view.support_programs.to_new'), new_product_path %>
+<% end %>

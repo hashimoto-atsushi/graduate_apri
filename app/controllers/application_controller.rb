@@ -26,8 +26,12 @@ class ApplicationController < ActionController::Base
     @user = User.where(position: 0).find_by(department: 1)
   end
 
-  def admin_and_sales_login
+  def sales_and_admin_login
     current_user.permission || current_user.department == "営業部"
+  end
+
+  def tech_and_admin_login
+    current_user.permission || current_user.department == "技術部"
   end
 
 

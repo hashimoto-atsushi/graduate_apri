@@ -60,7 +60,7 @@
         </td>
         <td><%= customer.user.name %></td>
         <td><%= link_to t('view.customers.show'), customer %></td>
-        <% if admin_and_sales_display %>
+        <% if sales_and_admin_display %>
           <td><%= link_to t('view.customers.edit'), edit_customer_path(customer) %></td>
           <td><%= link_to t('view.customers.delete'), customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
@@ -70,6 +70,6 @@
 </table>
 
 <br>
-<% if admin_and_sales_display %>
+<% if sales_and_admin_display %>
 <%= link_to t('view.customers.to_new'), new_customer_path %>
 <% end %>
