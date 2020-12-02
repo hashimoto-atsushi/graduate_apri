@@ -43,9 +43,8 @@ class ApplicationController < ActionController::Base
     boss_status || current_user.permission
   end
 
-  def sales_in_charge_and_admin_login
-    
-  end
+  # def sales_in_charge_and_admin_login
+  # end
 
 
 
