@@ -78,5 +78,11 @@ class UserMailer < ApplicationMailer
     @user = tech_boss
     mail to: @user.email, subject: "【技術部長】【新規】営業確認終了の連絡です。"
   end
+  #ここからdeviseの登録メール機能
+  def user_welcome_mail(user)
+    @user = user
+  	mail(to: @user.email, subject: 'Welcome to Our Application!')
+  end
+
 
 end
