@@ -22,6 +22,9 @@ RSpec.describe '顧客管理機能', type: :system do
         fill_in 'customer_phone_number', with: '045045045'
         select '営業部員', from: 'customer[user_id]'
         click_on '登録する'
+        click_on '登録する'
+        visit top_index_path
+        visit customers_path
         expect(page).to have_content '甲乙'
       end
     end
