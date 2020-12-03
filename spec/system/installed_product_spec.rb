@@ -9,9 +9,9 @@ RSpec.describe '納入機器 管理機能', type: :system do
     log_in
   end
 
-  describe '顧客情報 登録機能' do
-    context '顧客情報を新規登録した場合' do
-      it '登録した顧客名が表示される' do
+  describe '納入機器 管理機能' do
+    context '納入情報を新規登録した場合' do
+      it '顧客名、納入機器、サポート終了期間が表示される' do
         visit installed_products_path
         visit new_installed_product_path
         select '顧客1', from: 'installed_product[customer_id]'

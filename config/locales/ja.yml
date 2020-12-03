@@ -245,6 +245,7 @@ ja:
       delete: '削除'
       to_index: 一覧へ
       to_detail_new: '作業報告登録へ'
+      confirm_to_submit: '登録する'
     detail_reports:
       id: '案件選択'
       ordered_date: '受注日'
