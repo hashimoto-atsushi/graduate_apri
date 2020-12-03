@@ -261,6 +261,7 @@ ja:
       delete: '削除'
       to_boss_check_comment: '上長確認 登録へ'
       to_index: 一覧へ
+      confirm_to_submit: '登録する'
     boss_check_comments:
       id: '報告選択'
       confirmation: '上長承認'

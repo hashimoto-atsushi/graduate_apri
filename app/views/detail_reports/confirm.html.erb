@@ -61,7 +61,7 @@
   <P><%= t('view.detail_reports.evaluation_details') %>: <%= @detail_report.evaluation_details %></P>
 </div>
 <div>
- <%= form.submit "submit"%>
+ <%= form.submit t('view.detail_reports.confirm_to_submit') %>
 </div>
 <div>
   <%= link_to 'back', new_support_program_detail_report_path, name: 'back'%>

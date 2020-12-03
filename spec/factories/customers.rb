@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :customer do
+    id { 1 }
     user_id { 2 }
     customer_number { 1 }
     name { "顧客1" }

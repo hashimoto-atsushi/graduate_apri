@@ -28,6 +28,8 @@ RSpec.describe '保守案件情報 登録管理機能', type: :system do
         select '未完了', from: 'support_program[closed]'
         click_on '登録する'
         click_on '登録する'
+        visit top_index_path
+        visit support_programs_path
         expect(page).to have_content '顧客1'
         expect(page).to have_content 'ちゃんとメンテしようね'
         expect(page).to have_content '技術部員'

@@ -1,13 +1,14 @@
 FactoryBot.define do
   factory :support_program do
-    customer { nil }
-    user { nil }
+    id { 1 }
+    customer_id { 1 }
+    user_id { 3 }
     title_number { 1 }
-    title { "MyString" }
-    main_work { "MyText" }
-    planed_or_argent { 1 }
-    order_status { false }
-    kick_off_date { "2020-11-26" }
+    title { "定期保守A" }
+    main_work { "全ユニットオーバーホール" }
+    planed_or_argent { 0 }
+    order_status { true }
+    kick_off_date { "2021-11-11" }
     closed { 1 }
   end
 end

@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :product do
+    id { 1 }
     name { "製品おひつじ" }
     type_name { "ZZZ" }
     category { "部品" }

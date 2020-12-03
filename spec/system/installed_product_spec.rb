@@ -23,6 +23,8 @@ RSpec.describe '納入機器 管理機能', type: :system do
         fill_in 'installed_product_discount_price', with: '1480'
         click_on '登録する'
         click_on '登録する'
+        visit top_index_path
+        visit installed_products_path        
         expect(page).to have_content '顧客1'
         expect(page).to have_content '製品おひつじ'
         expect(page).to have_content '12345678'
