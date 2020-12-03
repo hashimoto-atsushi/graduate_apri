@@ -25,6 +25,7 @@ class DetailReportsController < ApplicationController
       render :new
     else
       if @detail_report.save
+        UserMailer.detail_report_mail_to_sales(@detail_report).deliver
         UserMailer.detail_report_mail_to_tech(@detail_report).deliver
         UserMailer.detail_report_mail_to_tech_boss(@detail_report, tech_boss).deliver
         redirect_to @detail_report, notice: '作成しました！'
