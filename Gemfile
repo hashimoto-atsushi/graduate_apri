@@ -22,12 +22,14 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
+  gem 'spring-commands-rspec'
+  gem 'launchy'
+  gem 'spring'
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener_web'
 end
@@ -35,7 +37,6 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'webdrivers'
-
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
