@@ -12,6 +12,10 @@ RSpec.describe '作業報告 登録管理機能', type: :system do
     log_in
   end
 
+  after(:all) do
+    ActionMailer::Base.deliveries.clear
+  end
+
   describe '作業報告 登録管理機能' do
     context '作業報告を登録した場合' do
       it '登録した作業報告内容が登録され表示される' do
@@ -35,6 +39,8 @@ RSpec.describe '作業報告 登録管理機能', type: :system do
         fill_in 'detail_report_evaluation_details', with: 'お客様も安心して立ち会っていただき、最終動作も満足していただきました。'
         click_on '登録する'
         click_on '登録する'
+        expect(ActionMailer::Base.deliveries.first.from).to eq ['from@example.com']
+        expect(ActionMailer::Base.deliveries.first.to).to eq ['sales@example.com']        
         visit top_index_path
         visit detail_reports_path
         expect(page).to have_content '電源ユニット、ファンユニットをオーバーホール。各部清掃作業を実行しました。'
