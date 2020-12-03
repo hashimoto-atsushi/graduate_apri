@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+#カタログ設計 1 & 2
 RSpec.describe '納入機器 管理機能', type: :system do
 
   before do

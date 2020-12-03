@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+#カタログ設計 3
 RSpec.describe '保守案件情報 登録管理機能', type: :system do
 
   before do
