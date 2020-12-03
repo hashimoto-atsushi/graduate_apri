@@ -5,6 +5,7 @@ RSpec.describe '作業報告 登録管理機能', type: :system do
   before do
     FactoryBot.create(:sales_user)
     FactoryBot.create(:tech_user)
+    FactoryBot.create(:boss_user)
     FactoryBot.create(:customer)
     FactoryBot.create(:product)
     FactoryBot.create(:installed_product)
@@ -18,7 +19,7 @@ RSpec.describe '作業報告 登録管理機能', type: :system do
 
   describe '作業報告 登録管理機能' do
     context '作業報告を登録した場合' do
-      it '登録した作業報告内容が登録され表示される' do
+      it '関連部署にメールが送信され、登録した作業報告内容が登録され表示される' do
         visit support_programs_path
         click_on '詳細'
         click_on '作業報告登録へ'
@@ -40,7 +41,11 @@ RSpec.describe '作業報告 登録管理機能', type: :system do
         click_on '登録する'
         click_on '登録する'
         expect(ActionMailer::Base.deliveries.first.from).to eq ['from@example.com']
-        expect(ActionMailer::Base.deliveries.first.to).to eq ['sales@example.com']        
+        expect(ActionMailer::Base.deliveries.first.to).to eq ['sales@example.com']
+        expect(ActionMailer::Base.deliveries.second.from).to eq ['from@example.com']
+        expect(ActionMailer::Base.deliveries.second.to).to eq ['tech@example.com']
+        expect(ActionMailer::Base.deliveries.third.from).to eq ['from@example.com']
+        expect(ActionMailer::Base.deliveries.third.to).to eq ['boss@example.com']
         visit top_index_path
         visit detail_reports_path
         expect(page).to have_content '電源ユニット、ファンユニットをオーバーホール。各部清掃作業を実行しました。'
