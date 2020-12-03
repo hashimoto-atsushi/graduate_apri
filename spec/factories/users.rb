@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :admin_user, class: User do
     id {1}
     employee_number { 1 }
-    name { "管理者" }
+    name { "管理者テスト" }
     department { 2 }
     position { 2 }
     permission { true }
@@ -15,7 +15,7 @@ FactoryBot.define do
   factory :sales_user, class: User do
     id {2}
     employee_number { 2 }
-    name { "営業部員" }
+    name { "営業部員テスト" }
     department { 0 }
     position { 2 }
     permission { false }
@@ -28,7 +28,7 @@ FactoryBot.define do
   factory :tech_user, class: User do
     id {3}
     employee_number { 3 }
-    name { "技術部員" }
+    name { "技術部員テスト" }
     department { 1 }
     position { 2 }
     permission { false }

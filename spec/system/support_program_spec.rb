@@ -32,7 +32,7 @@ RSpec.describe '保守案件情報 登録管理機能', type: :system do
         visit support_programs_path
         expect(page).to have_content '顧客1'
         expect(page).to have_content 'ちゃんとメンテしようね'
-        expect(page).to have_content '技術部員'
+        expect(page).to have_content '技術部員テスト'
         expect(page).to have_content '電源ユニット全交換'
         expect(page).to have_content '受注済'
       end

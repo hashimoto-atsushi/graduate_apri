@@ -226,6 +226,7 @@ ja:
       products: '製品情報'
       parts: '保守パーツ情報'
       users: '社員情報'
+      letter_opner: 'メール送信確認へ'
     allsupports:
       shows: '詳細'
       to_show: '詳細'
