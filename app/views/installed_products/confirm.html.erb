@@ -25,13 +25,13 @@
   <P><%= t('view.installed_products.serial_number') %>: <%= @installed_product.serial_number %></P>
 </div>
 <div>
-  <P><%= t('view.installed_products.installed_date') %>: <%= @installed_product.installed_date %></P>
+  <P><%= t('view.installed_products.installed_date') %>: <%= @installed_product.installed_date.strftime("%Y年%m月%d日")  %></P>
 </div>
 <div>
   <P><%= t('view.installed_products.discount_price') %>: <%= @installed_product.discount_price %></P>
 </div>
 <div>
- <%= form.submit "submit"%>
+ <%= form.submit t('view.installed_products.confirm_to_submit')%>
 </div>
 <div>
   <%= form.submit 'back', name: 'back'%>

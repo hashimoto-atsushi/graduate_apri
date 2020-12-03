@@ -22,9 +22,12 @@ RSpec.describe '納入機器 管理機能', type: :system do
         select '1', from: 'installed_product[installed_date(3i)]'
         fill_in 'installed_product_discount_price', with: '1480'
         click_on '登録する'
+        click_on '登録する'
         expect(page).to have_content '顧客1'
         expect(page).to have_content '製品おひつじ'
         expect(page).to have_content '12345678'
+        expect(page).to have_content '2025年05月05日'
+        expect(page).to have_content '2027年07月07日'
       end
     end
   end

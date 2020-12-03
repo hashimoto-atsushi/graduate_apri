@@ -14,11 +14,19 @@
 </p>
 <p>
   <strong><%= t('view.installed_products.installed_date') %>:</strong>
-  <%= @installed_product.installed_date %>
+  <%= @installed_product.installed_date.strftime("%Y年%m月%d日")  %>
 </p>
 <p>
   <strong><%= t('view.installed_products.discount_price') %>:</strong>
   <%= @installed_product.discount_price %>
+</p>
+<p>
+  <strong><%= t('view.products.end_of_production') %>:</strong>
+  <%= @installed_product.product.end_of_production.strftime("%Y年%m月%d日")  %>
+</p>
+<p>
+  <strong><%= t('view.products.end_of_service') %>:</strong>
+  <%= @installed_product.product.end_of_service.strftime("%Y年%m月%d日")  %>
 </p>
 
 <%= link_to t('view.installed_products.edit'), edit_installed_product_path(@installed_product) %> |

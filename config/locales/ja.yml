@@ -302,6 +302,7 @@ ja:
       delete: '削除'
       to_new: '新規作成へ'
       to_index: '一覧へ'
+      confirm_to_submit: '登録する'
     installed_products:
       serial_number: 'シリアル番号'
       installed_date: '納入日'
@@ -311,6 +312,7 @@ ja:
       delete: '削除'
       to_new: '新規作成へ'
       to_index: '一覧へ'
+      confirm_to_submit: '登録する'
     products:
       name: '製品名'
       type_name: '型式'

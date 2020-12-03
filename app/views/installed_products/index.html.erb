@@ -10,6 +10,8 @@
       <th><%= t('view.installed_products.serial_number') %></th>
       <th><%= sort_link @search, :installed_date, t('view.installed_products.installed_date') %></th>
       <th><%= t('view.installed_products.discount_price') %></th>
+      <th><%= t('view.products.end_of_production') %></th>
+      <th><%= t('view.products.end_of_service') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,8 +22,10 @@
         <td><%= installed_product.customer.name %></td>
         <td><%= installed_product.product.name %></td>
         <td><%= installed_product.serial_number %></td>
-        <td><%= installed_product.installed_date %></td>
+        <td><%= installed_product.installed_date.strftime("%Y年%m月%d日") %></td>
         <td><%= installed_product.discount_price %></td>
+        <td><%= installed_product.product.end_of_production.strftime("%Y年%m月%d日")  %></td>
+        <td><%= installed_product.product.end_of_service.strftime("%Y年%m月%d日")  %></td>
         <td><%= link_to t('view.parts.show'), installed_product %></td>
         <% if sales_and_admin_display %>
           <td><%= link_to t('view.parts.edit'), edit_installed_product_path(installed_product) %></td>
