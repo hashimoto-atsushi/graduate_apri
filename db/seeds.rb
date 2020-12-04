@@ -113,7 +113,7 @@ end
       {
         user_id: n + 3,
         customer_number: n + 17,
-        name: "顧客#{n + 11}",
+        name: "顧客#{n + 17}",
         phone_number: "456456456",
         profession: "業種B#{n + 1}",
         customer_in_charge: "お客様A#{n + 17}",
@@ -209,6 +209,42 @@ end
         serial_number: n + 44444,
         installed_date: "2016-6-#{n + 1}",
         discount_price:1500,
+      }
+    ]
+  )
+end
+
+#support_program
+10.times do |n|
+  SupportProgram.create!(
+    [
+      {
+        customer_id: n + 1,
+        user_id: n + 13,
+        title_number: n + 1,
+        title: "保守案件#{n + 1}",
+        main_work: "パーツの交換です#{n + 1}",
+        planed_or_argent: 0,
+        order_status: true,
+        kick_off_date: "2020-1-#{n + 1}",
+        closed: 0,
+      }
+    ]
+  )
+end
+10.times do |n|
+  SupportProgram.create!(
+    [
+      {
+        customer_id: n + 11,
+        user_id: n + 13,
+        title_number: n + 11,
+        title: "保守案件#{n + 11}",
+        main_work: "電源ユニットの交換です#{n + 11}",
+        planed_or_argent: 1,
+        order_status: false,
+        kick_off_date: "2020-1-#{n + 11}",
+        closed: 0,
       }
     ]
   )

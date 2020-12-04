@@ -16,6 +16,7 @@
       <th><%= t('view.detail_reports.results') %></th>
       <th><%= t('view.detail_reports.evaluation') %></th>
       <th><%= t('view.detail_reports.evaluation_details') %></th>
+      <th><%= t('view.support_programs.user') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -34,6 +35,7 @@
         <td><%= detail_report.results %></td>
         <td><%= detail_report.evaluation %></td>
         <td><%= detail_report.evaluation_details %></td>
+        <td><%= detail_report.support_program.user.name %></td>
         <td><%= link_to t('view.detail_reports.show'), detail_report %></td>
         <% if current_user.permission %>
           <td><%= link_to t('view.detail_reports.delete'), detail_report, method: :delete, data: { confirm: '削除しますか?' } %></td>
