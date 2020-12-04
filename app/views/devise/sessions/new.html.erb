@@ -2,6 +2,11 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
+    <%= f.label t('view.users.number')%><br />
+    <%= f.number_field :employee_number, autofocus: true, autocomplete: "employee_number" %>
+  </div>
+  
+  <div class="field">
     <%= f.label t('view.users.email')%><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
