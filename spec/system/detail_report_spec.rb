@@ -10,11 +10,8 @@ RSpec.describe '作業報告 登録管理機能', type: :system do
     FactoryBot.create(:product)
     FactoryBot.create(:installed_product)
     FactoryBot.create(:support_program)
-    log_in
-  end
-
-  after(:all) do
     ActionMailer::Base.deliveries.clear
+    log_in
   end
 
   describe '作業報告 登録管理機能' do

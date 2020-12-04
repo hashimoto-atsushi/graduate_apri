@@ -28,28 +28,28 @@
   <P><%= t('view.support_programs.title') %>: <%= @boss_check_comment.detail_report.support_program.title %></P>
 </div>
 <div>
-  <P><%= t('view.boss_check_comments.confirmation')%>: <%= @boss_check_comment.confirmation %></P>
+  <P><%= t('view.boss_check_comments.confirmation') %>: <%= @boss_check_comment.confirmation %></P>
 </div>
 <div>
-  <P><%= t('view.boss_check_comments.confirmation_date')%>: <%= @boss_check_comment.confirmation_date %></P>
+  <P><%= t('view.boss_check_comments.confirmation_date') %>: <%= @boss_check_comment.confirmation_date %></P>
 </div>
 <div>
-  <P><%= t('view.boss_check_comments.positive_comment')%>: <%= @boss_check_comment.positive_comment %></P>
+  <P><%= t('view.boss_check_comments.positive_comment') %>: <%= @boss_check_comment.positive_comment %></P>
 </div>
 <div>
-  <P><%= t('view.boss_check_comments.negative_comment')%>: <%= @boss_check_comment.negative_comment %></P>
+  <P><%= t('view.boss_check_comments.negative_comment') %>: <%= @boss_check_comment.negative_comment %></P>
 </div>
 <div>
-  <P><%= t('view.boss_check_comments.assistance')%>: <%= @boss_check_comment.assistance %></P>
+  <P><%= t('view.boss_check_comments.assistance') %>: <%= @boss_check_comment.assistance %></P>
 </div>
 <div>
-  <P><%= t('view.boss_check_comments.questions')%>: <%= @boss_check_comment.questions %></P>
+  <P><%= t('view.boss_check_comments.questions') %>: <%= @boss_check_comment.questions %></P>
 </div>
 <div>
-  <P><%= t('view.boss_check_comments.report_to_sales')%>: <%= @boss_check_comment.report_to_sales %></P>
+  <P><%= t('view.boss_check_comments.report_to_sales') %>: <%= @boss_check_comment.report_to_sales %></P>
 </div>
 <div>
- <%= form.submit "submit"%>
+ <%= form.submit t('view.boss_check_comments.confirm_to_submit') %>
 </div>
 <div>
   <%= link_to 'back', new_support_program_detail_report_boss_check_comment_path, name: 'back'%>
