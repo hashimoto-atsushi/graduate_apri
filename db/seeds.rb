@@ -285,3 +285,67 @@ end
     ]
   )
 end
+
+#boss_check_comment
+10.times do |n|
+  BossCheckComment.create!(
+    [
+      {
+        detail_report_id: n + 1,
+        confirmation: true,
+        confirmation_date: "2020-02-#{n + 1}",
+        positive_comment: "無事に作業終了ありがとうごいました#{n + 1}。",
+        negative_comment: "特にありませんが、報告をもう少し早めにお願いします#{n + 1}。",
+        assistance: "この調子でよろしくお願いします#{n + 1}。",
+        questions: "特にありません#{n + 1}。",
+        report_to_sales: "営業さん、問題無く全工程を終了しました#{n + 1}。",
+      }
+    ]
+  )
+end
+10.times do |n|
+  BossCheckComment.create!(
+    [
+      {
+        detail_report_id: n + 11,
+        confirmation: true,
+        confirmation_date: "2020-02-#{n + 11}",
+        positive_comment: "了解です。不良部品の検査をお願いします#{n + 11}。",
+        negative_comment: "できるだけ、動作確認をして、先方にはきちんと原因の説明をさしあげましょう#{n + 11}。",
+        assistance: "今後は、持ち出し時に、動作確認をお願いします#{n + 11}。",
+        questions: "営業には私から連絡しておきますが、いいですか？ 明日までに私に声をかけてください#{n + 11}。",
+        report_to_sales: "営業さん、保守パーツに初期不良がありました。先方への対応、相談させてください#{n + 1}。",
+      }
+    ]
+  )
+end
+
+# sales_check_comment
+10.times do |n|
+  SalesCheckComment.create!(
+    [
+      {
+        boss_check_comment_id: n + 1,
+        confirmation: true,
+        confirmation_date: "2020-02-#{n + 5}",
+        comments: "報告ありがとうございまいた。明日にでも先方に挨拶に伺いします#{n + 1}。",
+        discussion_possibility: false,
+        matter_closed: true,
+      }
+    ]
+  )
+end
+10.times do |n|
+  SalesCheckComment.create!(
+    [
+      {
+        boss_check_comment_id: n + 11,
+        confirmation: true,
+        confirmation_date: "2020-02-#{n + 16}",
+        comments: "了解です。正確なご報告ありがとうございます。一度、先方への説明を含め相談させてください#{n + 1}。",
+        discussion_possibility: true,
+        matter_closed: true,
+      }
+    ]
+  )
+end
