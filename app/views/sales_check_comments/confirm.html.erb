@@ -40,6 +40,6 @@
  <%= form.submit t('view.sales_check_comments.confirm_to_submit') %>
 </div>
 <div>
-  <%= form.submit 'back', name: 'back'%>
+  <%= link_to t('view.sales_check_comments.back'), new_support_program_detail_report_boss_check_comment_sales_check_comment_path, name: 'back'%>
 </div>
 <% end %>

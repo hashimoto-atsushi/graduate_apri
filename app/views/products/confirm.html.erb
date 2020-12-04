@@ -44,9 +44,9 @@
   <P><%= t('view.products.end_of_service') %>: <%= @product.end_of_service %></P>
 </div>
 <div>
- <%= form.submit "submit"%>
+ <%= form.submit t('view.products.confirm_to_submit') %>
 </div>
 <div>
-  <%= form.submit 'back', name: 'back'%>
+  <%= form.submit t('view.products.back'), name: 'back'%>
 </div>
 <% end %>
