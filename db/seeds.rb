@@ -82,7 +82,7 @@ end
         name: "顧客#{n + 1}",
         phone_number: "123123121",
         profession: "業種A#{n + 1}",
-        customer_in_charge: "お客様A#{n + 1}",
+        customer_in_charge: "お客#{n + 1}様",
         department: '技術部',
         position: '一般',
       }
@@ -99,8 +99,8 @@ end
         name: "顧客#{n + 9}",
         phone_number: "456456456",
         profession: "業種B#{n + 1}",
-        customer_in_charge: "お客様A#{n + 9}",
-        department: '工作部',
+        customer_in_charge: "お客様#{n + 9}様",
+        department: '設備管理部',
         position: '一般',
       }
     ]
@@ -116,7 +116,7 @@ end
         name: "顧客#{n + 17}",
         phone_number: "456456456",
         profession: "業種B#{n + 1}",
-        customer_in_charge: "お客様A#{n + 17}",
+        customer_in_charge: "お客様#{n + 17}様",
         department: '工作部',
         position: '一般',
       }
@@ -176,8 +176,8 @@ end
   InstalledProduct.create!(
     [
       {
-        product_id: n + 5,
-        customer_id: n + 5,
+        product_id: n + 6,
+        customer_id: n + 6,
         serial_number: n + 22222,
         installed_date: "2017-7-#{n + 1}",
         discount_price: 5000,
@@ -190,8 +190,8 @@ end
   InstalledProduct.create!(
     [
       {
-        product_id: n + 10,
-        customer_id: n + 10,
+        product_id: n + 11,
+        customer_id: n + 11,
         serial_number: n + 33333,
         installed_date: "2019-9-#{n + 1}",
         discount_price: 7000,
@@ -204,8 +204,8 @@ end
   InstalledProduct.create!(
     [
       {
-        product_id: n + 15,
-        customer_id: n + 15,
+        product_id: n + 16,
+        customer_id: n + 16,
         serial_number: n + 44444,
         installed_date: "2016-6-#{n + 1}",
         discount_price:1500,
@@ -245,6 +245,42 @@ end
         order_status: false,
         kick_off_date: "2020-1-#{n + 11}",
         closed: 0,
+      }
+    ]
+  )
+end
+
+#detail_report
+10.times do |n|
+  DetailReport.create!(
+    [
+      {
+        support_program_id: n + 1,
+        ordered_date: "2019-12-#{n + 1}",
+        ordered_price: 2000 + n,
+        actual_kickoff_date: "2020-01-#{n + 1}",
+        actual_complete_date: "2019-01-#{n + 10}",
+        service_detail: "パーツの交換作業#{n + 1}",
+        results: "問題無く全工程を終了#{n + 1}",
+        evaluation: 0,
+        evaluation_details: "お客様も安心して立ち会っていただき、最終動作も満足していただきました#{n + 1}。",
+      }
+    ]
+  )
+end
+10.times do |n|
+  DetailReport.create!(
+    [
+      {
+        support_program_id: n + 11,
+        ordered_date: "2019-11-#{n + 1}",
+        ordered_price: 4000 + n,
+        actual_kickoff_date: "2020-02-#{n + 1}",
+        actual_complete_date: "2020-02-#{n + 20}",
+        service_detail: "電源ユニットの交換作業#{n + 1}",
+        results: "一部、部品に不良があり、別電源ユニットで対応しました#{n + 1}。",
+        evaluation: 1,
+        evaluation_details: "作業時間が延びてしまったことに関して、ご指摘をうけました#{n + 1}。",
       }
     ]
   )
