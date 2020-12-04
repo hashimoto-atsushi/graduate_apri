@@ -73,11 +73,11 @@ end
 end
 
 #Customerデータ
-10.times do |n|
+8.times do |n|
   Customer.create!(
     [
       {
-        user_id: n + 1,
+        user_id: n + 3,
         customer_number: n + 1,
         name: "顧客#{n + 1}",
         phone_number: "123123121",
@@ -90,16 +90,33 @@ end
   )
 end
 
-10.times do |n|
+8.times do |n|
   Customer.create!(
     [
       {
-        user_id: n + 1,
-        customer_number: n + 10,
-        name: "顧客#{n + 10}",
+        user_id: n + 3,
+        customer_number: n + 9,
+        name: "顧客#{n + 9}",
         phone_number: "456456456",
         profession: "業種B#{n + 1}",
-        customer_in_charge: "お客様A#{n + 10}",
+        customer_in_charge: "お客様A#{n + 9}",
+        department: '工作部',
+        position: '一般',
+      }
+    ]
+  )
+end
+
+4.times do |n|
+  Customer.create!(
+    [
+      {
+        user_id: n + 3,
+        customer_number: n + 17,
+        name: "顧客#{n + 11}",
+        phone_number: "456456456",
+        profession: "業種B#{n + 1}",
+        customer_in_charge: "お客様A#{n + 17}",
         department: '工作部',
         position: '一般',
       }
@@ -136,6 +153,62 @@ end
         release_date: "2017-2-#{n + 1}",
         end_of_production: "2024-1-#{n + 1}",
         end_of_service: "2027-1-#{n + 1}",
+      }
+    ]
+  )
+end
+#Installed_products
+  5.times do |n|
+    InstalledProduct.create!(
+      [
+        {
+          product_id: n + 1,
+          customer_id: n + 1,
+          serial_number: n + 11111,
+          installed_date: "2015-1-#{n + 1}",
+          discount_price: 3000,
+        }
+      ]
+    )
+end
+
+5.times do |n|
+  InstalledProduct.create!(
+    [
+      {
+        product_id: n + 5,
+        customer_id: n + 5,
+        serial_number: n + 22222,
+        installed_date: "2017-7-#{n + 1}",
+        discount_price: 5000,
+      }
+    ]
+  )
+end
+
+5.times do |n|
+  InstalledProduct.create!(
+    [
+      {
+        product_id: n + 10,
+        customer_id: n + 10,
+        serial_number: n + 33333,
+        installed_date: "2019-9-#{n + 1}",
+        discount_price: 7000,
+      }
+    ]
+  )
+end
+
+5.times do |n|
+  InstalledProduct.create!(
+    [
+      {
+        product_id: n + 15,
+        customer_id: n + 15,
+        serial_number: n + 44444,
+        installed_date: "2016-6-#{n + 1}",
+        discount_price:1500,
       }
     ]
   )
