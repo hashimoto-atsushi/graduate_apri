@@ -226,7 +226,6 @@ ja:
       products: '製品情報'
       parts: '保守パーツ情報'
       users: '社員情報'
-      letter_opner: 'メール送信確認へ'
     allsupports:
       shows: '詳細'
       to_show: '詳細'
@@ -290,6 +289,7 @@ ja:
       delete: '削除'
       to_sales_check_comment: '営業担当へ報告する'
       to_index: 一覧へ
+      confirm_to_submit: '登録する'
     customers:
       customer_number: '顧客番号'
       customer: '顧客名'

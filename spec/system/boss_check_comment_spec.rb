@@ -1,6 +1,6 @@
 require 'rails_helper'
-#カタログ設計 4 & 5
-RSpec.describe '作業報告 登録管理機能', type: :system do
+#カタログ設計 7
+RSpec.describe '上長確認 登録管理機能', type: :system do
 
   before do
     FactoryBot.create(:sales_user)
@@ -28,7 +28,7 @@ RSpec.describe '作業報告 登録管理機能', type: :system do
         select '26', from: 'boss_check_comment[confirmation_date(3i)]'
         fill_in 'boss_check_comment_positive_comment', with: '内容了解しました。安全に作業していただきありがとうございます。'
         fill_in 'boss_check_comment_negative_comment', with: '特にはありませんが、できるだけ早めに報告を上げていだけると幸いです。'
-        fill_in 'boss_check_comment_assistance', with: 'この調子でよろしくお願いします。'
+        fill_in 'boss_check_comment_assistance', with: 'この調子でよろしくお願いします。営業部には私から連絡しておきます。'
         fill_in 'boss_check_comment_questions', with: '電源ユニットの出力はだいぶ下がっていましたか？'
         fill_in 'boss_check_comment_report_to_sales', with: '営業部員テストさんへ、保守案件Aの作業が問題なく終了しました。お客様が今後のサポートに関してお話をされたいとのことです。一度、相談させてください。'
         click_on '登録する'
@@ -41,7 +41,7 @@ RSpec.describe '作業報告 登録管理機能', type: :system do
         visit boss_check_comments_path
         expect(page).to have_content '内容了解しました。安全に作業していただきありがとうございます。'
         expect(page).to have_content '特にはありませんが、できるだけ早めに報告を上げていだけると幸いです。'
-        expect(page).to have_content 'この調子でよろしくお願いします。'
+        expect(page).to have_content 'この調子でよろしくお願いします。営業部には私から連絡しておきます。'
         expect(page).to have_content '電源ユニットの出力はだいぶ下がっていましたか？'
         expect(page).to have_content '営業部員テストさんへ、保守案件Aの作業が問題なく終了しました。お客様が今後のサポートに関してお話をされたいとのことです。一度、相談させてください。'
       end
