@@ -341,7 +341,7 @@ end
       {
         boss_check_comment_id: n + 11,
         confirmation: true,
-        confirmation_date: "2020-02-#{n + 16}",
+        confirmation_date: "2020-02-#{n + 15}",
         comments: "了解です。正確なご報告ありがとうございます。一度、先方への説明を含め相談させてください#{n + 1}。",
         discussion_possibility: true,
         matter_closed: true,
