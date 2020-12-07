@@ -9,7 +9,10 @@
   </head>
   <header class="">
     <div class="header-wrap">
-      <nav class="navbar-navbar-default" role="navigation">
+      <div class="top">
+        <h1>TEST</h1>
+      </div>
+      <nav class="navbar fixed-top navbar-dark bg-primary" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <div class="navbar-brand">
@@ -19,12 +22,12 @@
           </div>
             <ul class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
-                <li class=""><%= link_to t('view.layouts.to_top'), top_index_path %></li>
-                <li><%= link_to current_user.name + t('view.layouts.my_page'), user_path(current_user.id) %></li>
-                <li><%= link_to t('view.layouts.logout'), destroy_user_session_path, method: :delete %></li>
+                <li class=""><%= link_to t('view.layouts.to_top'), top_index_path, class:"bg-primary" %></li>
+                <li><%= link_to current_user.name + t('view.layouts.my_page'), user_path(current_user.id), class:"bg-primary" %></li>
+                <li><%= link_to t('view.layouts.logout'), destroy_user_session_path, method: :delete, class:"bg-primary"  %></li>
               <% end %>
               <% if user_signed_in? && current_user.permission %>
-                <li><%= link_to t('view.layouts.admin'), rails_admin_path %></li>
+                <li><%= link_to t('view.layouts.admin'), rails_admin_path, class:"bg-primary"  %></li>
               <% end %>
             </div>
         </div>
