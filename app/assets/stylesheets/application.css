@@ -23,3 +23,16 @@
 .to-signup {
   margin-left: 15px;
 }
+
+.login-font-size {
+  font-size: 2rem;
+}
+
+.side_bar{
+width:250px;
+min-height:500px;
+height:auto;
+background-color:#009b9f;
+float:left;
+margin-top:10px;
+}

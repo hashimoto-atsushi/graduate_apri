@@ -27,7 +27,14 @@
     </div>
   </header>
   <body>
-    <%= yield %>
+    <div class="content_wrapper">
+      <div class="side_bar">
+        <%= render 'layouts/side_bar'%>
+      </div>
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
   </body>
   <footer>
 
