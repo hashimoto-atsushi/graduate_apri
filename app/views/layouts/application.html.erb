@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TESTapp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>Apri for Graduation</title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-<header>
-  <div>
-    <% if user_signed_in? %>
-    <%= link_to t('view.layouts.to_top'), top_index_path%>
-    <%= link_to t('view.layouts.logout'), destroy_user_session_path, method: :delete %>
-    <%= link_to current_user.name + t('view.layouts.my_page'), user_path(current_user.id) %>
-    <% end %>
-    <% if user_signed_in? && current_user.permission %>
-    <%= link_to t('view.layouts.admin'), rails_admin_path %>
-    <% end %>
-  </div>
-</header>
+  <header class="">
+    <div class="">
+      <nav class="navbar-navbar-default" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-right">
+              <% if user_signed_in? %>
+                <li class=""><%= link_to t('view.layouts.to_top'), top_index_path %></li>
+                <li><%= link_to current_user.name + t('view.layouts.my_page'), user_path(current_user.id) %></li>
+                <li><%= link_to t('view.layouts.logout'), destroy_user_session_path, method: :delete %></li>
+              <% end %>
+              <% if user_signed_in? && current_user.permission %>
+                <li><%= link_to t('view.layouts.admin'), rails_admin_path %></li>
+              <% end %>
+            </div>
+        </div>
+      </nav>
+      <h1 class="page-header"><%= full_title(yield(:title)) %></h1>
+    </div>
+  </header>
   <body>
     <%= yield %>
   </body>

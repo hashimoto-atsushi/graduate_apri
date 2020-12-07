@@ -1,5 +1,4 @@
-<h1>社員情報 一覧</h1>
-
+<h1><% provide(:title,"社員情報 一覧") %></h1>
 <%= search_form_for @search do |form| %>
 <div class="field">
   <%= form.label :employee_number_eq, "社員番号 検索: " %>

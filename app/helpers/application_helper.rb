@@ -21,4 +21,13 @@ module ApplicationHelper
     current_user == @boss_check_comment.detail_report.support_program.customer.user || current_user.permission
   end
 
+  def full_title(page_title="")
+    base_title = ""
+    if page_title.empty?
+      base_title
+    else
+      page_title
+    end
+  end
+
 end
