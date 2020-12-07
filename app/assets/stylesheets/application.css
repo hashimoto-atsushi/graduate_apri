@@ -20,7 +20,13 @@
   margin-right: 0px;
 }
 
-.to-signup {
+.to_registration-btn-position {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.to_login-btn-position {
+  margin-top: 20px;
   margin-left: 15px;
 }
 
