@@ -14,7 +14,19 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  width: 100%;
+  height: 80px;
+}
 
+.navbar-brand {
+  font-size: 2.5rem;
+}
+
+.logo {
+  width: 200px;
+  heigth: 150px;
+}
 .checkbox-place {
   margin-left: 30px;
   margin-right: 0px;
