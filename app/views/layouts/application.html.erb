@@ -29,7 +29,9 @@
   <body>
     <div class="content_wrapper">
       <div class="side_bar">
+        <% if user_signed_in? %>
         <%= render 'layouts/side_bar' %>
+        <% end %>
       </div>
       <div class="content">
         <%= yield %>
