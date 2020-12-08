@@ -357,6 +357,7 @@ ja:
       to_new: '新規作成へ'
       confirm_to_submit: '登録する'
       back: '戻る'
+      search: '検索する'
     users:
       id: 'ID'
       number: '社員番号'
