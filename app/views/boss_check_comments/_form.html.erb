@@ -111,23 +111,24 @@
     <%= form.text_area :negative_comment, class: "form-control" %>
   </div>
 </div>
-
-  <div class="field">
+<div class="row">
+  <div class="field form-group col-xs-12">
     <%= form.label t('view.boss_check_comments.assistance'), class:"control-label"  %>
     <%= form.text_area :assistance, class: "form-control" %>
   </div>
+</div>
 
-  <div class="field">
+  <div class="field form-group col-xs-12">
     <%= form.label t('view.boss_check_comments.questions'), class:"control-label"  %>
     <%= form.text_area :questions, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group col-xs-12">
     <%= form.label t('view.boss_check_comments.report_to_sales'), class:"control-label"  %>
     <%= form.text_area :report_to_sales, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
