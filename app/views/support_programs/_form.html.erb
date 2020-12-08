@@ -2,7 +2,6 @@
   <% if support_program.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(support_program.errors.count, "error") %> prohibited this support_program from being saved:</h2>
-
       <ul>
       <% support_program.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -30,30 +29,31 @@
     <%= form.select :user_id, User.all.map{|o| [o.name, o.id]}, class:"form-control" %>
   </div>
 </div>
-  <div class="field form-group col-xs-3">
+<div class="row">
+  <div class="field form-group col-xs-12">
     <%= form.label t('view.support_programs.main_work'), class:"control-label"  %>
-    <%= form.text_area :main_work %>
+    <%= form.text_area :main_work, class:"form-control" %>
   </div>
+</div>
 <div class="row">
   <div class="field form-group col-xs-3">
     <%= form.label t('view.support_programs.planed_or_argent'), class:"control-label" %><br />
     <%= form.select :planed_or_argent, SupportProgram.planed_or_argents.keys.to_a, {}, autofocus: true, autocomplete: "planed_or_argent" %>
   </div>
-  <div class="field">
+  <div class="field form-group col-xs-3">
     <%= form.label t('view.support_programs.order_status') %><br />
-    <%= form.select :order_status, {"受注済": "true", "未受注": "false"}, autofocus: true, autocomplete: "order_status" %>
+    <%= form.select :order_status, {"受注済": "true", "未受注": "false"}, autofocus: true, autocomplete: "order_status", class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group col-xs-3">
     <%= form.label t('view.support_programs.kick_off_date') %>
-    <%= form.date_select :kick_off_date %>
+    <%= form.date_select :kick_off_date, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group col-xs-3">
     <%= form.label t('view.support_programs.closed') %><br />
-    <%= form.select :closed, SupportProgram.closeds.keys.to_a, {}, autofocus: true, autocomplete: "closed" %>
+    <%= form.select :closed, SupportProgram.closeds.keys.to_a, {}, autofocus: true, autocomplete: "closed", class:"form-control" %>
   </div>
 </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
