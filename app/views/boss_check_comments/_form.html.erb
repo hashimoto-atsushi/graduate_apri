@@ -2,7 +2,6 @@
   <% if boss_check_comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(boss_check_comment.errors.count, "error") %> prohibited this boss_check_comment from being saved:</h2>
-
       <ul>
       <% boss_check_comment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,107 +9,122 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
+<div class="row">
+  <div class="col-xs-3">
     <p><%= t('view.support_programs.title_number') %>:<%= @detail_report.support_program.title_number %></p>
   </div>
-  <div>
+  <div class="col-xs-3">
     <p><%= t('view.support_programs.customer') %>:<%= @detail_report.support_program.customer.name %></p>
   </div>
-  <div>
+  <div class="col-xs-3">
     <p><%= t('view.support_programs.title') %>:<%= @detail_report.support_program.title %></p>
   </div>
-  <div>
+  <div class="col-xs-3">
     <p><%= t('view.support_programs.user') %>:<%= @detail_report.support_program.user.name %></p>
   </div>
-  <div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
     <p><%= t('view.support_programs.main_work') %>:<%= @detail_report.support_program.main_work %></p>
   </div>
-  <div>
+  <div class="col-xs-3">
     <p><%= t('view.support_programs.planed_or_argent') %>:<%= @detail_report.support_program.planed_or_argent %></p>
-  </div>
-  <div>
-    <p><%= t('view.support_programs.order_status') %>:<%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
-  </div>
+  </div class="col-xs-3">
+</div>
   <!-- <div>
     <p>Supportprogram:<%= @detail_report.support_program.title %></p>
   </div> -->
-  <div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><%= t('view.support_programs.order_status') %>:<%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
+  </div>
+  <div class="col-xs-3">
     <p><%= t('view.detail_reports.ordered_date') %>:<%= @detail_report.ordered_date %></p>
   </div>
-  <div>
+  <div class="col-xs-3">
     <p><%= t('view.detail_reports.ordered_price') %>:<%= @detail_report.ordered_price %></p>
   </div>
-    <div>
-      <p><%= t('view.support_programs.kick_off_date') %>:<%= @detail_report.support_program.kick_off_date %></p>
-    </div>
-  <div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><%= t('view.support_programs.kick_off_date') %>:<%= @detail_report.support_program.kick_off_date %></p>
+  </div>
+  <div class="col-xs-3">
     <p><%= t('view.detail_reports.actual_kickoff_date') %>:<%= @detail_report.actual_kickoff_date %></p>
   </div>
-  <div>
+  <div class="col-xs-3">
     <p><%= t('view.support_programs.closed') %>:<%= @detail_report.support_program.closed %></p>
   </div>
-  <div>
+  <div class="col-xs-3">
     <p><%= t('view.detail_reports.actual_complete_date') %>:<%= @detail_report.actual_complete_date %></p>
   </div>
-  <div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
     <p><%= t('view.detail_reports.service_detail') %>:<%= @detail_report.service_detail %></p>
   </div>
-  <div>
+</div>
+  <!-- <div>
     <p><%= t('view.detail_reports.photo') %>:<%= @detail_report.photo %></p>
-  </div>
-  <div>
+  </div> -->
+<div class="row">
+  <div class="col-xs-12">
     <p><%= t('view.detail_reports.results') %>:<%= @detail_report.results %></p>
   </div>
-  <div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
     <p><%= t('view.detail_reports.evaluation') %>:<%= @detail_report.evaluation %></p>
   </div>
-  <div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
     <p><%= t('view.detail_reports.evaluation_details') %>:<%= @detail_report.evaluation_details %></p>
   </div>
-  <div>
+</div>
+  <!-- <div>
     <p><%= t('view.support_programs.user') %>:<%= @detail_report.support_program.user.name %></p>
+  </div> -->
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.detail_reports.id'), class:"control-label" %>
+    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]},{}, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.boss_check_comments.confirmation'), class:"control-label" %><br />
+    <%= form.select :confirmation, {"承認済": "true", "未承認": "false"},{}, autofocus: true, autocomplete: "confirmation", class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.boss_check_comments.confirmation_date'), class:"control-label" %>
+    <%= form.date_field :confirmation_date, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-12">
+    <%= form.label t('view.boss_check_comments.positive_comment'), class:"control-label", class:"control-label"  %>
+    <%= form.text_area :positive_comment, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-12">
+    <%= form.label t('view.boss_check_comments.negative_comment'), class:"control-label"  %>
+    <%= form.text_area :negative_comment, class: "form-control" %>
+  </div>
+</div>
+
+  <div class="field">
+    <%= form.label t('view.boss_check_comments.assistance'), class:"control-label"  %>
+    <%= form.text_area :assistance, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label t('view.detail_reports.id') %>
-    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]} %>
+    <%= form.label t('view.boss_check_comments.questions'), class:"control-label"  %>
+    <%= form.text_area :questions, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label t('view.boss_check_comments.confirmation') %><br />
-    <%= form.select :confirmation, {"承認済": "true", "未承認": "false"}, autofocus: true, autocomplete: "confirmation" %>
-  </div>
-
-
-  <div class="field">
-    <%= form.label t('view.boss_check_comments.confirmation_date') %>
-    <%= form.date_select :confirmation_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.boss_check_comments.positive_comment') %>
-    <%= form.text_area :positive_comment %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.boss_check_comments.negative_comment') %>
-    <%= form.text_area :negative_comment %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.boss_check_comments.assistance') %>
-    <%= form.text_area :assistance %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.boss_check_comments.questions') %>
-    <%= form.text_area :questions %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.boss_check_comments.report_to_sales') %>
-    <%= form.text_area :report_to_sales %>
+    <%= form.label t('view.boss_check_comments.report_to_sales'), class:"control-label"  %>
+    <%= form.text_area :report_to_sales, class: "form-control" %>
   </div>
 
   <div class="actions">
