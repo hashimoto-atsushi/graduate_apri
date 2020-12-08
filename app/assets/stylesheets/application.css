@@ -14,10 +14,6 @@
  *= require_tree .
  *= require_self
  */
-.container {
-  width: 95%;
-  height: 60px;
-}
 
 .navbar-brand {
   font-size: 2.5rem;

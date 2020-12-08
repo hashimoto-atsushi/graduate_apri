@@ -3,51 +3,50 @@
 
 <%= search_form_for @search do |form| %>
 <div class="content-wrapper">
-  <div class="row">
-    <div class="field form-group col-xs-4 box-1">
-      <%= form.label :title_number_eq, "保守案件番号 検索:", class:"control-label" %>
-      <%= form.text_field :title_number_eq, class:"form-control" %>
+  <div class="container">
+    <div class="upper-box">
+      <div class="row">
+        <div class="field form-group col-xs-3">
+          <%= form.label :title_number_eq, "保守案件番号 検索:", class:"control-label" %>
+          <%= form.text_field :title_number_eq, class:"form-control" %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :customer_name_cont, "顧客名 検索:", class:"control-label"  %>
+          <%= form.text_field :customer_name_cont, class:"form-control" %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :title_cont, "保守案件名 検索:", class:"control-label"  %>
+          <%= form.text_field :title_cont, class:"form-control" %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :user_name_cont, "担当者名 検索:", class:"control-label"  %>
+          <%= form.text_field :user_name_cont, class:"form-control" %>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="field form-group col-xs-4 box-1">
-      <%= form.label :customer_name_cont, "顧客名 検索:", class:"control-label"  %>
-      <%= form.text_field :customer_name_cont, class:"form-control" %>
+    <div class="lower-box">
+      <div class="row">
+        <div class="field form-group col-xs-2 box-2">
+          <%= form.label :planed_or_argent_eq, "計画/緊急 検索: ", class:"control-label"  %>
+          <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field form-group col-xs-2 box-2">
+          <%= form.label :order_status_eq, "受注状況 検索: ", class:"control-label"  %>
+          <%= form.select :order_status_eq, [['受注済', true], ['未受注', false]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field form-group col-xs-2 box-2">
+          <%= form.label :closed_eq, "案件完了状態 検索: ", class:"control-label"  %>
+          <%= form.select :closed_eq, [['未完了', 0], ['完了', 1]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="field form-group col-xs-4 box-1">
-      <%= form.label :title_cont, "保守案件名 検索:", class:"control-label"  %>
-      <%= form.text_field :title_cont, class:"form-control" %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="field form-group col-xs-4 box-1">
-      <%= form.label :user_name_cont, "担当者名 検索:", class:"control-label"  %>
-      <%= form.text_field :user_name_cont, class:"form-control" %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="field form-group col-xs-4 box-1">
-      <%= form.label :planed_or_argent_eq, "計画/緊急 検索: ", class:"control-label"  %>
-      <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
-      {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="field form-group col-xs-2 box-2">
-      <%= form.label :order_status_eq, "受注状況 検索: ", class:"control-label"  %>
-      <%= form.select :order_status_eq, [['受注済', true], ['未受注', false]],
-      {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="field form-group col-xs-2 box-2">
-      <%= form.label :closed_eq, "案件完了状態 検索: ", class:"control-label"  %>
-      <%= form.select :closed_eq, [['未完了', 0], ['完了', 1]],
-      {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
-    </div>
-  </div>
   <div class="action"><%= form.submit "Search" %></div>
   <% end %>
 
