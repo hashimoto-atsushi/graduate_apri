@@ -36,13 +36,14 @@
           <th><%= t('view.users.email') %></th>
           <th><%= t('view.users.cellphone_number') %></th>
           <th><%= t('view.users.stay_or_left') %></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
         <% @users.each do |user| %>
         <tr>
-          <td><%= user.id %></td>
-          <td><%= user.employee_number %></td>
+          <td class="text-center"><%= user.id %></td>
+          <td class="text-center"><%= user.employee_number %></td>
           <td><%= user.name %></td>
           <td><%= user.department %></td>
           <td><%= user.position %></td>
@@ -50,14 +51,15 @@
           <td><%= user.email %></td>
           <td><%= user.cellphone_number %></td>
           <td><%= user.stay_or_left %></td>
-          <td><%= link_to t('view.users.show'), user_path(user.id) %></td>
+          <td><%= link_to t('view.users.show'), user_path(user.id), class:"btn btn-info btn-xs" %></td>
         </tr>
         <% end %>
       </tbody>
     </table>
-
   </div>
-  <% if current_user.permission? %>
-  <%= link_to t('view.users.edit_users'), rails_admin_path %>
-  <% end %>
+  <div class="create-new pull-right">
+    <% if current_user.permission? %>
+      <%= link_to t('view.users.edit_users'), rails_admin_path, class:"btn btn-danger btn-lg" %>
+    <% end %>
+  </div>
 </div>
