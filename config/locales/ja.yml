@@ -379,4 +379,5 @@ ja:
       delete: '削除'
       confirm_to_submit: '登録する'
       back: '戻る'
-      to_index: 一覧へ
+      to_index: '一覧へ'
+      search: '検索する'
