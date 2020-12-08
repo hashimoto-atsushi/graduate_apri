@@ -3,23 +3,29 @@
 
 <%= search_form_for @search do |form| %>
 <div class="content-wrapper">
-  <div>
-    <%= form.label :discussion_possibility_eq, "協議の必要性 検索: " %>
-    <%= form.select :discussion_possibility_eq, [['有り', true], ['無し', false]],
-    {include_blank: '選択なし'}, class: 'sample' %>
+  <div class="container">
+    <div class="upper-box">
+      <div class="row">
+        <div class="field form-group col-xs-3">
+          <%= form.label :discussion_possibility_eq, "協議の必要性 検索: ", class:"control-label"  %>
+          <%= form.select :discussion_possibility_eq, [['有り', true], ['無し', false]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :confirmation_eq, "営業確認 検索: ", class:"control-label"  %>
+          <%= form.select :confirmation_eq, [['確認済', true], ['未確認', false]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :boss_check_comments_confirmation_eq, "上長承認 検索: ", class:"control-label"  %>
+          <%= form.select :boss_check_comment_confirmation_eq, [['承認済', true], ['未承認', false]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
+        </div>
+      </div>
+      <div class="action"><%= form.submit t('view.sales_check_comments.search'), class:"btn btn-primary"  %></div>
+      <% end %>
+    </div>
   </div>
-  <div>
-    <%= form.label :confirmation_eq, "営業確認 検索: " %>
-    <%= form.select :confirmation_eq, [['確認済', true], ['未確認', false]],
-    {include_blank: '選択なし'}, class: 'sample' %>
-  </div>
-  <div>
-    <%= form.label :boss_check_comments_confirmation_eq, "上長承認 検索: " %>
-    <%= form.select :boss_check_comment_confirmation_eq, [['承認済', true], ['未承認', false]],
-    {include_blank: '選択なし'}, class: 'sample' %>
-  </div>
-  <div class="action"><%= form.submit "Search" %></div>
-  <% end %>
 
   <table border="1">
     <thead>
