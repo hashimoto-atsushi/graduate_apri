@@ -1,40 +1,44 @@
+<h1><% provide(:title,"製品情報 一覧") %></h1>
 <p id="notice"><%= notice %></p>
-
-<h1>製品情報 一覧</h1>
-
 <%= search_form_for @search do |form| %>
-<div class="field">
-  <%= form.label :name_cont, "製品名 検索:" %>
-  <%= form.text_field :name_cont %>
-</div>
-<div class="field">
-  <%= form.label :type_name_cont, "型式名 検索:" %>
-  <%= form.text_field :type_name_cont %>
-</div>
-<div class="field">
-  <%= form.label :category_cont, "機器種類 検索:" %>
-  <%= form.text_field :category_cont %>
-</div>
-<div class="action"><%= form.submit "Search" %></div>
-  <% end %>
-</div>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <div class="row">
+        <div class="field form-group col-xs-3">
+          <%= form.label :name_cont, "製品名 検索:", class:"control-label" %>
+          <%= form.text_field :name_cont, class:"form-control"  %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :type_name_cont, "型式名 検索:", class:"control-label" %>
+          <%= form.text_field :type_name_cont, class:"form-control"  %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :category_cont, "機器種類 検索:", class:"control-label" %>
+          <%= form.text_field :category_cont, class:"form-control"  %>
+        </div>
+      </div>
+      <div class="action"><%= form.submit t('view.products.search'), class:"btn btn-primary" %></div>
+      <% end %>
+    </div>
+  </div>
 
-<table border="1">
-  <thead>
-    <tr>
-      <th><%= t('view.products.name')%></th>
-      <th><%= t('view.products.type_name')%></th>
-      <th><%= sort_link @search, :category, t('view.products.category')%></th>
-      <th><%= t('view.products.list_price')%></th>
-      <th><%= sort_link @search, :release_date, t('view.products.release_date')%></th>
-      <th><%= sort_link @search, :end_of_production, t('view.products.end_of_production')%></th>
-      <th><%= sort_link @search, :end_of_service, t('view.products.end_of_service')%></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <table border="1">
+    <thead>
+      <tr>
+        <th><%= t('view.products.name')%></th>
+        <th><%= t('view.products.type_name')%></th>
+        <th><%= sort_link @search, :category, t('view.products.category')%></th>
+        <th><%= t('view.products.list_price')%></th>
+        <th><%= sort_link @search, :release_date, t('view.products.release_date')%></th>
+        <th><%= sort_link @search, :end_of_production, t('view.products.end_of_production')%></th>
+        <th><%= sort_link @search, :end_of_service, t('view.products.end_of_service')%></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @products.each do |product| %>
+    <tbody>
+      <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
         <td><%= product.type_name %></td>
@@ -49,11 +53,13 @@
         <td><%= link_to  t('view.support_programs.delete'), product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <% if sales_and_admin_display %>
+  <%= link_to t('view.support_programs.to_new'), new_product_path %>
+  <% end %>
 
-<br>
-<% if sales_and_admin_display %>
-<%= link_to t('view.support_programs.to_new'), new_product_path %>
-<% end %>
+  </div>
+</div>
