@@ -31,15 +31,11 @@
           <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
           {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
         </div>
-      </div>
-      <div class="row">
         <div class="field form-group col-xs-2 box-2">
           <%= form.label :order_status_eq, "受注状況 検索: ", class:"control-label"  %>
           <%= form.select :order_status_eq, [['受注済', true], ['未受注', false]],
           {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
         </div>
-      </div>
-      <div class="row">
         <div class="field form-group col-xs-2 box-2">
           <%= form.label :closed_eq, "案件完了状態 検索: ", class:"control-label"  %>
           <%= form.select :closed_eq, [['未完了', 0], ['完了', 1]],
@@ -47,7 +43,7 @@
         </div>
       </div>
     </div>
-  <div class="action"><%= form.submit "Search" %></div>
+  <div class="action"><%= form.submit t('view.support_programs.search'), class:"btn btn-primary" %></div>
   <% end %>
 
   <table border="1">

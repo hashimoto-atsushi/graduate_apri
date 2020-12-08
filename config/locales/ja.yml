@@ -247,6 +247,7 @@ ja:
       to_detail_new: '作業報告登録へ'
       confirm_to_submit: '登録する'
       back: '戻る'
+      search: '検索する'
     detail_reports:
       id: '案件選択'
       ordered_date: '受注日'
