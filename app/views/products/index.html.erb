@@ -22,8 +22,8 @@
       <% end %>
     </div>
   </div>
-
-  <table border="1">
+<div class="container table-responsive">
+  <table class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
         <th><%= t('view.products.name')%></th>
@@ -36,7 +36,6 @@
         <th colspan="3"></th>
       </tr>
     </thead>
-
     <tbody>
       <% @products.each do |product| %>
       <tr>
@@ -47,19 +46,21 @@
         <td><%= product.release_date %></td>
         <td><%= product.end_of_production %></td>
         <td><%= product.end_of_service %></td>
-        <td><%= link_to  t('view.support_programs.show'), product %></td>
+        <td><%= link_to  t('view.support_programs.show'), product, class:"btn btn-info btn-xs" %></td>
         <% if sales_and_admin_display %>
-        <td><%= link_to  t('view.support_programs.edit'), edit_product_path(product) %></td>
-        <td><%= link_to  t('view.support_programs.delete'), product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to  t('view.support_programs.edit'), edit_product_path(product), class:"btn btn-warning btn-xs" %></td>
+        <td><%= link_to  t('view.support_programs.delete'), product, method: :delete, data: { confirm: '削除します?' }, class:"btn btn-danger btn-xs" %></td>
         <% end %>
       </tr>
       <% end %>
     </tbody>
   </table>
-  <br>
-  <% if sales_and_admin_display %>
-  <%= link_to t('view.support_programs.to_new'), new_product_path %>
-  <% end %>
+  <div class="create-new pull-right">
+    <% if sales_and_admin_display %>
+    <%= link_to t('view.support_programs.to_new'), new_product_path, class:"btn btn-success btn-lg"%>
+    <% end %>
+  </div>
+</div>
 
   </div>
 </div>
