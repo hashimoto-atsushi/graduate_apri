@@ -42,7 +42,7 @@
     <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b><%= @detail_report.ordered_price %></p>
+    <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b><%= @detail_report.ordered_price.to_s(:delimited) %></p>
   </div>
 </div>
 <div class="row">
