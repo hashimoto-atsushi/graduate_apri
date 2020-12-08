@@ -1,42 +1,44 @@
 <h1><% provide(:title,"顧客情報 一覧") %></h1>
 <p id="notice"><%= notice %></p>
 <%= search_form_for @search do |form| %>
-<div class="field">
-  <%= form.label :customer_number_eq, "顧客番号 検索:" %>
-  <%= form.text_field :customer_number_eq %>
-</div>
-<div class="field">
-  <%= form.label :name_cont, "顧客名 検索: " %>
-  <%= form.text_field :name_cont %>
-</div>
-<div class="field">
-  <%= form.label :support_programs_title_cont, "案件名 検索: " %>
-  <%= form.text_field :support_programs_title_cont %>
-</div>
+<div class=class="content-wrapper">
+  <div
+  <div class="field">
+    <%= form.label :customer_number_eq, "顧客番号 検索:" %>
+    <%= form.text_field :customer_number_eq %>
+  </div>
+  <div class="field">
+    <%= form.label :name_cont, "顧客名 検索: " %>
+    <%= form.text_field :name_cont %>
+  </div>
+  <div class="field">
+    <%= form.label :support_programs_title_cont, "案件名 検索: " %>
+    <%= form.text_field :support_programs_title_cont %>
+  </div>
 
   <div class="action"><%= form.submit "Search" %></div>
   <% end %>
 
 
-<table border="1">
-  <thead>
-    <tr>
-      <th><%= sort_link @search, :customer_number, t('view.customers.customer_number') %></th>
-      <th><%= t('view.customers.customer') %></th>
-      <th><%= sort_link @search, :profession, t('view.customers.profession') %></th>
-      <th><%= t('view.customers.customer_in_charge') %></th>
-      <th><%= t('view.customers.department') %></th>
-      <th><%= t('view.customers.position') %></th>
-      <th><%= t('view.customers.phone_number') %></th>
-      <th><%= t('view.customers.installed_products') %></th>
-      <th><%= t('view.customers.support_programs') %></th>
-      <th><%= t('view.customers.employee_in_charge') %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <table border="1">
+    <thead>
+      <tr>
+        <th><%= sort_link @search, :customer_number, t('view.customers.customer_number') %></th>
+        <th><%= t('view.customers.customer') %></th>
+        <th><%= sort_link @search, :profession, t('view.customers.profession') %></th>
+        <th><%= t('view.customers.customer_in_charge') %></th>
+        <th><%= t('view.customers.department') %></th>
+        <th><%= t('view.customers.position') %></th>
+        <th><%= t('view.customers.phone_number') %></th>
+        <th><%= t('view.customers.installed_products') %></th>
+        <th><%= t('view.customers.support_programs') %></th>
+        <th><%= t('view.customers.employee_in_charge') %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @customers.each do |customer| %>
+    <tbody>
+      <% @customers.each do |customer| %>
       <tr>
         <td><%= customer.customer_number %></td>
         <td><%= customer.name %></td>
@@ -60,15 +62,17 @@
         <td><%= customer.user.name %></td>
         <td><%= link_to t('view.customers.show'), customer %></td>
         <% if sales_and_admin_display %>
-          <td><%= link_to t('view.customers.edit'), edit_customer_path(customer) %></td>
-          <td><%= link_to t('view.customers.delete'), customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('view.customers.edit'), edit_customer_path(customer) %></td>
+        <td><%= link_to t('view.customers.delete'), customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
 
-<br>
-<% if sales_and_admin_display %>
-<%= link_to t('view.customers.to_new'), new_customer_path %>
-<% end %>
+  <br>
+  <% if sales_and_admin_display %>
+  <%= link_to t('view.customers.to_new'), new_customer_path %>
+  <% end %>
+
+</div>
