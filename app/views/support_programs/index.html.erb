@@ -1,59 +1,74 @@
+<h1><% provide(:title,"保守案件 一覧") %></h1>
 <p id="notice"><%= notice %></p>
 
-<h1>保守案件 一覧</h1>
 <%= search_form_for @search do |form| %>
-<div class="field">
-  <%= form.label :title_number_eq, "保守案件番号 検索:" %>
-  <%= form.text_field :title_number_eq %>
-</div>
-<div class="field">
-  <%= form.label :customer_name_cont, "顧客名 検索:" %>
-  <%= form.text_field :customer_name_cont %>
-</div>
-<div class="field">
-  <%= form.label :title_cont, "保守案件名 検索:" %>
-  <%= form.text_field :title_cont %>
-</div>
-<div class="field">
-  <%= form.label :user_name_cont, "担当者名 検索:" %>
-  <%= form.text_field :user_name_cont %>
-</div>
-<div>
-  <%= form.label :planed_or_argent_eq, "計画/緊急 検索: " %>
-  <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
-   {include_blank: '選択なし'}, class: 'sample' %>
-</div>
-<div>
-  <%= form.label :order_status_eq, "受注状況 検索: " %>
-  <%= form.select :order_status_eq, [['受注済', true], ['未受注', false]],
-   {include_blank: '選択なし'}, class: 'sample' %>
-</div>
-<div>
-  <%= form.label :closed_eq, "案件完了状態 検索: " %>
-  <%= form.select :closed_eq, [['未完了', 0], ['完了', 1]],
-   {include_blank: '選択なし'}, class: 'sample' %>
-</div>
-<div class="action"><%= form.submit "Search" %></div>
-<% end %>
+<div class="content-wrapper">
+  <div class="row">
+    <div class="field form-group col-xs-4 box-1">
+      <%= form.label :title_number_eq, "保守案件番号 検索:", class:"control-label" %>
+      <%= form.text_field :title_number_eq, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field form-group col-xs-4 box-1">
+      <%= form.label :customer_name_cont, "顧客名 検索:", class:"control-label"  %>
+      <%= form.text_field :customer_name_cont, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field form-group col-xs-4 box-1">
+      <%= form.label :title_cont, "保守案件名 検索:", class:"control-label"  %>
+      <%= form.text_field :title_cont, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field form-group col-xs-4 box-1">
+      <%= form.label :user_name_cont, "担当者名 検索:", class:"control-label"  %>
+      <%= form.text_field :user_name_cont, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field form-group col-xs-4 box-1">
+      <%= form.label :planed_or_argent_eq, "計画/緊急 検索: ", class:"control-label"  %>
+      <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
+      {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field form-group col-xs-2 box-2">
+      <%= form.label :order_status_eq, "受注状況 検索: ", class:"control-label"  %>
+      <%= form.select :order_status_eq, [['受注済', true], ['未受注', false]],
+      {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field form-group col-xs-2 box-2">
+      <%= form.label :closed_eq, "案件完了状態 検索: ", class:"control-label"  %>
+      <%= form.select :closed_eq, [['未完了', 0], ['完了', 1]],
+      {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+    </div>
+  </div>
+  <div class="action"><%= form.submit "Search" %></div>
+  <% end %>
 
-<table border="1">
-  <thead>
-    <tr>
-      <th><%= sort_link @search, :title_number,t('view.support_programs.title_number') %></th>
-      <th><%= t('view.support_programs.customer') %></th>
-      <th><%= t('view.support_programs.title') %></th>
-      <th><%= t('view.support_programs.user') %></th>
-      <th><%= t('view.support_programs.main_work') %></th>
-      <th><%= t('view.support_programs.planed_or_argent') %></th>
-      <th><%= t('view.support_programs.order_status') %></th>
-      <th><%= sort_link @search, :kick_off_date, t('view.support_programs.kick_off_date') %></th>
-      <th><%= t('view.support_programs.closed') %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <table border="1">
+    <thead>
+      <tr>
+        <th><%= sort_link @search, :title_number,t('view.support_programs.title_number') %></th>
+        <th><%= t('view.support_programs.customer') %></th>
+        <th><%= t('view.support_programs.title') %></th>
+        <th><%= t('view.support_programs.user') %></th>
+        <th><%= t('view.support_programs.main_work') %></th>
+        <th><%= t('view.support_programs.planed_or_argent') %></th>
+        <th><%= t('view.support_programs.order_status') %></th>
+        <th><%= sort_link @search, :kick_off_date, t('view.support_programs.kick_off_date') %></th>
+        <th><%= t('view.support_programs.closed') %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @support_programs.each do |support_program| %>
+    <tbody>
+      <% @support_programs.each do |support_program| %>
       <tr>
         <td><%= support_program.title_number %></td>
         <td><%= support_program.customer.name %></td>
@@ -66,15 +81,16 @@
         <td><%= support_program.closed %></td>
         <td><%= link_to t('view.support_programs.show'), support_program %></td>
         <% if tech_and_admin_display %>
-          <td><%= link_to t('view.support_programs.edit'), edit_support_program_path(support_program) %></td>
-          <td><%= link_to t('view.support_programs.delete'), support_program, method: :delete, data: { confirm: '削除しますが？' } %></td>
+        <td><%= link_to t('view.support_programs.edit'), edit_support_program_path(support_program) %></td>
+        <td><%= link_to t('view.support_programs.delete'), support_program, method: :delete, data: { confirm: '削除しますが？' } %></td>
         <% end %>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
 
-<br>
-<% if tech_and_admin_display %>
+  <br>
+  <% if tech_and_admin_display %>
   <%= link_to t('view.support_programs.to_new'), new_support_program_path %>
-<% end %>
+  <% end %>
+</div>

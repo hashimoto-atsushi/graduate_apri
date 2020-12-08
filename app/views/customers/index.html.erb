@@ -1,6 +1,5 @@
+<h1><% provide(:title,"顧客情報 一覧") %></h1>
 <p id="notice"><%= notice %></p>
-
-<h1>顧客情報 一覧</h1>
 <%= search_form_for @search do |form| %>
 <div class="field">
   <%= form.label :customer_number_eq, "顧客番号 検索:" %>
