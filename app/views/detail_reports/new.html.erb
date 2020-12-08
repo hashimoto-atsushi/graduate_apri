@@ -1,5 +1,10 @@
-<h1>作業報告 -新規登録-</h1>
+<h1><% provide(:title,"作業報告 -新規登録-") %></h1>
 
-<%= render 'form', detail_report: @detail_report %>
-
-<%= link_to t('view.detail_reports.to_index'), detail_reports_path %>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <%= render 'form', detail_report: @detail_report %>
+      <%= link_to t('view.detail_reports.to_index'), detail_reports_path %>
+    </div>
+  </div>
+</div>

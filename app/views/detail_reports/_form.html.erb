@@ -10,90 +10,101 @@
       </ul>
     </div>
   <% end %>
+ <div class="support_program">
+   <div class="row">
+     <div class="col-xs-3">
+       <p><%= t('view.support_programs.title_number') %>: <%= @support_program.title_number %></p>
+     </div>
+     <div class="col-xs-3">
+       <p><%= t('view.support_programs.customer') %>:<%= @support_program.customer.name %></p>
+     </div>
+     <div class="col-xs-3">
+       <p><%= t('view.support_programs.title') %>:<%= @support_program.title %></p>
+     </div>
+     <div class="col-xs-3">
+       <p><%= t('view.support_programs.user') %>: <%= @support_program.user.name %></p>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-xs-4">
+       <p><%= t('view.support_programs.main_work') %>: <%= @support_program.main_work %></p>
+     </div>
+     <div class="col-xs-4">
+       <p><%= t('view.support_programs.planed_or_argent') %>: <%= @support_program.planed_or_argent %></p>
+     </div class="col-xs-4">
+     <div>
+       <p><%= t('view.support_programs.order_status') %>: <%= @support_program.order_status %></p>
+     </div>
+   </div>
+ </div>
 
-  <div>
-    <p><%= t('view.support_programs.title_number') %>: <%= @support_program.title_number %></p>
+ <div class="input-form">
+   <div class="row">
+     <div class="field form-group col-xs-4">
+       <%= form.label t('view.support_programs.title'), class:"control-label"  %>
+       <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.title, o.id]},{}, class: "form-control" %>
+     </div>
 
-  </div>
-  <div>
-    <p><%= t('view.support_programs.customer') %>:<%= @support_program.customer.name %></p>
+     <div class="field form-group col-xs-4">
+       <%= form.label t('view.detail_reports.ordered_date'), class:"control-label" %>
+       <%= form.date_field :ordered_date, class: "form-control" %>
+     </div>
 
-  </div>
-  <div>
-    <p><%= t('view.support_programs.title') %>:<%= @support_program.title %></p>
+     <div class="field form-group col-xs-4">
+       <%= form.label t('view.detail_reports.ordered_price'), class:"control-label" %>
+       <%= form.number_field :ordered_price, class: "form-control" %>
+     </div>
+   </div>
 
-  </div>
-  <div>
-    <p><%= t('view.support_programs.user') %>: <%= @support_program.user.name %></p>
-
-  </div>
-  <div>
-    <p><%= t('view.support_programs.main_work') %>: <%= @support_program.main_work %></p>
-
-  </div>
-  <div>
-    <p><%= t('view.support_programs.planed_or_argent') %>: <%= @support_program.planed_or_argent %></p>
-
-  </div>
-  <div>
-    <p><%= t('view.support_programs.order_status') %>: <%= @support_program.order_status %></p>
-
-  </div>
-
-
-  <div class="field">
-    <%= form.label t('view.support_programs.title')  %>
-    <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.title, o.id]} %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.detail_reports.ordered_date') %>
-    <%= form.date_select :ordered_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.detail_reports.ordered_price') %>
-    <%= form.number_field :ordered_price %>
-  </div>
-  <div>
-    <p><%= t('view.support_programs.kick_off_date')%>: <%= @support_program.kick_off_date %></p>
-  </div>
-  <div class="field">
-    <%= form.label t('view.detail_reports.actual_kickoff_date') %>
-    <%= form.date_select :actual_kickoff_date %>
-  </div>
-  <div>
-    <p><%= t('view.support_programs.closed')%>: <%= @support_program.closed %></p>
-  </div>
-  <div class="field">
-    <%= form.label t('view.detail_reports.actual_complete_date') %>
-    <%= form.date_select :actual_complete_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.detail_reports.service_detail') %>
-    <%= form.text_area :service_detail %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.detail_reports.photo') %>
-    <%= form.text_area :photo %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.detail_reports.results') %>
-    <%= form.text_area :results %>
+   <div class="row">
+     <div class="field form-group col-xs-4">
+       <div>
+         <p><%= t('view.support_programs.kick_off_date')%>: <%= @support_program.kick_off_date %></p>
+       </div>
+       <div class="field">
+         <%= form.label t('view.detail_reports.actual_kickoff_date'), class:"control-label" %>
+         <%= form.date_field :actual_kickoff_date, class: "form-control" %>
+       </div>
+     </div>
+     <div class="field form-group col-xs-4">
+       <div>
+         <p><%= t('view.support_programs.closed')%>: <%= @support_program.closed %></p>
+       </div>
+       <div class="field">
+         <%= form.label t('view.detail_reports.actual_complete_date'), class:"control-label" %>
+         <%= form.date_field :actual_complete_date, class: "form-control" %>
+       </div>
+     </div>
+   </div>
+  <div class="row">
+    <div class="field form-group col-xs-12">
+      <%= form.label t('view.detail_reports.service_detail'), class:"control-label" %>
+      <%= form.text_area :service_detail, class:"form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label t('view.detail_reports.evaluation') %>
-    <%= form.select :evaluation, DetailReport.evaluations.keys.to_a, {}, autofocus: true, autocomplete: "evaluation" %>
-  </div>
+   <!-- <div class="field">
+     <%= form.label t('view.detail_reports.photo') %>
+     <%= form.text_area :photo %>
+   </div> -->
+   <div class="row">
+     <div class="field form-group col-xs-12">
+       <%= form.label t('view.detail_reports.results'), class:"control-label" %>
+       <%= form.text_area :results, class:"form-control" %>
+     </div>
+   </div>
+ <div class="row">
+   <div class="field form-group col-xs-2">
+     <%= form.label t('view.detail_reports.evaluation'), class:"control-label" %>
+     <%= form.select :evaluation, DetailReport.evaluations.keys.to_a, {}, autofocus: true, autocomplete: "evaluation", class:"form-control" %>
+   </div>
+   <div class="field form-group col-xs-10">
+     <%= form.label t('view.detail_reports.evaluation_details'), class:"control-label" %>
+     <%= form.text_area :evaluation_details, class:"form-control" %>
+   </div>
+ </div>
 
-  <div class="field">
-    <%= form.label t('view.detail_reports.evaluation_details') %>
-    <%= form.text_area :evaluation_details %>
-  </div>
+ </div>
 
   <div class="actions">
     <%= form.submit %>
