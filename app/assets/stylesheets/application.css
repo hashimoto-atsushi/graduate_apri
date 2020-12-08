@@ -63,3 +63,7 @@
 .upper-box {
   margin-top: 50px;
 }
+
+textarea.form-control {
+  height: 200px;
+}
