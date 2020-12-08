@@ -74,10 +74,10 @@
          <td><%= support_program.order_status == true ? "受注済" : "未受注" %></td>
          <td><%= support_program.kick_off_date %></td>
          <td><%= support_program.closed %></td>
-         <td><%= link_to t('view.support_programs.show'), support_program %></td>
+         <td><%= link_to t('view.support_programs.show'), support_program, class:"btn btn-info btn-xs" %></td>
          <% if tech_and_admin_display %>
-         <td><%= link_to t('view.support_programs.edit'), edit_support_program_path(support_program) %></td>
-         <td><%= link_to t('view.support_programs.delete'), support_program, method: :delete, data: { confirm: '削除しますが？' } %></td>
+         <td><%= link_to t('view.support_programs.edit'), edit_support_program_path(support_program), class:"btn btn-warning btn-xs" %></td>
+         <td><%= link_to t('view.support_programs.delete'), support_program, method: :delete, data: { confirm: '削除しますが？' }, class:"btn btn-danger btn-xs"  %></td>
          <% end %>
        </tr>
        <% end %>
