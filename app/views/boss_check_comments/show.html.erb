@@ -1,123 +1,168 @@
-<h1>上長確認 -詳細-</h1>
+<h1><% provide(:title,"上長確認 -詳細-") %></h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('view.support_programs.title_number') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.title_number %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.customer') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.customer.name %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.title') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.title %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.user') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.user.name %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.main_work') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.main_work %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.planed_or_argent') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.planed_or_argent %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.order_status') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %>
-</p>
-<p>
-  <strong><%= t('view.detail_reports.ordered_date') %>:</strong>
-  <%= @boss_check_comment.detail_report.ordered_date %>
-</p>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <div class="row">
+        <div class="col-xs-4">
+          <p><b><%= t('view.support_programs.title_number') %></b>:</strong>
+            <%= @boss_check_comment.detail_report.support_program.title_number %></p>
+          </div>
+          <div class="col-xs-4">
+            <p><b><%= t('view.support_programs.customer') %></b>:</strong>
+            <%= @boss_check_comment.detail_report.support_program.customer.name %></p>
+          </div>
+          <div class="col-xs-4">
+            <p><b><%= t('view.support_programs.title') %></b>:</strong>
+            <%= @boss_check_comment.detail_report.support_program.title %></p>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <p><b><%= t('view.support_programs.main_work') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.support_program.main_work %></p>
+        </div>
+        <div class="col-xs-4">
+          <p><b><%= t('view.support_programs.planed_or_argent') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.support_program.planed_or_argent %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <p><b><%= t('view.support_programs.order_status') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
+        </div>
+        <div class="col-xs-4">
+          <p><b><%= t('view.detail_reports.ordered_date') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.ordered_date %></p>
+        </div>
+        <div class="col-xs-4">
+          <p><b><%= t('view.detail_reports.ordered_price') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.ordered_price %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4""col-xs-4">
+          <p><b><%= t('view.support_programs.kick_off_date') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.support_program.kick_off_date %></p>
+        </div>
+        <div class="col-xs-4">
+          <p><b><%= t('view.detail_reports.actual_kickoff_date') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.actual_kickoff_date %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <p><b><%= t('view.support_programs.closed')%></b>:</strong>
+          <%= @boss_check_comment.detail_report.support_program.closed %></p>
+        </div>
+        <div class="col-xs-4">
+          <p><b><%= t('view.detail_reports.actual_complete_date')%></b>:</strong>
+          <%= @boss_check_comment.detail_report.actual_complete_date %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p><b><%= t('view.detail_reports.service_detail') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.service_detail %></p>
+        </div>
+      </div>
+      <!-- <div>
+        <p><b><%= t('view.detail_reports.photo') %></b>:</strong>
+        <%= @boss_check_comment.detail_report.photo %></p>
+      </div> -->
+      <div class="row">
+        <div class="col-xs-12">
+          <p><b><%= t('view.detail_reports.results') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.results %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-2">
+          <p><b><%= t('view.detail_reports.evaluation') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.evaluation %></p>
+        </div>
+        <div class="col-xs-10">
+          <p><b><%= t('view.detail_reports.evaluation_details') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.evaluation_details %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <p><b><%= t('view.support_programs.user') %></b>:</strong>
+          <%= @boss_check_comment.detail_report.support_program.user.name %></p>
+        </div>
+      </div>
+      <div>
+        <p><b><%= t('view.detail_reports.service_detail') %>:</b>
+        <%= @boss_check_comment.detail_report.service_detail %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.detail_reports.ordered_price') %>:</strong>
-  <%= @boss_check_comment.detail_report.ordered_price %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.kick_off_date') %>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.kick_off_date %>
-</p>
-<p>
-  <strong><%= t('view.detail_reports.actual_kickoff_date') %>:</strong>
-  <%= @boss_check_comment.detail_report.actual_kickoff_date %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.closed')%>:</strong>
-  <%= @boss_check_comment.detail_report.support_program.closed %>
-</p>
-<p>
-  <strong><%= t('view.detail_reports.actual_complete_date')%>:</strong>
-  <%= @boss_check_comment.detail_report.actual_complete_date %>
-</p>
+      <div>
+        <p><b><%= t('view.detail_reports.photo') %>:</b>
+        <%= @boss_check_comment.detail_report.photo %></P>
+      </div>
+      <div>
+        <p><b><%= t('view.detail_reports.results') %>:</b>
+        <%= @boss_check_comment.detail_report.results %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.detail_reports.service_detail') %>:</strong>
-  <%= @boss_check_comment.detail_report.service_detail %>
-</p>
+      <div>
+        <p><b><%= t('view.detail_reports.evaluation') %>:</b>
+        <%= @boss_check_comment.detail_report.evaluation %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.detail_reports.photo') %>:</strong>
-  <%= @boss_check_comment.detail_report.photo %>
-</p>
-<p>
-  <strong><%= t('view.detail_reports.results') %>:</strong>
-  <%= @boss_check_comment.detail_report.results %>
-</p>
+      <div>
+        <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>
+        <%= @boss_check_comment.detail_report.evaluation_details %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.detail_reports.evaluation') %>:</strong>
-  <%= @boss_check_comment.detail_report.evaluation %>
-</p>
+      <div>
+        <p><b><%= t('view.boss_check_comments.confirmation')%>:</b>
+        <%= @boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.detail_reports.evaluation_details') %>:</strong>
-  <%= @boss_check_comment.detail_report.evaluation_details %>
-</p>
+      <div>
+        <p><b><%= t('view.boss_check_comments.confirmation_date')%>:</b>
+        <%= @boss_check_comment.confirmation_date %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.boss_check_comments.confirmation')%>:</strong>
-  <%= @boss_check_comment.confirmation == true ? "承認済" : "未承認" %>
-</p>
+      <div>
+        <p><b><%= t('view.boss_check_comments.positive_comment')%>:</b>
+        <%= @boss_check_comment.positive_comment %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.boss_check_comments.confirmation_date')%>:</strong>
-  <%= @boss_check_comment.confirmation_date %>
-</p>
+      <div>
+        <p><b><%= t('view.boss_check_comments.negative_comment')%>:</b>
+        <%= @boss_check_comment.negative_comment %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.boss_check_comments.positive_comment')%>:</strong>
-  <%= @boss_check_comment.positive_comment %>
-</p>
+      <div>
+        <p><b><%= t('view.boss_check_comments.assistance')%>:</b>
+        <%= @boss_check_comment.assistance %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.boss_check_comments.negative_comment')%>:</strong>
-  <%= @boss_check_comment.negative_comment %>
-</p>
+      <div>
+        <p><b><%= t('view.boss_check_comments.questions')%>:</b>
+        <%= @boss_check_comment.questions %></P>
+      </div>
 
-<p>
-  <strong><%= t('view.boss_check_comments.assistance')%>:</strong>
-  <%= @boss_check_comment.assistance %>
-</p>
+      <div>
+        <p><b><%= t('view.boss_check_comments.report_to_sales')%>:</b>
+        <%= @boss_check_comment.report_to_sales %></P>
+      </div>
+      <div>
+        <% if sales_in_charge_and_admin_display %>
+        <%= link_to t('view.boss_check_comments.to_sales_check_comment'),  new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@support_program, @detail_report, @boss_check_comment.id) %>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to t('view.boss_check_comments.to_index'), boss_check_comments_path %>
+      </div>
 
-<p>
-  <strong><%= t('view.boss_check_comments.questions')%>:</strong>
-  <%= @boss_check_comment.questions %>
-</p>
 
-<p>
-  <strong><%= t('view.boss_check_comments.report_to_sales')%>:</strong>
-  <%= @boss_check_comment.report_to_sales %>
-</p>
-<div>
-  <% if sales_in_charge_and_admin_display %>
-  <%= link_to t('view.boss_check_comments.to_sales_check_comment'),  new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@support_program, @detail_report, @boss_check_comment.id) %>
-  <% end %>
+
 </div>
-<div>
-  <%= link_to t('view.boss_check_comments.to_index'), boss_check_comments_path %>
+</div>
 </div>
