@@ -78,18 +78,21 @@
           <%= @detail_report.results %></p>
         </div>
       </div>
-      <div class="row"
-      <div>
-        <p><b><%= t('view.detail_reports.evaluation') %></b>:</strong>
-        <%= @detail_report.evaluation %></p>
+      <div class="row">
+        <div class="col-xs-2">
+          <p><b><%= t('view.detail_reports.evaluation') %></b>:</strong>
+          <%= @detail_report.evaluation %></p>
+        </div>
+        <div class="col-xs-10">
+          <p><b><%= t('view.detail_reports.evaluation_details') %></b>:</strong>
+          <%= @detail_report.evaluation_details %></p>
+        </div>
       </div>
-      <div>
-        <p><b><%= t('view.detail_reports.evaluation_details') %></b>:</strong>
-        <%= @detail_report.evaluation_details %></p>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.user') %></b>:</strong>
-        <%= @detail_report.support_program.user.name %></p>
+      <div class="row">
+        <div class="col-xs-4">
+          <p><b><%= t('view.support_programs.user') %></b>:</strong>
+          <%= @detail_report.support_program.user.name %></p>
+        </div>
       </div>
       <div class="create-new">
         <% if boss_and_admin_display %>
