@@ -1,5 +1,10 @@
-<h1>顧客情報 -新規登録-</h1>
+<h1><% provide(:title,"顧客情報 -新規登録") %></h1>
 
-<%= render 'form', customer: @customer %>
-
-<%= link_to t('view.customers.to_index'), customers_path %>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <%= render 'form', customer: @customer %>
+      <%= link_to t('view.customers.to_index'), customers_path %>
+    </div>
+  </div>
+</div>

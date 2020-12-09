@@ -12,47 +12,49 @@
   <% end %>
 
 
-  <div class="field">
-    <%= form.label t('view.customers.customer_number') %>
-    <%= form.number_field :customer_number %>
-  </div>
 
-  <div class="field">
-    <%= form.label t('view.customers.customer')%>
-    <%= form.text_field :name %>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.customer_number'), class:"control-label" %>
+    <%= form.number_field :customer_number, class: "form-control" %>
   </div>
-
-  <div class="field">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.customer'), class:"control-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.customers.profession') %>
-    <%= form.text_field :profession %>
+    <%= form.text_field :profession, class: "form-control" %>
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label t('view.customers.customer_in_charge') %>
-    <%= form.text_field :customer_in_charge %>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.customer_in_charge'), class:"control-label" %>
+    <%= form.text_field :customer_in_charge, class: "form-control" %>
   </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.department'), class:"control-label" %>
+    <%= form.text_field :department, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.position'), class:"control-label" %>
+    <%= form.text_field :position, class: "form-control" %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= form.label t('view.customers.department') %>
-    <%= form.text_field :department %>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.phone_number'), class:"control-label" %>
+    <%= form.text_field :phone_number, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label t('view.customers.position') %>
-    <%= form.text_field :position %>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.employee_in_charge'), class:"control-label"  %>
+    <%= form.select :user_id, User.all.map{|o| [o.name, o.id]},{}, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label t('view.customers.phone_number') %>
-    <%= form.text_field :phone_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.customers.employee_in_charge')  %>
-    <%= form.select :user_id, User.all.map{|o| [o.name, o.id]} %>
-  </div>
+</div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
