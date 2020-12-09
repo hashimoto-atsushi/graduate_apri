@@ -34,6 +34,9 @@
           <p><b><%= t('view.support_programs.order_status') %></b>:</strong>
           <%= @sales_check_comment.boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
         </div>
+      </div>
+      <div class="row">
+      <h3>- 作業報告 詳細 -</h3>
         <div class="col-xs-4">
           <p><b><%= t('view.detail_reports.ordered_date') %></b>:</strong>
           <%= @sales_check_comment.boss_check_comment.detail_report.ordered_date %></p>
