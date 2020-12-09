@@ -4,7 +4,7 @@
 <div class="content-wrapper">
   <div class="container">
     <div class="upper-box">
-      <h3>- 報告内容 -</h3>
+      <h3>- 保守案件 詳細 -</h3>
       <div class="row">
         <div class="col-xs-4">
           <p><b><%= t('view.support_programs.title_number') %></b>:</strong>
@@ -34,6 +34,9 @@
           <p><b><%= t('view.support_programs.order_status') %></b>:</strong>
           <%= @boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
         </div>
+      </div>
+      <h3>- 作業報告 詳細 -</h3>
+      <div class="row">
         <div class="col-xs-4">
           <p><b><%= t('view.detail_reports.ordered_date') %></b>:</strong>
           <%= @boss_check_comment.detail_report.ordered_date %></p>
