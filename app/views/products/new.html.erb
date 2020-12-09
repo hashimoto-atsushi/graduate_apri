@@ -1,5 +1,10 @@
-<h1>製品情報 -新規登録-</h1>
+<h1><% provide(:title,"製品情報 -新規登録-") %></h1>
 
-<%= render 'form', product: @product %>
-
-<%= link_to t('view.customers.to_index'), products_path %>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <%= render 'form', product: @product %>
+      <%= link_to t('view.customers.to_index'), products_path %>
+    </div>
+  </div>
+</div>

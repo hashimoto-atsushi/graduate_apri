@@ -37,9 +37,10 @@
           <% end %>
         </tbody>
       </table>
-      <% if sales_and_admin_display %>
-      <%= link_to t('view.parts.to_new'), new_installed_product_path %>
-      <% end %>
-    </div>
+      <div class="create-new pull-right">
+        <% if sales_and_admin_display %>
+          <%= link_to t('view.parts.to_new'), new_installed_product_path, class:"btn btn-success btn-lg" %>
+        <% end %>
+      </div>
   </div>
 </div>

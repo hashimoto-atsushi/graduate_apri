@@ -11,42 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label t('view.products.name')%>
-    <%= form.text_field :name %>
+<div class="row">
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.name'), class:"control-label"%>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label t('view.products.type_name') %>
-    <%= form.text_field :type_name %>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.type_name'), class:"control-label" %>
+    <%= form.text_field :type_name, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label t('view.products.category') %>
-    <%= form.text_field :category %>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.category'), class:"control-label" %>
+    <%= form.text_field :category, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label t('view.products.list_price') %>
-    <%= form.number_field :list_price %>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.list_price'), class:"control-label" %>
+    <%= form.number_field :list_price, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label t('view.products.release_date') %>
-    <%= form.date_select :release_date %>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.release_date'), class:"control-label" %>
+    <%= form.date_field :release_date, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label t('view.products.end_of_production') %>
-    <%= form.date_select :end_of_production %>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.end_of_production'), class:"control-label" %>
+    <%= form.date_field :end_of_production, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label t('view.products.end_of_service') %>
-    <%= form.date_select :end_of_service %>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.end_of_service'), class:"control-label" %>
+    <%= form.date_field :end_of_service, class: "form-control" %>
   </div>
-
+</div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
