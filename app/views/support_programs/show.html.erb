@@ -1,46 +1,53 @@
-<h1>保守案件 -詳細-</h1>
+<h1><% provide(:title,"保守案件 -詳細-") %></h1>
 <p id="notice"><%= notice %></p>
-<p>
-  <strong><%= t('view.support_programs.title_number') %>: </strong>
-  <%= @support_program.title_number %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.customer') %>: </strong>
-  <%= @support_program.customer.name %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.title') %>:</strong>
-  <%= @support_program.title %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.user') %>:</strong>
-  <%= @support_program.user.name %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.main_work') %>:</strong>
-  <%= @support_program.main_work %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.planed_or_argent') %>:</strong>
-  <%= @support_program.planed_or_argent %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.order_status') %>:</strong>
-  <%= @support_program.order_status == true ? "受注済" : "未受注" %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.kick_off_date') %>:</strong>
-  <%= @support_program.kick_off_date %>
-</p>
-<p>
-  <strong><%= t('view.support_programs.closed') %>:</strong>
-  <%= @support_program.closed %>
-</p>
-<div>
-  <% if tech_in_charge_and_admin_display %>
-  <%= link_to t('view.support_programs.to_detail_new'), new_support_program_detail_report_path(@support_program.id) %>
-  <% end %>
-</div>
-<div>
-  <%= link_to t('view.support_programs.to_index'), support_programs_path %>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <p>
+        <strong><%= t('view.support_programs.title_number') %>: </strong>
+        <%= @support_program.title_number %>
+      </p>
+      <p>
+        <strong><%= t('view.support_programs.customer') %>: </strong>
+        <%= @support_program.customer.name %>
+      </p>
+      <p>
+        <strong><%= t('view.support_programs.title') %>:</strong>
+        <%= @support_program.title %>
+      </p>
+      <p>
+        <strong><%= t('view.support_programs.user') %>:</strong>
+        <%= @support_program.user.name %>
+      </p>
+      <p>
+        <strong><%= t('view.support_programs.main_work') %>:</strong>
+        <%= @support_program.main_work %>
+      </p>
+      <p>
+        <strong><%= t('view.support_programs.planed_or_argent') %>:</strong>
+        <%= @support_program.planed_or_argent %>
+      </p>
+      <p>
+        <strong><%= t('view.support_programs.order_status') %>:</strong>
+        <%= @support_program.order_status == true ? "受注済" : "未受注" %>
+      </p>
+      <p>
+        <strong><%= t('view.support_programs.kick_off_date') %>:</strong>
+        <%= @support_program.kick_off_date %>
+      </p>
+      <p>
+        <strong><%= t('view.support_programs.closed') %>:</strong>
+        <%= @support_program.closed %>
+      </p>
+      <div class="create-new">
+        <% if tech_in_charge_and_admin_display %>
+        <%= link_to t('view.support_programs.to_detail_new'), new_support_program_detail_report_path(@support_program.id), class:"btn btn-success btn-lg" %>
+        <% end %>
+      </div>
+      <div class="pull-left">
+        <%= link_to t('view.support_programs.to_index'), support_programs_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
 </div>
