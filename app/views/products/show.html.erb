@@ -1,39 +1,52 @@
+<h1><% provide(:title,"製品情報 -詳細-") %></h1>
 <p id="notice"><%= notice %></p>
-<h1>製品情報 -詳細-</h1>
-<p>
-  <strong><%= t('view.products.name') %>:</strong>
-  <%= @product.name %>
-</p>
 
-<p>
-  <strong><%= t('view.products.type_name') %>:</strong>
-  <%= @product.type_name %>
-</p>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <div>
+        <p><b><%= t('view.products.name') %>:</b>
+        <%= @product.name %></p>
+      </div>
 
-<p>
-  <strong><%= t('view.products.category') %>:</strong>
-  <%= @product.category %>
-</p>
+      <div>
+        <p><b><%= t('view.products.type_name') %>:</b>
+        <%= @product.type_name %></p>
+      </div>
 
-<p>
-  <strong><%= t('view.products.list_price') %>:</strong>
-  <%= @product.list_price %>
-</p>
+      <div>
+        <p><b><%= t('view.products.category') %>:</b>
+        <%= @product.category %></p>
+      </div>
 
-<p>
-  <strong><%= t('view.products.release_date') %>:</strong>
-  <%= @product.release_date %>
-</p>
+      <div>
+        <p><b><%= t('view.products.list_price') %>:</b>
+        <%= @product.list_price %></p>
+      </div>
 
-<p>
-  <strong><%= t('view.products.end_of_production') %>:</strong>
-  <%= @product.end_of_production %>
-</p>
+      <div>
+        <p><b><%= t('view.products.release_date') %>:</b>
+        <%= @product.release_date %></p>
+      </div>
 
-<p>
-  <strong><%= t('view.products.end_of_service') %>:</strong>
-  <%= @product.end_of_service %>
-</p>
+      <div>
+        <p><b><%= t('view.products.end_of_production') %>:</b>
+        <%= @product.end_of_production %></p>
+      </div>
 
-<%= link_to t('view.products.edit'), edit_product_path(@product) %> |
-<%= link_to t('view.products.to_index'), products_path %>
+      <div>
+        <p><b><%= t('view.products.end_of_service') %>:</b>
+        <%= @product.end_of_service %></p>
+      </div>
+
+
+
+      <div class="create-new">
+        <%= link_to t('view.products.edit'), edit_product_path(@product), class:"btn btn-warning" %>
+      </div>
+      <div class="create-new">
+        <%= link_to t('view.products.to_index'), products_path, class:"btn btn-info" %>
+      </div>
+    </div>
+  </div>
+</div>
