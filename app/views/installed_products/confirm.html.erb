@@ -1,39 +1,46 @@
-<h1>納入機器 -登録確認-</h1>
+<h1><% provide(:title,"納入機器 -登録確認-") %></h1>
 <%= form_with(model: @installed_product, local: true) do |form| %>
-<div>
-  <%= form.hidden_field :customer_id %>
-</div>
-<div>
-  <%= form.hidden_field :product_id %>
-</div>
-<div>
-  <%= form.hidden_field :serial_number %>
-</div>
-<div>
-  <%= form.hidden_field :installed_date %>
-</div>
-<div>
-  <%= form.hidden_field :discount_price %>
-</div>
-<div>
-  <P><%= t('view.customers.customer') %>: <%= @installed_product.customer.name %></P>
-</div>
-<div>
-  <P><%= t('view.products.name') %>: <%= @installed_product.product.name %></P>
-</div>
-<div>
-  <P><%= t('view.installed_products.serial_number') %>: <%= @installed_product.serial_number %></P>
-</div>
-<div>
-  <P><%= t('view.installed_products.installed_date') %>: <%= @installed_product.installed_date.strftime("%Y年%m月%d日")  %></P>
-</div>
-<div>
-  <P><%= t('view.installed_products.discount_price') %>: <%= @installed_product.discount_price %></P>
-</div>
-<div>
- <%= form.submit t('view.installed_products.confirm_to_submit')%>
-</div>
-<div>
-  <%= form.submit t('view.installed_products.back'), name: 'back'%>
-</div>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <div>
+        <%= form.hidden_field :customer_id %>
+      </div>
+      <div>
+        <%= form.hidden_field :product_id %>
+      </div>
+      <div>
+        <%= form.hidden_field :serial_number %>
+      </div>
+      <div>
+        <%= form.hidden_field :installed_date %>
+      </div>
+      <div>
+        <%= form.hidden_field :discount_price %>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.customer') %>:&emsp;</b> <%= @installed_product.customer.name %></P>
+      </div>
+      <div>
+        <p><b><%= t('view.products.name') %>:&emsp;</b> <%= @installed_product.product.name %></P>
+      </div>
+      <div>
+        <p><b><%= t('view.installed_products.serial_number') %>:&emsp;</b> <%= @installed_product.serial_number %></P>
+      </div>
+      <div>
+        <p><b><%= t('view.installed_products.installed_date') %>:&emsp;</b> <%= @installed_product.installed_date.strftime("%Y年%m月%d日")  %></P>
+      </div>
+      <div>
+        <p><b><%= t('view.installed_products.discount_price') %>:&emsp;</b> <%= @installed_product.discount_price %></P>
+      </div>
+      <div class="create-new">
+       <%= form.submit t('view.installed_products.confirm_to_submit'), class:"btn btn-danger" %>
+      </div>
+      <div class="create-new">
+        <%= form.submit t('view.installed_products.back'), name: 'back', class:"btn btn-primary"%>
+      </div>
+    </div>
+  </div>
+</div>      
 <% end %>
