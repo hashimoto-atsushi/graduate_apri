@@ -1,5 +1,10 @@
-<h1>営業確認 -新規登録-</h1>
+<h1><% provide(:title,"営業確認 -新規登録-") %></h1>
 
-<%= render 'form', sales_check_comment: @sales_check_comment %>
-
-<%= link_to t('view.boss_check_comments.to_index'), sales_check_comments_path %>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <%= render 'form', sales_check_comment: @sales_check_comment %>
+      <%= link_to t('view.boss_check_comments.to_index'), sales_check_comments_path %>
+    </div>
+  </div>
+</div>

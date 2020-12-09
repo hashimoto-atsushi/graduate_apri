@@ -11,24 +11,24 @@
   <% end %>
 <div class="row">
   <div class="col-xs-3">
-    <p><b><b><%= t('view.support_programs.title_number') %>:&emsp;</b>&emsp;</b><%= @detail_report.support_program.title_number %></p>
+    <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b>&emsp;</b><%= @detail_report.support_program.title_number %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><b><%= t('view.support_programs.customer') %>:&emsp;</b></b><%= @detail_report.support_program.customer.name %></p>
+    <p><b><%= t('view.support_programs.customer') %>:&emsp;</b><%= @detail_report.support_program.customer.name %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><b><%= t('view.support_programs.title') %>:&emsp;</b></b><%= @detail_report.support_program.title %></p>
+    <p><b><%= t('view.support_programs.title') %>:&emsp;</b><%= @detail_report.support_program.title %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><b><%= t('view.support_programs.user') %>:&emsp;</b></b><%= @detail_report.support_program.user.name %></p>
+    <p><b><%= t('view.support_programs.user') %>:&emsp;</b><%= @detail_report.support_program.user.name %></p>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-3">
-    <p><b><b><%= t('view.support_programs.main_work') %>:&emsp;</b></b><%= @detail_report.support_program.main_work %></p>
+    <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b><%= @detail_report.support_program.main_work %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b></b><%= @detail_report.support_program.planed_or_argent %></p>
+    <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b><%= @detail_report.support_program.planed_or_argent %></p>
   </div class="col-xs-3">
 </div>
   <!-- <div>
@@ -36,7 +36,7 @@
   </div> -->
 <div class="row">
   <div class="col-xs-3">
-    <p><b><b><%= t('view.support_programs.order_status') %>:&emsp;</b></b><%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
+    <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
   </div>
   <div class="col-xs-3">
     <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date %></p>

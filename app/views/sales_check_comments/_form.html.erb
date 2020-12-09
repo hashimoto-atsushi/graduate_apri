@@ -10,130 +10,131 @@
       </ul>
     </div>
   <% end %>
+<div class="row">
+  <div>
+    <p><b><%= t('view.support_programs.title_number') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.title_number %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.customer') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.customer.name %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.title') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.title %></p>
+  </div>
+</div>
+  <div>
+    <p><b><%= t('view.support_programs.user') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.user.name %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.main_work') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.main_work %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.planed_or_argent') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.planed_or_argent %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.order_status') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.order_status %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.support_programs.title_number') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.title_number %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.customer') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.customer.name %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.title') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.title %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.user') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.user.name %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.main_work') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.main_work %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.planed_or_argent') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.planed_or_argent %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.order_status') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.order_status %>
-  </p>
 
+  <!-- <div>
+    <p><b>Supportprogram:</b>
+    <%= @boss_check_comment.detail_report.support_program.title %></p>
+  </div> -->
 
-  <!-- <p>
-    <strong>Supportprogram:</strong>
-    <%= @boss_check_comment.detail_report.support_program.title %>
-  </p> -->
+  <div>
+    <p><b><%= t('view.detail_reports.ordered_date') %>:</b>
+    <%= @boss_check_comment.detail_report.ordered_date %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.detail_reports.ordered_date') %>:</strong>
-    <%= @boss_check_comment.detail_report.ordered_date %>
-  </p>
+  <div>
+    <p><b><%= t('view.detail_reports.ordered_price') %>:</b>
+    <%= @boss_check_comment.detail_report.ordered_price %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.kick_off_date') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.kick_off_date %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:</b>
+    <%= @boss_check_comment.detail_report.actual_kickoff_date %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.closed') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.closed %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.detail_reports.actual_complete_date') %>::</b>
+    <%= @boss_check_comment.detail_report.actual_complete_date %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.detail_reports.ordered_price') %>:</strong>
-    <%= @boss_check_comment.detail_report.ordered_price %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.kick_off_date') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.kick_off_date %>
-  </p>
-  <p>
-    <strong><%= t('view.detail_reports.actual_kickoff_date') %>:</strong>
-    <%= @boss_check_comment.detail_report.actual_kickoff_date %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.closed') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.closed %>
-  </p>
-  <p>
-    <strong><%= t('view.detail_reports.actual_complete_date') %>::</strong>
-    <%= @boss_check_comment.detail_report.actual_complete_date %>
-  </p>
+  <div>
+    <p><b><%= t('view.detail_reports.service_detail') %>:</b>
+    <%= @boss_check_comment.detail_report.service_detail %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.detail_reports.service_detail') %>:</strong>
-    <%= @boss_check_comment.detail_report.service_detail %>
-  </p>
+  <div>
+    <p><b><%= t('view.detail_reports.photo') %>:</b>
+    <%= @boss_check_comment.detail_report.photo %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.detail_reports.results') %>:</b>
+    <%= @boss_check_comment.detail_report.results %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.detail_reports.photo') %>:</strong>
-    <%= @boss_check_comment.detail_report.photo %>
-  </p>
-  <p>
-    <strong><%= t('view.detail_reports.results') %>:</strong>
-    <%= @boss_check_comment.detail_report.results %>
-  </p>
+  <div>
+    <p><b><%= t('view.detail_reports.evaluation') %>:</b>
+    <%= @boss_check_comment.detail_report.evaluation %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.detail_reports.evaluation') %>:</strong>
-    <%= @boss_check_comment.detail_report.evaluation %>
-  </p>
+  <div>
+    <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>
+    <%= @boss_check_comment.detail_report.evaluation_details %></p>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.user') %>:</b>
+    <%= @boss_check_comment.detail_report.support_program.title %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.detail_reports.evaluation_details') %>:</strong>
-    <%= @boss_check_comment.detail_report.evaluation_details %>
-  </p>
-  <p>
-    <strong><%= t('view.support_programs.user') %>:</strong>
-    <%= @boss_check_comment.detail_report.support_program.title %>
-  </p>
+  <div>
+    <p><b><%= t('view.boss_check_comments.confirmation') %>:</b>
+    <%= @boss_check_comment.confirmation %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.boss_check_comments.confirmation') %>:</strong>
-    <%= @boss_check_comment.confirmation %>
-  </p>
+  <div>
+    <p><b><%= t('view.boss_check_comments.confirmation_date') %>:</b>
+    <%= @boss_check_comment.confirmation_date %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.boss_check_comments.confirmation_date') %>:</strong>
-    <%= @boss_check_comment.confirmation_date %>
-  </p>
+  <div>
+    <p><b><%= t('view.boss_check_comments.positive_comment') %>:</b>
+    <%= @boss_check_comment.positive_comment %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.boss_check_comments.positive_comment') %>:</strong>
-    <%= @boss_check_comment.positive_comment %>
-  </p>
+  <div>
+    <p><b><%= t('view.boss_check_comments.negative_comment') %>:</b>
+    <%= @boss_check_comment.negative_comment %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.boss_check_comments.negative_comment') %>:</strong>
-    <%= @boss_check_comment.negative_comment %>
-  </p>
+  <div>
+    <p><b><%= t('view.boss_check_comments.assistance') %>:</b>
+    <%= @boss_check_comment.assistance %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.boss_check_comments.assistance') %>:</strong>
-    <%= @boss_check_comment.assistance %>
-  </p>
+  <div>
+    <p><b><%= t('view.boss_check_comments.questions') %>:</b>
+    <%= @boss_check_comment.questions %></p>
+  </div>
 
-  <p>
-    <strong><%= t('view.boss_check_comments.questions') %>:</strong>
-    <%= @boss_check_comment.questions %>
-  </p>
-
-  <p>
-    <strong><%= t('view.boss_check_comments.report_to_sales') %>:</strong>
-    <%= @boss_check_comment.report_to_sales %>
-  </p>
+  <div>
+    <p><b><%= t('view.boss_check_comments.report_to_sales') %>:</b>
+    <%= @boss_check_comment.report_to_sales %></p>
+  </div>
 
   <div class="field">
     <%= form.label t('view.sales_check_comments.id') %>
