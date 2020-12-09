@@ -11,39 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label t('view.parts.detail_report_id') %>
-    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.id, o.id]}, include_blank: "紐付け無" %>
+  <div class="row">
+    <div class="field">
+      <%= form.label t('view.parts.detail_report_id') %>
+      <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.id, o.id]}, include_blank: "紐付け無" %>
+    </div>
+    <div class="field">
+      <%= form.label t('view.parts.name')  %>
+      <%= form.text_field :name %>
+    </div>
+    <div class="field">
+      <%= form.label t('view.parts.type_name')   %>
+      <%= form.text_field :type_name %>
+    </div>
+    <div class="field">
+      <%= form.label t('view.parts.category')   %>
+      <%= form.text_field :category %>
+    </div>
   </div>
+  <div class="row">
+    <div class="field">
+      <%= form.label t('view.parts.list_price')   %>
+      <%= form.number_field :list_price %>
+    </div>
 
-  <div class="field">
-    <%= form.label t('view.parts.name')  %>
-    <%= form.text_field :name %>
-  </div>
+    <div class="field">
+      <%= form.label t('view.parts.stock')   %>
+      <%= form.number_field :stock %>
+    </div>
 
-  <div class="field">
-    <%= form.label t('view.parts.type_name')   %>
-    <%= form.text_field :type_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.parts.category')   %>
-    <%= form.text_field :category %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.parts.list_price')   %>
-    <%= form.number_field :list_price %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.parts.stock')   %>
-    <%= form.number_field :stock %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.parts.release_date')   %>
-    <%= form.date_select :release_date %>
+    <div class="field">
+      <%= form.label t('view.parts.release_date')   %>
+      <%= form.date_select :release_date %>
+    </div>
   </div>
 
   <div class="field">

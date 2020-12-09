@@ -1,5 +1,11 @@
-<h1>保守パーツ情報 -新規登録-</h1>
+<h1><% provide(:title,"保守パーツ情報 -新規登録-") %></h1>
 
-<%= render 'form', part: @part %>
 
-<%= link_to t('view.customers.to_index'), parts_path %>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <%= render 'form', part: @part %>
+      <%= link_to t('view.customers.to_index'), parts_path %>
+    </div>
+  </div>
+</div>
