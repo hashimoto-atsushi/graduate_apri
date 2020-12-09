@@ -159,17 +159,14 @@
           <%= @boss_check_comment.report_to_sales %></P>
         </div>
       </div>
-      <div>
+      <div class="create-new">
         <% if sales_in_charge_and_admin_display %>
-        <%= link_to t('view.boss_check_comments.to_sales_check_comment'),  new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@support_program, @detail_report, @boss_check_comment.id) %>
+        <%= link_to t('view.boss_check_comments.to_sales_check_comment'),  new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@support_program, @detail_report, @boss_check_comment.id), class:"btn btn-success btn-lg" %>
         <% end %>
       </div>
       <div>
-        <%= link_to t('view.boss_check_comments.to_index'), boss_check_comments_path %>
+        <%= link_to t('view.boss_check_comments.to_index'), boss_check_comments_path, class:"btn btn-primary" %>
       </div>
-
-
-
-</div>
-</div>
+    </div>
+  </div>
 </div>
