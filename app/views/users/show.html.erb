@@ -1,36 +1,44 @@
-<h1>社員情報 一覧</h1>
+<h1><% provide(:title,"社員情報 -詳細-") %></h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('view.users.id') %>:</strong>
-  <%= @user.id %>
-</p>
-<p>
-  <strong><%= t('view.users.number') %>:</strong>
-  <%= @user.employee_number %>
-</p>
-<p>
-  <strong><%= t('view.users.name') %>:</strong>
-  <%= @user.name %>
-</p>
-<p>
-  <strong><%= t('view.users.department') %>:</strong>
-  <%= @user.department %>
-</p>
-<p>
-  <strong><%= t('view.users.position') %>:</strong>
-  <%= @user.position %>
-</p>
-<p>
-  <strong><%= t('view.users.email') %>:</strong>
-  <%= @user.email %>
-</p>
-<p>
-  <strong><%= t('view.users.cellphone_number') %>:</strong>
-  <%= @user.cellphone_number %>
-</p>
-<p>
-  <strong><%= t('view.users.stay_or_left') %>:</strong>
-  <%= @user.stay_or_left %>
-</p>
-<%= link_to t('view.users.to_index'), users_path %>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <div>
+        <p><b><%= t('view.users.id') %>:</b>
+        <%= @user.id %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.users.number') %>:</b>
+        <%= @user.employee_number %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.users.name') %>:</b>
+        <%= @user.name %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.users.department') %>:</b>
+        <%= @user.department %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.users.position') %>:</b>
+        <%= @user.position %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.users.email') %>:</b>
+        <%= @user.email %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.users.cellphone_number') %>:</b>
+        <%= @user.cellphone_number %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.users.stay_or_left') %>:</b>
+        <%= @user.stay_or_left %></p>
+      </div>
+      <div class="create-new">
+        <%= link_to t('view.users.to_index'), users_path, class:"btn btn-info" %>
+      </div>
+    </div>
+  </div>
+</div>
