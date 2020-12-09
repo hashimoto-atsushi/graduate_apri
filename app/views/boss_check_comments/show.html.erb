@@ -4,6 +4,7 @@
 <div class="content-wrapper">
   <div class="container">
     <div class="upper-box">
+      <h3>- 報告内容 -</h3>
       <div class="row">
         <div class="col-xs-4">
           <p><b><%= t('view.support_programs.title_number') %></b>:</strong>
@@ -94,7 +95,7 @@
           <%= @boss_check_comment.detail_report.support_program.user.name %></p>
         </div>
       </div>
-      <div>
+      <!-- <div>
         <p><b><%= t('view.detail_reports.service_detail') %>:</b>
         <%= @boss_check_comment.detail_report.service_detail %></P>
       </div>
@@ -102,8 +103,8 @@
       <div>
         <p><b><%= t('view.detail_reports.photo') %>:</b>
         <%= @boss_check_comment.detail_report.photo %></P>
-      </div>
-      <div>
+      </div> -->
+      <!-- <div>
         <p><b><%= t('view.detail_reports.results') %>:</b>
         <%= @boss_check_comment.detail_report.results %></P>
       </div>
@@ -116,18 +117,19 @@
       <div>
         <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>
         <%= @boss_check_comment.detail_report.evaluation_details %></P>
+      </div> -->
+      <h3>- 上長確認 -</h3>
+      <div class="row">
+        <div class="col-xs-4">
+          <p><b><%= t('view.boss_check_comments.confirmation')%>:</b>
+          <%= @boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
+        </div>
+        <div class="col-xs-4">
+          <p><b><%= t('view.boss_check_comments.confirmation_date')%>:</b>
+          <%= @boss_check_comment.confirmation_date %></P>
+        </div>
       </div>
-
-      <div>
-        <p><b><%= t('view.boss_check_comments.confirmation')%>:</b>
-        <%= @boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
-      </div>
-
-      <div>
-        <p><b><%= t('view.boss_check_comments.confirmation_date')%>:</b>
-        <%= @boss_check_comment.confirmation_date %></P>
-      </div>
-
+      
       <div>
         <p><b><%= t('view.boss_check_comments.positive_comment')%>:</b>
         <%= @boss_check_comment.positive_comment %></P>
