@@ -12,34 +12,34 @@
   <% end %>
 
 
-
-  <div class="field">
-    <%= form.label t('view.customers.customer') %>
-    <%= form.select :customer_id, Customer.all.map{|o| [o.name, o.id]} %>
+  <div class="row">
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.customers.customer'), class:"control-label" %>
+      <%= form.select :customer_id, Customer.all.map{|o| [o.name, o.id]},{}, class: "form-control" %>
+    </div>
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.products.name'), class:"control-label" %>
+      <%= form.select :product_id, Product.all.map{|o| [o.name, o.id]},{}, class: "form-control" %>
+    </div>
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.installed_products.serial_number'), class:"control-label" %>
+      <%= form.text_field :serial_number, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label t('view.products.name') %>
-    <%= form.select :product_id, Product.all.map{|o| [o.name, o.id]} %>
+  <div class="row">
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.installed_products.installed_date') %>
+      <%= form.date_field :installed_date, class: "form-control" %>
+    </div>
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.installed_products.discount_price') %>
+      <%= form.number_field :discount_price, class: "form-control" %>
+    </div>
   </div>
 
-
-  <div class="field">
-    <%= form.label t('view.installed_products.serial_number') %>
-    <%= form.text_field :serial_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.installed_products.installed_date') %>
-    <%= form.date_select :installed_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label t('view.installed_products.discount_price') %>
-    <%= form.number_field :discount_price %>
-  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
