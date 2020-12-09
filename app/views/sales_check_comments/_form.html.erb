@@ -151,36 +151,36 @@
 
 <div class="row">
   <div class="field form-group col-xs-4">
-    <%= form.label t('view.sales_check_comments.id') %>
-    <%= form.select :boss_check_comment_id, BossCheckComment.all.map{|o| [o.detail_report.support_program.title, o.id]} %>
+    <%= form.label t('view.sales_check_comments.id'), class:"control-label" %>
+    <%= form.select :boss_check_comment_id, BossCheckComment.all.map{|o| [o.detail_report.support_program.title, o.id]},{}, class: "form-control" %>
   </div>
   <div class="field form-group col-xs-4">
-    <%= form.label t('view.sales_check_comments.confirmation') %><br />
-    <%= form.select :confirmation, {"確認済": "ture", "未確認": "false"}, autofocus: true, autocomplete: "confirmation" %>
+    <%= form.label t('view.sales_check_comments.confirmation'), class:"control-label" %><br />
+    <%= form.select :confirmation, {"確認済": "ture", "未確認": "false"},{}, autofocus: true, autocomplete: "confirmation", class: "form-control" %>
   </div>
   <div class="field form-group col-xs-4">
-    <%= form.label t('view.sales_check_comments.confirmation_date')  %>
-    <%= form.date_field :confirmation_date %>
+    <%= form.label t('view.sales_check_comments.confirmation_date'), class:"control-label"  %>
+    <%= form.date_field :confirmation_date, class: "form-control" %>
   </div>
 </div>
 <div class="row">
   <div class="field form-group col-xs-12">
-    <%= form.label t('view.sales_check_comments.comment') %>
-    <%= form.text_area :comments %>
+    <%= form.label t('view.sales_check_comments.comment'), class:"control-label" %>
+    <%= form.text_area :comments, class: "form-control" %>
   </div>
 </div>
 <div class="row">
   <div class="field form-group col-xs-4">
-    <%= form.label t('view.sales_check_comments.discussion_possibility') %><br />
-    <%= form.select :discussion_possibility, {"有り": "ture", "無し": "false"}, autofocus: true, autocomplete: "discussion_possibility" %>
+    <%= form.label t('view.sales_check_comments.discussion_possibility'), class:"control-label" %><br />
+    <%= form.select :discussion_possibility, {"有り": "ture", "無し": "false"},{}, autofocus: true, autocomplete: "discussion_possibility", class: "form-control" %>
   </div>
   <div class="field form-group col-xs-4">
-    <%= form.label t('view.sales_check_comments.matter_closed') %><br />
-    <%= form.select :matter_closed, {"承認済": "ture", "未承認": "false"}, autofocus: true, autocomplete: "matter_closed" %>
+    <%= form.label t('view.sales_check_comments.matter_closed'), class:"control-label" %><br />
+    <%= form.select :matter_closed, {"承認済": "ture", "未承認": "false"},{}, autofocus: true, autocomplete: "matter_closed", class: "form-control" %>
   </div>
 </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
