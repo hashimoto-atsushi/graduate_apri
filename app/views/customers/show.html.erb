@@ -1,63 +1,65 @@
+<h1><% provide(:title,"顧客情報 -詳細-") %></h1>
 <p id="notice"><%= notice %></p>
-<h1>顧客情報 -詳細-</h1>
 
-<p>
-  <strong><%= t('view.customers.customer_number') %>:</strong>
-  <%= @customer.customer_number %>
-</p>
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <div>
+        <p><b><%= t('view.customers.customer_number') %>:</b>
+        <%= @customer.customer_number %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.customer') %>:</b>
+        <%= @customer.name %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.profession') %>:</b>
+        <%= @customer.profession %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.customer_in_charge') %>:</b>
+        <%= @customer.customer_in_charge %></p>
+      </div>
 
-<p>
-  <strong><%= t('view.customers.customer') %>:</strong>
-  <%= @customer.name %>
-</p>
+      <div>
+        <p><b><%= t('view.customers.department') %>:</b>
+        <%= @customer.department %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.position') %>:</b>
+        <%= @customer.position %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.phone_number') %>:</b>
+        <%= @customer.phone_number %></p>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.installed_products') %>:</b>
+        <% @customer.installed_products.each do | installed_product | %></p>
+        <ul>
+          <li><%= installed_product.product.name %></li>
+        </ul>
+        <% end %>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.support_programs') %>:</b>
+        <% @customer.support_programs.each do | support_program | %></p>
+        <ul>
+          <li><%= support_program.title %></li>
+        </ul>
+        <% end %>
+      </div>
+      <div>
+        <p><b><%= t('view.customers.employee_in_charge') %>:</b>
+        <%= @customer.user.name %></p>
+      </div>
 
-
-<p>
-  <strong><%= t('view.customers.profession') %>:</strong>
-  <%= @customer.profession %>
-</p>
-
-<p>
-  <strong><%= t('view.customers.customer_in_charge') %>:</strong>
-  <%= @customer.customer_in_charge %>
-</p>
-
-<p>
-  <strong><%= t('view.customers.department') %>:</strong>
-  <%= @customer.department %>
-</p>
-
-<p>
-  <strong><%= t('view.customers.position') %>:</strong>
-  <%= @customer.position %>
-</p>
-<p>
-  <strong><%= t('view.customers.phone_number') %>:</strong>
-  <%= @customer.phone_number %>
-</p>
-<p>
-  <strong><%= t('view.customers.installed_products') %>:</strong>
-  <% @customer.installed_products.each do | installed_product | %>
-  <ul>
-    <li><%= installed_product.product.name %></li>
-  </ul>
-  <% end %>
-</p>
-
-<p>
-  <strong><%= t('view.customers.support_programs') %>:</strong>
-  <% @customer.support_programs.each do | support_program | %>
-  <ul>
-    <li><%= support_program.title %></li>
-  </ul>
-  <% end %>
-</p>
-
-
-<p>
-  <strong><%= t('view.customers.employee_in_charge') %>:</strong>
-  <%= @customer.user.name %>
-</p>
-
-<%= link_to t('view.customers.edit'), edit_customer_path(@customer) %> |
-<%= link_to t('view.customers.to_index'), customers_path %>
+      <div>
+        <%= link_to t('view.customers.edit'), edit_customer_path(@customer) %>
+      </div>
+      <div>
+        <%= link_to t('view.customers.to_index'), customers_path %>
+      </div>
+    </div>
+  </div>
+</div>
