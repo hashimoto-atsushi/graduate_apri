@@ -1,42 +1,47 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<div class="container">
-  <div class="panel panel-primary center-block">
-    <div class="panel-heading">
-      <h1 class="panel-title login-font-size">ログイン</h1>
-    </div>
-    <div class="panel-body">
-      <div class="row">
-        <div class="field form-group col-xs-6">
-          <%= f.label t('view.users.number'), class:"control-label" %><br />
-          <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number", class:"form-control", placeholder:"社員番号を入力してください" %>
-        </div>
+<div class="cover-wrapper">
+  <div class="cover-image">
+    <%= render 'layouts/cover_page'%>
+  </div>
+  <div class="container login_new_top">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title login-font-size">ログイン</h1>
       </div>
-      <div class="row">
-        <div class="field form-group col-xs-6">
-          <%= f.label t('view.users.email'), class:"control-label" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"Eメールアドレスを入力してください" %>
-        </div>
-      </div>
-      <div class="row">
-          <div class="field form-group col-xs-6">
-          <%= f.label t('view.users.password'), class:"control-label"  %><br />
-          <%= f.password_field :password, autocomplete: "current-password", class:"form-control", placeholder:"パスワードを入力してください"   %>
+      <div class="panel-body">
+        <div class="row">
+          <div class="field form-group col-xs-4">
+            <%= f.label t('view.users.number'), class:"control-label" %><br />
+            <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number", class:"form-control", placeholder:"社員番号を入力してください" %>
           </div>
-      </div>
-      <% if devise_mapping.rememberable? %>
-        <div class="checkbox checkbox-place">
-          <%= f.check_box :remember_me %>
-          <P class="test"><%= f.label t('view.users.remember_me') %></P>
         </div>
-      <% end %>
+        <div class="row">
+          <div class="field form-group col-xs-4">
+            <%= f.label t('view.users.email'), class:"control-label" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"Eメールアドレスを入力してください" %>
+          </div>
+        </div>
+        <div class="row">
+            <div class="field form-group col-xs-4">
+            <%= f.label t('view.users.password'), class:"control-label"  %><br />
+            <%= f.password_field :password, autocomplete: "current-password", class:"form-control", placeholder:"パスワードを入力してください"   %>
+            </div>
+        </div>
+        <% if devise_mapping.rememberable? %>
+          <div class="checkbox checkbox-place">
+            <%= f.check_box :remember_me %>
+            <P class="test"><%= f.label t('view.users.remember_me') %></P>
+          </div>
+        <% end %>
 
-      <div class="actions">
-        <%= f.submit t('view.users.log_in'), class:"btn btn-primary"%>
+        <div class="actions">
+          <%= f.submit t('view.users.log_in'), class:"btn btn-primary"%>
+        </div>
       </div>
-    </div>
-    <div class="panel-fotter">
-      <%= render "devise/shared/links"%>
+      <div class="panel-fotter">
+        <%= render "devise/shared/links"%>
+      </div>
     </div>
   </div>
 </div>

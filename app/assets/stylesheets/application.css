@@ -123,3 +123,12 @@ textarea.form-control {
 .pagination>li>a:hover {
   border-radius: 15px;    /*角を丸くする*/
 }
+
+.cover-image {
+  float: left;
+}
+
+.login_new_top {
+  width: 60%;
+  float: left;
+}
