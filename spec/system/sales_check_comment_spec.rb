@@ -24,9 +24,7 @@ RSpec.describe '営業確認 登録管理機能', type: :system do
         click_on '営業担当 確認画面へ'
         select '定期保守A', from: 'sales_check_comment[boss_check_comment_id]'
         select '確認済', from: 'sales_check_comment[confirmation]'
-        select '2021', from: 'sales_check_comment[confirmation_date(1i)]'
-        select '11月', from: 'sales_check_comment[confirmation_date(2i)]'
-        select '28', from: 'sales_check_comment[confirmation_date(3i)]'
+        fill_in 'sales_check_comment_confirmation_date', with: '002021-11-28'
         fill_in 'sales_check_comment_comments', with: '連絡ありがとうございます。保守案件Aが無事終了してよかったです。明日あたり顧客1様にアポイントをとって挨拶してきます。ところで、サポート期限件に関しての打ち合わせ相談させてください。'
         select '有り', from: 'sales_check_comment[discussion_possibility]'
         select '承認済', from: 'sales_check_comment[matter_closed]'
@@ -58,6 +56,7 @@ end
 private
 def log_in
   visit new_user_session_path
+  fill_in 'user_employee_number', with: 2
   fill_in 'user_email', with: 'sales@example.com'
   fill_in 'user_password', with: 'testtest'
   click_on 'ログイン'

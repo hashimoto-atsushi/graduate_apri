@@ -34,6 +34,7 @@ end
 private
 def log_in
   visit new_user_session_path
+  fill_in 'user_employee_number', with: 1
   fill_in 'user_email', with: 'admin@example.com'
   fill_in 'user_password', with: 'testtest'
   click_on 'ログイン'

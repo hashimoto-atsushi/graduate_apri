@@ -22,14 +22,14 @@ RSpec.describe '保守案件情報 登録管理機能', type: :system do
         fill_in 'support_program_main_work', with: '電源ユニット全交換作業'
         select '計画', from: 'support_program[planed_or_argent]'
         select '受注済', from: 'support_program[order_status]'
-        select '2022', from: 'support_program[kick_off_date(1i)]'
-        select '2月', from: 'support_program[kick_off_date(2i)]'
-        select '2', from: 'support_program[kick_off_date(3i)]'
+
+        fill_in 'support_program_kick_off_date', with: '002022-02-02'
         select '未完了', from: 'support_program[closed]'
         click_on '登録する'
         click_on '登録する'
         visit top_index_path
         visit support_programs_path
+        click_on '詳細'
         expect(page).to have_content '顧客1'
         expect(page).to have_content 'ちゃんとメンテしようね'
         expect(page).to have_content '技術部員テスト'
@@ -43,6 +43,7 @@ end
 private
 def log_in
   visit new_user_session_path
+  fill_in 'user_employee_number', with: 3
   fill_in 'user_email', with: 'tech@example.com'
   fill_in 'user_password', with: 'testtest'
   click_on 'ログイン'

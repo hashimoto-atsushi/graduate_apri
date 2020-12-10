@@ -17,14 +17,12 @@ RSpec.describe '納入機器 管理機能', type: :system do
         select '顧客1', from: 'installed_product[customer_id]'
         select '製品おひつじ', from: 'installed_product[product_id]'
         fill_in 'installed_product_serial_number', with: '12345678'
-        select '2020', from: 'installed_product[installed_date(1i)]'
-        select '1月', from: 'installed_product[installed_date(2i)]'
-        select '1', from: 'installed_product[installed_date(3i)]'
+        fill_in 'installed_product_installed_date', with: '002020-01-01'
         fill_in 'installed_product_discount_price', with: '1480'
         click_on '登録する'
         click_on '登録する'
         visit top_index_path
-        visit installed_products_path        
+        visit installed_products_path
         expect(page).to have_content '顧客1'
         expect(page).to have_content '製品おひつじ'
         expect(page).to have_content '12345678'
@@ -38,6 +36,7 @@ end
 private
 def log_in
   visit new_user_session_path
+  fill_in 'user_employee_number', with: 2
   fill_in 'user_email', with: 'sales@example.com'
   fill_in 'user_password', with: 'testtest'
   click_on 'ログイン'

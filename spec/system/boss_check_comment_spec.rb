@@ -24,11 +24,6 @@ RSpec.describe '上長確認 登録管理機能', type: :system do
         select '定期保守A', from: 'boss_check_comment[detail_report_id]'
         select '承認済', from: 'boss_check_comment[confirmation]'
         fill_in 'boss_check_comment_confirmation_date', with: '002021-11-26'
-
-
-        # select '2021', from: 'boss_check_comment[confirmation_date(1i)]'
-        # select '11月', from: 'boss_check_comment[confirmation_date(2i)]'
-        # select '26', from: 'boss_check_comment[confirmation_date(3i)]'
         fill_in 'boss_check_comment_positive_comment', with: '内容了解しました。安全に作業していただきありがとうございます。'
         fill_in 'boss_check_comment_negative_comment', with: '特にはありませんが、できるだけ早めに報告を上げていだけると幸いです。'
         fill_in 'boss_check_comment_assistance', with: 'この調子でよろしくお願いします。営業部には私から連絡しておきます。'
