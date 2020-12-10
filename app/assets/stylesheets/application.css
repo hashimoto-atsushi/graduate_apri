@@ -50,10 +50,9 @@ td {
   position: absolute;
   top: -26px;
   left: 22px;
-
-    height: 150px;
-    padding: 0;
-    width: 150px;
+  height: 150px;
+  padding: 0;
+  width: 150px;
 }
 
 .top-title {
@@ -124,11 +123,15 @@ textarea.form-control {
   border-radius: 15px;    /*角を丸くする*/
 }
 
+.cover-wrapper {
+  margin: 200px auto
+}
 .cover-image {
   float: left;
 }
 
 .login_new_top {
+  margin: 35px 0 0 30px;
   width: 60%;
   float: left;
 }
