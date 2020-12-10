@@ -5,31 +5,31 @@
   <div class="container">
     <div class="upper-box">
       <div>
-        <p><b><%= t('view.customers.customer') %>:</b>
+        <p><b><%= t('view.customers.customer') %>:</b>&emsp;
         <%= @installed_product.customer.name %></p>
       </div>
       <div>
-        <p><b><%= t('view.products.name') %>:</b>
+        <p><b><%= t('view.products.name') %>:</b>&emsp;
         <%= @installed_product.product.name %></p>
       </div>
       <div>
-        <p><b><%= t('view.installed_products.serial_number') %>:</b>
+        <p><b><%= t('view.installed_products.serial_number') %>:</b>&emsp;
         <%= @installed_product.serial_number %></p>
       </div>
       <div>
-        <p><b><%= t('view.installed_products.installed_date') %>:</b>
+        <p><b><%= t('view.installed_products.installed_date') %>:</b>&emsp;
         <%= @installed_product.installed_date.strftime("%Y年%m月%d日") %></p>
       </div>
       <div>
-        <p><b><%= t('view.installed_products.discount_price') %>:</b>
+        <p><b><%= t('view.installed_products.discount_price') %>:</b>&emsp;
         <%= @installed_product.discount_price %></p>
       </div>
       <div>
-        <p><b><%= t('view.products.end_of_production') %>:</b>
+        <p><b><%= t('view.products.end_of_production') %>:</b>&emsp;
         <%= @installed_product.product.end_of_production.strftime("%Y年%m月%d日") %></p>
       </div>
       <div>
-        <p><b><%= t('view.products.end_of_service') %>:</b>
+        <p><b><%= t('view.products.end_of_service') %>:</b>&emsp;
         <%= @installed_product.product.end_of_service.strftime("%Y年%m月%d日") %></p>
       </div>
 

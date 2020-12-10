@@ -5,36 +5,36 @@
   <div class="container">
     <div class="upper-box">
       <div>
-        <p><b><%= t('view.customers.customer_number') %>:</b>
+        <p><b><%= t('view.customers.customer_number') %>:</b>&emsp;
         <%= @customer.customer_number %></p>
       </div>
       <div>
-        <p><b><%= t('view.customers.customer') %>:</b>
+        <p><b><%= t('view.customers.customer') %>:</b>&emsp;
         <%= @customer.name %></p>
       </div>
       <div>
-        <p><b><%= t('view.customers.profession') %>:</b>
+        <p><b><%= t('view.customers.profession') %>:</b>&emsp;
         <%= @customer.profession %></p>
       </div>
       <div>
-        <p><b><%= t('view.customers.customer_in_charge') %>:</b>
+        <p><b><%= t('view.customers.customer_in_charge') %>:</b>&emsp;
         <%= @customer.customer_in_charge %></p>
       </div>
 
       <div>
-        <p><b><%= t('view.customers.department') %>:</b>
+        <p><b><%= t('view.customers.department') %>:</b>&emsp;
         <%= @customer.department %></p>
       </div>
       <div>
-        <p><b><%= t('view.customers.position') %>:</b>
+        <p><b><%= t('view.customers.position') %>:</b>&emsp;
         <%= @customer.position %></p>
       </div>
       <div>
-        <p><b><%= t('view.customers.phone_number') %>:</b>
+        <p><b><%= t('view.customers.phone_number') %>:</b>&emsp;
         <%= @customer.phone_number %></p>
       </div>
       <div>
-        <p><b><%= t('view.customers.installed_products') %>:</b>
+        <p><b><%= t('view.customers.installed_products') %>:</b>&emsp;
         <% @customer.installed_products.each do | installed_product | %></p>
         <ul>
           <li><%= installed_product.product.name %></li>
@@ -42,7 +42,7 @@
         <% end %>
       </div>
       <div>
-        <p><b><%= t('view.customers.support_programs') %>:</b>
+        <p><b><%= t('view.customers.support_programs') %>:</b>&emsp;
         <% @customer.support_programs.each do | support_program | %></p>
         <ul>
           <li><%= support_program.title %></li>
@@ -50,7 +50,7 @@
         <% end %>
       </div>
       <div>
-        <p><b><%= t('view.customers.employee_in_charge') %>:</b>
+        <p><b><%= t('view.customers.employee_in_charge') %>:</b>&emsp;
         <%= @customer.user.name %></p>
       </div>
 
