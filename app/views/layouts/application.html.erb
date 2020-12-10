@@ -12,14 +12,16 @@
       <div class="top">
         <h1>TEST</h1>
       </div>
-      <nav class="navbar fixed-top navbar-dark bg-primary" role="navigation">
+      <nav class="navbar fixed-top navbar-dark bg-primary navbar-top" role="navigation">
         <div class="container">
           <!-- <div class="navbar-brand">
               <a href="#"><%= image_tag "TEST.png", class:"logo" %></a>
               <span class="navbar-left"><%= full_title(yield(:title)) %></span>
           </div> -->
-          <%= link_to image_tag("logo_reg.png", alt:"logo"), '/', class:"navbar-brand" %>
-
+          <div class="navbar-brand">
+            <%= link_to image_tag("logo_reg.png", alt:"logo"), '/', class:"navbar-brand" %>
+            <span class="top-title"><%= full_title(yield(:title)) %></span>
+          </div>
 
             <ul class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>

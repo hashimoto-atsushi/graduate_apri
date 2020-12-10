@@ -29,28 +29,38 @@ td {
 .field {
   font-size: 1.5rem;
 }
-
-.navbar-brand {
-  font-size: 3rem;
-}
-
 /* .logo {
   width: 200px;
   heigth: 150px;
 } */
 .container {
   margin: 0;
+  width: 100%;
 }
-.navbar-brand {
-    padding: 0px;
+
+.navbar-top {
+  height: 100px;
 }
+
+.navbar-top li {
+  font-size: 1.6rem;
+}
+
 .navbar-brand>img {
   position: absolute;
-  top: -20px;
+  top: -26px;
+  left: 22px;
 
-    height: 100px;
+    height: 150px;
     padding: 0;
-    width: 100px;
+    width: 150px;
+}
+
+.top-title {
+  font-size: 4rem;
+  position: absolute;
+  top: 40px;
+  left: 200px;
 }
 
 .panel-primary {
