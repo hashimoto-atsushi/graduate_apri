@@ -13,7 +13,7 @@
         <nav class="navbar fixed-top navbar-dark bg-primary navbar-top" role="navigation">
           <div class="container">
             <div class="navbar-brand">
-              <a href="<%= link_to t('view.layouts.to_top'), top_index_path %>"><%= link_to image_tag("logo_reg.png", alt:"logo"), '/', class:"navbar-brand" %></a>
+              <a href="<%= link_to t('view.layouts.to_top'), top_index_path %>"<%= link_to image_tag("logo_reg.png", alt:"logo"), '/', class:"navbar-brand" %></a>
               <span class="top-title"><%= full_title(yield(:title)) %></span>
             </div>
 

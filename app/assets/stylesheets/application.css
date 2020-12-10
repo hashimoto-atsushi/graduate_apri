@@ -56,7 +56,7 @@ position: absolute;/*←絶対位置*/
   heigth: 150px;
 } */
 .container {
-  margin: 0;
+  margin: 20px;
   width: 100%;
 }
 
@@ -75,6 +75,10 @@ position: absolute;/*←絶対位置*/
   height: 150px;
   padding: 0;
   width: 150px;
+}
+
+.navbar-right {
+  margin-right: 80px;
 }
 
 .top-title {
