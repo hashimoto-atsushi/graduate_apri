@@ -55,12 +55,14 @@
       <% end %>
     </tbody>
   </table>
+  <div>
+    <%= paginate @products %>
+  </div>
   <div class="create-new pull-right">
     <% if sales_and_admin_display %>
     <%= link_to t('view.support_programs.to_new'), new_product_path, class:"btn btn-success btn-lg"%>
     <% end %>
   </div>
 </div>
-
-  </div>
+</div>
 </div>

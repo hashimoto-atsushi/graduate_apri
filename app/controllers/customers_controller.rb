@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
 
   def index
     @search = Customer.search(params[:q])
-    @customers = @search.result(distinct: true).page(params[:page]).per(PER)
+    @customers = @search.result(distinct: true).order(customer_number: :asc).page(params[:page]).per(PER)
   end
 
   def show

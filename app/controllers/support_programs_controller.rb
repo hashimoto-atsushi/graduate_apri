@@ -7,7 +7,7 @@ class SupportProgramsController < ApplicationController
 
   def index
     @search = SupportProgram.search(params[:q])
-    @support_programs = @search.result(distinct:true).page(params[:page]).per(PER)
+    @support_programs = @search.result(distinct:true).order(title_number: :asc).page(params[:page]).per(PER)
   end
 
   def show

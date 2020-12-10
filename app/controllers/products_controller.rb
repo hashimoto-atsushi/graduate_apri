@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def index
     @search = Product.search(params[:q])
-    @products = @search.result(distinct: true).page(params[:page]).per(PER)
+    @products = @search.result(distinct: true).order(id: :asc).page(params[:page]).per(PER)
   end
 
   def show

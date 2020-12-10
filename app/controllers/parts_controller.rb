@@ -6,7 +6,7 @@ class PartsController < ApplicationController
 
   def index
     @search = Part.search(params[:q])
-    @parts = @search.result(distinct:true).page(params[:page]).per(PER)
+    @parts = @search.result(distinct:true).order(id: :asc).page(params[:page]).per(PER)
   end
 
   def show

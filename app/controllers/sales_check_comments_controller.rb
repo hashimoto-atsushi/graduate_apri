@@ -6,7 +6,7 @@ class SalesCheckCommentsController < ApplicationController
 
   def index
     @search = SalesCheckComment.search(params[:q])
-    @sales_check_comments = @search.result(distinct:true).page(params[:page]).per(PER)
+    @sales_check_comments = @search.result(distinct:true).order(boss_check_comment_id: :asc).page(params[:page]).per(PER)
   end
 
   def show
