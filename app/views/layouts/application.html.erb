@@ -8,7 +8,6 @@
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header class="">
-    <% if user_signed_in? %>
     <div class="header-wrap">
       <nav class="navbar fixed-top navbar-dark bg-primary navbar-top" role="navigation">
         <div class="container">
@@ -29,7 +28,6 @@
         </div>
       </nav>
     </div>
-    <% end %>
   </header>
   <body>
     <div class="content_wrapper">
