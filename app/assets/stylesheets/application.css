@@ -31,12 +31,26 @@ td {
 }
 
 .navbar-brand {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
-.logo {
+/* .logo {
   width: 200px;
   heigth: 150px;
+} */
+.container {
+  margin: 0;
+}
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+  position: absolute;
+  top: -20px;
+
+    height: 100px;
+    padding: 0;
+    width: 100px;
 }
 
 .panel-primary {
@@ -62,6 +76,7 @@ td {
 }
 
 .side_bar {
+  font-size: 1.6rem;
   float: left;
   width: 200px;
   margin-top: 50px;
