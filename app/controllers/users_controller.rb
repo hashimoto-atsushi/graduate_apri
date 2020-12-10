@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-
+  PER = 10
   def index
     @search = User.search(params[:q])
-    @users = @search.result(distinct: true)
+    @users = @search.result(distinct: true).page(params[:page]).per(PER)
   end
 
   def show

@@ -2,11 +2,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :sales_and_admin_login, only: [:create, :update, :destroy]
-
+  PER = 10
 
   def index
     @search = Product.search(params[:q])
-    @products = @search.result(distinct: true)
+    @products = @search.result(distinct: true).page(params[:page]).per(PER)
   end
 
   def show

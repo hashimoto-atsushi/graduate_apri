@@ -2,10 +2,11 @@ class PartsController < ApplicationController
   before_action :set_part, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :tech_and_admin_login, only: [:create, :update, :destroy]
+  PER = 10
 
   def index
     @search = Part.search(params[:q])
-    @parts = @search.result(distinct:true)
+    @parts = @search.result(distinct:true).page(params[:page]).per(PER)
   end
 
   def show

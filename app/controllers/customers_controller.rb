@@ -2,11 +2,11 @@ class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :sales_and_admin_login, only: [:create, :update, :destroy]
-
+  PER = 10
 
   def index
     @search = Customer.search(params[:q])
-    @customers = @search.result(distinct: true)
+    @customers = @search.result(distinct: true).page(params[:page]).per(PER)
   end
 
   def show
