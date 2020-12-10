@@ -8,39 +8,43 @@
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header class="">
-    <div class="header-wrap">
-      <nav class="navbar fixed-top navbar-dark bg-primary navbar-top" role="navigation">
-        <div class="container">
-          <div class="navbar-brand">
-            <a href="<%= link_to t('view.layouts.to_top'), top_index_path %>"><%= link_to image_tag("logo_reg.png", alt:"logo"), '/', class:"navbar-brand" %></a>
-            <span class="top-title"><%= full_title(yield(:title)) %></span>
-          </div>
+    <div class="all-wrapper">
+      <div class="header-wrap">
+        <nav class="navbar fixed-top navbar-dark bg-primary navbar-top" role="navigation">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="<%= link_to t('view.layouts.to_top'), top_index_path %>"><%= link_to image_tag("logo_reg.png", alt:"logo"), '/', class:"navbar-brand" %></a>
+              <span class="top-title"><%= full_title(yield(:title)) %></span>
+            </div>
 
             <ul class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
-                <li><%= link_to current_user.name + t('view.layouts.my_page'), user_path(current_user.id), class:"bg-primary" %></li>
-                <li><%= link_to t('view.layouts.logout'), destroy_user_session_path, method: :delete, class:"bg-primary"  %></li>
+              <li><%= link_to current_user.name + t('view.layouts.my_page'), user_path(current_user.id), class:"bg-primary" %></li>
+              <li><%= link_to t('view.layouts.logout'), destroy_user_session_path, method: :delete, class:"bg-primary"  %></li>
               <% end %>
               <% if user_signed_in? && current_user.permission %>
-                <li><%= link_to t('view.layouts.admin'), rails_admin_path, class:"bg-primary"  %></li>
+              <li><%= link_to t('view.layouts.admin'), rails_admin_path, class:"bg-primary"  %></li>
               <% end %>
             </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <body>
+      <div class="wrapper-for-footer">
+        <div class="content_wrapper">
+          <div class="side_bar">
+            <% if user_signed_in? %>
+            <%= render 'layouts/side_bar' %>
+            <% end %>
+          </div>
+          <div class="content">
+            <%= yield %>
+          </div>
         </div>
-      </nav>
-    </div>
-  </header>
-  <body>
-    <div class="content_wrapper">
-      <div class="side_bar">
-        <% if user_signed_in? %>
-        <%= render 'layouts/side_bar' %>
-        <% end %>
+        <footer class="footer">
+        </footer>
       </div>
-      <div class="content">
-        <%= yield %>
-      </div>
+      </body>
     </div>
-  </body>
-  <footer>
-  </footer>
 </html>
