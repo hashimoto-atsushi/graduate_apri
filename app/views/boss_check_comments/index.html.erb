@@ -32,7 +32,7 @@
             <td><%= boss_check_comment.report_to_sales %></td>
             <td><%= link_to t('view.boss_check_comments.show'), boss_check_comment, class:"btn btn-info btn-xs" %></td>
             <% if boss_and_admin_display %>
-            <td><%= link_to t('view.boss_check_comments.delete'), boss_check_comment, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-xs" %></td>
+            <td><%= link_to t('view.boss_check_comments.delete'), boss_check_comment, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs" %></td>
             <% end %>
           </tr>
           <% end %>
