@@ -37,7 +37,7 @@
           <% detail_report.boss_check_comments.each do |boss_check_comment|%>
           <% boss_check_comment.sales_check_comments.each do |sales_check_comment|%>
           <ol>
-            <li><%= link_to  t('view.allsupports.to_show'), sales_check_comment_path(sales_check_comment.id), class:"btn btn-info btn-xs" %></ %></li>
+            <li><%= link_to  t('view.allsupports.to_show'), sales_check_comment_path(sales_check_comment.id), class:"btn btn-info btn-xs" %></li>
           </ol>
           <% end %>
           <% end %>
@@ -48,6 +48,9 @@
         <% end %>
       </tbody>
     </table>
+    <div>
+      <%= paginate @support_programs %>
+    </div>
 </div>
 </div>
 </div>
