@@ -74,9 +74,7 @@
         </tbody>
       </table>
     <div>
-    <div>
       <%= paginate @customers %>
-    </div>
     <div class="create-new pull-right">
       <% if sales_and_admin_display %>
       <%= link_to t('view.customers.to_new'), new_customer_path, class:"btn btn-success btn-lg" %>

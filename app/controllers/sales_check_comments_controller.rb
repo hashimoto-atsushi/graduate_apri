@@ -2,7 +2,7 @@ class SalesCheckCommentsController < ApplicationController
   before_action :set_sales_check_comment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :sales_and_admin_login, only: [:create, :update, :destroy]
-  PER = 10
+  PER = 8
 
   def index
     @search = SalesCheckComment.search(params[:q])

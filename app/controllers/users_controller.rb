@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  PER = 10
+  PER = 8
   def index
     @search = User.search(params[:q])
     @users = @search.result(distinct: true).order(employee_number: :asc).page(params[:page]).per(PER)

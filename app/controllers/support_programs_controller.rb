@@ -3,7 +3,7 @@ class SupportProgramsController < ApplicationController
   before_action :mail_to_systems, only: [:create]
   before_action :authenticate_user!
   before_action :tech_and_admin_login, only: [:create, :update, :destroy]
-  PER = 10
+  PER = 8
 
   def index
     @search = SupportProgram.search(params[:q])
