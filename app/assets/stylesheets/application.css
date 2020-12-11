@@ -43,8 +43,7 @@ footer{
   color: #fff;
   text-align: center;
   padding: 30px 0;
-
-position: absolute;/*←絶対位置*/
+  position: absolute;/*←絶対位置*/
   bottom: 0; /*下に固定*/
 }
 
@@ -109,7 +108,8 @@ position: absolute;/*←絶対位置*/
   font-size: 1.6rem;
   float: left;
   width: 200px;
-  margin-top: 25px;
+  margin-top: 20px;
+  padding-left: 10px;
 }
 
 .action {
@@ -136,12 +136,11 @@ textarea.form-control {
 
 .pagination>.active>a {
   background: #93c9ff;
-  border-radius: 14px;     /*角を丸くする*/
+  border-radius: 14px;
 }
 
-/*ホバー時のデザイン*/
 .pagination>li>a:hover {
-  border-radius: 15px;    /*角を丸くする*/
+  border-radius: 15px;
 }
 
 .cover-wrapper {
@@ -167,4 +166,40 @@ textarea.form-control {
   padding: 0;
   width: 50%;
   float: left;
+}
+
+
+/* もともとTOPのCSS */
+.content-wrapper {
+  float: left;
+  margin-left: 30px;
+}
+
+.info {
+  margin: 50px 0 60px 0;
+  overflow: hidden;
+}
+
+.link-btn {
+  float: left;
+}
+
+.btn-position1 {
+  margin-right: 60px;
+}
+
+.btn-position2 {
+  margin-right: 103px;
+}
+
+.btn-position3 {
+  margin-right: 103px;
+}
+
+.icon-position {
+  margin: 10px 60px 0 0px;
+}
+
+.top-wrapper p {
+  font-size:2rem;
 }
