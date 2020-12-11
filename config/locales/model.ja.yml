@@ -10,7 +10,7 @@ ja:
       detail_report: '作業報告'
       boss_check_comment: '上長確認'
       sales_check_comment: '営業確認'
-    attribute:
+    attributes:
       user:
         id: 'ID'
         number: '社員番号'

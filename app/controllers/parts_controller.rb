@@ -35,6 +35,7 @@ class PartsController < ApplicationController
 
   def confirm
     @part = Part.new(part_params)
+    render :new if @part.invalid?
   end
 
   def update

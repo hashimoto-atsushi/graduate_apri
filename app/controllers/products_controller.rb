@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
         UserMailer.product_mail_to_sales(@product, current_user).deliver
         redirect_to @product, notice: '作成しました！'
       else
-        format.html { render :new }
+        render :new 
       end
     end
   end
