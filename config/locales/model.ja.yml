@@ -13,7 +13,7 @@ ja:
     attributes:
       user:
         id: 'ID'
-        number: '社員番号'
+        employee_number: '社員番号'
         name: '名前'
         department: '部署'
         sale: "test"
