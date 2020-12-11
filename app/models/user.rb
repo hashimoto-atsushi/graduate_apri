@@ -1,10 +1,12 @@
 class User < ApplicationRecord
-  validates :employee_number, presence: true
+  validates :employee_number, presence: true,
+                            uniqueness: true
   validates :name, presence: true,
                      length: { maximum: 32 }
   validates :password, presence: true,
                          length: { minimum: 6 }
   validates :email, presence: true,
+                    uniqueness: true,
                       length: { maximum: 255 },
                       format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   before_validation { email.downcase! }
