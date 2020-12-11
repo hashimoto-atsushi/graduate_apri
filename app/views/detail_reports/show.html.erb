@@ -1,109 +1,105 @@
 <h1><% provide(:title,"作業報告 -詳細-") %></h1>
-<p id="notice"><%= notice %></div>
+<p id="notice"><%= notice %>
 
 <div class="content-wrapper">
   <div class="container">
     <div class="upper-box">
-       <h3>- 保守案件 詳細 -</h3>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.title_number') %>:</b>&emsp;</strong>
-            <%= @detail_report.support_program.title_number %></p>
-          </div>
-          <div class="col-xs-4">
-            <p><b><%= t('view.support_programs.customer') %>:</b>&emsp;</strong>
-            <%= @detail_report.support_program.customer.name %></p>
-          </div>
-          <div class="col-xs-4">
-            <p><b><%= t('view.support_programs.title') %>:</b>&emsp;</strong>
-            <%= @detail_report.support_program.title %></p>
-          </div>
+    <h3>- 保守案件 詳細 -</h3>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.title_number') %>:</b>&emsp;</strong>
+        <%= @detail_report.support_program.title_number %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.main_work') %>:</b>&emsp;</strong>
-          <%= @detail_report.support_program.main_work %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.planed_or_argent') %>:</b>&emsp;</strong>
-          <%= @detail_report.support_program.planed_or_argent %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.order_status') %>:</b>&emsp;</strong>
-            <%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
-          </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.customer') %>:</b>&emsp;</strong>
+        <%= @detail_report.support_program.customer.name %></p>
       </div>
-      <h3>- 作業報告 詳細 -</h3>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.detail_reports.ordered_date') %>:</b>&emsp;</strong>
-          <%= @detail_report.ordered_date %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.detail_reports.ordered_price') %>:</b>&emsp;</strong>
-          <%= @detail_report.ordered_price %></p>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.title') %>:</b>&emsp;</strong>
+        <%= @detail_report.support_program.title %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-4""col-xs-4">
-          <p><b><%= t('view.support_programs.kick_off_date') %>:</b>&emsp;</strong>
-          <%= @detail_report.support_program.kick_off_date %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:</b>&emsp;</strong>
-          <%= @detail_report.actual_kickoff_date %></p>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.main_work') %>:</b>&emsp;</strong>
+        <%= @detail_report.support_program.main_work %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.closed')%>:</b>&emsp;</strong>
-          <%= @detail_report.support_program.closed %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.detail_reports.actual_complete_date')%>:</b>&emsp;</strong>
-          <%= @detail_report.actual_complete_date %></p>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.planed_or_argent') %>:</b>&emsp;</strong>
+        <%= @detail_report.support_program.planed_or_argent %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.detail_reports.service_detail') %>:</b>&emsp;</strong>
-          <%= @detail_report.service_detail %></p>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.order_status') %>:</b>&emsp;</strong>
+        <%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
       </div>
-      <!-- <div>
-        <p><b><%= t('view.detail_reports.photo') %>:</b>&emsp;</strong>
-        <%= @detail_report.photo %></p>
-      </div> -->
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.detail_reports.results') %>:</b>&emsp;</strong>
-          <%= @detail_report.results %></p>
-        </div>
+    </div>
+    <h3>- 作業報告 詳細 -</h3>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.detail_reports.ordered_date') %>:</b>&emsp;</strong>
+        <%= @detail_report.ordered_date %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-2">
-          <p><b><%= t('view.detail_reports.evaluation') %>:</b>&emsp;</strong>
-          <%= @detail_report.evaluation %></p>
-        </div>
-        <div class="col-xs-10">
-          <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>&emsp;</strong>
-          <%= @detail_report.evaluation_details %></p>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.detail_reports.ordered_price') %>:</b>&emsp;</strong>
+        <%= @detail_report.ordered_price %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.user') %>:</b>&emsp;</strong>
-          <%= @detail_report.support_program.user.name %></p>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4""col-xs-4">
+        <p><b><%= t('view.support_programs.kick_off_date') %>:</b>&emsp;</strong>
+        <%= @detail_report.support_program.kick_off_date %></p>
       </div>
-      <div class="create-new">
-        <% if boss_and_admin_display %>
-        <%= link_to t('view.detail_reports.to_boss_check_comment'), new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id), class:"btn btn-success btn-lg"%>
-        <% end %>
+      <div class="col-xs-4">
+        <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:</b>&emsp;</strong>
+        <%= @detail_report.actual_kickoff_date %></p>
       </div>
-      <div>
-        <%= link_to t('view.detail_reports.to_index'), detail_reports_path, class:"btn btn-primary" %>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+      <p><b><%= t('view.support_programs.closed')%>:</b>&emsp;</strong>
+      <%= @detail_report.support_program.closed %></p>
       </div>
+      <div class="col-xs-4">
+      <p><b><%= t('view.detail_reports.actual_complete_date')%>:</b>&emsp;</strong>
+      <%= @detail_report.actual_complete_date %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+      <p><b><%= t('view.detail_reports.service_detail') %>:</b>&emsp;</strong>
+      <%= @detail_report.service_detail %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+      <p><b><%= t('view.detail_reports.results') %>:</b>&emsp;</strong>
+      <%= @detail_report.results %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">
+        <p><b><%= t('view.detail_reports.evaluation') %>:</b>&emsp;</strong>
+        <%= @detail_report.evaluation %></p>
+      </div>
+      <div class="col-xs-10">
+        <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>&emsp;</strong>
+        <%= @detail_report.evaluation_details %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.user') %>:</b>&emsp;</strong>
+        <%= @detail_report.support_program.user.name %></p>
+      </div>
+    </div>
+    <div class="create-new">
+      <% if boss_and_admin_display %>
+      <%= link_to t('view.detail_reports.to_boss_check_comment'), new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id), class:"btn btn-success btn-lg"%>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to t('view.detail_reports.to_index'), detail_reports_path, class:"btn btn-primary" %>
+    </div>
     </div>
   </div>
 </div>
