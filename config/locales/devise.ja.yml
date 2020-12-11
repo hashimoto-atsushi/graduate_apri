@@ -41,14 +41,14 @@ ja:
       signed_up: "ようこそ、サインアップに成功しました。"
       signed_up_but_inactive: "サインアップに成功しました。 しかし、まだあなたのアカウントを有効にしていません"
       signed_up_but_locked: "サインアップに成功しました。 しかし、あなたのアカウントはロックされています"
-      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
+      signed_up_but_unconfirmed: "確認する為のリンクが記載されたメッセージをEメールでお送りしました アカウントを有効する為に、そのリンクからアクセスしてください"
+      update_needs_confirmation: "アカウント更新ができました, しかし、あなたのEメールアドレスの確認が必要です。確認する為のリンクが記載されたメッセージをEメールでお送りしました Eメールを確認する為に、そのリンクからアクセスしてください。"
       updated: "Your account has been updated successfully."
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
     sessions:
       signed_in: "ログインしました"
       signed_out: "ログアウトしました"
-      already_signed_out: "Signed out successfully."
+      already_signed_out: "サインアウトが成功しました"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
