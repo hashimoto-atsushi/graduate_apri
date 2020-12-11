@@ -3,6 +3,7 @@ class SupportProgram < ApplicationRecord
   belongs_to :customer
   belongs_to :user
   validates :title_number, presence: true,
+                         uniqueness: true,
                              length: { maximum: 16 }
   validates :title, presence: true,
                       length: { maximum: 32 }

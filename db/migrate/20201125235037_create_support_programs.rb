@@ -13,5 +13,6 @@ class CreateSupportPrograms < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+    add_index :support_programs, :title_number, unique: true
   end
 end

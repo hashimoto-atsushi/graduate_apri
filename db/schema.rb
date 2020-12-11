@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
     t.string "position", limit: 16
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["customer_number"], name: "index_customers_on_customer_number", unique: true
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
@@ -137,6 +138,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_060910) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["customer_id"], name: "index_support_programs_on_customer_id"
+    t.index ["title_number"], name: "index_support_programs_on_title_number", unique: true
     t.index ["user_id"], name: "index_support_programs_on_user_id"
   end
 
