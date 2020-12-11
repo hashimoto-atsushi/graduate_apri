@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
- <div class="support_program">
    <div class="row">
      <div class="col-xs-3">
        <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b> <%= @support_program.title_number %></p>
@@ -103,9 +102,6 @@
      <%= form.text_area :evaluation_details, class:"form-control" %>
    </div>
  </div>
-
-</div>
-
   <div class="actions create-new">
     <%= form.submit class:"btn btn-warning" %>
   </div>
