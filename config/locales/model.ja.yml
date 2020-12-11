@@ -96,7 +96,7 @@ ja:
         id: '上長報告選択'
         confirmation: '営業確認'
         confirmation_date: '営業確認日'
-        comment: 'コメント'
+        comments: 'コメント'
         discussion_possibility: '協議の必要性'
         matter_closed: '営業承認'
         questions: '質問'

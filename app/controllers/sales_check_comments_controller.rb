@@ -33,7 +33,7 @@ class SalesCheckCommentsController < ApplicationController
         UserMailer.sales_check_comment_mail_to_tech_boss(@sales_check_comment, tech_boss).deliver
         redirect_to @sales_check_comment, notice: '作成しました！'
       else
-        render :new
+        redirect_to new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@sales_check_comment.boss_check_comment.detail_report.support_program.id, @sales_check_comment.boss_check_comment.detail_report.id, @sales_check_comment.boss_check_comment.id)
       end
     end
   end

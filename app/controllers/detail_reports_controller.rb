@@ -31,7 +31,7 @@ class DetailReportsController < ApplicationController
         UserMailer.detail_report_mail_to_tech_boss(@detail_report, tech_boss).deliver
         redirect_to @detail_report, notice: '作成しました！'
       else
-        render :new
+        redirect_to new_support_program_detail_report_path(@detail_report.support_program.id)
       end
     end
   end
