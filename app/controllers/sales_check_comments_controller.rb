@@ -10,6 +10,9 @@ class SalesCheckCommentsController < ApplicationController
   end
 
   def show
+    @support_program = @sales_check_comment.boss_check_comment.detail_report.support_program.id
+    @detail_report = @sales_check_comment.boss_check_comment.detail_report.id
+    @boss_check_comment = @sales_check_comment.boss_check_comment.id
   end
 
   def new
@@ -36,6 +39,8 @@ class SalesCheckCommentsController < ApplicationController
   end
 
   def confirm
+    @detail_report = DetailReport.find(params[:detail_report_id])
+    @boss_check_comment = BossCheckComment.find(params[:boss_check_comment_id])
     @sales_check_comment = SalesCheckComment.new(sales_check_comment_params)
     render :new if @sales_check_comment.invalid?
   end
