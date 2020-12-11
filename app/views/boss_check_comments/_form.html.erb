@@ -1,7 +1,7 @@
 <%= form_with(model: @boss_check_comment, local: true, url: choose_new_or_edit_boss) do |form| %>
   <% if boss_check_comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(boss_check_comment.errors.count, "error") %> prohibited this boss_check_comment from being saved:</h2>
+      <h2><%= boss_check_comment.errors.count  %><%= t('view.all.error_explanations') %></h2>
       <ul>
       <% boss_check_comment.errors.full_messages.each do |message| %>
         <li><%= message %></li>

@@ -1,7 +1,7 @@
 <%= form_with(model: @customer, local: true, url: choose_new_or_edit_customer ) do |form| %>
   <% if customer.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+      <h2><%= customer.errors.count  %><%= t('view.all.error_explanations') %></h2>
 
       <ul>
       <% customer.errors.full_messages.each do |message| %>

@@ -205,6 +205,8 @@ ja:
       short: "%m/%d %H:%M"
     pm: 午後
   view:
+    all:
+      error_explanations: '件のエラーがあります'
     layouts:
       to_top: 'トップページ'
       admin: 'システム部管理ページ'

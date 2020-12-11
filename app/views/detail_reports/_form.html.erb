@@ -1,7 +1,7 @@
 <%= form_with(model: @detail_report, local: true, url: choose_new_or_edit_detail_report ) do |form| %>
   <% if detail_report.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(detail_report.errors.count, "error") %> prohibited this detail_report from being saved:</h2>
+      <h2><%= detail_report.errors.count  %><%= t('view.all.error_explanations') %></h2>
 
       <ul>
       <% detail_report.errors.full_messages.each do |message| %>
