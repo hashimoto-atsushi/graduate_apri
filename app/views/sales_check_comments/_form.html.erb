@@ -1,7 +1,7 @@
 <%= form_with(model: @sales_check_comment, local: true, url: choose_new_or_edit_sales) do |form| %>
   <% if sales_check_comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(sales_check_comment.errors.count, "error") %> prohibited this sales_check_comment from being saved:</h2>
+      <h2><%= sales_check_comment.errors.count  %><%= t('view.all.error_explanations') %></h2>
 
       <ul>
       <% sales_check_comment.errors.full_messages.each do |message| %>
