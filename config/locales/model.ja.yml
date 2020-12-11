@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       user: '社員'
-      cutomer: '顧客'
+      customer: '顧客'
       product: '製品'
       part: '保守パーツ'
       installed_product: '納入機器'
@@ -12,7 +12,73 @@ ja:
       sales_check_comment: '営業確認'
     attribute:
       user:
-          
+        id: 'ID'
+        number: '社員番号'
+        name: '名前'
+        department: '部署'
+        sale: "test"
+        position: '役職'
+        permission: '権限'
+        email: 'Eメール'
+        cellphone_number: '携帯電話'
+        stay_or_left: '在籍'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+      customer:
+        customer_number: '顧客番号'
+        customer: '顧客名'
+        profession: '業種'
+        customer_in_charge: '顧客先 担当者'
+        department: '部署(顧客先)'
+        position: '役職(顧客先)'
+        phone_number: '連絡先電話番号'
+        installed_products: '納入機器'
+        support_programs: '保守案件'
+        employee_in_charge: '担当窓口'
+      product:
+        name: '製品名'
+        type_name: '型式'
+        category: '機器種類'
+        list_price: '標準価格'
+        release_date: '販売開始日'
+        end_of_production: '生産完了日'
+        end_of_service: 'サポート完了日'
+      part:
+        detail_report_id: '詳細報告ID'
+        name: '製品名'
+        type_name: '型式'
+        category: '機器種類'
+        list_price: '標準価格'
+        stock: '在庫数'
+        release_date: '販売開始日'
+        end_of_production: '生産完了日'
+        end_of_service: 'サポート完了日'
+      installed_product:
+        serial_number: 'シリアル番号'
+        installed_date: '納入日'
+        discount_price: '実売価格'
+      support_program:
+        title_number: '保守案件番号'
+        customer: '顧客名'
+        title: '保守案件名'
+        user: '技術担当者'
+        main_work: '作業内容'
+        planed_or_argent: '計画/緊急'
+        order_status: '受注状況'
+        kick_off_date: '作業予定日'
+        closed: '案件完了状態'
+
+
+
+
+
+
+
+
+
+
+
+
 
       to_top: 'トップページ'
       admin: 'システム部管理ページ'
