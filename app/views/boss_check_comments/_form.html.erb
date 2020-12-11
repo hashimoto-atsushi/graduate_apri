@@ -31,9 +31,6 @@
     <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b><%= @detail_report.support_program.planed_or_argent %></p>
   </div class="col-xs-3">
 </div>
-  <!-- <div>
-    <p><b>Supportprogram:<%= @detail_report.support_program.title %></p>
-  </div> -->
 <div class="row">
   <div class="col-xs-3">
     <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
@@ -64,9 +61,6 @@
     <p><b><%= t('view.detail_reports.service_detail') %>:&emsp;</b><%= @detail_report.service_detail %></p>
   </div>
 </div>
-  <!-- <div>
-    <p><b><%= t('view.detail_reports.photo') %>:&emsp;</b><%= @detail_report.photo %></p>
-  </div> -->
 <div class="row">
   <div class="col-xs-12">
     <p><b><%= t('view.detail_reports.results') %>:&emsp;</b><%= @detail_report.results %></p>
@@ -82,9 +76,6 @@
     <p><b><%= t('view.detail_reports.evaluation_details') %>:&emsp;</b><%= @detail_report.evaluation_details %></p>
   </div>
 </div>
-  <!-- <div>
-    <p><b><%= t('view.support_programs.user') %>:&emsp;</b><%= @detail_report.support_program.user.name %></p>
-  </div> -->
 <div class="row">
   <div class="field form-group col-xs-4">
     <%= form.label t('view.detail_reports.id'), class:"control-label" %>
@@ -100,25 +91,22 @@
   </div>
 </div>
 <div class="row">
-  <div class="field form-group col-xs-12">
+  <div class="field form-group col-xs-6">
     <%= form.label t('view.boss_check_comments.positive_comment'), class:"control-label"  %>
     <%= form.text_area :positive_comment, class: "form-control" %>
   </div>
-</div>
-<div class="row">
-  <div class="field form-group col-xs-12">
+  <div class="field form-group col-xs-6">
     <%= form.label t('view.boss_check_comments.negative_comment'), class:"control-label"  %>
     <%= form.text_area :negative_comment, class: "form-control" %>
   </div>
 </div>
+
 <div class="row">
-  <div class="field form-group col-xs-12">
+  <div class="field form-group col-xs-6">
     <%= form.label t('view.boss_check_comments.assistance'), class:"control-label"  %>
     <%= form.text_area :assistance, class: "form-control" %>
   </div>
-</div>
-<div class="row">
-  <div class="field form-group col-xs-12">
+  <div class="field form-group col-xs-6">
     <%= form.label t('view.boss_check_comments.questions'), class:"control-label"  %>
     <%= form.text_area :questions, class: "form-control" %>
   </div>
