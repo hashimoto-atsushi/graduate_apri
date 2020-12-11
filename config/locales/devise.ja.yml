@@ -43,16 +43,16 @@ ja:
       signed_up_but_locked: "サインアップに成功しました。 しかし、あなたのアカウントはロックされています"
       signed_up_but_unconfirmed: "確認する為のリンクが記載されたメッセージをEメールでお送りしました アカウントを有効する為に、そのリンクからアクセスしてください"
       update_needs_confirmation: "アカウント更新ができました, しかし、あなたのEメールアドレスの確認が必要です。確認する為のリンクが記載されたメッセージをEメールでお送りしました Eメールを確認する為に、そのリンクからアクセスしてください。"
-      updated: "Your account has been updated successfully."
-      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
+      updated: "アカウント更新ができました"
+      updated_but_not_signed_in: "アカウント更新ができました、 しかし、パスワードが変更されたので、再度サインインしてください。"
     sessions:
       signed_in: "ログインしました"
       signed_out: "ログアウトしました"
       already_signed_out: "サインアウトが成功しました"
     unlocks:
-      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      send_instructions: "数分後にアカウント解除の確認方法をメールでお伝えします"
+      send_paranoid_instructions: "もしあなたのアカウントがあれば、 数分後にアカウント解除の確認方法をメールでお伝えします"
+      unlocked: "アカウント解除に成功しました。 継続する場合はサインインしてください。"
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"
