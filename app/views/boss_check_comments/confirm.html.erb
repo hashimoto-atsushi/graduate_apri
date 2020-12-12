@@ -29,7 +29,7 @@
     <p><b><%= t('view.support_programs.title') %>:&emsp;</b> <%= @boss_check_comment.detail_report.support_program.title %></P>
   </div>
   <div>
-    <p><b><%= t('view.boss_check_comments.confirmation') %>:&emsp;</b> <%= @boss_check_comment.confirmation %></P>
+    <p><b><%= t('view.boss_check_comments.confirmation') %>:&emsp;</b> <%= @boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
   </div>
   <div>
     <p><b><%= t('view.boss_check_comments.confirmation_date') %>:&emsp;</b> <%= @boss_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></P>
