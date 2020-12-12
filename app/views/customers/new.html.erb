@@ -1,10 +1,8 @@
 <h1><% provide(:title,"顧客情報 -新規登録") %></h1>
 
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
-      <%= render 'form', customer: @customer %>
-      <%= link_to t('view.customers.to_index'), customers_path, class:"btn btn-info" %>
-    </div>
+<div class="container">
+  <div class="upper-box">
+    <%= render 'form', customer: @customer %>
+    <%= link_to t('view.customers.to_index'), customers_path, class:"btn btn-info" %>
   </div>
 </div>
