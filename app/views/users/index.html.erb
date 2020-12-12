@@ -2,45 +2,43 @@
 <p id="notice"><%= notice %></p>
 
 <%= search_form_for @search do |form| %>
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
-      <div class="row">
-        <div class="field form-group col-xs-3">
-          <%= form.label :employee_number_eq, "社員番号 検索: ", class:"control-label" %>
-          <%= form.text_field :employee_number_eq, class:"form-control" %>
-        </div>
-        <div class="field form-group col-xs-3">
-          <%= form.label :name_cont, "名前 検索: ", class:"control-label" %>
-          <%= form.text_field :name_cont, class:"form-control" %>
-        </div>
-        <div class="field form-group col-xs-3">
-          <%= form.label :department_eq, "部署 検索: ", class:"control-label" %>
-          <%= form.select :department_eq, [['営業部', 0], ['技術部', 1], ['システム部', 2]],
-          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %></div>
+<div class="container">
+  <div class="upper-box">
+    <div class="row">
+      <div class="field form-group col-xs-3">
+      <%= form.label :employee_number_eq, "社員番号 検索: ", class:"control-label" %>
+      <%= form.text_field :employee_number_eq, class:"form-control" %>
       </div>
-      <div class="action"><%= form.submit t('view.users.search'), class:"btn btn-primary" %></div>
-      <% end %>
+      <div class="field form-group col-xs-3">
+      <%= form.label :name_cont, "名前 検索: ", class:"control-label" %>
+      <%= form.text_field :name_cont, class:"form-control" %>
+      </div>
+      <div class="field form-group col-xs-3">
+      <%= form.label :department_eq, "部署 検索: ", class:"control-label" %>
+      <%= form.select :department_eq, [['営業部', 0], ['技術部', 1], ['システム部', 2]],
+      {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+      </div>
     </div>
+    <div class="action"><%= form.submit t('view.users.search'), class:"btn btn-primary" %></div>
+    <% end %>
   </div>
-  <div class="container table-responsive">
-    <table class="table table-bordered table-striped table-hover">
-      <thead>
-        <tr>
-          <th><%= t('view.users.id') %></th>
-          <th><%= sort_link @search, :employee_number, t('view.users.number') %></th>
-          <th><%= sort_link @search, :name, t('view.users.name') %></th>
-          <th><%= sort_link @search, :department, t('view.users.department') %></th>
-          <th><%= t('view.users.position') %></th>
-          <th><%= t('view.users.permission') %></th>
-          <th><%= t('view.users.email') %></th>
-          <th><%= t('view.users.cellphone_number') %></th>
-          <th><%= t('view.users.stay_or_left') %></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @users.each do |user| %>
+  <table class="table table-bordered table-striped table-hover table-responsive">
+    <thead>
+      <tr>
+        <th><%= t('view.users.id') %></th>
+        <th><%= sort_link @search, :employee_number, t('view.users.number') %></th>
+        <th><%= sort_link @search, :name, t('view.users.name') %></th>
+        <th><%= sort_link @search, :department, t('view.users.department') %></th>
+        <th><%= t('view.users.position') %></th>
+        <th><%= t('view.users.permission') %></th>
+        <th><%= t('view.users.email') %></th>
+        <th><%= t('view.users.cellphone_number') %></th>
+        <th><%= t('view.users.stay_or_left') %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
         <tr>
           <td class="text-center"><%= user.id %></td>
           <td class="text-center"><%= user.employee_number %></td>
@@ -54,13 +52,12 @@
           <td><%= link_to t('view.users.show'), user_path(user.id), class:"btn btn-info btn-xs" %></td>
         </tr>
         <% end %>
-      </tbody>
-    </table>
-      <%= paginate @users %>
-  </div>
+    </tbody>
+  </table>
+  <%= paginate @users %>
   <div class="create-new pull-right">
     <% if current_user.permission? %>
-      <%= link_to t('view.users.edit_users'), rails_admin_path, class:"btn btn-danger btn-lg" %>
+    <%= link_to t('view.users.edit_users'), rails_admin_path, class:"btn btn-danger btn-lg" %>
     <% end %>
   </div>
 </div>
