@@ -1,31 +1,26 @@
 <h1><% provide(:title,"顧客情報 一覧") %></h1>
 <p id="notice"><%= notice %></p>
-<div class="content-wrapper">
   <div class="container">
     <%= search_form_for @search do |form| %>
       <div class="upper-box">
-        <div class="field">
-          <div class="row">
-            <div class="field form-group col-xs-3">
-              <%= form.label :customer_number_eq, "顧客番号 検索:", class:"control-label"  %>
-            <%= form.text_field :customer_number_eq, class:"form-control" %>
-            </div>
-            <div class="field form-group col-xs-3">
-              <%= form.label :name_cont, "顧客名 検索: ", class:"control-label"  %>
-              <%= form.text_field :name_cont, class:"form-control" %>
-            </div>
-            <div class="field form-group col-xs-3">
-              <%= form.label :support_programs_title_cont, "案件名 検索: ", class:"control-label"  %>
-              <%= form.text_field :support_programs_title_cont, class:"form-control" %>
-            </div>
+        <div class="row">
+          <div class="field form-group col-xs-3">
+            <%= form.label :customer_number_eq, "顧客番号 検索:", class:"control-label"  %>
+          <%= form.text_field :customer_number_eq, class:"form-control" %>
           </div>
-          <div class="action"><%= form.submit "Search", class:"btn btn-primary"  %></div>
+          <div class="field form-group col-xs-3">
+            <%= form.label :name_cont, "顧客名 検索: ", class:"control-label"  %>
+            <%= form.text_field :name_cont, class:"form-control" %>
+          </div>
+          <div class="field form-group col-xs-3">
+            <%= form.label :support_programs_title_cont, "案件名 検索: ", class:"control-label"  %>
+            <%= form.text_field :support_programs_title_cont, class:"form-control" %>
+          </div>
         </div>
+        <div class="action"><%= form.submit "Search", class:"btn btn-primary"  %></div>
       </div>
     <% end %>
-
-    <div class="container table-responsive">
-      <table class="table table-bordered table-striped table-hover">
+      <table class="table table-bordered table-striped table-hover able-responsive">
         <thead>
           <tr>
             <th><%= sort_link @search, :customer_number, t('view.customers.customer_number') %></th>
@@ -51,34 +46,34 @@
             <td><%= customer.department %></td>
             <td><%= customer.position %></td>
             <td><%= customer.phone_number %></td>
-            <td><% customer.installed_products.each do | installed_product | %>
+            <td>
+              <% customer.installed_products.each do | installed_product | %>
               <ul>
                 <li><%= installed_product.product.name %></li>
               </ul>
               <% end %>
             </td>
-            <td><% customer.support_programs.each do | support_program | %>
+            <td>
+              <% customer.support_programs.each do | support_program | %>
               <ul>
                 <li><%= support_program.title %></li>
               </ul>
-            <% end %>
+              <% end %>
             </td>
             <td><%= customer.user.name %></td>
             <td><%= link_to t('view.customers.show'), customer, class:"btn btn-info btn-xs"  %></td>
             <% if sales_and_admin_display %>
-            <td><%= link_to t('view.customers.edit'), edit_customer_path(customer), class:"btn btn-warning btn-xs" %></td>
-            <td><%= link_to t('view.customers.delete'), customer, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs"  %></td>
+              <td><%= link_to t('view.customers.edit'), edit_customer_path(customer), class:"btn btn-warning btn-xs" %></td>
+              <td><%= link_to t('view.customers.delete'), customer, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs"  %></td>
             <% end %>
           </tr>
           <% end %>
         </tbody>
       </table>
-    <div>
       <%= paginate @customers %>
     <div class="create-new pull-right">
       <% if sales_and_admin_display %>
-      <%= link_to t('view.customers.to_new'), new_customer_path, class:"btn btn-success btn-lg" %>
+        <%= link_to t('view.customers.to_new'), new_customer_path, class:"btn btn-success btn-lg" %>
       <% end %>
     </div>
   </div>
-</div>

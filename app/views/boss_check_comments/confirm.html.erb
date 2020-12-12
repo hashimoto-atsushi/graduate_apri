@@ -1,61 +1,59 @@
 <h1><% provide(:title,"上長確認 -登録確認-") %></h1>
 <%= form_with(model: @boss_check_comment, local: true) do |form| %>
-<div class="container">
-  <div class="upper-box">
-    <div>
-      <%= form.hidden_field :detail_report_id %>
-    </div>
-    <div>
-      <%= form.hidden_field :confirmation %>
-    </div>
-    <div>
-      <%= form.hidden_field :confirmation_date %>
-    </div>
-    <div>
-      <%= form.hidden_field :positive_comment %>
-    </div>
-    <div>
-      <%= form.hidden_field :negative_comment %>
-    </div>
-    <div>
-      <%= form.hidden_field :assistance %>
-    </div>
-    <div>
-      <%= form.hidden_field :questions %>
-    </div>
-    <div>
-      <%= form.hidden_field :report_to_sales %>
-    </div>
-    <div>
-      <p><b><%= t('view.support_programs.title') %>:&emsp;</b> <%= @boss_check_comment.detail_report.support_program.title %></P>
-    </div>
-    <div>
-      <p><b><%= t('view.boss_check_comments.confirmation') %>:&emsp;</b> <%= @boss_check_comment.confirmation %></P>
-    </div>
-    <div>
-      <p><b><%= t('view.boss_check_comments.confirmation_date') %>:&emsp;</b> <%= @boss_check_comment.confirmation_date %></P>
-    </div>
-    <div>
-      <p><b><%= t('view.boss_check_comments.positive_comment') %>:&emsp;</b> <%= @boss_check_comment.positive_comment %></P>
-    </div>
-    <div>
-      <p><b><%= t('view.boss_check_comments.negative_comment') %>:&emsp;</b> <%= @boss_check_comment.negative_comment %></P>
-    </div>
-    <div>
-      <p><b><%= t('view.boss_check_comments.assistance') %>:&emsp;</b> <%= @boss_check_comment.assistance %></P>
-    </div>
-    <div>
-      <p><b><%= t('view.boss_check_comments.questions') %>:&emsp;</b> <%= @boss_check_comment.questions %></P>
-    </div>
-    <div>
-      <p><b><%= t('view.boss_check_comments.report_to_sales') %>:&emsp;</b> <%= @boss_check_comment.report_to_sales %></P>
-    </div>
-    <div class="create-new">
-     <%= form.submit t('view.boss_check_comments.confirm_to_submit'), class:"btn btn-danger" %>
-    </div>
-    <div class="create-new">
-      <%= link_to t('view.boss_check_comments.back'), new_support_program_detail_report_boss_check_comment_path, name: 'back', class:"btn btn-primary"%>
-    </div>
+<div class="upper-box">
+  <div>
+    <%= form.hidden_field :detail_report_id %>
+  </div>
+  <div>
+    <%= form.hidden_field :confirmation %>
+  </div>
+  <div>
+    <%= form.hidden_field :confirmation_date %>
+  </div>
+  <div>
+    <%= form.hidden_field :positive_comment %>
+  </div>
+  <div>
+    <%= form.hidden_field :negative_comment %>
+  </div>
+  <div>
+    <%= form.hidden_field :assistance %>
+  </div>
+  <div>
+    <%= form.hidden_field :questions %>
+  </div>
+  <div>
+    <%= form.hidden_field :report_to_sales %>
+  </div>
+  <div>
+    <p><b><%= t('view.support_programs.title') %>:&emsp;</b> <%= @boss_check_comment.detail_report.support_program.title %></P>
+  </div>
+  <div>
+    <p><b><%= t('view.boss_check_comments.confirmation') %>:&emsp;</b> <%= @boss_check_comment.confirmation %></P>
+  </div>
+  <div>
+    <p><b><%= t('view.boss_check_comments.confirmation_date') %>:&emsp;</b> <%= @boss_check_comment.confirmation_date %></P>
+  </div>
+  <div>
+    <p><b><%= t('view.boss_check_comments.positive_comment') %>:&emsp;</b> <%= @boss_check_comment.positive_comment %></P>
+  </div>
+  <div>
+    <p><b><%= t('view.boss_check_comments.negative_comment') %>:&emsp;</b> <%= @boss_check_comment.negative_comment %></P>
+  </div>
+  <div>
+    <p><b><%= t('view.boss_check_comments.assistance') %>:&emsp;</b> <%= @boss_check_comment.assistance %></P>
+  </div>
+  <div>
+    <p><b><%= t('view.boss_check_comments.questions') %>:&emsp;</b> <%= @boss_check_comment.questions %></P>
+  </div>
+  <div>
+    <p><b><%= t('view.boss_check_comments.report_to_sales') %>:&emsp;</b> <%= @boss_check_comment.report_to_sales %></P>
+  </div>
+  <div class="create-new">
+   <%= form.submit t('view.boss_check_comments.confirm_to_submit'), class:"btn btn-danger" %>
+  </div>
+  <div class="create-new">
+    <%= link_to t('view.boss_check_comments.back'), new_support_program_detail_report_boss_check_comment_path, name: 'back', class:"btn btn-primary"%>
   </div>
 </div>
 <% end %>
