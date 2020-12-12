@@ -1,10 +1,10 @@
 <h1><% provide(:title,"営業確認済リスト") %></h1>
 <p id="notice"><%= notice %></p>
 
-<%= search_form_for @search do |form| %>
 <div class="content-wrapper">
   <div class="container">
     <div class="upper-box">
+      <%= search_form_for @search do |form| %>
       <div class="row">
         <div class="field form-group col-xs-3">
           <%= form.label :discussion_possibility_eq, "協議の必要性 検索: ", class:"control-label"  %>
@@ -25,42 +25,37 @@
       <div class="action"><%= form.submit t('view.sales_check_comments.search'), class:"btn btn-primary"  %></div>
       <% end %>
     </div>
-  </div>
-<div class="container table-responsive">
-  <table class="table table-bordered table-striped table-hover">
-    <thead>
-      <tr>
-        <th><%= t('view.support_programs.title_number') %></th>
-        <th><%= t('view.customers.customer') %></th>
-        <th><%= t('view.support_programs.title') %></th>
-        <th><%= t('view.sales_check_comments.confirmation') %></th>
-        <th><%= sort_link @search, :confirmation_date, t('view.sales_check_comments.confirmation_date') %></th>
-        <!-- <th><%= t('view.sales_check_comments.comment') %></th> -->
-        <th><%= t('view.sales_check_comments.discussion_possibility') %></th>
-        <th><%= t('view.sales_check_comments.matter_closed') %></th>
-        <th><%= t('view.boss_check_comments.confirmation') %></th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @sales_check_comments.each do |sales_check_comment| %>
-      <tr>
-        <td class="text-center"><%= sales_check_comment.boss_check_comment.detail_report.support_program.title_number %></td>
-        <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.customer.name %></td>
-        <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.title %></td>
-        <td><%= sales_check_comment.confirmation == true ? "確認済" : "未確認" %></td>
-        <!-- <td><%= sales_check_comment.confirmation %></td> -->
-        <td><%= sales_check_comment.confirmation_date %></td>
-        <!-- <td><%= sales_check_comment.comments %></td> -->
-        <td><%= sales_check_comment.discussion_possibility == true ? " 有り" : "無し" %></td>
-        <td><%= sales_check_comment.matter_closed == true ? " 承認済" : "未承認" %></td>
-        <td><%= sales_check_comment.boss_check_comment.confirmation == true ? " 承認済" : "未承認"  %></td>
-        <td><%= link_to t('view.sales_check_comments.show'), sales_check_comment, class:"btn btn-info btn-xs" %></td>
-        <td><%= link_to t('view.sales_check_comments.delete'), sales_check_comment, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs" %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <table class="table table-bordered table-striped table-hover table-responsive">
+      <thead>
+        <tr>
+          <th><%= t('view.support_programs.title_number') %></th>
+          <th><%= t('view.customers.customer') %></th>
+          <th><%= t('view.support_programs.title') %></th>
+          <th><%= t('view.sales_check_comments.confirmation') %></th>
+          <th><%= sort_link @search, :confirmation_date, t('view.sales_check_comments.confirmation_date') %></th>
+          <th><%= t('view.sales_check_comments.discussion_possibility') %></th>
+          <th><%= t('view.sales_check_comments.matter_closed') %></th>
+          <th><%= t('view.boss_check_comments.confirmation') %></th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sales_check_comments.each do |sales_check_comment| %>
+        <tr>
+          <td class="text-center"><%= sales_check_comment.boss_check_comment.detail_report.support_program.title_number %></td>
+          <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.customer.name %></td>
+          <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.title %></td>
+          <td><%= sales_check_comment.confirmation == true ? "確認済" : "未確認" %></td>
+          <td><%= sales_check_comment.confirmation_date %></td>
+          <td><%= sales_check_comment.discussion_possibility == true ? " 有り" : "無し" %></td>
+          <td><%= sales_check_comment.matter_closed == true ? " 承認済" : "未承認" %></td>
+          <td><%= sales_check_comment.boss_check_comment.confirmation == true ? " 承認済" : "未承認"  %></td>
+          <td><%= link_to t('view.sales_check_comments.show'), sales_check_comment, class:"btn btn-info btn-xs" %></td>
+          <td><%= link_to t('view.sales_check_comments.delete'), sales_check_comment, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs" %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
     <%= paginate @sales_check_comments %>
-</div>
+  </div>
 </div>
