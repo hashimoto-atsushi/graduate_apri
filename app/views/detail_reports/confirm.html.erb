@@ -1,75 +1,73 @@
 <h1><% provide(:title,"作業報告 -登録確認-") %></h1>
 <%= form_with(model: @detail_report, local: true ) do |form| %>
 
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
-      <div>
-        <%= form.hidden_field :support_program_id %>
-      </div>
-      <div>
-        <%= form.hidden_field :ordered_date %>
-      </div>
-      <div>
-        <%= form.hidden_field :ordered_price %>
-      </div>
-      <div>
-        <%= form.hidden_field :actual_kickoff_date %>
-      </div>
-      <div>
-        <%= form.hidden_field :actual_complete_date %>
-      </div>
-      <div>
-        <%= form.hidden_field :service_detail %>
-      </div>
-      <div>
-        <%= form.hidden_field :photo %>
-      </div>
-      <div>
-        <%= form.hidden_field :results %>
-      </div>
-      <div>
-        <%= form.hidden_field :evaluation %>
-      </div>
-      <div>
-        <%= form.hidden_field :evaluation_details %>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.title') %>:&emsp;</b> <%= @detail_report.support_program.title %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b> <%= @detail_report.ordered_date %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b> <%= @detail_report.ordered_price %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b> <%= @detail_report.actual_kickoff_date %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.actual_complete_date')%>:&emsp;</b> <%= @detail_report.actual_complete_date %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.service_detail') %>:&emsp;</b> <%= @detail_report.service_detail %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.photo') %>:&emsp;</b> <%= @detail_report.photo %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.results') %>:&emsp;</b> <%= @detail_report.results %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.evaluation') %>:&emsp;</b> <%= @detail_report.evaluation %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.detail_reports.evaluation_details') %>:&emsp;</b> <%= @detail_report.evaluation_details %></P>
-      </div>
-      <div class="create-new">
-       <%= form.submit t('view.detail_reports.confirm_to_submit'), class:"btn btn-danger" %>
-      </div>
-      <div class="create-new">
-        <%= link_to t('view.detail_reports.back'), new_support_program_detail_report_path, name: 'back', class:"btn btn-primary"%>
-      </div>
+<div class="container">
+  <div class="upper-box">
+    <div>
+      <%= form.hidden_field :support_program_id %>
+    </div>
+    <div>
+      <%= form.hidden_field :ordered_date %>
+    </div>
+    <div>
+      <%= form.hidden_field :ordered_price %>
+    </div>
+    <div>
+      <%= form.hidden_field :actual_kickoff_date %>
+    </div>
+    <div>
+      <%= form.hidden_field :actual_complete_date %>
+    </div>
+    <div>
+      <%= form.hidden_field :service_detail %>
+    </div>
+    <div>
+      <%= form.hidden_field :photo %>
+    </div>
+    <div>
+      <%= form.hidden_field :results %>
+    </div>
+    <div>
+      <%= form.hidden_field :evaluation %>
+    </div>
+    <div>
+      <%= form.hidden_field :evaluation_details %>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.title') %>:&emsp;</b> <%= @detail_report.support_program.title %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b> <%= @detail_report.ordered_date %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b> <%= @detail_report.ordered_price %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b> <%= @detail_report.actual_kickoff_date %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.actual_complete_date')%>:&emsp;</b> <%= @detail_report.actual_complete_date %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.service_detail') %>:&emsp;</b> <%= @detail_report.service_detail %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.photo') %>:&emsp;</b> <%= @detail_report.photo %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.results') %>:&emsp;</b> <%= @detail_report.results %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.evaluation') %>:&emsp;</b> <%= @detail_report.evaluation %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.detail_reports.evaluation_details') %>:&emsp;</b> <%= @detail_report.evaluation_details %></P>
+    </div>
+    <div class="create-new">
+     <%= form.submit t('view.detail_reports.confirm_to_submit'), class:"btn btn-danger" %>
+    </div>
+    <div class="create-new">
+      <%= link_to t('view.detail_reports.back'), new_support_program_detail_report_path, name: 'back', class:"btn btn-primary"%>
     </div>
   </div>
 </div>

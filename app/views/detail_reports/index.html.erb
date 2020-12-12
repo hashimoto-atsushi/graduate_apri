@@ -1,51 +1,49 @@
 <h1><% provide(:title,"作業報告 一覧") %></h1>
 <p id="notice"><%= notice %></p>
 
-<div class="content-wrapper">
+<div class="container">
   <div class="upper-box">
-    <div class="container table-responsive">
-      <table class="table table-bordered table-striped table-hover">
-        <thead>
-          <tr>
-            <th><%= t('view.customers.customer') %></th>
-            <th><%= t('view.support_programs.title') %></th>
-            <th><%= t('view.detail_reports.ordered_date') %></th>
-            <th><%= t('view.detail_reports.ordered_price') %></th>
-            <th><%= t('view.detail_reports.actual_kickoff_date') %></th>
-            <th><%= t('view.detail_reports.actual_complete_date') %></th>
-            <th><%= t('view.detail_reports.service_detail') %></th>
-            <!-- <th><%= t('view.detail_reports.photo') %></th> -->
-            <!-- <th><%= t('view.detail_reports.results') %></th> -->
-            <th><%= t('view.detail_reports.evaluation') %></th>
-            <!-- <th><%= t('view.detail_reports.evaluation_details') %></th> -->
-            <th><%= t('view.support_programs.user') %></th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @detail_reports.each do |detail_report| %>
-          <tr>
-            <td><%= detail_report.support_program.customer.name %></td>
-            <td><%= detail_report.support_program.title %></td>
-            <td><%= detail_report.ordered_date %></td>
-            <td><%= detail_report.ordered_price %></td>
-            <td><%= detail_report.actual_kickoff_date %></td>
-            <td><%= detail_report.actual_complete_date %></td>
-            <td><%= detail_report.service_detail %></td>
-            <!-- <td><%= detail_report.photo %></td> -->
-            <!-- <td><%= detail_report.results %></td> -->
-            <td><%= detail_report.evaluation %></td>
-            <!-- <td><%= detail_report.evaluation_details %></td> -->
-            <td><%= detail_report.support_program.user.name %></td>
-            <td><%= link_to t('view.detail_reports.show'), detail_report, class:"btn btn-info btn-xs" %></td>
-            <% if current_user.permission %>
+    <table class="table table-bordered table-striped table-hover table-responsive">
+      <thead>
+        <tr>
+          <th><%= t('view.customers.customer') %></th>
+          <th><%= t('view.support_programs.title') %></th>
+          <th><%= t('view.detail_reports.ordered_date') %></th>
+          <th><%= t('view.detail_reports.ordered_price') %></th>
+          <th><%= t('view.detail_reports.actual_kickoff_date') %></th>
+          <th><%= t('view.detail_reports.actual_complete_date') %></th>
+          <th><%= t('view.detail_reports.service_detail') %></th>
+          <!-- <th><%= t('view.detail_reports.photo') %></th> -->
+          <!-- <th><%= t('view.detail_reports.results') %></th> -->
+          <th><%= t('view.detail_reports.evaluation') %></th>
+          <!-- <th><%= t('view.detail_reports.evaluation_details') %></th> -->
+          <th><%= t('view.support_programs.user') %></th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @detail_reports.each do |detail_report| %>
+        <tr>
+          <td><%= detail_report.support_program.customer.name %></td>
+          <td><%= detail_report.support_program.title %></td>
+          <td><%= detail_report.ordered_date %></td>
+          <td><%= detail_report.ordered_price %></td>
+          <td><%= detail_report.actual_kickoff_date %></td>
+          <td><%= detail_report.actual_complete_date %></td>
+          <td><%= detail_report.service_detail %></td>
+          <!-- <td><%= detail_report.photo %></td> -->
+          <!-- <td><%= detail_report.results %></td> -->
+          <td><%= detail_report.evaluation %></td>
+          <!-- <td><%= detail_report.evaluation_details %></td> -->
+          <td><%= detail_report.support_program.user.name %></td>
+          <td><%= link_to t('view.detail_reports.show'), detail_report, class:"btn btn-info btn-xs" %></td>
+          <% if current_user.permission %>
             <td><%= link_to t('view.detail_reports.delete'), detail_report, method: :delete, data: { confirm: '削除しますか?' }, class:"btn btn-danger btn-xs" %></td>
-            <% end %>
-          </tr>
           <% end %>
-        </tbody>
-      </table>
-        <%= paginate @detail_reports %>
-    </div>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= paginate @detail_reports %>
   </div>
 </div>

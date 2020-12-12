@@ -2,7 +2,6 @@
   <% if detail_report.errors.any? %>
     <div id="error_explanation">
       <h2><%= detail_report.errors.count  %><%= t('view.all.error_explanations') %></h2>
-
       <ul>
       <% detail_report.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,100 +9,91 @@
       </ul>
     </div>
   <% end %>
-<div class="support_program">
-  <div class="row">
-     <div class="col-xs-3">
-       <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b> <%= @support_program.title_number %></p>
+  <div class="support_program">
+    <div class="row">
+       <div class="col-xs-3">
+         <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b> <%= @support_program.title_number %></p>
+       </div>
+       <div class="col-xs-3">
+         <p><b><%= t('view.support_programs.customer') %>:&emsp;</b><%= @support_program.customer.name %></p>
+       </div>
+       <div class="col-xs-3">
+         <p><b><%= t('view.support_programs.title') %>:&emsp;</b><%= @support_program.title %></p>
+       </div>
+       <div class="col-xs-3">
+         <p><b><%= t('view.support_programs.user') %>:&emsp;</b> <%= @support_program.user.name %></p>
+       </div>
      </div>
-     <div class="col-xs-3">
-       <p><b><%= t('view.support_programs.customer') %>:&emsp;</b><%= @support_program.customer.name %></p>
-     </div>
-     <div class="col-xs-3">
-       <p><b><%= t('view.support_programs.title') %>:&emsp;</b><%= @support_program.title %></p>
-     </div>
-     <div class="col-xs-3">
-       <p><b><%= t('view.support_programs.user') %>:&emsp;</b> <%= @support_program.user.name %></p>
-     </div>
-   </div>
-   <div class="row">
-     <div class="col-xs-3">
-       <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b> <%= @support_program.main_work %></p>
-     </div>
-     <div class="col-xs-3">
-       <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b> <%= @support_program.planed_or_argent %></p>
-     </div class="col-xs-3">
-     <div>
-       <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b> <%= @support_program.order_status %></p>
-     </div>
-   </div>
- </div>
-
- <div class="input-form">
-   <div class="row">
-     <div class="field form-group col-xs-4">
-       <%= form.label t('view.support_programs.title'), class:"control-label"  %>
-       <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.title, o.id]},{}, class: "form-control" %>
-     </div>
-
-     <div class="field form-group col-xs-4">
-       <%= form.label t('view.detail_reports.ordered_date'), class:"control-label" %>
-       <%= form.date_field :ordered_date, class: "form-control" %>
-     </div>
-
-     <div class="field form-group col-xs-4">
-       <%= form.label t('view.detail_reports.ordered_price'), class:"control-label" %>
-       <%= form.number_field :ordered_price, class: "form-control" %>
-     </div>
-   </div>
-
-   <div class="row">
-     <div class="field form-group col-xs-4">
+     <div class="row">
+       <div class="col-xs-3">
+         <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b> <%= @support_program.main_work %></p>
+       </div>
+       <div class="col-xs-3">
+         <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b> <%= @support_program.planed_or_argent %></p>
+       </div class="col-xs-3">
        <div>
-         <p><%= t('view.support_programs.kick_off_date')%>: <%= @support_program.kick_off_date %></p>
-       </div>
-       <div class="field">
-         <%= form.label t('view.detail_reports.actual_kickoff_date'), class:"control-label" %>
-         <%= form.date_field :actual_kickoff_date, class: "form-control" %>
-       </div>
-     </div>
-     <div class="field form-group col-xs-4">
-       <div>
-         <p><%= t('view.support_programs.closed')%>: <%= @support_program.closed %></p>
-       </div>
-       <div class="field">
-         <%= form.label t('view.detail_reports.actual_complete_date'), class:"control-label" %>
-         <%= form.date_field :actual_complete_date, class: "form-control" %>
+         <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b> <%= @support_program.order_status %></p>
        </div>
      </div>
    </div>
-  <div class="row">
-    <div class="field form-group col-xs-12">
-      <%= form.label t('view.detail_reports.service_detail'), class:"control-label" %>
-      <%= form.text_area :service_detail, class:"form-control" %>
+   <div class="input-form">
+     <div class="row">
+       <div class="field form-group col-xs-4">
+         <%= form.label t('view.support_programs.title'), class:"control-label"  %>
+         <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.title, o.id]},{}, class: "form-control" %>
+       </div>
+       <div class="field form-group col-xs-4">
+         <%= form.label t('view.detail_reports.ordered_date'), class:"control-label" %>
+         <%= form.date_field :ordered_date, class: "form-control" %>
+       </div>
+       <div class="field form-group col-xs-4">
+         <%= form.label t('view.detail_reports.ordered_price'), class:"control-label" %>
+         <%= form.number_field :ordered_price, class: "form-control" %>
+       </div>
+     </div>
+     <div class="row">
+       <div class="field form-group col-xs-4">
+         <div>
+           <p><%= t('view.support_programs.kick_off_date')%>: <%= @support_program.kick_off_date %></p>
+         </div>
+         <div class="field">
+           <%= form.label t('view.detail_reports.actual_kickoff_date'), class:"control-label" %>
+           <%= form.date_field :actual_kickoff_date, class: "form-control" %>
+         </div>
+       </div>
+       <div class="field form-group col-xs-4">
+         <div>
+           <p><%= t('view.support_programs.closed')%>: <%= @support_program.closed %></p>
+         </div>
+         <div class="field">
+           <%= form.label t('view.detail_reports.actual_complete_date'), class:"control-label" %>
+           <%= form.date_field :actual_complete_date, class: "form-control" %>
+         </div>
+       </div>
+     </div>
+    <div class="row">
+      <div class="field form-group col-xs-12">
+        <%= form.label t('view.detail_reports.service_detail'), class:"control-label" %>
+        <%= form.text_area :service_detail, class:"form-control" %>
+      </div>
     </div>
-  </div>
-
-   <!-- <div class="field">
-     <%= form.label t('view.detail_reports.photo') %>
-     <%= form.text_area :photo %>
-   </div> -->
+     <div class="row">
+       <div class="field form-group col-xs-12">
+         <%= form.label t('view.detail_reports.results'), class:"control-label" %>
+         <%= form.text_area :results, class:"form-control" %>
+       </div>
+     </div>
    <div class="row">
-     <div class="field form-group col-xs-12">
-       <%= form.label t('view.detail_reports.results'), class:"control-label" %>
-       <%= form.text_area :results, class:"form-control" %>
+     <div class="field form-group col-xs-2">
+       <%= form.label t('view.detail_reports.evaluation'), class:"control-label" %>
+       <%= form.select :evaluation, DetailReport.evaluations.keys.to_a, {}, autofocus: true, autocomplete: "evaluation", class:"form-control" %>
+     </div>
+     <div class="field form-group col-xs-10">
+       <%= form.label t('view.detail_reports.evaluation_details'), class:"control-label" %>
+       <%= form.text_area :evaluation_details, class:"form-control" %>
      </div>
    </div>
- <div class="row">
-   <div class="field form-group col-xs-2">
-     <%= form.label t('view.detail_reports.evaluation'), class:"control-label" %>
-     <%= form.select :evaluation, DetailReport.evaluations.keys.to_a, {}, autofocus: true, autocomplete: "evaluation", class:"form-control" %>
-   </div>
-   <div class="field form-group col-xs-10">
-     <%= form.label t('view.detail_reports.evaluation_details'), class:"control-label" %>
-     <%= form.text_area :evaluation_details, class:"form-control" %>
-   </div>
- </div>
-</div>
+  </div>
   <div class="actions create-new">
     <%= form.submit class:"btn btn-warning" %>
   </div>
