@@ -28,7 +28,7 @@
       <p><b><%= t('view.sales_check_comments.confirmation')%>:&emsp;</b> <%= @sales_check_comment.confirmation %></P>
     </div>
     <div>
-      <p><b><%= t('view.sales_check_comments.confirmation_date')%>:&emsp;</b> <%= @sales_check_comment.confirmation_date %></P>
+      <p><b><%= t('view.sales_check_comments.confirmation_date')%>:&emsp;</b> <%= @sales_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></P>
     </div>
     <div>
       <p><b><%= t('view.sales_check_comments.comment')%>:&emsp;</b> <%= @sales_check_comment.comments %></P>

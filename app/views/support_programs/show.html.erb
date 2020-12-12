@@ -38,7 +38,7 @@
     </div>
     <div class="col-xs-4">
       <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b>
-      <%= @support_program.kick_off_date %></P>
+      <%= @support_program.kick_off_date.strftime("%Y年%m月%d日") %></P>
     </div>
     <div class="col-xs-4">
       <p><b><%= t('view.support_programs.closed') %>:&emsp;</b>

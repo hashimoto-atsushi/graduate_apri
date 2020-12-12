@@ -23,10 +23,10 @@
         <tr>
           <td><%= detail_report.support_program.customer.name %></td>
           <td><%= detail_report.support_program.title %></td>
-          <td><%= detail_report.ordered_date %></td>
+          <td><%= detail_report.ordered_date.strftime("%Y年%m月%d日") %></td>
           <td><%= detail_report.ordered_price.to_s(:delimited) %>円</td>
-          <td><%= detail_report.actual_kickoff_date %></td>
-          <td><%= detail_report.actual_complete_date %></td>
+          <td><%= detail_report.actual_kickoff_date.strftime("%Y年%m月%d日") %></td>
+          <td><%= detail_report.actual_complete_date.strftime("%Y年%m月%d日") %></td>
           <td><%= detail_report.service_detail %></td>
           <td><%= detail_report.evaluation %></td>
           <td><%= detail_report.support_program.user.name %></td>

@@ -52,7 +52,7 @@
       <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b></b> <%= @support_program.order_status == true ? "受注済" : "未受注" %></P>
     </div>
     <div>
-      <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b></b> <%= @support_program.kick_off_date %></P>
+      <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b></b> <%= @support_program.kick_off_date.strftime("%Y年%m月%d日") %></P>
     </div>
     <div>
       <p><b><%= t('view.support_programs.closed') %>:&emsp;</b></b> <%= @support_program.closed %></P>
