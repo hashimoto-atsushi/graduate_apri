@@ -48,19 +48,19 @@ td {
 .field {
   font-size: 1.5rem;
 }
-
+/* bootstrap */
 .container {
   margin: 20px;
 }
-
+/* ヘッダーのナビバー */
 .navbar-top {
-  height: 100px;
+  height: 120px;
 }
-
+/* ヘッダーナビバーの文字 */
 .navbar-top li {
   font-size: 1.6rem;
 }
-
+/* ナビバーの画像 */
 .navbar-brand>img {
   position: absolute;
   top: -26px;
@@ -69,7 +69,7 @@ td {
   padding: 0;
   width: 150px;
 }
-
+/* ナビバーないのタイトル文字 */
 .top-title {
   font-size: 4rem;
   position: absolute;
@@ -77,9 +77,12 @@ td {
   left: 200px;
 }
 
+/* login Signupのパネル */
 .panel-primary {
   width: 60%;
 }
+
+/* login記憶のチェックボタン */
 .checkbox-place {
   margin-left: 30px;
   margin-right: 0px;
