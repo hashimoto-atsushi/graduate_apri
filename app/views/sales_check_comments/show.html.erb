@@ -1,197 +1,195 @@
 <h1><% provide(:title,"営業確認 -詳細-") %></h1>
 <p id="notice"><%= notice %></p>
 
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
-      <h3>- 保守案件 詳細 -</h3>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.title_number') %>:</b>&emsp;</strong>
-            <%= @sales_check_comment.boss_check_comment.detail_report.support_program.title_number %></p>
-          </div>
-          <div class="col-xs-4">
-            <p><b><%= t('view.support_programs.customer') %>:</b>&emsp;</strong>
-            <%= @sales_check_comment.boss_check_comment.detail_report.support_program.customer.name %></p>
-          </div>
-          <div class="col-xs-4">
-            <p><b><%= t('view.support_programs.title') %>:</b>&emsp;</strong>
-            <%= @sales_check_comment.boss_check_comment.detail_report.support_program.title %></p>
-          </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.main_work') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.main_work %></p>
+<div class="container">
+  <div class="upper-box">
+    <h3>- 保守案件 詳細 -</h3>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.title_number') %>:</b>&emsp;</strong>
+          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.title_number %></p>
         </div>
         <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.planed_or_argent') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.planed_or_argent %></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.order_status') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
-        </div>
-      </div>
-      <div class="row">
-      <h3>- 作業報告 詳細 -</h3>
-        <div class="col-xs-4">
-          <p><b><%= t('view.detail_reports.ordered_date') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.ordered_date %></p>
+          <p><b><%= t('view.support_programs.customer') %>:</b>&emsp;</strong>
+          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.customer.name %></p>
         </div>
         <div class="col-xs-4">
-          <p><b><%= t('view.detail_reports.ordered_price') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.ordered_price %></p>
+          <p><b><%= t('view.support_programs.title') %>:</b>&emsp;</strong>
+          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.title %></p>
         </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.main_work') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.support_program.main_work %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-4""col-xs-4">
-          <p><b><%= t('view.support_programs.kick_off_date') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.kick_off_date %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.actual_kickoff_date %></p>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.planed_or_argent') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.support_program.planed_or_argent %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.closed')%>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.closed %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.detail_reports.actual_complete_date')%>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.actual_complete_date %></p>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.order_status') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.detail_reports.service_detail') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.service_detail %></p>
-        </div>
+    </div>
+    <div class="row">
+    <h3>- 作業報告 詳細 -</h3>
+      <div class="col-xs-4">
+        <p><b><%= t('view.detail_reports.ordered_date') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.ordered_date %></p>
       </div>
-      <!-- <div>
-        <p><b><%= t('view.detail_reports.photo') %>:</b>&emsp;</strong>
-        <%= @sales_check_comment.boss_check_comment.detail_report.photo %></p>
-      </div> -->
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.detail_reports.results') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.results %></p>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.detail_reports.ordered_price') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.ordered_price %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-2">
-          <p><b><%= t('view.detail_reports.evaluation') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.evaluation %></p>
-        </div>
-        <div class="col-xs-10">
-          <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.evaluation_details %></p>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4""col-xs-4">
+        <p><b><%= t('view.support_programs.kick_off_date') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.support_program.kick_off_date %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.support_programs.user') %>:</b>&emsp;</strong>
-          <%= @sales_check_comment.boss_check_comment.detail_report.support_program.user.name %></p>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.actual_kickoff_date %></p>
       </div>
-      <!-- <div>
-        <p><b><%= t('view.detail_reports.service_detail') %>:</b>&emsp;
-        <%= @sales_check_comment.boss_check_comment.detail_report.service_detail %></P>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.closed')%>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.support_program.closed %></p>
       </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.detail_reports.actual_complete_date')%>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.actual_complete_date %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><b><%= t('view.detail_reports.service_detail') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.service_detail %></p>
+      </div>
+    </div>
+    <!-- <div>
+      <p><b><%= t('view.detail_reports.photo') %>:</b>&emsp;</strong>
+      <%= @sales_check_comment.boss_check_comment.detail_report.photo %></p>
+    </div> -->
+    <div class="row">
+      <div class="col-xs-12">
+        <p><b><%= t('view.detail_reports.results') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.results %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">
+        <p><b><%= t('view.detail_reports.evaluation') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.evaluation %></p>
+      </div>
+      <div class="col-xs-10">
+        <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.evaluation_details %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.support_programs.user') %>:</b>&emsp;</strong>
+        <%= @sales_check_comment.boss_check_comment.detail_report.support_program.user.name %></p>
+      </div>
+    </div>
+    <!-- <div>
+      <p><b><%= t('view.detail_reports.service_detail') %>:</b>&emsp;
+      <%= @sales_check_comment.boss_check_comment.detail_report.service_detail %></P>
+    </div>
 
-      <div>
-        <p><b><%= t('view.detail_reports.photo') %>:</b>&emsp;
-        <%= @sales_check_comment.boss_check_comment.detail_report.photo %></P>
-      </div> -->
-      <!-- <div>
-        <p><b><%= t('view.detail_reports.results') %>:</b>&emsp;
-        <%= @sales_check_comment.boss_check_comment.detail_report.results %></P>
-      </div>
+    <div>
+      <p><b><%= t('view.detail_reports.photo') %>:</b>&emsp;
+      <%= @sales_check_comment.boss_check_comment.detail_report.photo %></P>
+    </div> -->
+    <!-- <div>
+      <p><b><%= t('view.detail_reports.results') %>:</b>&emsp;
+      <%= @sales_check_comment.boss_check_comment.detail_report.results %></P>
+    </div>
 
-      <div>
-        <p><b><%= t('view.detail_reports.evaluation') %>:</b>&emsp;
-        <%= @sales_check_comment.boss_check_comment.detail_report.evaluation %></P>
-      </div>
+    <div>
+      <p><b><%= t('view.detail_reports.evaluation') %>:</b>&emsp;
+      <%= @sales_check_comment.boss_check_comment.detail_report.evaluation %></P>
+    </div>
 
-      <div>
-        <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>&emsp;
-        <%= @sales_check_comment.boss_check_comment.detail_report.evaluation_details %></P>
-      </div> -->
-      <h3>- 上長確認 -</h3>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.boss_check_comments.confirmation')%>:</b>&emsp;
-          <%= @sales_check_comment.boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.boss_check_comments.confirmation_date')%>:</b>&emsp;
-          <%= @sales_check_comment.boss_check_comment.confirmation_date %></P>
-        </div>
+    <div>
+      <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>&emsp;
+      <%= @sales_check_comment.boss_check_comment.detail_report.evaluation_details %></P>
+    </div> -->
+    <h3>- 上長確認 -</h3>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.boss_check_comments.confirmation')%>:</b>&emsp;
+        <%= @sales_check_comment.boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.boss_check_comments.positive_comment')%>:</b>&emsp;
-          <%= @sales_check_comment.boss_check_comment.positive_comment %></P>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.boss_check_comments.confirmation_date')%>:</b>&emsp;
+        <%= @sales_check_comment.boss_check_comment.confirmation_date %></P>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.boss_check_comments.negative_comment')%>:</b>&emsp;
-          <%= @sales_check_comment.boss_check_comment.negative_comment %></P>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><b><%= t('view.boss_check_comments.positive_comment')%>:</b>&emsp;
+        <%= @sales_check_comment.boss_check_comment.positive_comment %></P>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.boss_check_comments.assistance')%>:</b>&emsp;
-          <%= @sales_check_comment.boss_check_comment.assistance %></P>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><b><%= t('view.boss_check_comments.negative_comment')%>:</b>&emsp;
+        <%= @sales_check_comment.boss_check_comment.negative_comment %></P>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.boss_check_comments.questions')%>:</b>&emsp;
-          <%= @sales_check_comment.boss_check_comment.questions %></P>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><b><%= t('view.boss_check_comments.assistance')%>:</b>&emsp;
+        <%= @sales_check_comment.boss_check_comment.assistance %></P>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.boss_check_comments.report_to_sales')%>:</b>&emsp;
-          <%= @sales_check_comment.boss_check_comment.report_to_sales %></P>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><b><%= t('view.boss_check_comments.questions')%>:</b>&emsp;
+        <%= @sales_check_comment.boss_check_comment.questions %></P>
       </div>
-      <h3>- 営業確認 -</h3>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.sales_check_comments.confirmation')%>:</b>&emsp;
-          <%= @sales_check_comment.confirmation == true ? "確認済" : "未確認" %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.sales_check_comments.confirmation_date')%>:</b>&emsp;
-          <%= @sales_check_comment.confirmation_date %></p>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><b><%= t('view.boss_check_comments.report_to_sales')%>:</b>&emsp;
+        <%= @sales_check_comment.boss_check_comment.report_to_sales %></P>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p><b><%= t('view.sales_check_comments.comment')%>:</b>&emsp;
-          <%= @sales_check_comment.comments %></p>
-        </div>
+    </div>
+    <h3>- 営業確認 -</h3>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.sales_check_comments.confirmation')%>:</b>&emsp;
+        <%= @sales_check_comment.confirmation == true ? "確認済" : "未確認" %></p>
       </div>
-      <div class="row">
-        <div class="col-xs-4">
-          <p><b><%= t('view.sales_check_comments.discussion_possibility')%>:</b>&emsp;
-          <%= @sales_check_comment.discussion_possibility == true ? "有り" : "無し" %></p>
-        </div>
-        <div class="col-xs-4">
-          <p><b><%= t('view.sales_check_comments.matter_closed')%>:</b>&emsp;
-          <%= @sales_check_comment.matter_closed == true ? "承認済" : "未承認" %></p>
-        </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.sales_check_comments.confirmation_date')%>:</b>&emsp;
+        <%= @sales_check_comment.confirmation_date %></p>
       </div>
-      <div>
-        <%= link_to t('view.sales_check_comments.to_index') ,sales_check_comments_path, class:"btn btn-primary" %>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><b><%= t('view.sales_check_comments.comment')%>:</b>&emsp;
+        <%= @sales_check_comment.comments %></p>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <p><b><%= t('view.sales_check_comments.discussion_possibility')%>:</b>&emsp;
+        <%= @sales_check_comment.discussion_possibility == true ? "有り" : "無し" %></p>
+      </div>
+      <div class="col-xs-4">
+        <p><b><%= t('view.sales_check_comments.matter_closed')%>:</b>&emsp;
+        <%= @sales_check_comment.matter_closed == true ? "承認済" : "未承認" %></p>
+      </div>
+    </div>
+    <div>
+      <%= link_to t('view.sales_check_comments.to_index') ,sales_check_comments_path, class:"btn btn-primary" %>
     </div>
   </div>
 </div>
