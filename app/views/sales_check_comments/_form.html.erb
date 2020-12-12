@@ -24,89 +24,74 @@
     <%= @boss_check_comment.detail_report.support_program.title %></p>
   </div>
 </div>
-  <div class="row">
-    <div class="col-xs-3">
-      <p><b><%= t('view.support_programs.user') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.support_program.user.name %></p>
-    </div>
-    <div class="col-xs-3">
-      <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.support_program.main_work %></p>
-    </div>
-    <div class="col-xs-3">
-      <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.support_program.planed_or_argent %></p>
-    </div>
-    <div class="col-xs-3">
-      <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.support_program.order_status %></p>
-    </div>
-  </div>
-
-
-  <!-- <div>
-    <p><b>Supportprogram:</b>
-    <%= @boss_check_comment.detail_report.support_program.title %></p>
-  </div> -->
-  <div class="row">
-    <div class="col-xs-3">
-      <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.ordered_date %></p>
-    </div>
-    <div class="col-xs-3">
-      <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.ordered_price %></p>
-    </div>
-    <div class="col-xs-3">
-      <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.support_program.kick_off_date %></p>
-    </div>
-    <div class="col-xs-3">
-      <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.actual_kickoff_date %></p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-3">
-      <p><b><%= t('view.support_programs.closed') %>:&emsp;</b>
-        <%= @boss_check_comment.detail_report.support_program.closed %></p>
-      </div>
-      <div class="col-xs-3">
-        <p><b><%= t('view.detail_reports.actual_complete_date') %>::</b>
-          <%= @boss_check_comment.detail_report.actual_complete_date %></p>
-        </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <p><b><%= t('view.detail_reports.service_detail') %>:&emsp;</b>
-        <%= @boss_check_comment.detail_report.service_detail %></p>
-      </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <p><b><%= t('view.detail_reports.results') %>:&emsp;</b>
-      <%= @boss_check_comment.detail_report.results %></p>
-    </div>
-  </div>
-  <!-- <div>
-    <p><b><%= t('view.detail_reports.photo') %>:&emsp;</b>
-    <%= @boss_check_comment.detail_report.photo %></p>
-  </div> -->
-  <div class="row">
-    <div class="col-xs-3">
-      <p><b><%= t('view.detail_reports.evaluation') %>:&emsp;</b>
-        <%= @boss_check_comment.detail_report.evaluation %></p>
-      </div>
-      <div class="col-xs-9">
-        <p><b><%= t('view.detail_reports.evaluation_details') %>:&emsp;</b>
-        <%= @boss_check_comment.detail_report.evaluation_details %></p>
-      </div>
-  </div>
-  <!-- <div>
+<div class="row">
+  <div class="col-xs-3">
     <p><b><%= t('view.support_programs.user') %>:&emsp;</b>
     <%= @boss_check_comment.detail_report.support_program.user.name %></p>
-  </div> -->
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.main_work %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.planed_or_argent %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.order_status %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.ordered_date %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.ordered_price %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.kick_off_date %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.actual_kickoff_date %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.closed') %>:&emsp;</b>
+      <%= @boss_check_comment.detail_report.support_program.closed %></p>
+    </div>
+    <div class="col-xs-3">
+      <p><b><%= t('view.detail_reports.actual_complete_date') %>::</b>
+        <%= @boss_check_comment.detail_report.actual_complete_date %></p>
+      </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.detail_reports.service_detail') %>:&emsp;</b>
+      <%= @boss_check_comment.detail_report.service_detail %></p>
+    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.detail_reports.results') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.results %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.evaluation') %>:&emsp;</b>
+      <%= @boss_check_comment.detail_report.evaluation %></p>
+    </div>
+    <div class="col-xs-9">
+      <p><b><%= t('view.detail_reports.evaluation_details') %>:&emsp;</b>
+      <%= @boss_check_comment.detail_report.evaluation_details %></p>
+    </div>
+</div>
 <div class="row">
   <div class="col-xs-3">
     <p><b><%= t('view.boss_check_comments.confirmation') %>:&emsp;</b>
@@ -179,8 +164,7 @@
     <%= form.select :matter_closed, {"承認済": "ture", "未承認": "false"},{}, autofocus: true, autocomplete: "matter_closed", class: "form-control" %>
   </div>
 </div>
-
-  <div class="actions create-new">
-    <%= form.submit class:"btn btn-warning" %>
-  </div>
+<div class="actions create-new">
+  <%= form.submit class:"btn btn-warning" %>
+</div>
 <% end %>
