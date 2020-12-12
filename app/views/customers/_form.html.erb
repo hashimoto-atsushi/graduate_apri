@@ -2,11 +2,10 @@
   <% if customer.errors.any? %>
     <div id="error_explanation">
       <h2><%= customer.errors.count  %><%= t('view.all.error_explanations') %></h2>
-
       <ul>
-      <% customer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% customer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -49,8 +48,7 @@
     <%= form.select :user_id, User.all.map{|o| [o.name, o.id]},{}, class: "form-control" %>
   </div>
 </div>
-
-  <div class="actions create-new">
-    <%= form.submit class:"btn btn-warning" %>
-  </div>
+<div class="actions create-new">
+  <%= form.submit class:"btn btn-warning" %>
+</div>
 <% end %>
