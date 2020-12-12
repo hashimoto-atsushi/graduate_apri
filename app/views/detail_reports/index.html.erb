@@ -13,10 +13,7 @@
           <th><%= t('view.detail_reports.actual_kickoff_date') %></th>
           <th><%= t('view.detail_reports.actual_complete_date') %></th>
           <th><%= t('view.detail_reports.service_detail') %></th>
-          <!-- <th><%= t('view.detail_reports.photo') %></th> -->
-          <!-- <th><%= t('view.detail_reports.results') %></th> -->
           <th><%= t('view.detail_reports.evaluation') %></th>
-          <!-- <th><%= t('view.detail_reports.evaluation_details') %></th> -->
           <th><%= t('view.support_programs.user') %></th>
           <th colspan="3"></th>
         </tr>
@@ -31,10 +28,7 @@
           <td><%= detail_report.actual_kickoff_date %></td>
           <td><%= detail_report.actual_complete_date %></td>
           <td><%= detail_report.service_detail %></td>
-          <!-- <td><%= detail_report.photo %></td> -->
-          <!-- <td><%= detail_report.results %></td> -->
           <td><%= detail_report.evaluation %></td>
-          <!-- <td><%= detail_report.evaluation_details %></td> -->
           <td><%= detail_report.support_program.user.name %></td>
           <td><%= link_to t('view.detail_reports.show'), detail_report, class:"btn btn-info btn-xs" %></td>
           <% if current_user.permission %>
