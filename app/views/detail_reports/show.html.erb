@@ -1,9 +1,8 @@
 <h1><% provide(:title,"作業報告 -詳細-") %></h1>
 <p id="notice"><%= notice %>
 
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
+<div class="container">
+  <div class="upper-box">
     <h3>- 保守案件 詳細 -</h3>
     <div class="row">
       <div class="col-xs-4">
@@ -94,12 +93,11 @@
     </div>
     <div class="create-new">
       <% if boss_and_admin_display %>
-      <%= link_to t('view.detail_reports.to_boss_check_comment'), new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id), class:"btn btn-success btn-lg"%>
+        <%= link_to t('view.detail_reports.to_boss_check_comment'), new_support_program_detail_report_boss_check_comment_path(@support_program, @detail_report.id), class:"btn btn-success btn-lg"%>
       <% end %>
     </div>
     <div>
       <%= link_to t('view.detail_reports.to_index'), detail_reports_path, class:"btn btn-primary" %>
-    </div>
     </div>
   </div>
 </div>
