@@ -1,9 +1,9 @@
 <h1><% provide(:title,"保守案件 一覧") %></h1>
 <p id="notice"><%= notice %></p>
 
-<%= search_form_for @search do |form| %>
   <div class="container">
     <div class="upper-box">
+      <%= search_form_for @search do |form| %>
       <div class="row">
         <div class="field form-group col-xs-3">
           <%= form.label :title_number_eq, "保守案件番号 検索:", class:"control-label" %>
@@ -22,8 +22,6 @@
           <%= form.text_field :user_name_cont, class:"form-control" %>
         </div>
       </div>
-    </div>
-    <div class="lower-box">
       <div class="row">
         <div class="field form-group col-xs-2 box-2">
           <%= form.label :planed_or_argent_eq, "計画/緊急 検索: ", class:"control-label"  %>
@@ -41,9 +39,9 @@
           {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
         </div>
       </div>
+      <div class="action"><%= form.submit t('view.support_programs.search'), class:"btn btn-primary" %></div>
+      <% end %>
     </div>
-  <div class="action"><%= form.submit t('view.support_programs.search'), class:"btn btn-primary" %></div>
-  <% end %>
   <div class="container table-responsive">
     <table class="table table-bordered table-striped table-hover">
       <thead>
