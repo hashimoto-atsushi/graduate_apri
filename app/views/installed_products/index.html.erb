@@ -1,8 +1,8 @@
 <h1><% provide(:title,"納入機器情報 一覧") %></h1>
 <p id="notice"><%= notice %></p>
 
-<div class="upper-box">
-  <div class="container">
+<div class="container">
+  <div class="upper-box">
     <table class="table table-bordered table-striped table-hover table-responsive">
       <thead>
         <tr>
@@ -23,7 +23,7 @@
           <td><%= installed_product.product.name %></td>
           <td><%= installed_product.serial_number %></td>
           <td><%= installed_product.installed_date.strftime("%Y年%m月%d日") %></td>
-          <td><%= installed_product.discount_price %></td>
+          <td><%= installed_product.discount_price.to_s(:delimited) %>円</td>
           <td><%= installed_product.product.end_of_production.strftime("%Y年%m月%d日")  %></td>
           <td><%= installed_product.product.end_of_service.strftime("%Y年%m月%d日")  %></td>
           <td><%= link_to t('view.parts.show'), installed_product, class:"btn btn-info btn-xs" %></td>
@@ -41,4 +41,5 @@
         <%= link_to t('view.parts.to_new'), new_installed_product_path, class:"btn btn-success btn-lg" %>
       <% end %>
     </div>
+  </div>
 </div>

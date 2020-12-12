@@ -20,7 +20,7 @@
     </div>
     <div>
       <p><b><%= t('view.installed_products.discount_price') %>:</b>&emsp;
-      <%= @installed_product.discount_price %></p>
+      <%= @installed_product.discount_price.to_s(:delimited) %>円</p>
     </div>
     <div>
       <p><b><%= t('view.products.end_of_production') %>:</b>&emsp;

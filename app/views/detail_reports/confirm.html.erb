@@ -40,7 +40,7 @@
       <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b> <%= @detail_report.ordered_date %></P>
     </div>
     <div>
-      <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b> <%= @detail_report.ordered_price %></P>
+      <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b> <%= @detail_report.ordered_price.to_s(:delimited) %>円</P>
     </div>
     <div>
       <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b> <%= @detail_report.actual_kickoff_date %></P>
