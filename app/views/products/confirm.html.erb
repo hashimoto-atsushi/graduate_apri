@@ -1,60 +1,55 @@
 <h1><% provide(:title,"製品情報情報 -登録確認-") %></h1>
-
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
-      <%= form_with(model: @product, local: true) do |form| %>
-      <div>
-        <%= form.hidden_field :name %>
-      </div>
-      <div>
-        <%= form.hidden_field :type_name %>
-      </div>
-      <div>
-        <%= form.hidden_field :category %>
-      </div>
-      <div>
-        <%= form.hidden_field :list_price %>
-      </div>
-      <div>
-        <%= form.hidden_field :release_date %>
-      </div>
-      <div>
-        <%= form.hidden_field :end_of_production %>
-      </div>
-      <div>
-        <%= form.hidden_field :end_of_service %>
-      </div>
-      <div>
-      <div>
-        <p><b><%= t('view.products.name') %>:&emsp;</b> <%= @product.name %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.products.type_name') %>:&emsp;</b> <%= @product.type_name %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.products.category') %>:&emsp;</b> <%= @product.category %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.products.list_price') %>:&emsp;</b> <%= @product.list_price %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.products.release_date') %>:&emsp;</b> <%= @product.release_date %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.products.end_of_production') %>:&emsp;</b> <%= @product.end_of_production %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.products.end_of_service') %>:&emsp;</b> <%= @product.end_of_service %></P>
-      </div>
-      <div class="create-new">
-       <%= form.submit t('view.products.confirm_to_submit'), class:"btn btn-danger" %>
-      </div>
-      <div class="create-new">
-        <%= form.submit t('view.products.back'), name: 'back', class:"btn btn-primary"%>
-      </div>
-      <% end %>
+<div class="container">
+  <div class="upper-box">
+    <%= form_with(model: @product, local: true) do |form| %>
+    <div>
+      <%= form.hidden_field :name %>
     </div>
+    <div>
+      <%= form.hidden_field :type_name %>
+    </div>
+    <div>
+      <%= form.hidden_field :category %>
+    </div>
+    <div>
+      <%= form.hidden_field :list_price %>
+    </div>
+    <div>
+      <%= form.hidden_field :release_date %>
+    </div>
+    <div>
+      <%= form.hidden_field :end_of_production %>
+    </div>
+    <div>
+      <%= form.hidden_field :end_of_service %>
+    </div>
+    <div>
+      <p><b><%= t('view.products.name') %>:&emsp;</b> <%= @product.name %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.products.type_name') %>:&emsp;</b> <%= @product.type_name %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.products.category') %>:&emsp;</b> <%= @product.category %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.products.list_price') %>:&emsp;</b> <%= @product.list_price.to_s(:delimited) %>円</P>
+    </div>
+    <div>
+      <p><b><%= t('view.products.release_date') %>:&emsp;</b> <%= @product.release_date %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.products.end_of_production') %>:&emsp;</b> <%= @product.end_of_production %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.products.end_of_service') %>:&emsp;</b> <%= @product.end_of_service %></P>
+    </div>
+    <div class="create-new">
+     <%= form.submit t('view.products.confirm_to_submit'), class:"btn btn-danger" %>
+    </div>
+    <div class="create-new">
+      <%= form.submit t('view.products.back'), name: 'back', class:"btn btn-primary"%>
+    </div>
+    <% end %>
   </div>
 </div>
-  

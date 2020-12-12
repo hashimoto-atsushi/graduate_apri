@@ -42,7 +42,7 @@
       <td><%= part.name %></td>
       <td><%= part.type_name %></td>
       <td><%= part.category %></td>
-      <td><%= part.list_price %></td>
+      <td><%= part.list_price.to_s(:delimited) %>円</td>
       <td><%= part.stock %></td>
       <td><%= part.release_date %></td>
       <td><%= part.end_of_production %></td>

@@ -39,7 +39,7 @@
           <td><%= product.name %></td>
           <td><%= product.type_name %></td>
           <td><%= product.category %></td>
-          <td><%= product.list_price %></td>
+          <td><%= product.list_price.to_s(:delimited) %>円</td>
           <td><%= product.release_date %></td>
           <td><%= product.end_of_production %></td>
           <td><%= product.end_of_service %></td>

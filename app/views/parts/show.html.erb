@@ -20,7 +20,7 @@
     </div>
     <div>
       <p><b><%= t('view.parts.list_price')%>:</b>&emsp;
-      <%= @part.list_price %></p>
+      <%= @part.list_price.to_s(:delimited) %>円</p>
     </div>
     <div>
       <p><b><%= t('view.parts.stock')%>:</b>&emsp;
