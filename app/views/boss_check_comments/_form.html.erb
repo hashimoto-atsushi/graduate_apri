@@ -36,7 +36,7 @@
     <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date %></p>
+    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date.strftime("%Y年%m月%d日") %></p>
   </div>
   <div class="col-xs-3">
     <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b><%= @detail_report.ordered_price.to_s(:delimited) %></p>
@@ -44,16 +44,16 @@
 </div>
 <div class="row">
   <div class="col-xs-3">
-    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b><%= @detail_report.support_program.kick_off_date %></p>
+    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b><%= @detail_report.support_program.kick_off_date.strftime("%Y年%m月%d日") %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b><%= @detail_report.actual_kickoff_date %></p>
+    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b><%= @detail_report.actual_kickoff_date.strftime("%Y年%m月%d日") %></p>
   </div>
   <div class="col-xs-3">
     <p><b><%= t('view.support_programs.closed') %>:&emsp;</b><%= @detail_report.support_program.closed %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.actual_complete_date') %>:&emsp;</b><%= @detail_report.actual_complete_date %></p>
+    <p><b><%= t('view.detail_reports.actual_complete_date') %>:&emsp;</b><%= @detail_report.actual_complete_date.strftime("%Y年%m月%d日") %></p>
   </div>
 </div>
 <div class="row">
@@ -78,7 +78,7 @@
 </div>
 <div class="row">
   <div class="field form-group col-xs-4">
-    <%= form.label t('view.detail_reports.id'), class:"control-label" %>
+    <%= form.label t('view.detail_reports.id') + '上記案件名と合わせてください', class:"control-label" %>
     <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]},{}, class: "form-control" %>
   </div>
   <div class="field form-group col-xs-4">
