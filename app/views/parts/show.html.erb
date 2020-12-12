@@ -1,60 +1,48 @@
 <h1><% provide(:title,"製品情報 -詳細-") %></h1>
 <p id="notice"><%= notice %></p>
-
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
-      <div>
-        <p><b><%= t('view.parts.detail_report_id')%>:</b>&emsp;
-        <%= @part.detail_report_id %></p>
-      </div>
-
-      <div>
-        <p><b><%= t('view.parts.name')%>:</b>&emsp;
-        <%= @part.name %></p>
-      </div>
-
-      <div>
-        <p><b><%= t('view.parts.type_name')%>:</b>&emsp;
-        <%= @part.type_name %></p>
-      </div>
-
-      <div>
-        <p><b><%= t('view.parts.category')%>:</b>&emsp;
-        <%= @part.category %></p>
-      </div>
-
-      <div>
-        <p><b><%= t('view.parts.list_price')%>:</b>&emsp;
-        <%= @part.list_price %></p>
-      </div>
-
-      <div>
-        <p><b><%= t('view.parts.stock')%>:</b>&emsp;
-        <%= @part.stock %></p>
-      </div>
-
-      <div>
-        <p><b><%= t('view.parts.release_date')%>:</b>&emsp;
-        <%= @part.release_date %></p>
-      </div>
-
-      <div>
-        <p><b><%= t('view.parts.end_of_production')%>:</b>&emsp;
-        <%= @part.end_of_production %></p>
-      </div>
-
-      <div>
-        <p><b><%= t('view.parts.end_of_service')%>:</b>&emsp;
-        <%= @part.end_of_service %></p>
-      </div>
-
-      <div class="create-new">
-        <%= link_to t('view.parts.edit'), edit_part_path(@part), class:"btn btn-warning" %>
-      </div>
-      <div class="create-new">
-        <%= link_to t('view.parts.to_index'), parts_path, class:"btn btn-info" %>
-      </div>
+<div class="container">
+  <div class="upper-box">
+    <div>
+      <p><b><%= t('view.parts.detail_report_id')%>:</b>&emsp;
+      <%= @part.detail_report_id %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.name')%>:</b>&emsp;
+      <%= @part.name %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.type_name')%>:</b>&emsp;
+      <%= @part.type_name %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.category')%>:</b>&emsp;
+      <%= @part.category %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.list_price')%>:</b>&emsp;
+      <%= @part.list_price %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.stock')%>:</b>&emsp;
+      <%= @part.stock %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.release_date')%>:</b>&emsp;
+      <%= @part.release_date %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.end_of_production')%>:</b>&emsp;
+      <%= @part.end_of_production %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.end_of_service')%>:</b>&emsp;
+      <%= @part.end_of_service %></p>
+    </div>
+    <div class="create-new">
+      <%= link_to t('view.parts.edit'), edit_part_path(@part), class:"btn btn-warning" %>
+    </div>
+    <div class="create-new">
+      <%= link_to t('view.parts.to_index'), parts_path, class:"btn btn-info" %>
     </div>
   </div>
 </div>
