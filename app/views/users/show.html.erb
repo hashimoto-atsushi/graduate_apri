@@ -1,44 +1,41 @@
 <h1><% provide(:title,"社員情報 -詳細-") %></h1>
 <p id="notice"><%= notice %></p>
-
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
-      <div>
-        <p><b><%= t('view.users.id') %>:</b>&emsp;
-        <%= @user.id %></p>
-      </div>
-      <div>
-        <p><b><%= t('view.users.number') %>:</b>&emsp;
-        <%= @user.employee_number %></p>
-      </div>
-      <div>
-        <p><b><%= t('view.users.name') %>:</b>&emsp;
-        <%= @user.name %></p>
-      </div>
-      <div>
-        <p><b><%= t('view.users.department') %>:</b>&emsp;
-        <%= @user.department %></p>
-      </div>
-      <div>
-        <p><b><%= t('view.users.position') %>:</b>&emsp;
-        <%= @user.position %></p>
-      </div>
-      <div>
-        <p><b><%= t('view.users.email') %>:</b>&emsp;
-        <%= @user.email %></p>
-      </div>
-      <div>
-        <p><b><%= t('view.users.cellphone_number') %>:</b>&emsp;
-        <%= @user.cellphone_number %></p>
-      </div>
-      <div>
-        <p><b><%= t('view.users.stay_or_left') %>:</b>&emsp;
-        <%= @user.stay_or_left %></p>
-      </div>
-      <div class="create-new">
-        <%= link_to t('view.users.to_index'), users_path, class:"btn btn-info" %>
-      </div>
+<div class="container">
+  <div class="upper-box">
+    <!-- <div>
+      <p><b><%= t('view.users.id') %>:</b>&emsp;
+      <%= @user.id %></p>
+    </div> -->
+    <div>
+      <p><b><%= t('view.users.number') %>:</b>&emsp;
+      <%= @user.employee_number %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.users.name') %>:</b>&emsp;
+      <%= @user.name %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.users.department') %>:</b>&emsp;
+      <%= @user.department %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.users.position') %>:</b>&emsp;
+      <%= @user.position %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.users.email') %>:</b>&emsp;
+      <%= @user.email %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.users.cellphone_number') %>:</b>&emsp;
+      <%= @user.cellphone_number %></p>
+    </div>
+    <div>
+      <p><b><%= t('view.users.stay_or_left') %>:</b>&emsp;
+      <%= @user.stay_or_left %></p>
+    </div>
+    <div class="create-new">
+      <%= link_to t('view.users.to_index'), users_path, class:"btn btn-info" %>
     </div>
   </div>
 </div>

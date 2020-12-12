@@ -25,7 +25,7 @@
   <table class="table table-bordered table-striped table-hover table-responsive">
     <thead>
       <tr>
-        <th><%= t('view.users.id') %></th>
+        <!-- <th><%= t('view.users.id') %></th> -->
         <th><%= sort_link @search, :employee_number, t('view.users.number') %></th>
         <th><%= sort_link @search, :name, t('view.users.name') %></th>
         <th><%= sort_link @search, :department, t('view.users.department') %></th>
@@ -40,7 +40,7 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td class="text-center"><%= user.id %></td>
+          <!-- <td class="text-center"><%= user.id %></td> -->
           <td class="text-center"><%= user.employee_number %></td>
           <td><%= user.name %></td>
           <td><%= user.department %></td>
