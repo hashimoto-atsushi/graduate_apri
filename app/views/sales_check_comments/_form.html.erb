@@ -2,7 +2,6 @@
   <% if sales_check_comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= sales_check_comment.errors.count  %><%= t('view.all.error_explanations') %></h2>
-
       <ul>
       <% sales_check_comment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -132,8 +131,6 @@
     <%= @boss_check_comment.report_to_sales %></p>
   </div>
 </div>
-
-
 <div class="row">
   <div class="field form-group col-xs-4">
     <%= form.label t('view.sales_check_comments.id'), class:"control-label" %>
