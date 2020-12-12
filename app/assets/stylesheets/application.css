@@ -36,9 +36,8 @@ td {
 
 /* header-main-footer範囲 */
 .h-m-f-container {
-  height: auto;
+  min-height: 100%;
   position: relative;
-  padding-bottom: 60px;
   box-sizing: border-box;
 }
 
@@ -47,9 +46,9 @@ td {
   background-color: #3478d1;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  height: 50px;
   position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+  /* bottom: 0; /*下に固定*/ */
 }
 
 /* new edit画面の文字サイズ */
