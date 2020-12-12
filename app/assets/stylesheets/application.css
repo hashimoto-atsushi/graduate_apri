@@ -36,7 +36,7 @@ td {
 
 /* header-main-footer範囲 */
 .h-m-f-container {
-  min-height: 100%;
+  min-height: 100vh;
   position: relative;
   box-sizing: border-box;
 }
@@ -47,8 +47,8 @@ td {
   color: #fff;
   text-align: center;
   height: 50px;
-  position: absolute;/*←絶対位置*/
-  /* bottom: 0; /*下に固定*/ */
+  position: absolute;
+  bottom: 0;
 }
 
 /* new edit画面の文字サイズ */
@@ -185,10 +185,12 @@ textarea.form-control {
 .content-wrapper {
   float: left;
   margin-left: 30px;
+  margin-bottom: 10px;
 }
 
 .clear {
   clear: left;
+  padding-bottom: 50px;
 }
 
 .top-container {
