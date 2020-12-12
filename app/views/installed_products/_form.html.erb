@@ -2,7 +2,6 @@
   <% if installed_product.errors.any? %>
     <div id="error_explanation">
       <h2><%= installed_product.errors.count  %><%= t('view.all.error_explanations') %></h2>
-
       <ul>
       <% installed_product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -25,7 +24,6 @@
       <%= form.text_field :serial_number, class: "form-control" %>
     </div>
   </div>
-
   <div class="row">
     <div class="field form-group col-xs-4">
       <%= form.label t('view.installed_products.installed_date') %>
@@ -36,7 +34,6 @@
       <%= form.number_field :discount_price, class: "form-control" %>
     </div>
   </div>
-
   <div class="actions create-new">
     <%= form.submit class:"btn btn-warning" %>
   </div>
