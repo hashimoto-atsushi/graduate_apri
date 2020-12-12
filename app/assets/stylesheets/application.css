@@ -30,9 +30,9 @@ td {
 
 
 .h-m-f-container {
-  position: relative;/*←相対位置*/
-  padding-bottom: 60px;/*←footerの高さ*/
-  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  position: relative;
+  padding-bottom: 60px;
+  box-sizing: border-box;
 }
 
 footer{
@@ -168,12 +168,15 @@ textarea.form-control {
 }
 
 
-/* もともとTOPのCSS */
 .content-wrapper {
   float: left;
   margin-left: 30px;
 }
 
+
+.top-container {
+  margin-left: 40px;
+}
 .info {
   margin: 50px 0 60px 0;
   overflow: hidden;

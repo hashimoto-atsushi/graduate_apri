@@ -1,6 +1,6 @@
 <% provide(:title,"TOPページ") %>
 <p id="notice"><%= notice %></p>
-<div class="content-wrapper">
+<div class="top-container">
   <div class="info">
     <div class="btn-position">
       <p><%= link_to t('view.tops.allsupports'), allsupports_index_path, class:"btn btn-primary btn-lg" %></p>
@@ -10,17 +10,12 @@
     <div class="link-btn btn-position1">
       <P><%= link_to t('view.tops.support_programs'), support_programs_path, class:"btn btn-primary btn-lg" %></P>
     </div>
-
     <div class="link-btn btn-position1">
       <P><%= link_to t('view.tops.detail_reports'), detail_reports_path, class:"btn btn-primary btn-lg" %></P>
     </div>
-
-
     <div class="link-btn btn-position1">
       <p><%= link_to t('view.tops.boss_check_comments'), boss_check_comments_path, class:"btn btn-primary btn-lg" %></p>
     </div>
-
-
     <div class="link-btn btn-position1">
       <P><%= link_to t('view.tops.sales_check_comments'), sales_check_comments_path, class:"btn btn-primary btn-lg" %></P>
     </div>
