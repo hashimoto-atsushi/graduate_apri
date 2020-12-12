@@ -97,7 +97,7 @@ td {
   margin-top: 20px;
   margin-left: 15px;
 }
-
+/* ログインパネルの文字 */
 .login-font-size {
   font-size: 2rem;
 }
@@ -167,7 +167,7 @@ textarea.form-control {
   float: left;
 }
 
-
+/* 右画面のラッパー */
 .content-wrapper {
   float: left;
   margin-left: 30px;
@@ -196,12 +196,4 @@ textarea.form-control {
 
 .btn-position3 {
   margin-right: 103px;
-}
-
-.icon-position {
-  margin: 10px 60px 0 0px;
-}
-
-.top-wrapper p {
-  font-size:2rem;
 }
