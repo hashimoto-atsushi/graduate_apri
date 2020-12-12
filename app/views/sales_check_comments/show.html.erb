@@ -42,7 +42,7 @@
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.detail_reports.ordered_price') %>:</b>&emsp;</strong>
-        <%= @sales_check_comment.boss_check_comment.detail_report.ordered_price %></p>
+        <%= @sales_check_comment.boss_check_comment.detail_report.ordered_price.to_s(:delimited) %>円</p>
       </div>
     </div>
     <div class="row">
