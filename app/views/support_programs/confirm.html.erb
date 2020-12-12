@@ -1,69 +1,67 @@
 <h1><% provide(:title,"保守案件 -登録確認-") %></h1>
 <%= form_with(model: @support_program, local: true) do |form| %>
 
-<div class="content-wrapper">
-  <div class="container">
-    <div class="upper-box">
-      <div>
-        <%= form.hidden_field :title_number %>
-      </div>
-      <div>
-        <%= form.hidden_field :customer_id %>
-      </div>
-      <div>
-        <%= form.hidden_field :title %>
-      </div>
-      <div>
-        <%= form.hidden_field :user_id %>
-      </div>
-      <div>
-        <%= form.hidden_field :main_work %>
-      </div>
-      <div>
-        <%= form.hidden_field :planed_or_argent %>
-      </div>
-      <div>
-        <%= form.hidden_field :order_status %>
-      </div>
-      <div>
-        <%= form.hidden_field :kick_off_date %>
-      </div>
-      <div>
-        <%= form.hidden_field :closed %>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b></b> <%= @support_program.title_number %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.customer') %>:&emsp;</b></b> <%= @support_program.customer.name %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.title') %>:&emsp;</b></b> <%= @support_program.title %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.user') %>:&emsp;</b></b> <%= @support_program.user.name %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b></b> <%= @support_program.main_work %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b></b> <%= @support_program.planed_or_argent %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b></b> <%= @support_program.order_status == true ? "受注済" : "未受注" %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b></b> <%= @support_program.kick_off_date %></P>
-      </div>
-      <div>
-        <p><b><%= t('view.support_programs.closed') %>:&emsp;</b></b> <%= @support_program.closed %></P>
-      </div>
-      <div class="create-new">
-       <%= form.submit t('view.support_programs.confirm_to_submit'), class:"btn btn-danger" %>
-      </div>
-      <div class="create-new">
-        <%= form.submit t('view.support_programs.back'), name: 'back', class:"btn btn-primary" %>
-      </div>
+<div class="container">
+  <div class="upper-box">
+    <div>
+      <%= form.hidden_field :title_number %>
+    </div>
+    <div>
+      <%= form.hidden_field :customer_id %>
+    </div>
+    <div>
+      <%= form.hidden_field :title %>
+    </div>
+    <div>
+      <%= form.hidden_field :user_id %>
+    </div>
+    <div>
+      <%= form.hidden_field :main_work %>
+    </div>
+    <div>
+      <%= form.hidden_field :planed_or_argent %>
+    </div>
+    <div>
+      <%= form.hidden_field :order_status %>
+    </div>
+    <div>
+      <%= form.hidden_field :kick_off_date %>
+    </div>
+    <div>
+      <%= form.hidden_field :closed %>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b></b> <%= @support_program.title_number %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.customer') %>:&emsp;</b></b> <%= @support_program.customer.name %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.title') %>:&emsp;</b></b> <%= @support_program.title %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.user') %>:&emsp;</b></b> <%= @support_program.user.name %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b></b> <%= @support_program.main_work %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b></b> <%= @support_program.planed_or_argent %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b></b> <%= @support_program.order_status == true ? "受注済" : "未受注" %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b></b> <%= @support_program.kick_off_date %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.closed') %>:&emsp;</b></b> <%= @support_program.closed %></P>
+    </div>
+    <div class="create-new">
+     <%= form.submit t('view.support_programs.confirm_to_submit'), class:"btn btn-danger" %>
+    </div>
+    <div class="create-new">
+      <%= form.submit t('view.support_programs.back'), name: 'back', class:"btn btn-primary" %>
     </div>
   </div>
 </div>

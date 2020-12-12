@@ -1,14 +1,14 @@
 <%= form_with(model: @support_program, local: true, url: choose_new_or_edit_support_program ) do |form| %>
-  <% if support_program.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= support_program.errors.count  %><%= t('view.all.error_explanations') %></h2>
-      <ul>
-      <% support_program.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<% if support_program.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= support_program.errors.count  %><%= t('view.all.error_explanations') %></h2>
+    <ul>
+    <% support_program.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 <div class="row">
   <div class="field form-group col-xs-3">
     <%= form.label t('view.support_programs.title_number'), class:"control-label" %>
@@ -53,7 +53,7 @@
     <%= form.select :closed, SupportProgram.closeds.keys.to_a, {}, autofocus: true, autocomplete: "closed", class:"form-control" %>
   </div>
 </div>
-  <div class="actions create-new">
-    <%= form.submit class:"btn btn-primary" %>
-  </div>
+<div class="actions create-new">
+  <%= form.submit class:"btn btn-primary" %>
+</div>
 <% end %>
