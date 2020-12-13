@@ -55,7 +55,7 @@ class SalesCheckCommentsController < ApplicationController
 
   def destroy
     @sales_check_comment.destroy
-      redirect_to sales_check_comments_url, notice: '削除しました！'
+    redirect_to sales_check_comments_url, notice: '削除しました！'
   end
 
   private

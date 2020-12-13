@@ -48,7 +48,7 @@ class PartsController < ApplicationController
 
   def destroy
     @part.destroy
-      redirect_to parts_url, notice: '削除しました！'
+    redirect_to parts_url, notice: '削除しました！'
   end
 
   private

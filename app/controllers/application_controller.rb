@@ -2,14 +2,12 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
-
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:employee_number, :name, :department, :position, :permission, :cellphone_number, :stay_or_left])
     devise_parameter_sanitizer.permit(:account_update, keys: [:employee_number, :name, :department, :position, :permission, :cellphone_number, :stay_or_left])
   end
 
   private
-
   def after_sign_in_path_for(resource_or_scope)
     top_index_path
   end
@@ -38,5 +36,4 @@ class ApplicationController < ActionController::Base
     boss_status = current_user.position == "部長" && current_user.department == "技術部"
     boss_status || current_user.permission
   end
-
 end

@@ -53,7 +53,7 @@ class SupportProgramsController < ApplicationController
 
   def destroy
     @support_program.destroy
-      redirect_to support_programs_url, notice: '削除する'
+    redirect_to support_programs_url, notice: '削除する'
   end
 
   private

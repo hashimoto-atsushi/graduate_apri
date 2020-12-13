@@ -48,7 +48,7 @@ class CustomersController < ApplicationController
 
   def destroy
     @customer.destroy
-      redirect_to customers_url, notice: '削除しました!'
+    redirect_to customers_url, notice: '削除しました!'
   end
 
   private

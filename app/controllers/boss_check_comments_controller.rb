@@ -43,16 +43,16 @@ class BossCheckCommentsController < ApplicationController
   end
 
   def update
-      if @boss_check_comment.update(boss_check_comment_params)
-        redirect_to @boss_check_comment, notice: '編集しました！'
-      else
-        render :edit
-      end
+    if @boss_check_comment.update(boss_check_comment_params)
+      redirect_to @boss_check_comment, notice: '編集しました！'
+    else
+      render :edit
+    end
   end
 
   def destroy
     @boss_check_comment.destroy
-      redirect_to boss_check_comments_url, notice: '削除しました！'
+    redirect_to boss_check_comments_url, notice: '削除しました！'
   end
 
   private

@@ -40,16 +40,16 @@ class InstalledProductsController < ApplicationController
 
 
   def update
-      if @installed_product.update(installed_product_params)
-        redirect_to @installed_product, notice: '編集しました！'
-      else
-        render :edit
-      end
+    if @installed_product.update(installed_product_params)
+      redirect_to @installed_product, notice: '編集しました！'
+    else
+      render :edit
+    end
   end
 
   def destroy
     @installed_product.destroy
-      redirect_to installed_products_url, notice: '削除しました！'
+    redirect_to installed_products_url, notice: '削除しました！'
   end
 
   private

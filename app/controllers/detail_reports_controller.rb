@@ -43,11 +43,11 @@ class DetailReportsController < ApplicationController
   end
 
   def update
-      if @detail_report.update(detail_report_params)
-        redirect_to @detail_report, notice: '編集しました！'
-      else
-        render :edit
-      end
+    if @detail_report.update(detail_report_params)
+      redirect_to @detail_report, notice: '編集しました！'
+    else
+      render :edit
+    end
   end
 
   def destroy
