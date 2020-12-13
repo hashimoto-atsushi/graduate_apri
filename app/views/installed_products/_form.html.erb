@@ -1,0 +1,40 @@
+<%= form_with(model: @installed_product, local: true, url: choose_new_or_edit_installed_product ) do |form| %>
+  <% if installed_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= installed_product.errors.count  %><%= t('view.all.error_explanations') %></h2>
+      <ul>
+      <% installed_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.customers.customer'), class:"control-label" %>
+      <%= form.select :customer_id, Customer.all.map{|o| [o.name, o.id]},{}, class: "form-control" %>
+    </div>
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.products.name'), class:"control-label" %>
+      <%= form.select :product_id, Product.all.map{|o| [o.name, o.id]},{}, class: "form-control" %>
+    </div>
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.installed_products.serial_number'), class:"control-label" %>
+      <%= form.text_field :serial_number, class: "form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.installed_products.installed_date') %>
+      <%= form.date_field :installed_date, class: "form-control" %>
+    </div>
+    <div class="field form-group col-xs-4">
+      <%= form.label t('view.installed_products.discount_price') %>
+      <%= form.number_field :discount_price, class: "form-control" %>
+    </div>
+  </div>
+  <div class="actions create-new">
+    <%= form.submit class:"btn btn-warning" %>
+  </div>
+<% end %>

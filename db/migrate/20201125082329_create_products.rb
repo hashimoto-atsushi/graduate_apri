@@ -1,0 +1,15 @@
+class CreateProducts < ActiveRecord::Migration[5.2]
+  def change
+    create_table :products do |t|
+      t.string :name, null: false, limit: 32
+      t.string :type_name, null: false, limit: 32
+      t.string :category, null: false, limit: 32
+      t.integer :list_price, null: false, limit: 4
+      t.date :release_date, null: false
+      t.date :end_of_production, null: false
+      t.date :end_of_service, null: false
+
+      t.timestamps
+    end
+  end
+end

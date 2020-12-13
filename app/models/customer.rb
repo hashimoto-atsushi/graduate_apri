@@ -1,6 +1,10 @@
 class Customer < ApplicationRecord
   belongs_to :user
-  validates :customer_number, presence: true
+  has_many :installed_products, dependent: :destroy
+  has_many :support_programs, dependent: :destroy
+  validates :customer_number, presence: true,
+                            uniqueness: true,
+                                length: { maximum: 16 }
   validates :name, presence: true,
                      length: { maximum: 32 }
   validates :phone_number, presence: true,

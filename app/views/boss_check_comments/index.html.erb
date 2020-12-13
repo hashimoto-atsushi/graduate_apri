@@ -1,0 +1,36 @@
+<h1><% provide(:title,"上長確認 一覧") %></h1>
+<p id="notice"><%= notice %></p>
+  <div class="container table-responsive">
+    <div class="upper-box">
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th><%= t('view.customers.customer')%></th>
+            <th><%= t('view.support_programs.title')%></th>
+            <th><%= t('view.boss_check_comments.confirmation')%></th>
+            <th><%= t('view.boss_check_comments.confirmation_date')%></th>
+            <th><%= t('view.boss_check_comments.report_to_sales')%></th>
+            <th><%= t('view.customers.employee_in_charge')%></th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @boss_check_comments.each do |boss_check_comment| %>
+          <tr>
+            <td><%= boss_check_comment.detail_report.support_program.customer.name %></td>
+            <td><%= boss_check_comment.detail_report.support_program.title %></td>
+            <td><%= boss_check_comment.confirmation == true ? "承認済" : "未承認" %></td>
+            <td><%= boss_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></td>
+            <td><%= boss_check_comment.report_to_sales %></td>
+            <td><%= boss_check_comment.detail_report.support_program.customer.user.name %></td>
+            <td><%= link_to t('view.boss_check_comments.show'), boss_check_comment, class:"btn btn-info btn-xs" %></td>
+            <% if boss_and_admin_display %>
+            <td><%= link_to t('view.boss_check_comments.delete'), boss_check_comment, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs" %></td>
+            <% end %>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= paginate @boss_check_comments %>
+    </div>
+  </div>

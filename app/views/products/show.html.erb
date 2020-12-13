@@ -1,0 +1,52 @@
+<h1><% provide(:title,"製品情報 -詳細-") %></h1>
+<p id="notice"><%= notice %></p>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="upper-box">
+      <div>
+        <p><b><%= t('view.products.name') %>:</b>&emsp;
+        <%= @product.name %></p>
+      </div>
+
+      <div>
+        <p><b><%= t('view.products.type_name') %>:</b>&emsp;
+        <%= @product.type_name %></p>
+      </div>
+
+      <div>
+        <p><b><%= t('view.products.category') %>:</b>&emsp;
+        <%= @product.category %></p>
+      </div>
+
+      <div>
+        <p><b><%= t('view.products.list_price') %>:</b>&emsp;
+        <%= @product.list_price.to_s(:delimited) %>円</p>
+      </div>
+
+      <div>
+        <p><b><%= t('view.products.release_date') %>:</b>&emsp;
+        <%= @product.release_date %></p>
+      </div>
+
+      <div>
+        <p><b><%= t('view.products.end_of_production') %>:</b>&emsp;
+        <%= @product.end_of_production %></p>
+      </div>
+
+      <div>
+        <p><b><%= t('view.products.end_of_service') %>:</b>&emsp;
+        <%= @product.end_of_service %></p>
+      </div>
+
+
+
+      <div class="create-new">
+        <%= link_to t('view.products.edit'), edit_product_path(@product), class:"btn btn-warning" %>
+      </div>
+      <div class="create-new">
+        <%= link_to t('view.products.to_index'), products_path, class:"btn btn-info" %>
+      </div>
+    </div>
+  </div>
+</div>

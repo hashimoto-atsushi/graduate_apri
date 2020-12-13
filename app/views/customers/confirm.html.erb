@@ -1,54 +1,62 @@
+<h1><% provide(:title,"顧客情報 -登録確認-") %></h1>
 <%= form_with(model: @customer, local: true) do |form| %>
-<div>
-  <%= form.hidden_field :customer_number %>
+
+<div class="container">
+  <div class="upper-box">
+    <div>
+      <%= form.hidden_field :customer_number %>
+    </div>
+    <div>
+      <%= form.hidden_field :name %>
+    </div>
+    <div>
+      <%= form.hidden_field :profession %>
+    </div>
+    <div>
+      <%= form.hidden_field :customer_in_charge %>
+    </div>
+    <div>
+      <%= form.hidden_field :department %>
+    </div>
+    <div>
+      <%= form.hidden_field :position %>
+    </div>
+    <div>
+      <%= form.hidden_field :phone_number %>
+    </div>
+    <div>
+      <%= form.hidden_field :user_id %>
+    </div>
+    <div>
+      <p><b><%= t('view.customers.customer_number') %>:&emsp;</b> <%= @customer.customer_number %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.customers.customer') %>:&emsp;</b> <%= @customer.name %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.customers.profession') %>:&emsp;</b> <%= @customer.profession %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.customers.customer_in_charge') %>:&emsp;</b> <%= @customer.customer_in_charge %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.customers.department') %>:&emsp;</b> <%= @customer.department %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.customers.position') %>:&emsp;</b> <%= @customer.position %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.customers.phone_number') %>:&emsp;</b> <%= @customer.phone_number %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.customers.employee_in_charge') %>:&emsp;</b> <%= @customer.user.name %></P>
+    </div>
+    <div class="create-new">
+       <%= form.submit t('view.customers.confirm_to_submit'), class:"btn btn-danger" %>
+    </div>
+    <div class="create-new">
+     <%= form.submit t('view.customers.back'), name: 'back', class:"btn btn-primary"%>
+    </div>
+  </div>
 </div>
-<div>
-  <%= form.hidden_field :name %>
-</div>
-<div>
-  <%= form.hidden_field :profession %>
-</div>
-<div>
-  <%= form.hidden_field :customer_in_charge %>
-</div>
-<div>
-  <%= form.hidden_field :department %>
-</div>
-<div>
-  <%= form.hidden_field :position %>
-</div>
-<div>
-  <%= form.hidden_field :phone_number %>
-</div>
-<div>
-  <%= form.hidden_field :user_id %>
-</div>
-<div>
-  <P>customer_number: <%= @customer.customer_number %></P>
-</div>
-<div>
-  <P>name: <%= @customer.name %></P>
-</div>
-<div>
-  <P>profession: <%= @customer.profession %></P>
-</div>
-<div>
-  <P>customer_in_charge: <%= @customer.customer_in_charge %></P>
-</div>
-<div>
-  <P>department: <%= @customer.department %></P>
-</div>
-<div>
-  <P>position: <%= @customer.position %></P>
-</div>
-<div>
-  <P>phone_number: <%= @customer.phone_number %></P>
-</div>
-<div>
-  <P>employee_in_charge: <%= @customer.user_id %></P>
-</div>
- <div>
-   <%= form.submit "submit"%>
- </div>
- <%= form.submit 'back', name: 'back'%>
- <% end %>
+<% end %>

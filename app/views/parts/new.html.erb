@@ -1,0 +1,7 @@
+<h1><% provide(:title,"保守パーツ情報 -新規登録-") %></h1>
+<div class="container">
+  <div class="upper-box">
+    <%= render 'form', part: @part %>
+    <%= link_to t('view.customers.to_index'), parts_path, class:"btn btn-info" %>
+  </div>
+</div>

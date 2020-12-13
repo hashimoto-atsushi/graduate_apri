@@ -1,19 +1,27 @@
 class User < ApplicationRecord
-  validates :employee_number, presence: true
+  validates :employee_number, presence: true,
+                            uniqueness: true
   validates :name, presence: true,
                      length: { maximum: 32 }
   validates :password, presence: true,
                          length: { minimum: 6 }
   validates :email, presence: true,
+                    uniqueness: true,
                       length: { maximum: 255 },
                       format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   before_validation { email.downcase! }
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
+  #ここから追記
+  after_create :send_welcome_mail
+  def send_welcome_mail
+    UserMailer.user_welcome_mail(self).deliver
+  end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  enum department: {sales:0, tech:1, systems:2}
-  enum position: {manager:0, chief:1, staff:2}
-  enum stay_or_left: {stay:0 , left:1}
+  enum department: {営業部:0, 技術部:1, システム部:2}
+  enum position: {部長:0, 課長:1, 一般:2}
+  enum stay_or_left: {在籍:0 , 退職:1}
   has_many :customers
+  has_many :support_programs
 end

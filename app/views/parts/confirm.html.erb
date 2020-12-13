@@ -1,0 +1,67 @@
+<h1><% provide(:title,"保守パーツ -登録確認-") %></h1>
+<div class="container">
+  <div class="upper-box">
+    <%= form_with(model: @part, local: true) do |form| %>
+    <div>
+      <%= form.hidden_field :detail_report_id %>
+    </div>
+    <div>
+      <%= form.hidden_field :name %>
+    </div>
+    <div>
+      <%= form.hidden_field :type_name %>
+    </div>
+    <div>
+      <%= form.hidden_field :category %>
+    </div>
+    <div>
+      <%= form.hidden_field :list_price %>
+    </div>
+    <div>
+      <%= form.hidden_field :stock %>
+    </div>
+    <div>
+      <%= form.hidden_field :release_date %>
+    </div>
+    <div>
+      <%= form.hidden_field :end_of_production %>
+    </div>
+    <div>
+      <%= form.hidden_field :end_of_service %>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.detail_report_id')%>:&emsp;</b> <%= @part.detail_report_id %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.name')%>:&emsp;</b> <%= @part.name %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.type_name')%>:&emsp;</b> <%= @part.type_name %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.category')%>:&emsp;</b> <%= @part.category %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.list_price')%>:&emsp;</b> <%= @part.list_price.to_s(:delimited) %>円</P>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.stock')%>:&emsp;</b> <%= @part.stock %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.release_date')%>:&emsp;</b> <%= @part.release_date %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.end_of_production')%>:&emsp;</b> <%= @part.end_of_production %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.parts.end_of_service')%>:&emsp;</b> <%= @part.end_of_service %></P>
+    </div>
+    <div class="create-new">
+     <%= form.submit t('view.parts.confirm_to_submit'), class:"btn btn-danger" %>
+    </div>
+    <div class="create-new">
+      <%= form.submit t('view.parts.back'), name: 'back', class:"btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
+</div>

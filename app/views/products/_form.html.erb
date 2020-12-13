@@ -1,0 +1,49 @@
+<%= form_with(model: @product, local: true, url: choose_new_or_edit_product ) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= product.errors.count  %><%= t('view.all.error_explanations') %></h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.name'), class:"control-label"%>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.type_name'), class:"control-label" %>
+    <%= form.text_field :type_name, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.category'), class:"control-label" %>
+    <%= form.text_field :category, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.list_price'), class:"control-label" %>
+    <%= form.number_field :list_price, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.release_date'), class:"control-label" %>
+    <%= form.date_field :release_date, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.end_of_production'), class:"control-label" %>
+    <%= form.date_field :end_of_production, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.products.end_of_service'), class:"control-label" %>
+    <%= form.date_field :end_of_service, class: "form-control" %>
+  </div>
+</div>
+  <div class="actions create-new">
+    <%= form.submit class:"btn btn-warning" %>
+  </div>
+<% end %>

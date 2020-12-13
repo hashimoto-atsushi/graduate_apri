@@ -1,0 +1,7 @@
+<h1><% provide(:title,"納入機器 -新規登録- ") %></h1>
+<div class="container">
+  <div class="upper-box">
+    <%= render 'form', installed_product: @installed_product %>
+    <%= link_to t('view.installed_products.to_index'), installed_products_path, class:"btn btn-info" %>
+  </div>
+</div>

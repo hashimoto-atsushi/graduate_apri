@@ -1,0 +1,12 @@
+<h1><% provide(:title,"保守案件 -編集-") %></h1>
+  <div class="container">
+    <div class="upper-box">
+      <%= render 'form', support_program: @support_program %>
+      <div class="create-new">
+        <%= link_to t('view.support_programs.show'), @support_program, class:"btn btn-info" %>
+      </div>
+      <div class="create-new">
+        <%= link_to t('view.support_programs.to_index'), support_programs_path, class:"btn btn-info" %>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,123 @@
+<%= form_with(model: @boss_check_comment, local: true, url: choose_new_or_edit_boss) do |form| %>
+  <% if boss_check_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= boss_check_comment.errors.count  %><%= t('view.all.error_explanations') %></h2>
+      <ul>
+      <% boss_check_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b><%= @detail_report.support_program.title_number %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.customer') %>:&emsp;</b><%= @detail_report.support_program.customer.name %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.title') %>:&emsp;</b><%= @detail_report.support_program.title %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.user') %>:&emsp;</b><%= @detail_report.support_program.user.name %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b><%= @detail_report.support_program.main_work %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b><%= @detail_report.support_program.planed_or_argent %></p>
+  </div class="col-xs-3">
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date.strftime("%Y年%m月%d日") %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b><%= @detail_report.ordered_price.to_s(:delimited) %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b><%= @detail_report.support_program.kick_off_date.strftime("%Y年%m月%d日") %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b><%= @detail_report.actual_kickoff_date.strftime("%Y年%m月%d日") %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.closed') %>:&emsp;</b><%= @detail_report.support_program.closed %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.actual_complete_date') %>:&emsp;</b><%= @detail_report.actual_complete_date.strftime("%Y年%m月%d日") %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.detail_reports.service_detail') %>:&emsp;</b><%= @detail_report.service_detail %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.detail_reports.results') %>:&emsp;</b><%= @detail_report.results %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.detail_reports.evaluation') %>:&emsp;</b><%= @detail_report.evaluation %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.detail_reports.evaluation_details') %>:&emsp;</b><%= @detail_report.evaluation_details %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.detail_reports.id') + '(上記案件名と合わせてください)', class:"control-label" %>
+    <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]},{}, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.boss_check_comments.confirmation'), class:"control-label" %><br />
+    <%= form.select :confirmation, {"承認済": "true", "未承認": "false"},{}, autofocus: true, autocomplete: "confirmation", class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.boss_check_comments.confirmation_date'), class:"control-label" %>
+    <%= form.date_field :confirmation_date, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-6">
+    <%= form.label t('view.boss_check_comments.positive_comment'), class:"control-label"  %>
+    <%= form.text_area :positive_comment, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-6">
+    <%= form.label t('view.boss_check_comments.negative_comment'), class:"control-label"  %>
+    <%= form.text_area :negative_comment, class: "form-control" %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="field form-group col-xs-6">
+    <%= form.label t('view.boss_check_comments.assistance'), class:"control-label"  %>
+    <%= form.text_area :assistance, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-6">
+    <%= form.label t('view.boss_check_comments.questions'), class:"control-label"  %>
+    <%= form.text_area :questions, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-12">
+    <%= form.label t('view.boss_check_comments.report_to_sales'), class:"control-label"  %>
+    <%= form.text_area :report_to_sales, class: "form-control" %>
+  </div>
+</div>
+  <div class="actions create-new">
+    <%= form.submit class:"btn btn-warning" %>
+  </div>
+<% end %>

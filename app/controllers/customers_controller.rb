@@ -1,8 +1,12 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :sales_and_admin_login, only: [:create, :update, :destroy]
+  PER = 8
 
   def index
-    @customers = Customer.all
+    @search = Customer.search(params[:q])
+    @customers = @search.result(distinct: true).order(customer_number: :asc).page(params[:page]).per(PER)
   end
 
   def show
@@ -26,6 +30,7 @@ class CustomersController < ApplicationController
       render :new
     else
       if @customer.save
+        UserMailer.customer_mail_to_sales(@customer).deliver
         redirect_to @customer, notice: '作成しました!'
       else
         render :new
@@ -43,7 +48,7 @@ class CustomersController < ApplicationController
 
   def destroy
     @customer.destroy
-      redirect_to customers_url, notice: '削除しました!'
+    redirect_to customers_url, notice: '削除しました!'
   end
 
   private

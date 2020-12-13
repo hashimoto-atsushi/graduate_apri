@@ -1,0 +1,2 @@
+module AllsupportsHelper
+end

@@ -1,0 +1,7 @@
+<h1><% provide(:title,"保守案件 -新規登録-") %></h1>
+<div class="container">
+  <div class="upper-box">
+    <%= render 'form', support_program: @support_program %>
+    <%= link_to t('view.support_programs.to_index'), support_programs_path, class:"btn btn-info" %>
+  </div>
+</div>

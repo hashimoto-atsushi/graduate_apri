@@ -1,0 +1,50 @@
+<h1><% provide(:title,"営業確認 -登録確認-") %></h1>
+<%= form_with(model: @sales_check_comment, local: true) do |form| %>
+
+<div class="container">
+  <div class="upper-box">
+    <div>
+      <%= form.hidden_field :boss_check_comment_id %>
+    </div>
+    <div>
+      <%= form.hidden_field :confirmation %>
+    </div>
+    <div>
+      <%= form.hidden_field :confirmation_date %>
+    </div>
+    <div>
+      <%= form.hidden_field :comments %>
+    </div>
+    <div>
+      <%= form.hidden_field :discussion_possibility %>
+    </div>
+    <div>
+      <%= form.hidden_field :matter_closed %>
+    </div>
+    <div>
+      <p><b><%= t('view.support_programs.title') %>:&emsp;</b> <%= @sales_check_comment.boss_check_comment.detail_report.support_program.title %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.sales_check_comments.confirmation')%>:&emsp;</b> <%= @sales_check_comment.confirmation == true ? "確認済" : "未確認"  %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.sales_check_comments.confirmation_date')%>:&emsp;</b> <%= @sales_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.sales_check_comments.comment')%>:&emsp;</b> <%= @sales_check_comment.comments %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.sales_check_comments.discussion_possibility')%>:&emsp;</b> <%= @sales_check_comment.discussion_possibility == true ? "有り" : "無し"  %></P>
+    </div>
+    <div>
+      <p><b><%= t('view.sales_check_comments.matter_closed')%>:&emsp;</b> <%= @sales_check_comment.matter_closed == true ? "承認済" : "未承認"  %></P>
+    </div>
+    <div class="create-new">
+     <%= form.submit t('view.sales_check_comments.confirm_to_submit'), class:"btn btn-danger" %>
+    </div>
+    <div class="create-new">
+      <%= link_to t('view.sales_check_comments.back'), new_support_program_detail_report_boss_check_comment_sales_check_comment_path, name: 'back', class:"btn btn-primary"%>
+    </div>
+  </div>
+</div>
+<% end %>

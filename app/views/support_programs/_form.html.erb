@@ -1,0 +1,59 @@
+<%= form_with(model: @support_program, local: true, url: choose_new_or_edit_support_program ) do |form| %>
+<% if support_program.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= support_program.errors.count  %><%= t('view.all.error_explanations') %></h2>
+    <ul>
+    <% support_program.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="row">
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.support_programs.title_number'), class:"control-label" %>
+    <%= form.number_field :title_number, class:"form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.support_programs.customer'), class:"control-label" %>
+    <%= form.select :customer_id, Customer.all.map{|o| [o.name, o.id]}, {}, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.support_programs.title'), class:"control-label"  %>
+    <%= form.text_field :title, class:"form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.support_programs.user'), class:"control-label"   %>
+    <%= form.select :user_id, User.all.map{|o| [o.name, o.id]},{}, class:"form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-12">
+    <%= form.label t('view.support_programs.main_work'), class:"control-label"  %>
+    <%= form.text_area :main_work, class:"form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.support_programs.planed_or_argent'), class:"control-label" %><br />
+    <%= form.select :planed_or_argent, SupportProgram.planed_or_argents.keys.to_a, {}, autofocus: true, autocomplete: "planed_or_argent",class:"form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.support_programs.order_status') %><br />
+    <%= form.select :order_status, {"受注済": "true", "未受注": "false"},{}, autofocus: true, autocomplete: "order_status", class:"form-control" %>
+  </div>
+  <div class="field form-group col-xs-2">
+    <%= form.label t('view.support_programs.kick_off_date') %>
+    <%= form.date_field :kick_off_date, class:"form-control" %>
+  </div>
+  <div class="field form-group col-xs-3">
+    <%= form.label t('view.support_programs.closed') %><br />
+    <%= form.select :closed, SupportProgram.closeds.keys.to_a, {}, autofocus: true, autocomplete: "closed", class:"form-control" %>
+  </div>
+</div>
+<div class="actions create-new">
+  <%= form.submit class:"btn btn-primary" %>
+</div>
+<% end %>

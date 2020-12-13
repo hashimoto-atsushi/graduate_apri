@@ -1,0 +1,2 @@
+class Compornent < ApplicationRecord
+end

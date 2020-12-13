@@ -10,6 +10,212 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap/dist/css/bootstrap
  *= require_tree .
  *= require_self
  */
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+th {
+  font-size: 1.5rem;
+}
+
+td {
+  font-size: 1.4rem;
+}
+
+/* header-main-footer範囲 */
+.h-m-f-container {
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.footer{
+  width: 100%;
+  background-color: #3478d1;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* new edit画面の文字サイズ */
+.field {
+  font-size: 1.5rem;
+}
+/* bootstrap */
+.container {
+  margin: 20px;
+}
+/* ヘッダーのナビバー */
+.navbar-top {
+  height: 110px;
+}
+/* ヘッダーナビバーの文字 */
+.navbar-top li {
+  font-size: 1.6rem;
+}
+/* ナビバーの画像 */
+.navbar-brand>img {
+  position: absolute;
+  top: -26px;
+  left: 22px;
+  height: 150px;
+  padding: 0;
+  width: 150px;
+}
+/* ナビバーないのタイトル文字 */
+.top-title {
+  font-size: 4rem;
+  position: absolute;
+  top: 40px;
+  left: 200px;
+}
+
+/* login Signupのパネル */
+.panel-primary {
+  width: 70%;
+}
+
+/* login記憶のチェックボタン */
+.checkbox-place {
+  margin-left: 30px;
+  margin-right: 0px;
+}
+
+.to_registration-btn-position {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.to_login-btn-position {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+/* ログインパネルの文字 */
+.login-font-size {
+  font-size: 2rem;
+}
+
+.side-bar {
+  font-size: 1.6rem;
+  float: left;
+  width: 200px;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.action {
+  margin-bottom: 20px;
+}
+
+.create-new {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.upper-box {
+  margin-top: 10px;
+}
+
+textarea.form-control {
+  height: 80px;
+}
+
+.pagination>li>a {
+  border: none;
+  color: #696969;
+}
+
+.pagination>.active>a {
+  background: #93c9ff;
+  border-radius: 14px;
+}
+
+.pagination>li>a:hover {
+  border-radius: 15px;
+}
+
+/* ログイン 新規作成画面のラッパー */
+.login-signup-wrapper {
+  clear: left;
+  width: 1100px;
+}
+/* ログイン画面の画像 */
+.cover-image-login {
+  float: left;
+  position: absolute;
+  top: 250px;
+  left:230px;
+}
+/* ログイン画面の入力部 */
+.login-top {
+  margin: 120px 0 0 0;
+  padding: 0 0 0 100px;
+
+  width: 60%;
+  float: right;
+}
+/* 新規作成画面の画像 */
+.cover-image-new {
+  float: left;
+  margin-top: 80px;
+  position: absolute;
+  top: 170px;
+  left:250px;
+}
+/* 新規作成画面の入力部 */
+.new_top {
+  margin: 0 0 100px 500px;
+  padding: 0;
+  width: 50%;
+  float: left;
+}
+
+/* 右画面のラッパー */
+.content-wrapper {
+  float: left;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.clear {
+  clear: left;
+  padding-bottom: 50px;
+}
+
+.top-container {
+  margin-left: 40px;
+}
+.info {
+  margin: 50px 0 60px 0;
+  overflow: hidden;
+}
+
+.link-btn {
+  float: left;
+}
+
+.btn-position1 {
+  margin-right: 60px;
+}
+
+.btn-position2 {
+  margin-right: 103px;
+}
+
+.btn-position3 {
+  margin-right: 103px;
+}

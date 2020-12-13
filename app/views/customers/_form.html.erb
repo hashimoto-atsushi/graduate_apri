@@ -1,63 +1,54 @@
-<%= form_with(model: @customer, local: true, url: choose_new_or_edit ) do |form| %>
+<%= form_with(model: @customer, local: true, url: choose_new_or_edit_customer ) do |form| %>
   <% if customer.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
-
+      <h2><%= customer.errors.count  %><%= t('view.all.error_explanations') %></h2>
       <ul>
-      <% customer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% customer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-
-  <div class="field">
-    <%= form.label :customer_number %>
-    <%= form.number_field :customer_number %>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.customer_number'), class:"control-label" %>
+    <%= form.number_field :customer_number, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.customer'), class:"control-label" %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :profession %>
-    <%= form.text_field :profession %>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.profession') %>
+    <%= form.text_field :profession, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :customer_in_charge %>
-    <%= form.text_field :customer_in_charge %>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.customer_in_charge'), class:"control-label" %>
+    <%= form.text_field :customer_in_charge, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :department %>
-    <%= form.text_field :department %>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.department'), class:"control-label" %>
+    <%= form.text_field :department, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :position %>
-    <%= form.text_field :position %>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.position'), class:"control-label" %>
+    <%= form.text_field :position, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.phone_number'), class:"control-label" %>
+    <%= form.text_field :phone_number, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= form.label :employee_in_charge %>
-    <%= form.number_field :user_id %>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.customers.employee_in_charge'), class:"control-label"  %>
+    <%= form.select :user_id, User.all.map{|o| [o.name, o.id]},{}, class: "form-control" %>
   </div>
-
-    <div class="field">
-      <%= form.label :employee_in_charge %><br />
-      <%= form.select :employee_in_charge, User.ids.keys.to_a, {} %>
-    </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
+<div class="actions create-new">
+  <%= form.submit class:"btn btn-warning" %>
+</div>
 <% end %>

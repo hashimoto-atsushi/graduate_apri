@@ -1,0 +1,167 @@
+<%= form_with(model: @sales_check_comment, local: true, url: choose_new_or_edit_sales) do |form| %>
+  <% if sales_check_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= sales_check_comment.errors.count  %><%= t('view.all.error_explanations') %></h2>
+      <ul>
+      <% sales_check_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.title_number %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.customer') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.customer.name %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.title') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.title %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.user') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.user.name %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.main_work %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.planed_or_argent %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.order_status %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.ordered_date %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.ordered_price %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.support_program.kick_off_date %></p>
+  </div>
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.actual_kickoff_date %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.support_programs.closed') %>:&emsp;</b>
+      <%= @boss_check_comment.detail_report.support_program.closed %></p>
+    </div>
+    <div class="col-xs-3">
+      <p><b><%= t('view.detail_reports.actual_complete_date') %>::</b>
+        <%= @boss_check_comment.detail_report.actual_complete_date %></p>
+      </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.detail_reports.service_detail') %>:&emsp;</b>
+      <%= @boss_check_comment.detail_report.service_detail %></p>
+    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.detail_reports.results') %>:&emsp;</b>
+    <%= @boss_check_comment.detail_report.results %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.detail_reports.evaluation') %>:&emsp;</b>
+      <%= @boss_check_comment.detail_report.evaluation %></p>
+    </div>
+    <div class="col-xs-9">
+      <p><b><%= t('view.detail_reports.evaluation_details') %>:&emsp;</b>
+      <%= @boss_check_comment.detail_report.evaluation_details %></p>
+    </div>
+</div>
+<div class="row">
+  <div class="col-xs-3">
+    <p><b><%= t('view.boss_check_comments.confirmation') %>:&emsp;</b>
+      <%= @boss_check_comment.confirmation %></p>
+    </div>
+    <div class="col-xs-3">
+      <p><b><%= t('view.boss_check_comments.confirmation_date') %>:&emsp;</b>
+      <%= @boss_check_comment.confirmation_date %></p>
+    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.boss_check_comments.positive_comment') %>:&emsp;</b>
+    <%= @boss_check_comment.positive_comment %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.boss_check_comments.negative_comment') %>:&emsp;</b>
+      <%= @boss_check_comment.negative_comment %></p>
+    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.boss_check_comments.assistance') %>:&emsp;</b>
+    <%= @boss_check_comment.assistance %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.boss_check_comments.questions') %>:&emsp;</b>
+    <%= @boss_check_comment.questions %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p><b><%= t('view.boss_check_comments.report_to_sales') %>:&emsp;</b>
+    <%= @boss_check_comment.report_to_sales %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.support_programs.title') + '(上記保守案件名と合わせてください)', class:"control-label" %>
+    <%= form.select :boss_check_comment_id, BossCheckComment.all.map{|o| [o.detail_report.support_program.title, o.id]},{}, class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.sales_check_comments.confirmation'), class:"control-label" %><br />
+    <%= form.select :confirmation, {"確認済": "ture", "未確認": "false"},{}, autofocus: true, autocomplete: "confirmation", class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.sales_check_comments.confirmation_date'), class:"control-label"  %>
+    <%= form.date_field :confirmation_date, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-12">
+    <%= form.label t('view.sales_check_comments.comment'), class:"control-label" %>
+    <%= form.text_area :comments, class: "form-control" %>
+  </div>
+</div>
+<div class="row">
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.sales_check_comments.discussion_possibility'), class:"control-label" %><br />
+    <%= form.select :discussion_possibility, {"有り": "ture", "無し": "false"},{}, autofocus: true, autocomplete: "discussion_possibility", class: "form-control" %>
+  </div>
+  <div class="field form-group col-xs-4">
+    <%= form.label t('view.sales_check_comments.matter_closed'), class:"control-label" %><br />
+    <%= form.select :matter_closed, {"承認済": "ture", "未承認": "false"},{}, autofocus: true, autocomplete: "matter_closed", class: "form-control" %>
+  </div>
+</div>
+<div class="actions create-new">
+  <%= form.submit class:"btn btn-warning" %>
+</div>
+<% end %>

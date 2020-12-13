@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TESTapp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <title>Apri for Graduation</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="h-m-f-container">
+    <header>
+      <nav class="navbar fixed-top navbar-dark bg-primary navbar-top" role="navigation">
+        <div class="container">
+          <div class="navbar-brand">
+            <a href="<%= link_to t('view.layouts.to_top'), top_index_path %>"<%= link_to image_tag("logo_lg.png", alt:"logo"), '/', class:"navbar-brand" %></a>
+            <span class="top-title"><%= full_title(yield(:title)) %></span>
+          </div>
+            <ul class="nav navbar-nav navbar-right">
+              <% if user_signed_in? %>
+                <li><%= link_to current_user.name + t('view.layouts.my_page'), user_path(current_user.id), class:"bg-primary" %></li>
+                <li><%= link_to t('view.layouts.logout'), destroy_user_session_path, method: :delete, class:"bg-primary"  %></li>
+              <% end %>
+              <% if user_signed_in? && current_user.permission %>
+                <li><%= link_to t('view.layouts.admin'), rails_admin_path, class:"bg-primary"  %></li>
+              <% end %>
+            </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <div class="side-bar">
+          <% if user_signed_in? %>
+          <%= render 'layouts/side_bar' %>
+          <% end %>
+        </div>
+        <div class="content-wrapper">
+          <%= yield %>
+        </div>
+        <div class="clear">
+        </div>
+    </main>
+    <footer class="footer">
+    </footer>
+  </div>
+</body>
 </html>

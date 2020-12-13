@@ -1,0 +1,12 @@
+<h1><% provide(:title,"保守パーツ情報 -編集-") %></h1>
+<div class="container">
+  <div class="upper-box">
+    <%= render 'form', part: @part %>
+    <div class="create-new">
+      <%= link_to t('view.parts.show'), @part, class:"btn btn-info" %>
+    </div>
+    <div class="create-new">
+      <%= link_to t('view.parts.to_index'), parts_path, class:"btn btn-info" %>
+    </div>
+  </div>
+</div>

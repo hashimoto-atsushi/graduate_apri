@@ -1,0 +1,87 @@
+<h1><% provide(:title,"保守案件 一覧") %></h1>
+<p id="notice"><%= notice %></p>
+
+  <div class="container">
+    <div class="upper-box">
+      <%= search_form_for @search do |form| %>
+      <div class="row">
+        <div class="field form-group col-xs-3">
+          <%= form.label :title_number_eq, "保守案件番号 検索:", class:"control-label" %>
+          <%= form.text_field :title_number_eq, class:"form-control" %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :customer_name_cont, "顧客名 検索:", class:"control-label"  %>
+          <%= form.text_field :customer_name_cont, class:"form-control" %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :title_cont, "保守案件名 検索:", class:"control-label"  %>
+          <%= form.text_field :title_cont, class:"form-control" %>
+        </div>
+        <div class="field form-group col-xs-3">
+          <%= form.label :user_name_cont, "担当者名 検索:", class:"control-label"  %>
+          <%= form.text_field :user_name_cont, class:"form-control" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field form-group col-xs-2 box-2">
+          <%= form.label :planed_or_argent_eq, "計画/緊急 検索: ", class:"control-label"  %>
+          <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+        </div>
+        <div class="field form-group col-xs-2 box-2">
+          <%= form.label :order_status_eq, "受注状況 検索: ", class:"control-label"  %>
+          <%= form.select :order_status_eq, [['受注済', true], ['未受注', false]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+        </div>
+        <div class="field form-group col-xs-2 box-2">
+          <%= form.label :closed_eq, "案件完了状態 検索: ", class:"control-label"  %>
+          <%= form.select :closed_eq, [['未完了', 0], ['完了', 1]],
+          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+        </div>
+      </div>
+      <div class="action"><%= form.submit t('view.support_programs.search'), class:"btn btn-primary" %></div>
+      <% end %>
+    </div>
+    <table class="table table-bordered table-striped table-hover table-responsive">
+      <thead>
+        <tr>
+          <th><%= sort_link @search, :title_number,t('view.support_programs.title_number') %></th>
+          <th><%= t('view.support_programs.customer') %></th>
+          <th><%= t('view.support_programs.title') %></th>
+          <th><%= t('view.support_programs.user') %></th>
+          <th><%= t('view.support_programs.main_work') %></th>
+          <th><%= t('view.support_programs.planed_or_argent') %></th>
+          <th><%= t('view.support_programs.order_status') %></th>
+          <th><%= sort_link @search, :kick_off_date, t('view.support_programs.kick_off_date') %></th>
+          <th><%= t('view.support_programs.closed') %></th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @support_programs.each do |support_program| %>
+        <tr>
+          <td class="text-center"><%= support_program.title_number %></td>
+          <td><%= support_program.customer.name %></td>
+          <td><%= support_program.title %></td>
+          <td><%= support_program.user.name %></td>
+          <td><%= support_program.main_work %></td>
+          <td><%= support_program.planed_or_argent %></td>
+          <td><%= support_program.order_status == true ? "受注済" : "未受注" %></td>
+          <td><%= support_program.kick_off_date.strftime("%Y年%m月%d日") %></td>
+          <td><%= support_program.closed %></td>
+          <td><%= link_to t('view.support_programs.show'), support_program, class:"btn btn-info btn-xs" %></td>
+          <% if tech_and_admin_display %>
+          <td><%= link_to t('view.support_programs.edit'), edit_support_program_path(support_program), class:"btn btn-warning btn-xs" %></td>
+          <td><%= link_to t('view.support_programs.delete'), support_program, method: :delete, data: { confirm: '削除しますが？' }, class:"btn btn-danger btn-xs" %></td>
+          <% end %>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= paginate @support_programs %>
+    <div class="create-new pull-right">
+        <% if tech_and_admin_display %>
+          <%= link_to t('view.support_programs.to_new'), new_support_program_path, class:"btn btn-primary btn-lg" %>
+        <% end %>
+    </div>
+  </div>

@@ -1,6 +1,13 @@
-<h1>Editing Customer</h1>
-
-<%= render 'form', customer: @customer %>
-
-<%= link_to 'Show', @customer %> |
-<%= link_to 'Back', customers_path %>
+<h1>顧客情報 -編集-</h1>
+<h1><% provide(:title,"顧客情報 -編集-") %></h1>
+<div class="container">
+  <div class="upper-box">
+    <%= render 'form', customer: @customer %>
+    <div class="create-new">
+     <%= link_to t('view.customers.show'), @customer, class:"btn btn-info" %>
+    </div>
+    <div class="create-new">
+     <%= link_to t('view.customers.to_index'), customers_path, class:"btn btn-info" %>
+    </div>
+  </div>
+</div>

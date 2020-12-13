@@ -1,0 +1,53 @@
+<h1><% provide(:title,"完了案件 一覧") %></h1>
+<p id="notice"><%= notice %></p>
+<div class="content-wrapper">
+<div class="upper-box">
+<div class="container table-responsive">
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th><%= t('view.support_programs.title_number') %></th>
+        <th><%= t('view.support_programs.customer') %></th>
+        <th><%= t('view.support_programs.title') %></th>
+        <th><%= t('view.support_programs.user') %></th>
+        <th><%= t('view.support_programs.main_work') %></th>
+        <th><%= t('view.support_programs.planed_or_argent') %></th>
+        <th><%= t('view.support_programs.order_status') %></th>
+        <th><%= t('view.support_programs.kick_off_date') %></th>
+        <th><%= t('view.support_programs.closed') %></th>
+        <th><%= t('view.allsupports.shows') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @support_programs.each do |support_program| %>
+      <% if support_program.closed == "完了"%>
+      <tr>
+        <td class="text-center"><%= support_program.title_number %></td>
+        <td><%= support_program.customer.name %></td>
+        <td><%= support_program.title %></td>
+        <td><%= support_program.user.name %></td>
+        <td><%= support_program.main_work %></td>
+        <td><%= support_program.planed_or_argent %></td>
+        <td><%= support_program.order_status == true ? "受注済" : "未受注" %></td>
+        <td><%= support_program.kick_off_date %></td>
+        <td><%= support_program.closed %></td>
+        <td>
+          <% support_program.detail_reports.each do |detail_report| %>
+          <% detail_report.boss_check_comments.each do |boss_check_comment|%>
+          <% boss_check_comment.sales_check_comments.each do |sales_check_comment|%>
+          <ul>
+            <li><%= link_to  t('view.allsupports.to_show'), sales_check_comment_path(sales_check_comment.id), class:"btn btn-info btn-xs" %></li>
+          </ul>
+          <% end %>
+          <% end %>
+          <% end %>
+        </td>
+      </tr>
+        <% end %>
+        <% end %>
+      </tbody>
+    </table>
+      <%= paginate @support_programs %>
+</div>
+</div>
+</div>
