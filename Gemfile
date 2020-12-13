@@ -25,6 +25,7 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'launchy'
   gem 'spring'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -45,6 +46,5 @@ gem 'devise'
 gem 'cancancan'
 gem 'rails_admin'
 gem 'ransack'
-gem 'dotenv-rails'
 gem 'carrierwave'
 gem 'mini_magick'
