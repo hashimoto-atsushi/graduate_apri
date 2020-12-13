@@ -26,6 +26,7 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'launchy'
   gem 'spring'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -33,6 +34,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener_web'
+  gem 'view_source_map'
 end
 
 group :test do
@@ -45,3 +47,5 @@ gem 'devise'
 gem 'cancancan'
 gem 'rails_admin'
 gem 'ransack'
+gem 'carrierwave'
+gem 'mini_magick'
