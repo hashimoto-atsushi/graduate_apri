@@ -157,13 +157,15 @@ textarea.form-control {
 .cover-image-login {
   float: left;
   position: absolute;
-  left:150px;
+  top: 250px;
+  left:230px;
 }
 /* ログイン画面の入力部 */
 .login-top {
-  margin: 30px 70px 0 45px;
-  padding: 0;
-  width: 50%;
+  margin: 120px 0 0 0;
+  padding: 0 0 0 100px;
+
+  width: 60%;
   float: right;
 }
 /* 新規作成画面の画像 */
@@ -171,11 +173,12 @@ textarea.form-control {
   float: left;
   margin-top: 80px;
   position: absolute;
-  left:150px;
+  top: 170px;
+  left:250px;
 }
 /* 新規作成画面の入力部 */
 .new_top {
-  margin: 0 0 100px 400px;
+  margin: 0 0 100px 500px;
   padding: 0;
   width: 50%;
   float: left;

@@ -2,7 +2,7 @@ class DetailReportsController < ApplicationController
   before_action :set_detail_report, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :tech_and_admin_login, only: [:create, :update, :destroy]
-  PER = 15
+  PER = 12
 
   def index
     @detail_reports = DetailReport.all.order(support_program_id: :asc).page(params[:page]).per(PER)
