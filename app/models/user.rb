@@ -17,8 +17,6 @@ class User < ApplicationRecord
   def send_welcome_mail
     UserMailer.user_welcome_mail(self).deliver
   end
-  #ここまで
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   enum department: {営業部:0, 技術部:1, システム部:2}

@@ -1,5 +1,4 @@
 class Part < ApplicationRecord
-  # belongs_to :detail_report
   validates :name, presence: true,
                      length: { maximum: 32 }
   validates :type_name, presence: true,
@@ -13,5 +12,5 @@ class Part < ApplicationRecord
   validates :release_date, presence: true
   validates :end_of_production, presence:true
   validates :end_of_service, presence:true
-
+  # belongs_to :detail_report
 end
