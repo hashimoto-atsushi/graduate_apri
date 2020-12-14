@@ -16,7 +16,7 @@ gem 'kaminari-bootstrap'
 gem 'faker'
 gem 'dotenv-rails'
 gem 'unicorn'
-gem 'mini_racer'
+gem 'mini_racer', platforms: :ruby
 
 
 group :development, :test do
