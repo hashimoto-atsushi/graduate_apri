@@ -58,11 +58,13 @@ td {
 /* bootstrap */
 .container {
   margin: 20px;
+  width: 95%;
 }
 /* ヘッダーのナビバー */
 .navbar-top {
   height: 120px;
 }
+
 /* ヘッダーナビバーの文字 */
 .navbar-top li {
   font-size: 1.6rem;
