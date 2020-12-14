@@ -52,6 +52,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     arel (9.0.0)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.0.1)
     better_errors (2.8.3)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -119,6 +120,7 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     execjs (2.7.0)
     factory_bot (6.1.0)
@@ -360,6 +362,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt_pbkdf
   better_errors
   binding_of_caller
   bootsnap (>= 1.1.0)
@@ -375,6 +378,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  ed25519
   factory_bot_rails
   faker
   jbuilder (~> 2.5)
