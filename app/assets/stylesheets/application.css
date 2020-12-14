@@ -58,7 +58,7 @@ td {
 /* bootstrap */
 .container {
   margin: 20px;
-  width: 95%;
+  width: 98%;
 }
 /* ヘッダーのナビバー */
 .navbar-top {
@@ -130,6 +130,7 @@ td {
 
 .upper-box {
   margin-top: 10px;
+  width: 1000px;
 }
 
 textarea.form-control {
