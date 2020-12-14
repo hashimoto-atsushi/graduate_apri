@@ -123,7 +123,7 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
 * dotenv-rails
 * letter_opener_web
 * faker
-* MailCatcher (その他のgem)
+* MailCatcher (その他のgem 12/13 利用なし)
 * view_source_map (その他のgem)
 * rails_admin (就業termより 2)
   - データの閲覧
