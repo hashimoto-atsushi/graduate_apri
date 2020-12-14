@@ -151,7 +151,7 @@ textarea.form-control {
 /* ログイン 新規作成画面のラッパー */
 .login-signup-wrapper {
   clear: left;
-  width: 1100px;
+  width: 1200px;
 }
 /* ログイン画面の画像 */
 .cover-image-login {
@@ -163,9 +163,8 @@ textarea.form-control {
 /* ログイン画面の入力部 */
 .login-top {
   margin: 120px 0 0 0;
-  padding: 0 0 0 100px;
-
-  width: 60%;
+  padding: 0 0 0 200px;
+  width: 70%;
   float: right;
 }
 /* 新規作成画面の画像 */
