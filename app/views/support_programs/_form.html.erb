@@ -10,21 +10,21 @@
   </div>
 <% end %>
 <div class="row">
-  <div class="field form-group col-xs-3">
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.title_number'), class:"control-label" %>
     <%= form.number_field :title_number, class:"form-control" %>
   </div>
-  <div class="field form-group col-xs-3">
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.customer'), class:"control-label" %>
     <%= form.select :customer_id, Customer.all.map{|o| [o.name, o.id]}, {}, class: "form-control" %>
   </div>
 </div>
 <div class="row">
-  <div class="field form-group col-xs-3">
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.title'), class:"control-label"  %>
     <%= form.text_field :title, class:"form-control" %>
   </div>
-  <div class="field form-group col-xs-3">
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.user'), class:"control-label"   %>
     <%= form.select :user_id, User.all.map{|o| [o.name, o.id]},{}, class:"form-control" %>
   </div>
@@ -36,23 +36,29 @@
   </div>
 </div>
 <div class="row">
-  <div class="field form-group col-xs-3">
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.planed_or_argent'), class:"control-label" %><br />
     <%= form.select :planed_or_argent, SupportProgram.planed_or_argents.keys.to_a, {}, autofocus: true, autocomplete: "planed_or_argent",class:"form-control" %>
   </div>
-  <div class="field form-group col-xs-3">
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.order_status') %><br />
     <%= form.select :order_status, {"受注済": "true", "未受注": "false"},{}, autofocus: true, autocomplete: "order_status", class:"form-control" %>
   </div>
-  <div class="field form-group col-xs-2">
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.kick_off_date') %>
     <%= form.date_field :kick_off_date, class:"form-control" %>
   </div>
-  <div class="field form-group col-xs-3">
+</div>
+<div class="row">
+  <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.closed') %><br />
     <%= form.select :closed, SupportProgram.closeds.keys.to_a, {}, autofocus: true, autocomplete: "closed", class:"form-control" %>
   </div>
 </div>
+
+
+
+
 <div class="actions create-new">
   <%= form.submit class:"btn btn-primary" %>
 </div>

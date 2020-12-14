@@ -14,6 +14,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'faker'
+gem 'dotenv-rails'
+gem 'unicorn'
+gem 'mini_racer'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -25,7 +29,11 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'launchy'
   gem 'spring'
-  gem 'dotenv-rails'
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do

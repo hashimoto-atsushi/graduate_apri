@@ -77,15 +77,15 @@
   </div>
 </div>
 <div class="row">
-  <div class="field form-group col-xs-4">
+  <div class="field form-group col-xs-6">
     <%= form.label t('view.detail_reports.id') + '(上記案件名と合わせてください)', class:"control-label" %>
     <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]},{}, class: "form-control" %>
   </div>
-  <div class="field form-group col-xs-4">
+  <div class="field form-group col-xs-3">
     <%= form.label t('view.boss_check_comments.confirmation'), class:"control-label" %><br />
     <%= form.select :confirmation, {"承認済": "true", "未承認": "false"},{}, autofocus: true, autocomplete: "confirmation", class: "form-control" %>
   </div>
-  <div class="field form-group col-xs-4">
+  <div class="field form-group col-xs-3">
     <%= form.label t('view.boss_check_comments.confirmation_date'), class:"control-label" %>
     <%= form.date_field :confirmation_date, class: "form-control" %>
   </div>
