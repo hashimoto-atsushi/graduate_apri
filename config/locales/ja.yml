@@ -403,3 +403,7 @@ ja:
     create: '作成しました'
     edit: '編集しました'
     delete: '削除しました'
+  parts:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
