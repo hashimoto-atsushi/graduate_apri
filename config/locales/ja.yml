@@ -419,3 +419,9 @@ ja:
     create: '作成しました'
     edit: '編集しました'
     delete: '削除しました'
+  mailers:
+    sales_installed_prodects: '【営業部】【新規】納入機器の情報登録の連絡です。'
+    sales_products: '【営業部】【新規】製品情報登録の連絡です。'
+    sales_customers: '【営業部】【新規】顧客情報登録の連絡です。'
+    tech_parts_products: '【技術部】【新規】納入機器の情報登録の連絡です。'
+    tech_support_programs: '【技術部】【新規】保守案件登録の連絡です。'
