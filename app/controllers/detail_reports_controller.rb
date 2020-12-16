@@ -29,7 +29,7 @@ class DetailReportsController < ApplicationController
         UserMailer.detail_report_mail_to_sales(@detail_report).deliver
         UserMailer.detail_report_mail_to_tech(@detail_report).deliver
         UserMailer.detail_report_mail_to_tech_boss(@detail_report, tech_boss).deliver
-        redirect_to @detail_report, notice: '作成しました！'
+        redirect_to @detail_report, notice: t('detail_reports.create')
       else
         redirect_to new_support_program_detail_report_path(@detail_report.support_program.id)
       end
@@ -44,7 +44,7 @@ class DetailReportsController < ApplicationController
 
   def update
     if @detail_report.update(detail_report_params)
-      redirect_to @detail_report, notice: '編集しました！'
+      redirect_to @detail_report, notice: t('detail_reports.edit')
     else
       render :edit
     end
@@ -52,7 +52,7 @@ class DetailReportsController < ApplicationController
 
   def destroy
     @detail_report.destroy
-    redirect_to detail_reports_url, notice: '削除しました！'
+    redirect_to detail_reports_url, notice: t('detail_reports.delete')
   end
 
   private
