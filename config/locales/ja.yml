@@ -411,7 +411,7 @@ ja:
     create: '作成しました'
     edit: '編集しました'
     delete: '削除しました'
-  sales:
+  sales_check_comments:
     create: '作成しました'
     edit: '編集しました'
     delete: '削除しました'
