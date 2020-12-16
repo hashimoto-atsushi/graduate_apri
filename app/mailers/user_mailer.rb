@@ -76,13 +76,13 @@ class UserMailer < ApplicationMailer
   def sales_check_comment_mail_to_tech(sales_check_comment)
     @sales_check_comment = sales_check_comment
     @user = @sales_check_comment.boss_check_comment.detail_report.support_program.user
-    mail to: @user.email, subject: "【技術部】【新規】営業確認終了の連絡です。"
+    mail to: @user.email, subject: t('mailers.tech_sales_check_comment')
   end
 
   def sales_check_comment_mail_to_tech_boss(sales_check_comment, tech_boss)
     @sales_check_comment = sales_check_comment
     @user = tech_boss
-    mail to: @user.email, subject: "【技術部長】【新規】営業確認終了の連絡です。"
+    mail to: @user.email, subject: t('mailers.boss_sales_check_comment')
   end
   #ここからdeviseの登録メール機能
   def user_welcome_mail(user)

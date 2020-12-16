@@ -432,3 +432,5 @@ ja:
     boss_detail_report: '【技術部長】【新規】顧客情報登録の連絡です。'
     sales_boss_check_comment: '【営業部】【新規】の上長確認報告の連絡です。'
     boss_boss_check_comment: '【技術部長】【新規】の上長確認報告の連絡です。'
+    tech_sales_check_comment: '【技術部】【新規】営業確認終了の連絡です。'
+    boss_sales_check_comment: '【技術部長】【新規】営業確認終了の連絡です。'
