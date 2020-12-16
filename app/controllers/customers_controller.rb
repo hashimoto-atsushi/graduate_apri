@@ -31,7 +31,7 @@ class CustomersController < ApplicationController
     else
       if @customer.save
         UserMailer.customer_mail_to_sales(@customer).deliver
-        redirect_to @customer, notice: '作成しました!'
+        redirect_to @customer, notice: t('customers.create')
       else
         render :new
       end
@@ -40,7 +40,7 @@ class CustomersController < ApplicationController
 
   def update
     if @customer.update(customer_params)
-      redirect_to @customer, notice: '編集しました!'
+      redirect_to @customer, notice: t('customers.edit')
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class CustomersController < ApplicationController
 
   def destroy
     @customer.destroy
-    redirect_to customers_url, notice: '削除しました!'
+    redirect_to customers_url, notice: t('customers.delete')
   end
 
   private

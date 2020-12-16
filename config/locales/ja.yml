@@ -391,3 +391,7 @@ ja:
     sales: '営業部'
     tech: '技術部'
     boss: '部長'
+  customers:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'    
