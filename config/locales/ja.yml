@@ -415,3 +415,7 @@ ja:
     create: '作成しました'
     edit: '編集しました'
     delete: '削除しました'
+  support_programs:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'

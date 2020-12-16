@@ -31,7 +31,7 @@ class SupportProgramsController < ApplicationController
         systems_members.each do | systems_member |
           UserMailer.mail_to_system(@support_program, systems_member).deliver
         end
-        redirect_to @support_program, notice: '作成しました'
+        redirect_to @support_program, notice: t('support_programs.create')
       else
         render :new
       end
@@ -45,7 +45,7 @@ class SupportProgramsController < ApplicationController
 
   def update
     if @support_program.update(support_program_params)
-      redirect_to @support_program, notice: '編集しました'
+      redirect_to @support_program, notice: t('support_programs.edit')
     else
       render :edit
     end
@@ -53,7 +53,7 @@ class SupportProgramsController < ApplicationController
 
   def destroy
     @support_program.destroy
-    redirect_to support_programs_url, notice: '削除する'
+    redirect_to support_programs_url, notice: t('support_programs.delete')
   end
 
   private
