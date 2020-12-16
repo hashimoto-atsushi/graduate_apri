@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
     else
       if @product.save
         UserMailer.product_mail_to_sales(@product, current_user).deliver
-        redirect_to @product, notice: '作成しました！'
+        redirect_to @product, notice: t('products.create')
       else
         render :new
       end
@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to @product, notice: '編集しました！'
+      redirect_to @product, notice: t('products.edit')
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to products_url, notice: '削除しました'
+    redirect_to products_url, notice: t('products.delete')
   end
 
   private
