@@ -31,7 +31,7 @@ class SalesCheckCommentsController < ApplicationController
       if @sales_check_comment.save
         UserMailer.sales_check_comment_mail_to_tech(@sales_check_comment).deliver
         UserMailer.sales_check_comment_mail_to_tech_boss(@sales_check_comment, tech_boss).deliver
-        redirect_to @sales_check_comment, notice: '作成しました！'
+        redirect_to @sales_check_comment, notice: t('sales.create')
       else
         redirect_to new_support_program_detail_report_boss_check_comment_sales_check_comment_path(@sales_check_comment.boss_check_comment.detail_report.support_program.id, @sales_check_comment.boss_check_comment.detail_report.id, @sales_check_comment.boss_check_comment.id)
       end
@@ -47,7 +47,7 @@ class SalesCheckCommentsController < ApplicationController
 
   def update
       if @sales_check_comment.update(sales_check_comment_params)
-        redirect_to @sales_check_comment, notice: '編集しました！'
+        redirect_to @sales_check_comment, notice: t('sales.edit')
       else
         render :edit
       end
@@ -55,7 +55,7 @@ class SalesCheckCommentsController < ApplicationController
 
   def destroy
     @sales_check_comment.destroy
-    redirect_to sales_check_comments_url, notice: '削除しました！'
+    redirect_to sales_check_comments_url, notice: t('sales.delete')
   end
 
   private
