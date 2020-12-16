@@ -29,7 +29,7 @@ class BossCheckCommentsController < ApplicationController
       if @boss_check_comment.save
         UserMailer.boss_check_comment_mail_to_sales(@boss_check_comment).deliver
         UserMailer.boss_check_comment_mail_to_tech_boss(@boss_check_comment, tech_boss).deliver
-        redirect_to @boss_check_comment, notice: '作成しました！'
+        redirect_to @boss_check_comment, notice: t('boss_check_comments.create')
       else
         redirect_to new_support_program_detail_report_boss_check_comment_path(@boss_check_comment.detail_report.support_program.id, @boss_check_comment.detail_report.id)
       end
@@ -44,7 +44,7 @@ class BossCheckCommentsController < ApplicationController
 
   def update
     if @boss_check_comment.update(boss_check_comment_params)
-      redirect_to @boss_check_comment, notice: '編集しました！'
+      redirect_to @boss_check_comment, notice: t('boss_check_comments.edit')
     else
       render :edit
     end
@@ -52,7 +52,7 @@ class BossCheckCommentsController < ApplicationController
 
   def destroy
     @boss_check_comment.destroy
-    redirect_to boss_check_comments_url, notice: '削除しました！'
+    redirect_to boss_check_comments_url, notice: t('boss_check_comments.delete')
   end
 
   private
