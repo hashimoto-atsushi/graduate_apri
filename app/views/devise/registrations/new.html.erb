@@ -4,71 +4,74 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="login-signup-wrapper">
-  <div class="cover-image-new">
-    <%= render 'layouts/cover_page'%>
-  </div>
-  <div class="container new_top">
-    <div class="panel panel-primary center-block">
-      <div class="panel-heading">
-        <h1 class="panel-title login-font-size">新規ユーザー登録</h1>
+  <div class="container">
+    <div class="row">
+      <div class="cover-image-new col-xs-6">
+        <%= render 'layouts/cover_page'%>
       </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="field form-group col-xs-8">
-            <%= f.label t('view.users.number'), class:"control-label"  %><br />
-            <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number", class:"form-control", placeholder:"社員番号を入力してください!" %>
+      <div class="container new_top col-xs-6">
+        <div class="panel panel-primary center-block">
+          <div class="panel-heading">
+            <h1 class="panel-title login-font-size">新規ユーザー登録</h1>
           </div>
-        </div>
-        <div class="row">
-          <div class="field form-group col-xs-8">
-            <%= f.label t('view.users.name'), class:"control-label"  %><br />
-            <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form-control", placeholder: "名前を入力してください" %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="field form-group col-xs-8">
-            <%= f.label t('view.users.department'), class:"control-label"  %><br />
-            <%= f.select :department, User.departments.keys.to_a, {}, autofocus: true, autocomplete: "department", class:"form-control" %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="field form-group col-xs-8">
-            <%= f.label t('view.users.email'), class:"form-conrol" %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"メールアドレスを入力してください" %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="field form-group col-xs-8">
-            <%= f.label t('view.users.cellphone_number'), class:"control-label"  %><br />
-            <%= f.number_field :cellphone_number, autofocus: true, autocomplete: "cellphone_number", class:"form-control", placeholder:"支給携帯電話番号を入力してください" %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="field form-group col-xs-8">
-            <%= f.label t('view.users.password'), class:"control-label"  %>
-            <% if @minimum_password_length %>
-            <em><%= @minimum_password_length %>文字以上</em>
-            <% end %><br />
-            <%= f.password_field :password, autocomplete: "new-password",class:"form-control", placeholder:"6文字以上にしてください" %>
-          </div>
-        </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="field form-group col-xs-8">
+                <%= f.label t('view.users.number'), class:"control-label"  %><br />
+                <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number", class:"form-control", placeholder:"社員番号を入力してください!" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field form-group col-xs-8">
+                <%= f.label t('view.users.name'), class:"control-label"  %><br />
+                <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form-control", placeholder: "名前を入力してください" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field form-group col-xs-8">
+                <%= f.label t('view.users.department'), class:"control-label"  %><br />
+                <%= f.select :department, User.departments.keys.to_a, {}, autofocus: true, autocomplete: "department", class:"form-control" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field form-group col-xs-8">
+                <%= f.label t('view.users.email'), class:"form-conrol" %><br />
+                <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"メールアドレスを入力してください" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field form-group col-xs-8">
+                <%= f.label t('view.users.cellphone_number'), class:"control-label"  %><br />
+                <%= f.number_field :cellphone_number, autofocus: true, autocomplete: "cellphone_number", class:"form-control", placeholder:"支給携帯電話番号を入力してください" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field form-group col-xs-8">
+                <%= f.label t('view.users.password'), class:"control-label"  %>
+                <% if @minimum_password_length %>
+                <em><%= @minimum_password_length %>文字以上</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "new-password",class:"form-control", placeholder:"6文字以上にしてください" %>
+              </div>
+            </div>
 
-        <div class="row">
-          <div class="field form-group col-xs-8">
-            <%= f.label t('view.users.password_confirmation'), class:"control-label"  %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", placeholder:"同じパスワードを入力してください"  %>
-          </div>
-        </div>
+            <div class="row">
+              <div class="field form-group col-xs-8">
+                <%= f.label t('view.users.password_confirmation'), class:"control-label"  %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", placeholder:"同じパスワードを入力してください"  %>
+              </div>
+            </div>
 
-        <div class="actions">
-          <%= f.submit t('view.devise.Sign_up'), class:"btn btn-primary" %>
-        </div>
-        <% end %>
-        <div class="panel-fotter">
-          <%= render "devise/shared/links" %>
+            <div class="actions">
+              <%= f.submit t('view.devise.Sign_up'), class:"btn btn-primary" %>
+            </div>
+            <% end %>
+            <div class="panel-fotter">
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
