@@ -216,7 +216,9 @@ ja:
     devise:
       log_in: 'ログイン画面へ'
       sign_up: '新規ユーザー登録へ'
+      sign_up_title: '新規ユーザー登録'
       Sign_up: '登録'
+      login_title: 'ログイン'
     tops:
       allsupports: '完了保守案件 一覧'
       support_programs: '保守案件 一覧'

@@ -1,4 +1,4 @@
-<h1><% provide(:title,"ログイン") %></h1>
+<h1><% provide(:title,t('view.devise.login_title')) %></h1>
 <p id="notice"><%= notice %></p>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="login-signup-wrapper">
