@@ -162,7 +162,7 @@
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.sales_check_comments.matter_closed')%>:</b>&emsp;
-        <%= @sales_check_comment.matter_closed == true ? "承認済" : "未承認" %></p>
+        <%= @sales_check_comment.matter_closed == true ? t('view.sales_check_comments.confirmed') : t('view.sales_check_comments.not_confirmed') %></p>
       </div>
     </div>
     <div>
