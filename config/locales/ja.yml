@@ -9,6 +9,8 @@ ja:
       models:
         product:
           attributes:
+            release_date:
+              aftertomorrow: 'は本日以降に設定してください'
             end_of_production:
               aftertomorrow: 'は本日以降に設定してください'
             end_of_service:
