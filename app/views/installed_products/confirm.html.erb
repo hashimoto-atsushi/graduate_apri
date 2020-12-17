@@ -30,7 +30,7 @@
       <p><b><%= t('view.installed_products.installed_date') %>:&emsp;</b> <%= @installed_product.installed_date.strftime("%Y年%m月%d日")  %></P>
     </div>
     <div>
-      <p><b><%= t('view.installed_products.discount_price') %>:&emsp;</b> <%= @installed_product.discount_price.to_s(:delimited) %>円</P>
+      <p><b><%= t('view.installed_products.discount_price') %>:&emsp;</b> <%= @installed_product.discount_price.to_s(:delimited) %><%= t('view.installed_products.yen') %></P>
     </div>
     <div class="create-new">
      <%= form.submit t('view.installed_products.confirm_to_submit'), class:"btn btn-danger" %>

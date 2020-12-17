@@ -455,6 +455,7 @@ ja:
       installed_product_show:  "納入機器 -詳細-"
       installed_product_edit:  "納入機器 -編集-"
       delete: '削除しますか？'
+      yen: '円'
     products:
       name: '製品名'
       type_name: '型式'
@@ -508,6 +509,7 @@ ja:
       search_type: '保守パーツ型式 検索: '
       search_category: '保守パーツ種類 検索: '
       delete_confirm: '削除しますか？'
+      no_link: '紐付け無し'
     users:
       id: 'ID'
       number: '社員番号'
