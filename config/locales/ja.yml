@@ -290,6 +290,7 @@ ja:
       please_adjust: '(上記案件名と合わせてください! )'
       confirmed: '承認済'
       not_confirmed: '未承認'
+      delete_confirm: '削除しますがよろしいでしょうか？'
     sales_check_comments:
       id: '上長報告選択'
       confirmation: '営業確認'

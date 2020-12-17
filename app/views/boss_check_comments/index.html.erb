@@ -19,13 +19,13 @@
           <tr>
             <td><%= boss_check_comment.detail_report.support_program.customer.name %></td>
             <td><%= boss_check_comment.detail_report.support_program.title %></td>
-            <td><%= boss_check_comment.confirmation == true ? "承認済" : "未承認" %></td>
+            <td><%= boss_check_comment.confirmation == true ? t('view.boss_check_comments.confirmed') : t('view.boss_check_comments.not_confirmed') %></td>
             <td><%= boss_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></td>
             <td><%= boss_check_comment.report_to_sales %></td>
             <td><%= boss_check_comment.detail_report.support_program.customer.user.name %></td>
             <td><%= link_to t('view.boss_check_comments.show'), boss_check_comment, class:"btn btn-info btn-xs" %></td>
             <% if boss_and_admin_display %>
-            <td><%= link_to t('view.boss_check_comments.delete'), boss_check_comment, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs" %></td>
+            <td><%= link_to t('view.boss_check_comments.delete'), boss_check_comment, method: :delete, data: { confirm: t('view.boss_check_comments.delete_confirm') }, class:"btn btn-danger btn-xs" %></td>
             <% end %>
           </tr>
           <% end %>
