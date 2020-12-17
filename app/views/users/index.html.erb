@@ -6,15 +6,15 @@
   <div class="upper-box">
     <div class="row">
       <div class="field form-group col-xs-3">
-      <%= form.label :employee_number_eq, "社員番号 検索: ", class:"control-label" %>
+      <%= form.label :employee_number_eq, t('view.users.search_number'), class:"control-label" %>
       <%= form.text_field :employee_number_eq, class:"form-control" %>
       </div>
       <div class="field form-group col-xs-3">
-      <%= form.label :name_cont, "名前 検索: ", class:"control-label" %>
+      <%= form.label :name_cont, t('view.users.search_name'), class:"control-label" %>
       <%= form.text_field :name_cont, class:"form-control" %>
       </div>
       <div class="field form-group col-xs-3">
-      <%= form.label :department_eq, "部署 検索: ", class:"control-label" %>
+      <%= form.label :department_eq, t('view.users.search_department'), class:"control-label" %>
       <%= form.select :department_eq, [['営業部', 0], ['技術部', 1], ['システム部', 2]],
       {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
       </div>

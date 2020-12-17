@@ -5,15 +5,15 @@
       <div class="upper-box">
         <div class="row">
           <div class="field form-group col-xs-3">
-            <%= form.label :customer_number_eq, "顧客番号 検索:", class:"control-label"  %>
+            <%= form.label :customer_number_eq, t('view.customers.search_number'), class:"control-label"  %>
           <%= form.text_field :customer_number_eq, class:"form-control" %>
           </div>
           <div class="field form-group col-xs-3">
-            <%= form.label :name_cont, "顧客名 検索: ", class:"control-label"  %>
+            <%= form.label :name_cont, t('view.customers.search_name'), class:"control-label"  %>
             <%= form.text_field :name_cont, class:"form-control" %>
           </div>
           <div class="field form-group col-xs-3">
-            <%= form.label :support_programs_title_cont, "案件名 検索: ", class:"control-label"  %>
+            <%= form.label :support_programs_title_cont, t('view.customers.search_title'), class:"control-label"  %>
             <%= form.text_field :support_programs_title_cont, class:"form-control" %>
           </div>
         </div>

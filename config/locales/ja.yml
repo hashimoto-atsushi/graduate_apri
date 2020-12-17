@@ -354,6 +354,13 @@ ja:
       customer_index:  "顧客情報 一覧"
       customer_new:  "顧客情報 -新規登録-"
       customer_show:  "顧客情報 -詳細-"
+      search_number: '顧客番号 検索: '
+      search_name: '顧客名 検索: '
+      search_title: '案件名 検索: '
+
+
+
+
     installed_products:
       serial_number: 'シリアル番号'
       installed_date: '納入日'
@@ -441,6 +448,9 @@ ja:
       search: '検索する'
       user_index:  "社員情報 一覧"
       user_show:  "社員情報 -詳細-"
+      search_number: '社員番号 検索: '
+      search_name: '名前 検索: '
+      search_department: '部署 検索: '
     user_mailer:
       boss_check_comment_content1: '新規 上長確認済み報告が登録されました。'
       boss_check_comment_content2: 'の上長確認済み報告が登録されました。'
@@ -450,7 +460,8 @@ ja:
       detail_report_content2: 'の作業報告が登録されました。'
       intstalled_product_content1: '新規 納入機器情報が登録されました。'
       intstalled_product_content2: 'の情報が登録されました。'
-      dear: '様の'
+      dear: '様'
+      to_dear: '様の'
       mail_to_system_content1: '新規保守案件が登録されました。'
       mail_to_system_content2: 'が登録されました。'
       part_content1: '新規 保守パーツ情報が登録されました。'
