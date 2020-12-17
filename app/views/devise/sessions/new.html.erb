@@ -10,25 +10,25 @@
       <div class="container login-top col-xs-6">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h1 class="panel-title login-font-size">ログイン</h1>
+            <h1 class="panel-title login-font-size"><%= t('view.devise.login_title') %></h1>
           </div>
           <div class="panel-body">
             <div class="row">
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.number'), class:"control-label" %><br />
-                <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number", class:"form-control", placeholder:"社員番号を入力してください" %>
+                <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number", class:"form-control", placeholder: t('view.devise.please_number') %>
               </div>
             </div>
             <div class="row">
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.email'), class:"control-label" %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"Eメールアドレスを入力してください" %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder: t('view.devise.please_mail') %>
               </div>
             </div>
             <div class="row">
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.password'), class:"control-label"  %><br />
-                <%= f.password_field :password, autocomplete: "current-password", class:"form-control", placeholder:"パスワードを入力してください"   %>
+                <%= f.password_field :password, autocomplete: "current-password", class:"form-control", placeholder: t('view.devise.please_in_pass') %>
               </div>
             </div>
             <% if devise_mapping.rememberable? %>

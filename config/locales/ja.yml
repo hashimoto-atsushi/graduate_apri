@@ -224,11 +224,9 @@ ja:
       please_mail: 'Eメールアドレスを入力してください'
       please_phone: '支給携帯電話番号を入力してください'
       please_password: '6文字以上にしてください'
+      please_in_pass: 'パスワードを入れてください'
       please_pass_confirm: '同じパスワードを入力してください'
       letter_number: '文字以上'
-
-
-
     tops:
       allsupports: '完了保守案件 一覧'
       support_programs: '保守案件 一覧'
@@ -288,9 +286,6 @@ ja:
       not_completed: '未完了'
       got_ordered: '受注済'
       not_ordered: '未受注'
-
-
-
     detail_reports:
       id: '案件選択'
       ordered_date: '受注日'
@@ -370,7 +365,6 @@ ja:
       confirmed: '承認済'
       not_confirmed: '未承認'
       not_selected: '選択なし'
-
     customers:
       customer_number: '顧客番号'
       customer: '顧客名'
@@ -398,10 +392,6 @@ ja:
       search_number: '顧客番号 検索: '
       search_name: '顧客名 検索: '
       search_title: '案件名 検索: '
-
-
-
-
     installed_products:
       serial_number: 'シリアル番号'
       installed_date: '納入日'
@@ -445,10 +435,6 @@ ja:
       search_type: '型式名 検索: '
       search_category: '機器種類 検索: '
       delete_confirm: '削除しますか？'
-
-
-
-
     parts:
       detail_report_id: '詳細報告ID'
       name: '製品名'
@@ -477,11 +463,6 @@ ja:
       search_type: '保守パーツ型式 検索: '
       search_category: '保守パーツ種類 検索: '
       delete_confirm: '削除しますか？'
-
-
-
-
-
     users:
       id: 'ID'
       number: '社員番号'
@@ -538,9 +519,6 @@ ja:
       welcom2: 'この度はアカウント登録頂きましてありがとうございます。'
       welcom3: 'ユーザー名:'
       welcom4: 'メールアドレス:'
-
-
-
   boss_check_comments:
     create: '作成しました'
     edit: '編集しました'
