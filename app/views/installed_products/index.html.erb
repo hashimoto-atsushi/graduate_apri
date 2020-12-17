@@ -22,10 +22,10 @@
           <td><%= installed_product.customer.name %></td>
           <td><%= installed_product.product.name %></td>
           <td><%= installed_product.serial_number %></td>
-          <td><%= installed_product.installed_date.strftime("%Y年%m月%d日") %></td>
+          <td><%= installed_product.installed_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
           <td><%= installed_product.discount_price.to_s(:delimited) %>円</td>
-          <td><%= installed_product.product.end_of_production.strftime("%Y年%m月%d日")  %></td>
-          <td><%= installed_product.product.end_of_service.strftime("%Y年%m月%d日")  %></td>
+          <td><%= installed_product.product.end_of_production.strftime(t('datetime.prompts.year_manth_day'))  %></td>
+          <td><%= installed_product.product.end_of_service.strftime(t('datetime.prompts.year_manth_day'))  %></td>
           <td><%= link_to t('view.parts.show'), installed_product, class:"btn btn-info btn-xs" %></td>
           <% if sales_and_admin_display %>
           <td><%= link_to t('view.parts.edit'), edit_installed_product_path(installed_product), class:"btn btn-warning btn-xs" %></td>

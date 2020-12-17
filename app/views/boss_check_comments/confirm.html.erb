@@ -32,7 +32,7 @@
     <p><b><%= t('view.boss_check_comments.confirmation') %>:&emsp;</b> <%= @boss_check_comment.confirmation == true ? t('view.boss_check_comments.confirmed') : t('view.boss_check_comments.not_confirmed') %></P>
   </div>
   <div>
-    <p><b><%= t('view.boss_check_comments.confirmation_date') %>:&emsp;</b> <%= @boss_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></P>
+    <p><b><%= t('view.boss_check_comments.confirmation_date') %>:&emsp;</b> <%= @boss_check_comment.confirmation_date.strftime(t('datetime.prompts.year_manth_day')) %></P>
   </div>
   <div>
     <p><b><%= t('view.boss_check_comments.positive_comment') %>:&emsp;</b> <%= @boss_check_comment.positive_comment %></P>

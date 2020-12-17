@@ -36,7 +36,7 @@
     <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? t('view.boss_check_comments.got_ordered') : t('view.boss_check_comments.not_ordered')  %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date.strftime("%Y年%m月%d日") %></p>
+    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
   <div class="col-xs-3">
     <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b><%= @detail_report.ordered_price.to_s(:delimited) %></p>
@@ -44,16 +44,16 @@
 </div>
 <div class="row">
   <div class="col-xs-3">
-    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b><%= @detail_report.support_program.kick_off_date.strftime("%Y年%m月%d日") %></p>
+    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b><%= @detail_report.support_program.kick_off_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b><%= @detail_report.actual_kickoff_date.strftime("%Y年%m月%d日") %></p>
+    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b><%= @detail_report.actual_kickoff_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
   <div class="col-xs-3">
     <p><b><%= t('view.support_programs.closed') %>:&emsp;</b><%= @detail_report.support_program.closed %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.actual_complete_date') %>:&emsp;</b><%= @detail_report.actual_complete_date.strftime("%Y年%m月%d日") %></p>
+    <p><b><%= t('view.detail_reports.actual_complete_date') %>:&emsp;</b><%= @detail_report.actual_complete_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
 </div>
 <div class="row">

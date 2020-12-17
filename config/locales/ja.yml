@@ -146,6 +146,7 @@ ja:
       day: 日
       month: 月
       year: 年
+      year_manth_day: "%Y年%m月%d日"
   errors:
     format: "%{attribute}%{message}"
     messages:

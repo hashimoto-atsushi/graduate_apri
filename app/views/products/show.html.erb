@@ -26,17 +26,17 @@
 
       <div>
         <p><b><%= t('view.products.release_date') %>:</b>&emsp;
-        <%= @product.release_date %></p>
+        <%= @product.release_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
 
       <div>
         <p><b><%= t('view.products.end_of_production') %>:</b>&emsp;
-        <%= @product.end_of_production %></p>
+        <%= @product.end_of_production.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
 
       <div>
         <p><b><%= t('view.products.end_of_service') %>:</b>&emsp;
-        <%= @product.end_of_service %></p>
+        <%= @product.end_of_service.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
 
 

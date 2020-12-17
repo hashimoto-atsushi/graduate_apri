@@ -44,9 +44,9 @@
       <td><%= part.category %></td>
       <td><%= part.list_price.to_s(:delimited) %>円</td>
       <td><%= part.stock %></td>
-      <td><%= part.release_date.strftime("%Y年%m月%d日") %></td>
-      <td><%= part.end_of_production.strftime("%Y年%m月%d日") %></td>
-      <td><%= part.end_of_service.strftime("%Y年%m月%d日") %></td>
+      <td><%= part.release_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
+      <td><%= part.end_of_production.strftime(t('datetime.prompts.year_manth_day')) %></td>
+      <td><%= part.end_of_service.strftime(t('datetime.prompts.year_manth_day')) %></td>
       <td><%= link_to t('view.parts.show'), part, class:"btn btn-info btn-xs" %></td>
       <% if tech_and_admin_display %>
         <td><%= link_to t('view.parts.edit'), edit_part_path(part), class:"btn btn-warning btn-xs" %></td>
