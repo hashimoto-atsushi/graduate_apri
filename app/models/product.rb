@@ -11,9 +11,9 @@ class Product < ApplicationRecord
   validates :release_date, presence: true
   validates :end_of_production, presence:true
   validates :end_of_service, presence:true
+
   validate :end_of_production_not_before_today
   validate :end_of_service_not_before_today
-
   def end_of_production_not_before_today
     errors.add(:end_of_production, :aftertomorrow) if end_of_production.nil? || end_of_production < Date.today
   end
