@@ -276,7 +276,8 @@ ja:
       argent: '緊急'
       completed: '完了'
       not_completed: '未完了'
-
+      got_ordered: '受注済'
+      not_ordered: '未受注'
 
 
 
