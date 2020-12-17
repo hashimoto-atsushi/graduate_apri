@@ -42,7 +42,7 @@
       <p><b><%= t('view.parts.category')%>:&emsp;</b> <%= @part.category %></P>
     </div>
     <div>
-      <p><b><%= t('view.parts.list_price')%>:&emsp;</b> <%= @part.list_price.to_s(:delimited) %>円</P>
+      <p><b><%= t('view.parts.list_price')%>:&emsp;</b> <%= @part.list_price.to_s(:delimited) %><%= t('number.currency.format.unit') %></P>
     </div>
     <div>
       <p><b><%= t('view.parts.stock')%>:&emsp;</b> <%= @part.stock %></P>

@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="upper-box">
-    <h3>- 保守案件 詳細 -</h3>
+    <h3><%= t('view.support_programs.support_program_detail')%></h3>
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.title_number') %>:</b>&emsp;</strong>
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="row">
-    <h3>- 作業報告 詳細 -</h3>
+    <h3><%= t('view.detail_reports.detail_report_detail')%></h3>
       <div class="col-xs-4">
         <p><b><%= t('view.detail_reports.ordered_date') %>:</b>&emsp;</strong>
         <%= @sales_check_comment.boss_check_comment.detail_report.ordered_date.strftime("%Y年%m月%d日") %></p>
@@ -97,11 +97,11 @@
         <%= @sales_check_comment.boss_check_comment.detail_report.support_program.user.name %></p>
       </div>
     </div>
-    <h3>- 上長確認 -</h3>
+    <h3><%= t('view.boss_check_comments.boss_check_comment_details')%></h3>
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.boss_check_comments.confirmation')%>:</b>&emsp;
-        <%= @sales_check_comment.boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
+        <%= @sales_check_comment.boss_check_comment.confirmation == true ? t('view.boss_check_comments.confirmed') : t('view.boss_check_comments.not_confirmed')  %></P>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.boss_check_comments.confirmation_date')%>:</b>&emsp;
@@ -138,11 +138,11 @@
         <%= @sales_check_comment.boss_check_comment.report_to_sales %></P>
       </div>
     </div>
-    <h3>- 営業確認 -</h3>
+    <h3><%= t('view.sales_check_comments.sales_check_comment_details') %></h3>
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.sales_check_comments.confirmation')%>:</b>&emsp;
-        <%= @sales_check_comment.confirmation == true ? "確認済" : "未確認" %></p>
+        <%= @sales_check_comment.confirmation == true ? t('view.sales_check_comments.look_over') : t('view.sales_check_comments.not_look_over')%></p>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.sales_check_comments.confirmation_date')%>:</b>&emsp;
@@ -158,7 +158,7 @@
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.sales_check_comments.discussion_possibility')%>:</b>&emsp;
-        <%= @sales_check_comment.discussion_possibility == true ? "有り" : "無し" %></p>
+        <%= @sales_check_comment.discussion_possibility == true ? t('view.sales_check_comments.necessary') : t('view.sales_check_comments.not_necessary')  %></p>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.sales_check_comments.matter_closed')%>:</b>&emsp;
