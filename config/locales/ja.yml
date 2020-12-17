@@ -219,6 +219,15 @@ ja:
       sign_up_title: '新規ユーザー登録'
       Sign_up: '登録'
       login_title: 'ログイン'
+      please_number: '社員番号を入力してください'
+      please_name: '名前を入力してください'
+      please_mail: 'Eメールアドレスを入力してください'
+      please_phone: '支給携帯電話番号を入力してください'
+      please_password: '6文字以上にしてください'
+      please_pass_confirm: '同じパスワードを入力してください!'
+
+
+
     tops:
       allsupports: '完了保守案件 一覧'
       support_programs: '保守案件 一覧'

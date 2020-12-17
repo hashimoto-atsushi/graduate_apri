@@ -12,19 +12,19 @@
       <div class="container new_top col-xs-6">
         <div class="panel panel-primary center-block">
           <div class="panel-heading">
-            <h1 class="panel-title login-font-size">新規ユーザー登録</h1>
+            <h1 class="panel-title login-font-size"><%= t('view.devise.sign_up_title') %></h1>
           </div>
           <div class="panel-body">
             <div class="row">
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.number'), class:"control-label"  %><br />
-                <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number", class:"form-control", placeholder:"社員番号を入力してください!" %>
+                <%= f.text_field :employee_number, autofocus: true, autocomplete: "employee_number", class:"form-control", placeholder:t('view.devise.please_number') %>
               </div>
             </div>
             <div class="row">
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.name'), class:"control-label"  %><br />
-                <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form-control", placeholder: "名前を入力してください" %>
+                <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form-control", placeholder: t('view.devise.please_name') %>
               </div>
             </div>
             <div class="row">
@@ -36,13 +36,13 @@
             <div class="row">
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.email'), class:"form-conrol" %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"メールアドレスを入力してください" %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:t('view.devise.please_mail') %>
               </div>
             </div>
             <div class="row">
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.cellphone_number'), class:"control-label"  %><br />
-                <%= f.number_field :cellphone_number, autofocus: true, autocomplete: "cellphone_number", class:"form-control", placeholder:"支給携帯電話番号を入力してください" %>
+                <%= f.number_field :cellphone_number, autofocus: true, autocomplete: "cellphone_number", class:"form-control", placeholder:t('view.devise.please_phone') %>
               </div>
             </div>
             <div class="row">
@@ -51,7 +51,7 @@
                 <% if @minimum_password_length %>
                 <em><%= @minimum_password_length %>文字以上</em>
                 <% end %><br />
-                <%= f.password_field :password, autocomplete: "new-password",class:"form-control", placeholder:"6文字以上にしてください" %>
+                <%= f.password_field :password, autocomplete: "new-password",class:"form-control", placeholder:t('view.devise.please_password') %>
               </div>
             </div>
 
