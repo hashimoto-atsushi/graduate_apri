@@ -451,6 +451,8 @@ ja:
       intstalled_product_content1: '新規 納入機器情報が登録されました。'
       intstalled_product_content2: 'の情報が登録されました。'
       dear: '様の'
+      mail_to_system_content1: '新規保守案件が登録されました。'
+      mail_to_system_content2: 'が登録されました。'
 
 
 
