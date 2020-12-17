@@ -16,7 +16,7 @@
       <div class="field form-group col-xs-3">
       <%= form.label :department_eq, t('view.users.search_department'), class:"control-label" %>
       <%= form.select :department_eq, [[t('view.users.search_sales'), 0], [t('view.users.search_tech'), 1], [t('view.users.search_system'), 2]],
-      {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+      {include_blank: t('view.users.not_selected')}, class: 'sample', class:"form-control" %>
       </div>
     </div>
     <div class="action"><%= form.submit t('view.users.search'), class:"btn btn-primary" %></div>

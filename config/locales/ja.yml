@@ -547,6 +547,7 @@ ja:
       search_sales: '営業部'
       search_tech: '技術部'
       search_system: 'システム部'
+      not_selected: '選択なし'
     user_mailer:
       boss_check_comment_content1: '新規 上長確認済み報告が登録されました。'
       boss_check_comment_content2: 'の上長確認済み報告が登録されました。'
