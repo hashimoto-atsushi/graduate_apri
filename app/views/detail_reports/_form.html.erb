@@ -86,7 +86,7 @@
    <div class="row">
      <div class="field form-group col-xs-2">
        <%= form.label t('view.detail_reports.evaluation'), class:"control-label" %>
-       <%= form.select :evaluation, DetailReport.evaluations.keys.to_a, {}, autofocus: true, autocomplete: "evaluation", class:"form-control" %>
+       <%= form.select :evaluation, DetailReport.evaluations_i18n.map { |k, v| [v, k] }, {}, autofocus: true, autocomplete: "evaluation", class:"form-control" %>
      </div>
      <div class="field form-group col-xs-10">
        <%= form.label t('view.detail_reports.evaluation_details'), class:"control-label" %>

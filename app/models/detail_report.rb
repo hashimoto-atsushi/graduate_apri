@@ -14,7 +14,7 @@ class DetailReport < ApplicationRecord
                            length: { maximum: 16 }
   validates :evaluation_details, presence:true,
                                    length: { maximum: 6400 }
-  enum evaluation: { 高評価:0 , 低評価:1}
+  enum evaluation: { high_eva:0 , low_eva:1}
 
   validate :ordered_date_not_after_today
   validate :actual_kickoff_date_not_after_today

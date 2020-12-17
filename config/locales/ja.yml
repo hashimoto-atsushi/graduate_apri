@@ -625,3 +625,8 @@ ja:
     boss_boss_check_comment: '【技術部長】【新規】の上長確認報告の連絡です。'
     tech_sales_check_comment: '【技術部】【新規】営業確認終了の連絡です。'
     boss_sales_check_comment: '【技術部長】【新規】営業確認終了の連絡です。'
+  enums:
+    detail_report:
+      evaluation:
+        high_eva: '高評価'
+        low_eva: '低評価'
