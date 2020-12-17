@@ -10,13 +10,17 @@ ja:
         product:
           attributes:
             end_of_production:
-              aftertomorrow: 'は明日以降に設定してください'
+              aftertomorrow: 'は本日以降に設定してください'
             end_of_service:
-              aftertomorrow: 'は明日以降に設定してください'
+              aftertomorrow: 'は本日以降に設定してください'
         support_program:
           attributes:
             kick_off_date:
-              aftertomorrow: 'は明日以降に設定してください'
+              aftertomorrow: 'は本日以降に設定してください'
+        boss_check_comment:
+          attributes:
+            confirmation_date:
+              aftertomorrow: 'は本日以降に設定してください'
 
   date:
     abbr_day_names:
