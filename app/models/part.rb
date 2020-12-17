@@ -25,5 +25,4 @@ class Part < ApplicationRecord
   def end_of_service_not_before_today
     errors.add(:end_of_service, :aftertomorrow) if end_of_service.nil? || end_of_service < Date.today
   end
-
 end

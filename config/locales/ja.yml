@@ -35,9 +35,14 @@ ja:
               aftertomorrow: 'は本日以降に設定してください'
             end_of_service:
               aftertomorrow: 'は本日以降に設定してください'
-
-
-
+        detail_report:
+          attributes:
+            ordered_date:
+              beforetomorrow: 'は本日以前に設定してください'
+            actual_kickoff_date:
+              beforetomorrow: 'は本日以前に設定してください'
+            actual_complete_date:
+              beforetomorrow: 'は本日以前に設定してください'
   date:
     abbr_day_names:
     - 日
