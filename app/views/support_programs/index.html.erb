@@ -25,7 +25,7 @@
       <div class="row">
         <div class="field form-group col-xs-2 box-2">
           <%= form.label :planed_or_argent_eq, t('view.support_programs.search_plan'), class:"control-label"  %>
-          <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
+          <%= form.select :planed_or_argent_eq, [[t('view.support_programs.planed'), 0], [t('view.support_programs.argent'), 1]],
           {include_blank: t('view.support_programs.not_selected')}, class: 'sample', class:"form-control" %>
         </div>
         <div class="field form-group col-xs-2 box-2">
