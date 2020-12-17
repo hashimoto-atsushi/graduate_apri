@@ -333,8 +333,12 @@ ja:
       search_need: '協議の必要性 検索: '
       search_confirm: '営業確認 検索: '
       search_approval: '上長承認 検索: '
+      look_over: '確認済'
+      not_look_over: '未確認'
+      necessary: '有り'
+      not_necessary: '無し'
       confirmed: '承認済'
-      not_confirmed: '未承認'
+      not_confirmed: '未承認'      
 
     customers:
       customer_number: '顧客番号'

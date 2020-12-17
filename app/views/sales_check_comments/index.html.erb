@@ -44,11 +44,11 @@
         <td class="text-center"><%= sales_check_comment.boss_check_comment.detail_report.support_program.title_number %></td>
         <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.customer.name %></td>
         <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.title %></td>
-        <td><%= sales_check_comment.confirmation == true ? t('view.sales_check_comments.confirmed') : "未確認" %></td>
+        <td><%= sales_check_comment.confirmation == true ? t('view.sales_check_comments.look_over') : t('view.sales_check_comments.not_look_over') %></td>
         <td><%= sales_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></td>
-        <td><%= sales_check_comment.discussion_possibility == true ? " 有り" : "無し" %></td>
-        <td><%= sales_check_comment.matter_closed == true ? " 承認済" : "未承認" %></td>
-        <td><%= sales_check_comment.boss_check_comment.confirmation == true ? " 承認済" : "未承認"  %></td>
+        <td><%= sales_check_comment.discussion_possibility == true ? t('view.sales_check_comments.necessary') : t('view.sales_check_comments.not_necessary') %></td>
+        <td><%= sales_check_comment.matter_closed == true ? t('view.sales_check_comments.confirmed') : t('view.sales_check_comments.not_confirmed') %></td>
+        <td><%= sales_check_comment.boss_check_comment.confirmation == true ? t('view.sales_check_comments.confirmed') : ('view.sales_check_comments.not_confirmed')  %></td>
         <td><%= link_to t('view.sales_check_comments.show'), sales_check_comment, class:"btn btn-info btn-xs" %></td>
         <td><%= link_to t('view.sales_check_comments.delete'), sales_check_comment, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs" %></td>
       </tr>
