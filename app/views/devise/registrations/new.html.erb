@@ -49,7 +49,7 @@
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.password'), class:"control-label"  %>
                 <% if @minimum_password_length %>
-                <em><%= @minimum_password_length %>文字以上</em>
+                <em><%= @minimum_password_length %><%= t('view.devise.letter_number') %></em>
                 <% end %><br />
                 <%= f.password_field :password, autocomplete: "new-password",class:"form-control", placeholder:t('view.devise.please_password') %>
               </div>
@@ -58,7 +58,7 @@
             <div class="row">
               <div class="field form-group col-xs-8">
                 <%= f.label t('view.users.password_confirmation'), class:"control-label"  %><br />
-                <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", placeholder:"同じパスワードを入力してください"  %>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control", placeholder:t('view.devise.please_pass_confirm')  %>
               </div>
             </div>
 

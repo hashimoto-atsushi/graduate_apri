@@ -224,7 +224,8 @@ ja:
       please_mail: 'Eメールアドレスを入力してください'
       please_phone: '支給携帯電話番号を入力してください'
       please_password: '6文字以上にしてください'
-      please_pass_confirm: '同じパスワードを入力してください!'
+      please_pass_confirm: '同じパスワードを入力してください'
+      letter_number: '文字以上'
 
 
 
