@@ -278,7 +278,6 @@ ja:
       detail_report_index:  "作業報告 一覧"
       detail_report_new:  "作業報告 -新規登録-"
       detail_report_show:  "作業報告 -詳細-"
-
     boss_check_comments:
       id: '報告選択'
       confirmation: '上長承認'
@@ -356,6 +355,13 @@ ja:
       to_index: '一覧へ'
       confirm_to_submit: '登録する'
       back: '戻る'
+      installed_product_detail:  "- 納入機器 詳細 -"
+      installed_product_confirm:  "納入機器  -登録確認-"
+      installed_product_index:  "納入機器 一覧"
+      installed_product_new:  "納入機器 -新規登録-"
+      installed_product_show:  "納入機器 -詳細-"
+      installed_product_edit:  "納入機器 -編集-"
+
     products:
       name: '製品名'
       type_name: '型式'
