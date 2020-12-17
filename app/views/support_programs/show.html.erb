@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="upper-box">
-    <h3>- 保守案件 詳細 -</h3>
+    <h3><%= t('view.support_programs.support_program_detail')%></h3>
     <div class="row">
       <div class="col-xs-4">
           <p><b><%= t('view.support_programs.title_number') %>:&emsp;</b>
@@ -34,7 +34,7 @@
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b>
-        <%= @support_program.order_status == true ? "受注済" : "未受注" %></P>
+        <%= @support_program.order_status == true ? t('view.support_programs.got_ordered') : t('view.support_programs.not_ordered') %></P>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b>

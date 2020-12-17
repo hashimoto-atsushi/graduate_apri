@@ -279,6 +279,7 @@ ja:
       products: '製品情報'
       parts: '保守パーツ情報'
       users: '社員情報'
+      top: 'TOPページ'
     allsupports:
       title: '完了案件 一覧'
       shows: '詳細'
