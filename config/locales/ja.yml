@@ -461,6 +461,10 @@ ja:
       sales_check_comment_content2: 'の営業確認が登録されました。'
       support_program_content1: '新規保守案件が登録されました。'
       support_program_content2: 'が登録されました。'
+      welcom1: 'ようこそ'
+      welcom2: 'この度はアカウント登録頂きましてありがとうございます。'
+      welcom3: 'ユーザー名:'
+      welcom4: 'メールアドレス:'
 
 
 
