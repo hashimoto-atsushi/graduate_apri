@@ -1,4 +1,4 @@
-<h1><% provide(:title,"上長確認 -詳細-") %></h1>
+<h1><% provide(:title,t('view.boss_check_comments.boss_check_comment_show')) %></h1>
 <p id="notice"><%= notice %></p>
 
 <div class="container">
@@ -31,7 +31,7 @@
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.order_status') %>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
+        <%= @boss_check_comment.detail_report.support_program.order_status == true ? t('view.boss_check_comments.got_ordered') : t('view.boss_check_comments.not_ordered') %></p>
       </div>
     </div>
     <h3><%= t('view.detail_reports.detail_report_detail')%></h3>
@@ -101,7 +101,7 @@
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.boss_check_comments.confirmation')%>:</b>&emsp;
-        <%= @boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
+        <%= @boss_check_comment.confirmation == true ? t('view.boss_check_comments.confirmed') : t('view.boss_check_comments.not_confirmed') %></P>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.boss_check_comments.confirmation_date')%>:</b>&emsp;

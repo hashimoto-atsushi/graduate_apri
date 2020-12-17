@@ -39,7 +39,7 @@
    <div class="input-form">
      <div class="row">
        <div class="field form-group col-xs-6">
-         <%= form.label t('view.support_programs.title') + '(上記保守案件と合わせてください)', class:"control-label"  %>
+         <%= form.label t('view.support_programs.title') + t('view.detail_report.please_adjust'), class:"control-label"  %>
          <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.title, o.id]},{}, class: "form-control" %>
        </div>
        <div class="field form-group col-xs-3">
