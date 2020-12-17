@@ -453,6 +453,9 @@ ja:
       dear: '様の'
       mail_to_system_content1: '新規保守案件が登録されました。'
       mail_to_system_content2: 'が登録されました。'
+      part_content1: '新規 保守パーツ情報が登録されました。'
+      part_content2: 'の情報が登録されました。'
+
 
 
 
