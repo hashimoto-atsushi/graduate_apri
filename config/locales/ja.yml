@@ -446,6 +446,8 @@ ja:
       boss_check_comment_content2: 'の上長確認済み報告が登録されました。'
       customer_content1: '新規 顧客情報が登録されました。'
       customer_content2: '様の顧客情報が登録されました。'
+      detail_report_content1: '新規作業報告が登録されました。'
+      detail_report_content2: 'の作業報告が登録されました。'
 
 
 
