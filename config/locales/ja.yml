@@ -441,6 +441,13 @@ ja:
       search: '検索する'
       user_index:  "社員情報 一覧"
       user_show:  "社員情報 -詳細-"
+    user_mailer:
+      boss_check_comment_content1: '新規 上長確認済み報告が登録されました。'
+      boss_check_comment_content2: 'の上長確認済み報告が登録されました。'
+      customer_content1: '新規 顧客情報が登録されました。'
+      customer_content2: '様の顧客情報が登録されました。'
+
+
 
   boss_check_comments:
     create: '作成しました'
