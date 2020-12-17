@@ -377,6 +377,18 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
+      product_detail:  "- 製品情報 詳細 -"
+      product_confirm:  "製品情報  -登録確認-"
+      product_edit:  "製品情報  -登録確認-"
+      product_index:  "製品情報 一覧"
+      product_new:  "製品情報 -新規登録-"
+      product_show:  "製品情報 -詳細-"
+
+
+
+
+
+
     parts:
       detail_report_id: '詳細報告ID'
       name: '製品名'
@@ -395,12 +407,12 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
-      part_detail:  "- 保守パーツ 詳細 -"
-      part_confirm:  "保守パーツ  -登録確認-"
-      part_index:  "保守パーツ 一覧"
-      part_new:  "保守パーツ -新規登録-"
-      part_show:  "保守パーツ -詳細-"
-      part_edit:  "保守パーツ -編集-"
+      part_detail:  "- 保守パーツ情報 詳細 -"
+      part_confirm:  "保守パーツ情報  -登録確認-"
+      part_index:  "保守パーツ情報 一覧"
+      part_new:  "保守パーツ情報 -新規登録-"
+      part_show:  "保守パーツ情報 -詳細-"
+      part_edit:  "保守パーツ情報 -編集-"
 
 
 
