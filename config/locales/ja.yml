@@ -395,6 +395,16 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
+      part_detail:  "- 保守パーツ 詳細 -"
+      part_confirm:  "保守パーツ  -登録確認-"
+      part_index:  "保守パーツ 一覧"
+      part_new:  "保守パーツ -新規登録-"
+      part_show:  "保守パーツ -詳細-"
+      part_edit:  "保守パーツ -編集-"
+
+
+
+
     users:
       id: 'ID'
       number: '社員番号'
