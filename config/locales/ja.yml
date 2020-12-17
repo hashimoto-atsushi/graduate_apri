@@ -294,6 +294,11 @@ ja:
       not_confirmed: '未承認'
       delete_confirm: '削除しますがよろしいでしょうか？'
       boss_check_comment_detail:  "- 上長確認 詳細 -"
+      boss_check_comment_edit:  "上長確認  -登録確認-"
+      boss_check_comment_index:  "上長確認 一覧"
+      boss_check_comment_new:  "上長確認 新規登録"
+
+
     sales_check_comments:
       id: '上長報告選択'
       confirmation: '営業確認'
