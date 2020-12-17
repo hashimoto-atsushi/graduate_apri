@@ -7,17 +7,17 @@
     <div class="row">
       <div class="field form-group col-xs-3">
         <%= form.label :discussion_possibility_eq, t('view.sales_check_comments.search_need'), class:"control-label"  %>
-        <%= form.select :discussion_possibility_eq, [['有り', true], ['無し', false]],
-        {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
+        <%= form.select :discussion_possibility_eq, [[ t('view.sales_check_comments.necessary'), true], [ t('view.sales_check_comments.not_necessary'), false]],
+        {include_blank: t('view.sales_check_comments.not_selected')}, class: 'sample', class:"form-control"  %>
       </div>
       <div class="field form-group col-xs-3">
         <%= form.label :confirmation_eq, t('view.sales_check_comments.search_confirm'), class:"control-label"  %>
-        <%= form.select :confirmation_eq, [['確認済', true], ['未確認', false]],
+        <%= form.select :confirmation_eq, [[t('view.sales_check_comments.look_over') , true], [t('view.sales_check_comments.not_look_over') , false]],
         {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
       </div>
       <div class="field form-group col-xs-3">
         <%= form.label :boss_check_comments_confirmation_eq, t('view.sales_check_comments.search_approval'), class:"control-label"  %>
-        <%= form.select :boss_check_comment_confirmation_eq, [['承認済', true], ['未承認', false]],
+        <%= form.select :boss_check_comment_confirmation_eq, [[t('view.sales_check_comments.confirmed'), true], [t('view.sales_check_comments.not_confirmed'), false]],
         {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
       </div>
     </div>
