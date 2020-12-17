@@ -256,6 +256,11 @@ ja:
       back: '戻る'
       search: '検索する'
       support_program_detail:  "- 保守案件 詳細 -"
+      support_program_confirm:  "保守案件  -登録確認-"
+      support_program_edit:  "保守案件  -編集-"
+      support_program_index:  "保守案件 一覧"
+      support_program_new:  "保守案件 -新規登録-"
+      support_program_show:  "保守案件 -詳細-"
     detail_reports:
       id: '案件選択'
       ordered_date: '受注日'
@@ -348,7 +353,7 @@ ja:
       back: '戻る'
       customer_detail:  "- 顧客情報 詳細 -"
       customer_confirm:  "顧客情報  -登録確認-"
-      customer_edit:  "顧客情報  -登録確認-"
+      customer_edit:  "顧客情報  -編集-"
       customer_index:  "顧客情報 一覧"
       customer_new:  "顧客情報 -新規登録-"
       customer_show:  "顧客情報 -詳細-"
@@ -387,7 +392,7 @@ ja:
       search: '検索する'
       product_detail:  "- 製品情報 詳細 -"
       product_confirm:  "製品情報  -登録確認-"
-      product_edit:  "製品情報  -登録確認-"
+      product_edit:  "製品情報  -編集-"
       product_index:  "製品情報 一覧"
       product_new:  "製品情報 -新規登録-"
       product_show:  "製品情報 -詳細-"
