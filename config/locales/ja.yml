@@ -351,6 +351,7 @@ ja:
       detail_report_new:  "作業報告 -新規登録-"
       detail_report_show:  "作業報告 -詳細-"
       please_adjust: '(上記保守案件と合わせてください)'
+      delete_confirm: '削除しますがよろしいでしょうか？'
     boss_check_comments:
       id: '報告選択'
       confirmation: '上長承認'
