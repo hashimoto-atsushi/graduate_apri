@@ -253,6 +253,7 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
+      support_program_detail:  "- 保守案件 詳細 -"
     detail_reports:
       id: '案件選択'
       ordered_date: '受注日'
@@ -270,6 +271,7 @@ ja:
       to_index: 一覧へ
       confirm_to_submit: '登録する'
       back: '戻る'
+      detail_report_detail:  "- 作業内容 詳細 -"
     boss_check_comments:
       id: '報告選択'
       confirmation: '上長承認'
@@ -291,6 +293,7 @@ ja:
       confirmed: '承認済'
       not_confirmed: '未承認'
       delete_confirm: '削除しますがよろしいでしょうか？'
+      boss_check_comment_detail:  "- 上長確認 詳細 -"
     sales_check_comments:
       id: '上長報告選択'
       confirmation: '営業確認'
