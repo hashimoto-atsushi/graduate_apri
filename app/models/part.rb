@@ -13,4 +13,17 @@ class Part < ApplicationRecord
   validates :end_of_production, presence:true
   validates :end_of_service, presence:true
   # belongs_to :detail_report
+  validate :release_date_not_before_today
+  validate :end_of_production_not_before_today
+  validate :end_of_service_not_before_today
+  def release_date_not_before_today
+    errors.add(:release_date, :aftertomorrow) if release_date.nil? || release_date < Date.today
+  end
+  def end_of_production_not_before_today
+    errors.add(:end_of_production, :aftertomorrow) if end_of_production.nil? || end_of_production < Date.today
+  end
+  def end_of_service_not_before_today
+    errors.add(:end_of_service, :aftertomorrow) if end_of_service.nil? || end_of_service < Date.today
+  end
+
 end
