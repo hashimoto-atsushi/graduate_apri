@@ -320,6 +320,14 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
+      sales_check_comment_detail:  "営業確認 -詳細 -"
+      sales_check_comment_confirm:  "営業確認  -登録確認-"
+      sales_check_comment_index:  "営業確認済リスト 一覧"
+      sales_check_comment_new:  "営業確認 -新規登録-"
+      sales_check_comment_show:  "営業確認 -詳細-"
+
+
+
     customers:
       customer_number: '顧客番号'
       customer: '顧客名'
