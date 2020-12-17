@@ -330,6 +330,12 @@ ja:
       sales_check_comment_index:  "営業確認済リスト 一覧"
       sales_check_comment_new:  "営業確認 -新規登録-"
       sales_check_comment_show:  "営業確認 -詳細-"
+      search_need: '協議の必要性 検索: '
+      search_confirm: '営業確認 検索: '
+      search_approval: '上長承認 検索: '
+      confirmed: '承認済'
+      not_confirmed: '未承認'
+
     customers:
       customer_number: '顧客番号'
       customer: '顧客名'
@@ -378,6 +384,7 @@ ja:
       installed_product_new:  "納入機器 -新規登録-"
       installed_product_show:  "納入機器 -詳細-"
       installed_product_edit:  "納入機器 -編集-"
+      delete: '削除しますか？'
     products:
       name: '製品名'
       type_name: '型式'
@@ -399,6 +406,14 @@ ja:
       product_index:  "製品情報 一覧"
       product_new:  "製品情報 -新規登録-"
       product_show:  "製品情報 -詳細-"
+      search_name: '製品名 検索: '
+      search_type: '型式名 検索: '
+      search_category: '機器種類 検索: '
+      delete_confirm: '削除しますか？'
+
+
+
+
     parts:
       detail_report_id: '詳細報告ID'
       name: '製品名'
@@ -423,6 +438,15 @@ ja:
       part_new:  "保守パーツ情報 -新規登録-"
       part_show:  "保守パーツ情報 -詳細-"
       part_edit:  "保守パーツ情報 -編集-"
+      search_name: '保守パーツ名 検索: '
+      search_type: '保守パーツ型式 検索: '
+      search_category: '保守パーツ種類 検索: '
+      delete_confirm: '削除しますか？'
+
+
+
+
+
     users:
       id: 'ID'
       number: '社員番号'

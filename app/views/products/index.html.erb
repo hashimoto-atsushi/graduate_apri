@@ -5,15 +5,15 @@
       <%= search_form_for @search do |form| %>
       <div class="row">
         <div class="field form-group col-xs-3">
-          <%= form.label :name_cont, "製品名 検索:", class:"control-label" %>
+          <%= form.label :name_cont, t('view.products.search_name'), class:"control-label" %>
           <%= form.text_field :name_cont, class:"form-control"  %>
         </div>
         <div class="field form-group col-xs-3">
-          <%= form.label :type_name_cont, "型式名 検索:", class:"control-label" %>
+          <%= form.label :type_name_cont, t('view.products.search_type'), class:"control-label" %>
           <%= form.text_field :type_name_cont, class:"form-control"  %>
         </div>
         <div class="field form-group col-xs-3">
-          <%= form.label :category_cont, "機器種類 検索:", class:"control-label" %>
+          <%= form.label :category_cont, t('view.products.search_category'), class:"control-label" %>
           <%= form.text_field :category_cont, class:"form-control"  %>
         </div>
       </div>

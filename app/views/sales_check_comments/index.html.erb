@@ -6,17 +6,17 @@
     <%= search_form_for @search do |form| %>
     <div class="row">
       <div class="field form-group col-xs-3">
-        <%= form.label :discussion_possibility_eq, "協議の必要性 検索: ", class:"control-label"  %>
+        <%= form.label :discussion_possibility_eq, t('view.sales_check_comments.search_need'), class:"control-label"  %>
         <%= form.select :discussion_possibility_eq, [['有り', true], ['無し', false]],
         {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
       </div>
       <div class="field form-group col-xs-3">
-        <%= form.label :confirmation_eq, "営業確認 検索: ", class:"control-label"  %>
+        <%= form.label :confirmation_eq, t('view.sales_check_comments.search_confirm'), class:"control-label"  %>
         <%= form.select :confirmation_eq, [['確認済', true], ['未確認', false]],
         {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
       </div>
       <div class="field form-group col-xs-3">
-        <%= form.label :boss_check_comments_confirmation_eq, "上長承認 検索: ", class:"control-label"  %>
+        <%= form.label :boss_check_comments_confirmation_eq, t('view.sales_check_comments.search_approval'), class:"control-label"  %>
         <%= form.select :boss_check_comment_confirmation_eq, [['承認済', true], ['未承認', false]],
         {include_blank: '選択なし'}, class: 'sample', class:"form-control"  %>
       </div>
@@ -44,7 +44,7 @@
         <td class="text-center"><%= sales_check_comment.boss_check_comment.detail_report.support_program.title_number %></td>
         <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.customer.name %></td>
         <td><%= sales_check_comment.boss_check_comment.detail_report.support_program.title %></td>
-        <td><%= sales_check_comment.confirmation == true ? "確認済" : "未確認" %></td>
+        <td><%= sales_check_comment.confirmation == true ? t('view.sales_check_comments.confirmed') : "未確認" %></td>
         <td><%= sales_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></td>
         <td><%= sales_check_comment.discussion_possibility == true ? " 有り" : "無し" %></td>
         <td><%= sales_check_comment.matter_closed == true ? " 承認済" : "未承認" %></td>
