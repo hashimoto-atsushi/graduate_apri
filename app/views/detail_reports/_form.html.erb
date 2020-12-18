@@ -32,7 +32,7 @@
          <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b> <%= @support_program.planed_or_argent_i18n %></p>
        </div class="col-xs-3">
        <div>
-         <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b> <%= @support_program.order_status %></p>
+         <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b> <%= @support_program.order_status == true ? t('view.boss_check_comments.got_ordered') : t('view.boss_check_comments.not_ordered') %></p>
        </div>
      </div>
    </div>

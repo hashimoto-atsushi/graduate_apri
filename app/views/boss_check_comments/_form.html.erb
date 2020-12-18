@@ -33,7 +33,7 @@
 </div>
 <div class="row">
   <div class="col-xs-3">
-    <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? t('view.boss_check_comments.got_ordered') : t('view.boss_check_comments.not_ordered')  %></p>
+    <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? t('view.boss_check_comments.got_ordered') : t('view.boss_check_comments.not_ordered') %></p>
   </div>
   <div class="col-xs-3">
     <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date.strftime(t('datetime.prompts.year_manth_day')) %></p>

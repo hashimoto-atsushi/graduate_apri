@@ -2,10 +2,10 @@ FactoryBot.define do
   factory :detail_report do
     id { 1 }
     support_program_id { 1 }
-    ordered_date { "2021-11-11" }
+    ordered_date { "2019-11-11" }
     ordered_price { 30000 }
-    actual_kickoff_date { "2021-11-15" }
-    actual_complete_date { "2020-11-25" }
+    actual_kickoff_date { "2019-11-15" }
+    actual_complete_date { "2019-11-25" }
     service_detail { "電源ユニット、ファンユニットをオーバーホール。各部清掃作業を実行しました。" }
     results { "問題無く全工程を終了" }
     evaluation { 0 }
