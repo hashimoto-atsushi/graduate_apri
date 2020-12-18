@@ -133,9 +133,9 @@ end
         type_name: "#{n + 100}式",
         category: "加工機器#{n + 1000}",
         list_price: n + 10000,
-        release_date: "2010-1-#{n + 1}",
-        end_of_production: "2020-1-#{n + 1}",
-        end_of_service: "2025-1-#{n + 1}",
+        release_date: "2021-1-#{n + 1}",
+        end_of_production: "2025-1-#{n + 1}",
+        end_of_service: "2027-1-#{n + 1}",
       }
     ]
   )
@@ -150,7 +150,7 @@ end
         category: "ユニット#{n + 1000}式",
         list_price: n + 200,
         stock: 30,
-        release_date: "2017-2-#{n + 1}",
+        release_date: "2021-1-#{n + 1}",
         end_of_production: "2024-1-#{n + 1}",
         end_of_service: "2027-1-#{n + 1}",
       }
@@ -226,7 +226,7 @@ end
         main_work: "パーツの交換です#{n + 1}",
         planed_or_argent: 0,
         order_status: true,
-        kick_off_date: "2020-1-#{n + 1}",
+        kick_off_date: "2021-1-#{n + 1}",
         closed: 0,
       }
     ]
@@ -243,7 +243,7 @@ end
         main_work: "電源ユニットの交換です#{n + 11}",
         planed_or_argent: 1,
         order_status: false,
-        kick_off_date: "2020-1-#{n + 11}",
+        kick_off_date: "2021-1-#{n + 11}",
         closed: 0,
       }
     ]
@@ -293,7 +293,7 @@ end
       {
         detail_report_id: n + 1,
         confirmation: true,
-        confirmation_date: "2020-02-#{n + 1}",
+        confirmation_date: "2021-02-#{n + 1}",
         positive_comment: "無事に作業終了ありがとうごいました#{n + 1}。",
         negative_comment: "特にありませんが、報告をもう少し早めにお願いします#{n + 1}。",
         assistance: "この調子でよろしくお願いします#{n + 1}。",
@@ -309,7 +309,7 @@ end
       {
         detail_report_id: n + 11,
         confirmation: true,
-        confirmation_date: "2020-02-#{n + 11}",
+        confirmation_date: "2021-02-#{n + 11}",
         positive_comment: "了解です。不良部品の検査をお願いします#{n + 11}。",
         negative_comment: "できるだけ、動作確認をして、先方にはきちんと原因の説明をさしあげましょう#{n + 11}。",
         assistance: "今後は、持ち出し時に、動作確認をお願いします#{n + 11}。",
@@ -327,7 +327,7 @@ end
       {
         boss_check_comment_id: n + 1,
         confirmation: true,
-        confirmation_date: "2020-02-#{n + 5}",
+        confirmation_date: "2021-02-#{n + 5}",
         comments: "報告ありがとうございまいた。明日にでも先方に挨拶に伺いします#{n + 1}。",
         discussion_possibility: false,
         matter_closed: true,
@@ -341,7 +341,7 @@ end
       {
         boss_check_comment_id: n + 11,
         confirmation: true,
-        confirmation_date: "2020-02-#{n + 15}",
+        confirmation_date: "2021-02-#{n + 15}",
         comments: "了解です。正確なご報告ありがとうございます。一度、先方への説明を含め相談させてください#{n + 1}。",
         discussion_possibility: true,
         matter_closed: true,
