@@ -634,3 +634,6 @@ ja:
       planed_or_argent:
         planed: '計画'
         argent: '緊急'
+      closed:
+        not_completed: '未完了'
+        completed: '完了'

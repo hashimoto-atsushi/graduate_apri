@@ -13,7 +13,7 @@ class SupportProgram < ApplicationRecord
   validates :kick_off_date, presence:true
   validates :closed, presence:true
   enum planed_or_argent: {planed:0 , argent:1}
-  enum closed: {未完了:0 , 完了:1}
+  enum closed: {not_completed:0 , completed:1}
 
   validate :kick_off_date_not_before_today
   def kick_off_date_not_before_today
