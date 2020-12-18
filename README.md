@@ -110,7 +110,7 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
 
 
 ## 使用予定Gem
-* bycrpyt
+* bycrpyt <font color="RED">=> devise利用に変更</font>
 * kaminari
 * carrierwave
 * mini_magick
