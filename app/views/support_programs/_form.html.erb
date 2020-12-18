@@ -38,7 +38,7 @@
 <div class="row">
   <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.planed_or_argent'), class:"control-label" %><br />
-    <%= form.select :planed_or_argent, SupportProgram.planed_or_argents.keys.to_a, {}, autofocus: true, autocomplete: "planed_or_argent",class:"form-control" %>
+    <%= form.select :planed_or_argent, SupportProgram.planed_or_argents_i18n.map { |k, v| [v, k] }, {}, autofocus: true, autocomplete: "planed_or_argent",class:"form-control" %>
   </div>
   <div class="field form-group col-xs-4">
     <%= form.label t('view.support_programs.order_status') %><br />
