@@ -141,7 +141,7 @@
     <%= form.select :confirmation, {"確認済": "ture", "未確認": "false"},{}, autofocus: true, autocomplete: "confirmation", class: "form-control" %>
   </div>
   <div class="field form-group col-xs-3">
-    <%= form.label t('view.sales_check_comments.confirmation_date'), class:"control-label"  %>
+    <%= form.label t('view.sales_check_comments.confirmation_date') + t('view.all.input_after'), class:"control-label"  %>
     <%= form.date_field :confirmation_date, class: "form-control" %>
   </div>
 </div>

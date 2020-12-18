@@ -249,6 +249,8 @@ ja:
   view:
     all:
       error_explanations: '件のエラーがあります'
+      input_after: '(注意:本日以降を入力)'
+      input_before: '(注意: 本日以前を入力)'
     layouts:
       to_top: 'トップページ'
       admin: 'システム部管理ページ'
@@ -352,7 +354,7 @@ ja:
       detail_report_index:  "作業報告 一覧"
       detail_report_new:  "作業報告 -新規登録-"
       detail_report_show:  "作業報告 -詳細-"
-      please_adjust: '(上記保守案件と合わせてください)'
+      please_adjust: '(注意:上記保守案件と合わせてください)'
       delete_confirm: '削除しますがよろしいでしょうか？'
     boss_check_comments:
       id: '報告選択'
@@ -415,7 +417,7 @@ ja:
       confirmed: '承認済'
       not_confirmed: '未承認'
       not_selected: '選択なし'
-      please_adjust: '(上記保守案件と合わせてください)'
+      please_adjust: '(注意:上記保守案件と合わせてください)'
     customers:
       customer_number: '顧客番号'
       customer: '顧客名'

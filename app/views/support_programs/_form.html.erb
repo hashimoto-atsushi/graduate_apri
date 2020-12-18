@@ -45,7 +45,7 @@
     <%= form.select :order_status, {"受注済": "true", "未受注": "false"},{}, autofocus: true, autocomplete: "order_status", class:"form-control" %>
   </div>
   <div class="field form-group col-xs-4">
-    <%= form.label t('view.support_programs.kick_off_date') %>
+    <%= form.label t('view.support_programs.kick_off_date') + t('view.all.input_after') %>
     <%= form.date_field :kick_off_date, class:"form-control" %>
   </div>
 </div>

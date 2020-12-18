@@ -43,7 +43,7 @@
          <%= form.select :support_program_id, SupportProgram.all.map{|o| [o.title, o.id]},{}, class: "form-control" %>
        </div>
        <div class="field form-group col-xs-3">
-         <%= form.label t('view.detail_reports.ordered_date'), class:"control-label" %>
+         <%= form.label t('view.detail_reports.ordered_date') + t('view.all.input_before'), class:"control-label" %>
          <%= form.date_field :ordered_date, class: "form-control" %>
        </div>
        <div class="field form-group col-xs-3">
@@ -57,7 +57,7 @@
            <p><%= t('view.support_programs.kick_off_date')%>: <%= @support_program.kick_off_date %></p>
          </div>
          <div class="field">
-           <%= form.label t('view.detail_reports.actual_kickoff_date'), class:"control-label" %>
+           <%= form.label t('view.detail_reports.actual_kickoff_date') + t('view.all.input_before'), class:"control-label" %>
            <%= form.date_field :actual_kickoff_date, class: "form-control" %>
          </div>
        </div>
@@ -66,7 +66,7 @@
            <p><%= t('view.support_programs.closed')%>: <%= @support_program.closed_i18n %></p>
          </div>
          <div class="field">
-           <%= form.label t('view.detail_reports.actual_complete_date'), class:"control-label" %>
+           <%= form.label t('view.detail_reports.actual_complete_date') + t('view.all.input_before'), class:"control-label" %>
            <%= form.date_field :actual_complete_date, class: "form-control" %>
          </div>
        </div>
