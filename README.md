@@ -39,9 +39,9 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
   - [ ] ユーザー 一覧表示機能
   - [ ] 情報 ソート機能
   - [ ] 情報 検索機能
-  - [ ] ユーザー情報 編集機能
-  - [ ] ユーザー情報 削除機能
-  - [ ] 各部署権限付与機能
+  - [ ] ユーザー情報 編集機能 <font color="RED">※rails_admin 管理画面で実行</font>
+  - [ ] ユーザー情報 削除機能 <font color="RED">※rails_admin 管理画面で実行</font>
+  - [ ] 各部署権限付与機能 <font color="RED">※rails_admin 管理画面で実行</font>
   - [ ] 登録完了メール通知機能
 - [ ] 顧客情報 登録機能
   - [ ] 顧客情報 一覧機能
@@ -76,7 +76,7 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
   - [ ] 情報 ソート機能
   - [ ] 保守案件情報 編集機能
   - [ ] 保守案件情報 削除機能
-  - [ ] 作業報告リンク
+  - [ ] 作業報告リンク <font color="RED">※最終的に「完了保守案件 一覧」で詳細とリンク</font>
   - [ ] 登録完了メール通知機能
 - [ ] 作業報告 登録機能
   - [ ] 作業内容入力機能
@@ -104,13 +104,14 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
 ## 画面遷移図
   下記にディレクトリにあります<br>
   conftrust/docs/画面遷移図.pdf
+  * <font color="RED">管理者でログインされると全てにアクセスできますので、動作確認は行いやすりと思います。報告のプロセスでの操作で不明な点あればお聞きください。</font>
+
 ## 画面ワイヤーフレーム
   下記にディレクトリにあります<br>
   conftrust/docs/ワイヤーフレーム.pdf
 
-
 ## 使用予定Gem
-* bycrpyt <font color="RED">=> devise利用に変更</font>
+* bycrpyt
 * kaminari
 * carrierwave
 * mini_magick
@@ -123,10 +124,14 @@ Ruby 2.6.5<br>  Rails 5.2.4.4<br>PostgreSql 13.0 (local)<br>
 * dotenv-rails
 * letter_opener_web
 * faker
-* MailCatcher (その他のgem)
-* view_source_map (その他のgem)
+* MailCatcher (その他のgem)<font color="RED">=> ネット情報収集後、場合によっては問題は発生かもしれない可能性の印象を受けたので、自身の判断で採用をやめました。</font>
+* view_source_map (その他の技術 1)
 * rails_admin (就業termより 2)
-  - データの閲覧
+* <font color="RED">cancancan(就業termより 4)</font>
+* <font color="RED">ransack(その他の技術 2)</font>
+* <font color="RED">enum_help(その他の技術 3)</font>
+* <font color="RED">rails-i18n(その他の技術 4)</font>
 
-## AWSにデプロイ予定
+
+## AWSにデプロイ予定 
    作成したアプリをAWSにデプロイするように努める (就業termより 3)
