@@ -1,9 +1,9 @@
-<h1><% provide(:title,"上長確認 -詳細-") %></h1>
+<h1><% provide(:title,t('view.boss_check_comments.boss_check_comment_show')) %></h1>
 <p id="notice"><%= notice %></p>
 
 <div class="container">
   <div class="upper-box">
-    <h3>- 保守案件 詳細 -</h3>
+    <h3><%= t('view.support_programs.support_program_detail')%></h3>
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.title_number') %>:</b>&emsp;</strong>
@@ -25,20 +25,20 @@
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.planed_or_argent') %>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.support_program.planed_or_argent %></p>
+        <%= @boss_check_comment.detail_report.support_program.planed_or_argent_i18n %></p>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.order_status') %>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
+        <%= @boss_check_comment.detail_report.support_program.order_status == true ? t('view.boss_check_comments.got_ordered') : t('view.boss_check_comments.not_ordered') %></p>
       </div>
     </div>
-    <h3>- 作業報告 詳細 -</h3>
+    <h3><%= t('view.detail_reports.detail_report_detail')%></h3>
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.detail_reports.ordered_date') %>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.ordered_date.strftime("%Y年%m月%d日") %></p>
+        <%= @boss_check_comment.detail_report.ordered_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.detail_reports.ordered_price') %>:</b>&emsp;</strong>
@@ -48,21 +48,21 @@
     <div class="row">
       <div class="col-xs-4""col-xs-4">
         <p><b><%= t('view.support_programs.kick_off_date') %>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.support_program.kick_off_date.strftime("%Y年%m月%d日") %></p>
+        <%= @boss_check_comment.detail_report.support_program.kick_off_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.actual_kickoff_date.strftime("%Y年%m月%d日") %></p>
+        <%= @boss_check_comment.detail_report.actual_kickoff_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.closed')%>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.support_program.closed %></p>
+        <%= @boss_check_comment.detail_report.support_program.closed_i18n %></p>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.detail_reports.actual_complete_date')%>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.actual_complete_date.strftime("%Y年%m月%d日") %></p>
+        <%= @boss_check_comment.detail_report.actual_complete_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
     </div>
     <div class="row">
@@ -84,7 +84,7 @@
     <div class="row">
       <div class="col-xs-2">
         <p><b><%= t('view.detail_reports.evaluation') %>:</b>&emsp;</strong>
-        <%= @boss_check_comment.detail_report.evaluation %></p>
+        <%= @boss_check_comment.detail_report.evaluation_i18n %></p>
       </div>
       <div class="col-xs-10">
         <p><b><%= t('view.detail_reports.evaluation_details') %>:</b>&emsp;</strong>
@@ -97,15 +97,15 @@
         <%= @boss_check_comment.detail_report.support_program.user.name %></p>
       </div>
     </div>
-    <h3>- 上長確認 -</h3>
+    <h3><%= t('view.boss_check_comments.boss_check_comment_details')%></h3>
     <div class="row">
       <div class="col-xs-4">
         <p><b><%= t('view.boss_check_comments.confirmation')%>:</b>&emsp;
-        <%= @boss_check_comment.confirmation == true ? "承認済" : "未承認" %></P>
+        <%= @boss_check_comment.confirmation == true ? t('view.boss_check_comments.confirmed') : t('view.boss_check_comments.not_confirmed') %></P>
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.boss_check_comments.confirmation_date')%>:</b>&emsp;
-        <%= @boss_check_comment.confirmation_date.strftime("%Y年%m月%d日") %></P>
+        <%= @boss_check_comment.confirmation_date.strftime(t('datetime.prompts.year_manth_day')) %></P>
       </div>
     </div>
     <div class="row">

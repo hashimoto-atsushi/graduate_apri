@@ -1,4 +1,4 @@
-<h1><% provide(:title,"作業報告 一覧") %></h1>
+<h1><% provide(:title,t('view.detail_reports.detail_report_index')) %></h1>
 <p id="notice"><%= notice %></p>
 
 <div class="container">
@@ -23,16 +23,16 @@
         <tr>
           <td><%= detail_report.support_program.customer.name %></td>
           <td><%= detail_report.support_program.title %></td>
-          <td><%= detail_report.ordered_date.strftime("%Y年%m月%d日") %></td>
+          <td><%= detail_report.ordered_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
           <td><%= detail_report.ordered_price.to_s(:delimited) %>円</td>
-          <td><%= detail_report.actual_kickoff_date.strftime("%Y年%m月%d日") %></td>
-          <td><%= detail_report.actual_complete_date.strftime("%Y年%m月%d日") %></td>
+          <td><%= detail_report.actual_kickoff_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
+          <td><%= detail_report.actual_complete_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
           <td><%= detail_report.service_detail %></td>
-          <td><%= detail_report.evaluation %></td>
+          <td><%= detail_report.evaluation_i18n %></td>
           <td><%= detail_report.support_program.user.name %></td>
           <td><%= link_to t('view.detail_reports.show'), detail_report, class:"btn btn-info btn-xs" %></td>
           <% if current_user.permission %>
-            <td><%= link_to t('view.detail_reports.delete'), detail_report, method: :delete, data: { confirm: '削除しますか?' }, class:"btn btn-danger btn-xs" %></td>
+            <td><%= link_to t('view.detail_reports.delete'), detail_report, method: :delete, data: { confirm:  t('view.detail_reports.delete_confirm') }, class:"btn btn-danger btn-xs" %></td>
           <% end %>
         </tr>
         <% end %>

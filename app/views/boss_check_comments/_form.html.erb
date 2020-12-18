@@ -28,15 +28,15 @@
     <p><b><%= t('view.support_programs.main_work') %>:&emsp;</b><%= @detail_report.support_program.main_work %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b><%= @detail_report.support_program.planed_or_argent %></p>
+    <p><b><%= t('view.support_programs.planed_or_argent') %>:&emsp;</b><%= @detail_report.support_program.planed_or_argent_i18n %></p>
   </div class="col-xs-3">
 </div>
 <div class="row">
   <div class="col-xs-3">
-    <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
+    <p><b><%= t('view.support_programs.order_status') %>:&emsp;</b><%= @detail_report.support_program.order_status == true ? t('view.boss_check_comments.got_ordered') : t('view.boss_check_comments.not_ordered') %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date.strftime("%Y年%m月%d日") %></p>
+    <p><b><%= t('view.detail_reports.ordered_date') %>:&emsp;</b><%= @detail_report.ordered_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
   <div class="col-xs-3">
     <p><b><%= t('view.detail_reports.ordered_price') %>:&emsp;</b><%= @detail_report.ordered_price.to_s(:delimited) %></p>
@@ -44,16 +44,16 @@
 </div>
 <div class="row">
   <div class="col-xs-3">
-    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b><%= @detail_report.support_program.kick_off_date.strftime("%Y年%m月%d日") %></p>
+    <p><b><%= t('view.support_programs.kick_off_date') %>:&emsp;</b><%= @detail_report.support_program.kick_off_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b><%= @detail_report.actual_kickoff_date.strftime("%Y年%m月%d日") %></p>
+    <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b><%= @detail_report.actual_kickoff_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.support_programs.closed') %>:&emsp;</b><%= @detail_report.support_program.closed %></p>
+    <p><b><%= t('view.support_programs.closed') %>:&emsp;</b><%= @detail_report.support_program.closed_i18n %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.detail_reports.actual_complete_date') %>:&emsp;</b><%= @detail_report.actual_complete_date.strftime("%Y年%m月%d日") %></p>
+    <p><b><%= t('view.detail_reports.actual_complete_date') %>:&emsp;</b><%= @detail_report.actual_complete_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
 </div>
 <div class="row">
@@ -68,7 +68,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <p><b><%= t('view.detail_reports.evaluation') %>:&emsp;</b><%= @detail_report.evaluation %></p>
+    <p><b><%= t('view.detail_reports.evaluation') %>:&emsp;</b><%= @detail_report.evaluation_i18n %></p>
   </div>
 </div>
 <div class="row">
@@ -78,7 +78,7 @@
 </div>
 <div class="row">
   <div class="field form-group col-xs-6">
-    <%= form.label t('view.detail_reports.id') + '(上記案件名と合わせてください)', class:"control-label" %>
+    <%= form.label t('view.detail_reports.id') + t('view.boss_check_comments.please_adjust'), class:"control-label" %>
     <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.support_program.title, o.id]},{}, class: "form-control" %>
   </div>
   <div class="field form-group col-xs-3">
@@ -86,7 +86,7 @@
     <%= form.select :confirmation, {"承認済": "true", "未承認": "false"},{}, autofocus: true, autocomplete: "confirmation", class: "form-control" %>
   </div>
   <div class="field form-group col-xs-3">
-    <%= form.label t('view.boss_check_comments.confirmation_date'), class:"control-label" %>
+    <%= form.label t('view.boss_check_comments.confirmation_date') + t('view.all.input_after'), class:"control-label" %>
     <%= form.date_field :confirmation_date, class: "form-control" %>
   </div>
 </div>

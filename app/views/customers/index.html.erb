@@ -1,19 +1,19 @@
-<h1><% provide(:title,"顧客情報 一覧") %></h1>
+<h1><% provide(:title,t('view.customers.customer_index')) %></h1>
 <p id="notice"><%= notice %></p>
   <div class="container">
     <%= search_form_for @search do |form| %>
       <div class="upper-box">
         <div class="row">
           <div class="field form-group col-xs-3">
-            <%= form.label :customer_number_eq, "顧客番号 検索:", class:"control-label"  %>
+            <%= form.label :customer_number_eq, t('view.customers.search_number'), class:"control-label"  %>
           <%= form.text_field :customer_number_eq, class:"form-control" %>
           </div>
           <div class="field form-group col-xs-3">
-            <%= form.label :name_cont, "顧客名 検索: ", class:"control-label"  %>
+            <%= form.label :name_cont, t('view.customers.search_name'), class:"control-label"  %>
             <%= form.text_field :name_cont, class:"form-control" %>
           </div>
           <div class="field form-group col-xs-3">
-            <%= form.label :support_programs_title_cont, "案件名 検索: ", class:"control-label"  %>
+            <%= form.label :support_programs_title_cont, t('view.customers.search_title'), class:"control-label"  %>
             <%= form.text_field :support_programs_title_cont, class:"form-control" %>
           </div>
         </div>
@@ -64,7 +64,7 @@
             <td><%= link_to t('view.customers.show'), customer, class:"btn btn-info btn-xs"  %></td>
             <% if sales_and_admin_display %>
               <td><%= link_to t('view.customers.edit'), edit_customer_path(customer), class:"btn btn-warning btn-xs" %></td>
-              <td><%= link_to t('view.customers.delete'), customer, method: :delete, data: { confirm: '削除しますが?' }, class:"btn btn-danger btn-xs"  %></td>
+              <td><%= link_to t('view.customers.delete'), customer, method: :delete, data: { confirm: t('view.customers.delete_confirm') }, class:"btn btn-danger btn-xs"  %></td>
             <% end %>
           </tr>
           <% end %>

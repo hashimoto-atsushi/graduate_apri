@@ -1,4 +1,4 @@
-<h1><% provide(:title,"製品情報 -詳細-") %></h1>
+<h1><% provide(:title,t('view.products.product_show')) %></h1>
 <p id="notice"><%= notice %></p>
 
 <div class="content-wrapper">
@@ -21,22 +21,22 @@
 
       <div>
         <p><b><%= t('view.products.list_price') %>:</b>&emsp;
-        <%= @product.list_price.to_s(:delimited) %>円</p>
+        <%= @product.list_price.to_s(:delimited) %></p>
       </div>
 
       <div>
         <p><b><%= t('view.products.release_date') %>:</b>&emsp;
-        <%= @product.release_date %></p>
+        <%= @product.release_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
 
       <div>
         <p><b><%= t('view.products.end_of_production') %>:</b>&emsp;
-        <%= @product.end_of_production %></p>
+        <%= @product.end_of_production.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
 
       <div>
         <p><b><%= t('view.products.end_of_service') %>:</b>&emsp;
-        <%= @product.end_of_service %></p>
+        <%= @product.end_of_service.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
 
 

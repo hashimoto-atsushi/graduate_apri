@@ -1,4 +1,4 @@
-<h1><% provide(:title,"納入機器情報 -詳細-") %></h1>
+<h1><% provide(:title, t('view.installed_products.installed_product_show')) %></h1>
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="upper-box">
@@ -16,7 +16,7 @@
     </div>
     <div>
       <p><b><%= t('view.installed_products.installed_date') %>:</b>&emsp;
-      <%= @installed_product.installed_date.strftime("%Y年%m月%d日") %></p>
+      <%= @installed_product.installed_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
     </div>
     <div>
       <p><b><%= t('view.installed_products.discount_price') %>:</b>&emsp;
@@ -24,11 +24,11 @@
     </div>
     <div>
       <p><b><%= t('view.products.end_of_production') %>:</b>&emsp;
-      <%= @installed_product.product.end_of_production.strftime("%Y年%m月%d日") %></p>
+      <%= @installed_product.product.end_of_production.strftime(t('datetime.prompts.year_manth_day')) %></p>
     </div>
     <div>
       <p><b><%= t('view.products.end_of_service') %>:</b>&emsp;
-      <%= @installed_product.product.end_of_service.strftime("%Y年%m月%d日") %></p>
+      <%= @installed_product.product.end_of_service.strftime(t('datetime.prompts.year_manth_day')) %></p>
     </div>
 
     <div class="create-new">

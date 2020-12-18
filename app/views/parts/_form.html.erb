@@ -12,7 +12,7 @@
   <div class="row">
     <div class="field form-group col-xs-3">
       <%= form.label t('view.parts.detail_report_id'), class:"control-label" %>
-      <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.id, o.id]},{include_blank: "紐付け無"},  class: "form-control" %>
+      <%= form.select :detail_report_id, DetailReport.all.map{|o| [o.id, o.id]},{include_blank: t('view.parts.no_link')},  class: "form-control" %>
     </div>
     <div class="field form-group col-xs-3">
       <%= form.label t('view.parts.name'), class:"control-label" %>

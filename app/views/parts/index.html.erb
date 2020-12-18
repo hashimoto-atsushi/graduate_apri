@@ -1,19 +1,19 @@
-<h1><% provide(:title,"保守パーツ情報 一覧") %></h1>
+<h1><% provide(:title,t('view.parts.part_index')) %></h1>
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="upper-box">
     <%= search_form_for @search do |form| %>
     <div class="row">
       <div class="field form-group col-xs-3">
-        <%= form.label :name_cont, "保守パーツ名 検索:" %>
+        <%= form.label :name_cont, t('view.parts.search_name') %>
         <%= form.text_field :name_cont, class:"form-control"  %>
       </div>
       <div class="field form-group col-xs-3">
-        <%= form.label :type_name_cont, "保守パーツ型式名 検索:" %>
+        <%= form.label :type_name_cont, t('view.parts.search_type') %>
         <%= form.text_field :type_name_cont, class:"form-control"  %>
       </div>
       <div class="field form-group col-xs-3">
-        <%= form.label :category_cont, "保守パーツ種類 検索:" %>
+        <%= form.label :category_cont, t('view.parts.search_category') %>
         <%= form.text_field :category_cont, class:"form-control"  %>
       </div>
     </div>
@@ -44,13 +44,13 @@
       <td><%= part.category %></td>
       <td><%= part.list_price.to_s(:delimited) %>円</td>
       <td><%= part.stock %></td>
-      <td><%= part.release_date %></td>
-      <td><%= part.end_of_production %></td>
-      <td><%= part.end_of_service %></td>
+      <td><%= part.release_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
+      <td><%= part.end_of_production.strftime(t('datetime.prompts.year_manth_day')) %></td>
+      <td><%= part.end_of_service.strftime(t('datetime.prompts.year_manth_day')) %></td>
       <td><%= link_to t('view.parts.show'), part, class:"btn btn-info btn-xs" %></td>
       <% if tech_and_admin_display %>
         <td><%= link_to t('view.parts.edit'), edit_part_path(part), class:"btn btn-warning btn-xs" %></td>
-        <td><%= link_to t('view.parts.delete'), part, method: :delete, data: { confirm: '削除しますか?' }, class:"btn btn-danger btn-xs" %></td>
+        <td><%= link_to t('view.parts.delete'), part, method: :delete, data: { confirm: t('view.parts.delete_confirm') }, class:"btn btn-danger btn-xs" %></td>
       <% end %>
       </tr>
       <% end %>

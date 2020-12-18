@@ -1,13 +1,13 @@
-  <h1>ようこそ <%= @user.name %> 様</h1>
+  <h1><%= t('view.user_mailer.welcom1') %> <%= @user.name %><%= t('view.user_mailer.dear') %></h1>
     <hr />
     <p>
-      この度はアカウント登録頂きましてありがとうございます。
+      <%= t('view.user_mailer.welcom2') %>
     </p>
     <p>
-      ユーザー名: <%= @user.name %>
+    <%= t('view.user_mailer.welcom3') %><%= @user.name %>
     </p>
     <p>
-      メールアドレス: <%= @user.email %>
+      <%= t('view.user_mailer.welcom4') %><%= @user.email %>
     </p>
     <hr />
   </div>

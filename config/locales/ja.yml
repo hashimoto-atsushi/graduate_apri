@@ -6,6 +6,47 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+      models:
+        product:
+          attributes:
+            release_date:
+              aftertomorrow: 'は本日以降に設定してください'
+            end_of_production:
+              aftertomorrow: 'は本日以降に設定してください'
+            end_of_service:
+              aftertomorrow: 'は本日以降に設定してください'
+        support_program:
+          attributes:
+            kick_off_date:
+              aftertomorrow: 'は本日以降に設定してください'
+        boss_check_comment:
+          attributes:
+            confirmation_date:
+              aftertomorrow: 'は本日以降に設定してください'
+        sales_check_comment:
+          attributes:
+            confirmation_date:
+              aftertomorrow: 'は本日以降に設定してください'
+        part:
+          attributes:
+            release_date:
+              aftertomorrow: 'は本日以降に設定してください'
+            end_of_production:
+              aftertomorrow: 'は本日以降に設定してください'
+            end_of_service:
+              aftertomorrow: 'は本日以降に設定してください'
+        detail_report:
+          attributes:
+            ordered_date:
+              beforetomorrow: 'は本日以前に設定してください'
+            actual_kickoff_date:
+              beforetomorrow: 'は本日以前に設定してください'
+            actual_complete_date:
+              beforetomorrow: 'は本日以前に設定してください'
+        installed_product:
+          attributes:
+            installed_date:
+              beforetomorrow: 'は本日以前に設定してください'
   date:
     abbr_day_names:
     - 日
@@ -105,6 +146,7 @@ ja:
       day: 日
       month: 月
       year: 年
+      year_manth_day: "%Y年%m月%d日"
   errors:
     format: "%{attribute}%{message}"
     messages:
@@ -207,6 +249,8 @@ ja:
   view:
     all:
       error_explanations: '件のエラーがあります'
+      input_after: '(注意:本日以降を入力)'
+      input_before: '(注意: 本日以前を入力)'
     layouts:
       to_top: 'トップページ'
       admin: 'システム部管理ページ'
@@ -216,7 +260,17 @@ ja:
     devise:
       log_in: 'ログイン画面へ'
       sign_up: '新規ユーザー登録へ'
+      sign_up_title: '新規ユーザー登録'
       Sign_up: '登録'
+      login_title: 'ログイン'
+      please_number: '社員番号を入力してください'
+      please_name: '名前を入力してください'
+      please_mail: 'Eメールアドレスを入力してください'
+      please_phone: '支給携帯電話番号を入力してください'
+      please_password: '6文字以上にしてください'
+      please_in_pass: 'パスワードを入れてください'
+      please_pass_confirm: '同じパスワードを入力してください'
+      letter_number: '文字以上'
     tops:
       allsupports: '完了保守案件 一覧'
       support_programs: '保守案件 一覧'
@@ -228,9 +282,14 @@ ja:
       products: '製品情報'
       parts: '保守パーツ情報'
       users: '社員情報'
+      top: 'TOPページ'
     allsupports:
+      title: '完了案件 一覧'
       shows: '詳細'
       to_show: '詳細'
+      complete: '完了'
+      got_ordered: '受注済'
+      not_ordered: '未受注'
     support_programs:
       title_number: '保守案件番号'
       customer: '顧客名'
@@ -250,6 +309,29 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
+      support_program_detail:  "- 保守案件 詳細 -"
+      support_program_confirm:  "保守案件  -登録確認-"
+      support_program_edit:  "保守案件  -編集-"
+      support_program_index:  "保守案件 一覧"
+      support_program_new:  "保守案件 -新規登録-"
+      support_program_show:  "保守案件 -詳細-"
+      search_number: '保守案件番号 検索: '
+      search_name: '顧客名 検索: '
+      search_title: '案件名 検索: '
+      search_employee: '担当者 検索: '
+      search_plan: '計画/緊急 検索: '
+      search_status: '受注状況 検索: '
+      search_complete: '案件完了状態 検索: '
+      not_selected: '選択なし'
+      delete_confirm: '削除しますか？'
+      got_ordered: '受注済'
+      not_ordered: '未受注'
+      planed: '計画'
+      argent: '緊急'
+      completed: '完了'
+      not_completed: '未完了'
+      got_ordered: '受注済'
+      not_ordered: '未受注'
     detail_reports:
       id: '案件選択'
       ordered_date: '受注日'
@@ -267,6 +349,13 @@ ja:
       to_index: 一覧へ
       confirm_to_submit: '登録する'
       back: '戻る'
+      detail_report_detail:  "- 作業報告 詳細 -"
+      detail_report_confirm:  "作業報告  -登録確認-"
+      detail_report_index:  "作業報告 一覧"
+      detail_report_new:  "作業報告 -新規登録-"
+      detail_report_show:  "作業報告 -詳細-"
+      please_adjust: '(注意:上記保守案件と合わせてください)'
+      delete_confirm: '削除しますがよろしいでしょうか？'
     boss_check_comments:
       id: '報告選択'
       confirmation: '上長承認'
@@ -282,6 +371,19 @@ ja:
       to_index: 一覧へ
       confirm_to_submit: '登録する'
       back: '戻る'
+      got_ordered: '受注済'
+      not_ordered: '未受注'
+      please_adjust: '(上記案件名と合わせてください! )'
+      confirmed: '承認済'
+      not_confirmed: '未承認'
+      delete_confirm: '削除しますがよろしいでしょうか？'
+      boss_check_comment_detail:  "上長確認 -詳細 -"
+      boss_check_comment_confirm:  "上長確認  -登録確認-"
+      boss_check_comment_index:  "上長確認 一覧"
+      boss_check_comment_new:  "上長確認 -新規登録-"
+      boss_check_comment_show:  "上長確認 -詳細-"
+      boss_check_comment_details:  "-上長確認 詳細 -"
+
     sales_check_comments:
       id: '上長報告選択'
       confirmation: '営業確認'
@@ -298,6 +400,23 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
+      sales_check_comment_detail:  "営業確認 -詳細 -"
+      sales_check_comment_confirm:  "営業確認  -登録確認-"
+      sales_check_comment_index:  "営業確認済リスト 一覧"
+      sales_check_comment_new:  "営業確認 -新規登録-"
+      sales_check_comment_show:  "営業確認 -詳細-"
+      sales_check_comment_details:  "- 営業確認 詳細 -"
+      search_need: '協議の必要性 検索: '
+      search_confirm: '営業確認 検索: '
+      search_approval: '上長承認 検索: '
+      look_over: '確認済'
+      not_look_over: '未確認'
+      necessary: '有り'
+      not_necessary: '無し'
+      confirmed: '承認済'
+      not_confirmed: '未承認'
+      not_selected: '選択なし'
+      please_adjust: '(注意:上記保守案件と合わせてください)'
     customers:
       customer_number: '顧客番号'
       customer: '顧客名'
@@ -316,6 +435,16 @@ ja:
       to_index: '一覧へ'
       confirm_to_submit: '登録する'
       back: '戻る'
+      customer_detail:  "- 顧客情報 詳細 -"
+      customer_confirm:  "顧客情報  -登録確認-"
+      customer_edit:  "顧客情報  -編集-"
+      customer_index:  "顧客情報 一覧"
+      customer_new:  "顧客情報 -新規登録-"
+      customer_show:  "顧客情報 -詳細-"
+      search_number: '顧客番号 検索: '
+      search_name: '顧客名 検索: '
+      search_title: '案件名 検索: '
+      delete_confirm: '削除しますがよろしいでしょうか？'
     installed_products:
       serial_number: 'シリアル番号'
       installed_date: '納入日'
@@ -327,6 +456,14 @@ ja:
       to_index: '一覧へ'
       confirm_to_submit: '登録する'
       back: '戻る'
+      installed_product_detail:  "- 納入機器 詳細 -"
+      installed_product_confirm:  "納入機器  -登録確認-"
+      installed_product_index:  "納入機器 一覧"
+      installed_product_new:  "納入機器 -新規登録-"
+      installed_product_show:  "納入機器 -詳細-"
+      installed_product_edit:  "納入機器 -編集-"
+      delete: '削除しますか？'
+      yen: '円'
     products:
       name: '製品名'
       type_name: '型式'
@@ -342,6 +479,16 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
+      product_detail:  "- 製品情報 詳細 -"
+      product_confirm:  "製品情報  -登録確認-"
+      product_edit:  "製品情報  -編集-"
+      product_index:  "製品情報 一覧"
+      product_new:  "製品情報 -新規登録-"
+      product_show:  "製品情報 -詳細-"
+      search_name: '製品名 検索: '
+      search_type: '型式名 検索: '
+      search_category: '機器種類 検索: '
+      delete_confirm: '削除しますか？'
     parts:
       detail_report_id: '詳細報告ID'
       name: '製品名'
@@ -360,6 +507,17 @@ ja:
       confirm_to_submit: '登録する'
       back: '戻る'
       search: '検索する'
+      part_detail:  "- 保守パーツ情報 詳細 -"
+      part_confirm:  "保守パーツ情報  -登録確認-"
+      part_index:  "保守パーツ情報 一覧"
+      part_new:  "保守パーツ情報 -新規登録-"
+      part_show:  "保守パーツ情報 -詳細-"
+      part_edit:  "保守パーツ情報 -編集-"
+      search_name: '保守パーツ名 検索: '
+      search_type: '保守パーツ型式 検索: '
+      search_category: '保守パーツ種類 検索: '
+      delete_confirm: '削除しますか？'
+      no_link: '紐付け無し'
     users:
       id: 'ID'
       number: '社員番号'
@@ -383,3 +541,100 @@ ja:
       back: '戻る'
       to_index: '一覧へ'
       search: '検索する'
+      user_index:  "社員情報 一覧"
+      user_show:  "社員情報 -詳細-"
+      search_number: '社員番号 検索: '
+      search_name: '名前 検索: '
+      search_department: '部署 検索: '
+      search_sales: '営業部'
+      search_tech: '技術部'
+      search_system: 'システム部'
+      not_selected: '選択なし'
+    user_mailer:
+      boss_check_comment_content1: '新規 上長確認済み報告が登録されました。'
+      boss_check_comment_content2: 'の上長確認済み報告が登録されました。'
+      customer_content1: '新規 顧客情報が登録されました。'
+      customer_content2: '様の顧客情報が登録されました。'
+      detail_report_content1: '新規作業報告が登録されました。'
+      detail_report_content2: 'の作業報告が登録されました。'
+      intstalled_product_content1: '新規 納入機器情報が登録されました。'
+      intstalled_product_content2: 'の情報が登録されました。'
+      dear: '様'
+      to_dear: '様の'
+      mail_to_system_content1: '新規保守案件が登録されました。'
+      mail_to_system_content2: 'が登録されました。'
+      part_content1: '新規 保守パーツ情報が登録されました。'
+      part_content2: 'の情報が登録されました。'
+      product_content1: '新規 製品情報が登録されました。'
+      product_content2: 'の情報が登録されました。'
+      sales_check_comment_content1: '新規 営業確認が登録されました。'
+      sales_check_comment_content2: 'の営業確認が登録されました。'
+      support_program_content1: '新規保守案件が登録されました。'
+      support_program_content2: 'が登録されました。'
+      welcom1: 'ようこそ'
+      welcom2: 'この度はアカウント登録頂きましてありがとうございます。'
+      welcom3: 'ユーザー名:'
+      welcom4: 'メールアドレス:'
+  boss_check_comments:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
+  application:
+    sales: '営業部'
+    tech: '技術部'
+    boss: '部長'
+  customers:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
+  detail_reports:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
+  installed_products:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
+  parts:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
+  products:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
+  sales_check_comments:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
+  support_programs:
+    create: '作成しました'
+    edit: '編集しました'
+    delete: '削除しました'
+  mailers:
+    sales_installed_prodects: '【営業部】【新規】納入機器の情報登録の連絡です。'
+    sales_products: '【営業部】【新規】製品情報登録の連絡です。'
+    sales_customers: '【営業部】【新規】顧客情報登録の連絡です。'
+    tech_parts_products: '【技術部】【新規】納入機器の情報登録の連絡です。'
+    tech_support_programs: '【技術部】【新規】保守案件登録の連絡です。'
+    sales_support_programs: '【営業部】【新規】保守案件登録の連絡です。'
+    admin_support_programs: '【システム部】【新規】保守案件登録の連絡です。'
+    sales_detail_report: '【営業部】【新規】顧客情報登録の連絡です。'
+    tech_detail_report: '【技術部】【新規】顧客情報登録の連絡です。'
+    boss_detail_report: '【技術部長】【新規】顧客情報登録の連絡です。'
+    sales_boss_check_comment: '【営業部】【新規】の上長確認報告の連絡です。'
+    boss_boss_check_comment: '【技術部長】【新規】の上長確認報告の連絡です。'
+    tech_sales_check_comment: '【技術部】【新規】営業確認終了の連絡です。'
+    boss_sales_check_comment: '【技術部長】【新規】営業確認終了の連絡です。'
+  enums:
+    detail_report:
+      evaluation:
+        high_eva: '高評価'
+        low_eva: '低評価'
+    support_program:
+      planed_or_argent:
+        planed: '計画'
+        argent: '緊急'
+      closed:
+        not_completed: '未完了'
+        completed: '完了'

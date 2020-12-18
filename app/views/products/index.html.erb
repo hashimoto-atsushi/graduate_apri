@@ -1,19 +1,19 @@
-<h1><% provide(:title,"製品情報 一覧") %></h1>
+<h1><% provide(:title,t('view.products.product_index')) %></h1>
 <p id="notice"><%= notice %></p>
   <div class="container">
     <div class="upper-box">
       <%= search_form_for @search do |form| %>
       <div class="row">
         <div class="field form-group col-xs-3">
-          <%= form.label :name_cont, "製品名 検索:", class:"control-label" %>
+          <%= form.label :name_cont, t('view.products.search_name'), class:"control-label" %>
           <%= form.text_field :name_cont, class:"form-control"  %>
         </div>
         <div class="field form-group col-xs-3">
-          <%= form.label :type_name_cont, "型式名 検索:", class:"control-label" %>
+          <%= form.label :type_name_cont, t('view.products.search_type'), class:"control-label" %>
           <%= form.text_field :type_name_cont, class:"form-control"  %>
         </div>
         <div class="field form-group col-xs-3">
-          <%= form.label :category_cont, "機器種類 検索:", class:"control-label" %>
+          <%= form.label :category_cont, t('view.products.search_category'), class:"control-label" %>
           <%= form.text_field :category_cont, class:"form-control"  %>
         </div>
       </div>
@@ -40,9 +40,9 @@
           <td><%= product.type_name %></td>
           <td><%= product.category %></td>
           <td><%= product.list_price.to_s(:delimited) %>円</td>
-          <td><%= product.release_date %></td>
-          <td><%= product.end_of_production %></td>
-          <td><%= product.end_of_service %></td>
+          <td><%= product.release_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
+          <td><%= product.end_of_production.strftime(t('datetime.prompts.year_manth_day')) %></td>
+          <td><%= product.end_of_service.strftime(t('datetime.prompts.year_manth_day')) %></td>
           <td><%= link_to  t('view.support_programs.show'), product, class:"btn btn-info btn-xs" %></td>
           <% if sales_and_admin_display %>
           <td><%= link_to  t('view.support_programs.edit'), edit_product_path(product), class:"btn btn-warning btn-xs" %></td>

@@ -1,4 +1,4 @@
-<h1><% provide(:title,"保守案件 一覧") %></h1>
+<h1><% provide(:title, t('view.support_programs.support_program_index')) %></h1>
 <p id="notice"><%= notice %></p>
 
   <div class="container">
@@ -6,37 +6,37 @@
       <%= search_form_for @search do |form| %>
       <div class="row">
         <div class="field form-group col-xs-3">
-          <%= form.label :title_number_eq, "保守案件番号 検索:", class:"control-label" %>
+          <%= form.label :title_number_eq, t('view.support_programs.search_number'), class:"control-label" %>
           <%= form.text_field :title_number_eq, class:"form-control" %>
         </div>
         <div class="field form-group col-xs-3">
-          <%= form.label :customer_name_cont, "顧客名 検索:", class:"control-label"  %>
+          <%= form.label :customer_name_cont, t('view.support_programs.search_name'), class:"control-label"  %>
           <%= form.text_field :customer_name_cont, class:"form-control" %>
         </div>
         <div class="field form-group col-xs-3">
-          <%= form.label :title_cont, "保守案件名 検索:", class:"control-label"  %>
+          <%= form.label :title_cont, t('view.support_programs.search_title'), class:"control-label"  %>
           <%= form.text_field :title_cont, class:"form-control" %>
         </div>
         <div class="field form-group col-xs-3">
-          <%= form.label :user_name_cont, "担当者名 検索:", class:"control-label"  %>
+          <%= form.label :user_name_cont, t('view.support_programs.search_employee'), class:"control-label"  %>
           <%= form.text_field :user_name_cont, class:"form-control" %>
         </div>
       </div>
       <div class="row">
         <div class="field form-group col-xs-2 box-2">
-          <%= form.label :planed_or_argent_eq, "計画/緊急 検索: ", class:"control-label"  %>
-          <%= form.select :planed_or_argent_eq, [['計画', 0], ['緊急', 1]],
-          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+          <%= form.label :planed_or_argent_eq, t('view.support_programs.search_plan'), class:"control-label"  %>
+          <%= form.select :planed_or_argent_eq, [[t('view.support_programs.planed'), 0], [t('view.support_programs.argent'), 1]],
+          {include_blank: t('view.support_programs.not_selected')}, class: 'sample', class:"form-control" %>
         </div>
         <div class="field form-group col-xs-2 box-2">
-          <%= form.label :order_status_eq, "受注状況 検索: ", class:"control-label"  %>
-          <%= form.select :order_status_eq, [['受注済', true], ['未受注', false]],
-          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+          <%= form.label :order_status_eq, t('view.support_programs.search_status'), class:"control-label"  %>
+          <%= form.select :order_status_eq, [[t('view.support_programs.got_ordered'), true], [t('view.support_programs.not_ordered'), false]],
+          {include_blank: t('view.support_programs.not_selected')}, class: 'sample', class:"form-control" %>
         </div>
         <div class="field form-group col-xs-2 box-2">
-          <%= form.label :closed_eq, "案件完了状態 検索: ", class:"control-label"  %>
-          <%= form.select :closed_eq, [['未完了', 0], ['完了', 1]],
-          {include_blank: '選択なし'}, class: 'sample', class:"form-control" %>
+          <%= form.label :closed_eq, t('view.support_programs.search_complete'), class:"control-label"  %>
+          <%= form.select :closed_eq, [[t('view.support_programs.not_completed'), 0], [t('view.support_programs.completed'), 1]],
+          {include_blank: t('view.support_programs.not_selected')}, class: 'sample', class:"form-control" %>
         </div>
       </div>
       <div class="action"><%= form.submit t('view.support_programs.search'), class:"btn btn-primary" %></div>
@@ -65,14 +65,14 @@
           <td><%= support_program.title %></td>
           <td><%= support_program.user.name %></td>
           <td><%= support_program.main_work %></td>
-          <td><%= support_program.planed_or_argent %></td>
-          <td><%= support_program.order_status == true ? "受注済" : "未受注" %></td>
-          <td><%= support_program.kick_off_date.strftime("%Y年%m月%d日") %></td>
-          <td><%= support_program.closed %></td>
+          <td><%= support_program.planed_or_argent_i18n %></td>
+          <td><%= support_program.order_status == true ? t('view.support_programs.got_ordered') : t('view.support_programs.not_ordered') %></td>
+          <td><%= support_program.kick_off_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
+          <td><%= support_program.closed_i18n %></td>
           <td><%= link_to t('view.support_programs.show'), support_program, class:"btn btn-info btn-xs" %></td>
           <% if tech_and_admin_display %>
           <td><%= link_to t('view.support_programs.edit'), edit_support_program_path(support_program), class:"btn btn-warning btn-xs" %></td>
-          <td><%= link_to t('view.support_programs.delete'), support_program, method: :delete, data: { confirm: '削除しますが？' }, class:"btn btn-danger btn-xs" %></td>
+          <td><%= link_to t('view.support_programs.delete'), support_program, method: :delete, data: { confirm: t('view.support_programs.delete_confirm') }, class:"btn btn-danger btn-xs" %></td>
           <% end %>
         </tr>
         <% end %>

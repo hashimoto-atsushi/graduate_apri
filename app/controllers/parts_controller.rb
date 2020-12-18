@@ -26,7 +26,7 @@ class PartsController < ApplicationController
     else
       if @part.save
         UserMailer.part_mail_to_sales(@part, current_user).deliver
-        redirect_to @part, notice: '作成しました！'
+        redirect_to @part, notice: t('parts.create')
       else
         render :new
       end
@@ -40,7 +40,7 @@ class PartsController < ApplicationController
 
   def update
     if @part.update(part_params)
-      redirect_to @part, notice: '編集しました！'
+      redirect_to @part, notice: t('parts.edit')
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class PartsController < ApplicationController
 
   def destroy
     @part.destroy
-    redirect_to parts_url, notice: '削除しました！'
+    redirect_to parts_url, notice: t('parts.delete')
   end
 
   private

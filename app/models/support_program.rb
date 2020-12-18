@@ -12,7 +12,11 @@ class SupportProgram < ApplicationRecord
   validates :planed_or_argent, presence: true
   validates :kick_off_date, presence:true
   validates :closed, presence:true
-  enum planed_or_argent: {計画:0 , 緊急:1}
-  enum closed: {未完了:0 , 完了:1}
+  enum planed_or_argent: {planed:0 , argent:1}
+  enum closed: {not_completed:0 , completed:1}
 
+  validate :kick_off_date_not_before_today
+  def kick_off_date_not_before_today
+    errors.add(:kick_off_date, :aftertomorrow) if kick_off_date.nil? || kick_off_date < Date.today
+  end
 end

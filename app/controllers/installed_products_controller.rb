@@ -26,7 +26,7 @@ class InstalledProductsController < ApplicationController
     else
       if @installed_product.save
         UserMailer.installed_product_mail_to_sales(@installed_product, current_user).deliver
-        redirect_to @installed_product, notice: '作成しました！'
+        redirect_to @installed_product, notice: t('installed_products.create')
       else
         render :new
       end
@@ -41,7 +41,7 @@ class InstalledProductsController < ApplicationController
 
   def update
     if @installed_product.update(installed_product_params)
-      redirect_to @installed_product, notice: '編集しました！'
+      redirect_to @installed_product, notice: t('installed_products.edit')
     else
       render :edit
     end
@@ -49,7 +49,7 @@ class InstalledProductsController < ApplicationController
 
   def destroy
     @installed_product.destroy
-    redirect_to installed_products_url, notice: '削除しました！'
+    redirect_to installed_products_url, notice: t('installed_products.delete')
   end
 
   private
