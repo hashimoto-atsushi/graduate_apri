@@ -29,7 +29,7 @@
       </div>
       <div class="col-xs-4">
         <p><b><%= t('view.support_programs.order_status') %>:</b>&emsp;</strong>
-        <%= @detail_report.support_program.order_status == true ? "受注済" : "未受注" %></p>
+        <%= @detail_report.support_program.order_status == true ? t('view.boss_check_comments.got_ordered') : t('view.boss_check_comments.not_ordered') %></p>
       </div>
     </div>
     <h3><%= t('view.detail_reports.detail_report_show')%></h3>
@@ -60,7 +60,7 @@
       </div>
       <div class="col-xs-4">
       <p><b><%= t('view.detail_reports.actual_complete_date')%>:</b>&emsp;</strong>
-      <%= @detail_report.actual_complete_date %></p>
+      <%= @detail_report.actual_complete_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
       </div>
     </div>
     <div class="row">
