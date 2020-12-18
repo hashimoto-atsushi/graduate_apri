@@ -20,7 +20,7 @@
     </thead>
     <tbody>
       <% @support_programs.each do |support_program| %>
-      <% if support_program.closed == t('view.allsupports.complete') %>
+      <% if support_program.closed == "completed" %>
       <tr>
         <td class="text-center"><%= support_program.title_number %></td>
         <td><%= support_program.customer.name %></td>
