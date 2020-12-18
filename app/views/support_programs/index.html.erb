@@ -65,7 +65,7 @@
           <td><%= support_program.title %></td>
           <td><%= support_program.user.name %></td>
           <td><%= support_program.main_work %></td>
-          <td><%= support_program.planed_or_argent %></td>
+          <td><%= support_program.planed_or_argent_i18n %></td>
           <td><%= support_program.order_status == true ? t('view.support_programs.got_ordered') : t('view.support_programs.not_ordered') %></td>
           <td><%= support_program.kick_off_date.strftime(t('datetime.prompts.year_manth_day')) %></td>
           <td><%= support_program.closed %></td>

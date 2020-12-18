@@ -630,3 +630,7 @@ ja:
       evaluation:
         high_eva: '高評価'
         low_eva: '低評価'
+    support_program:
+      planed_or_argent:
+        planed: '計画'
+        argent: '緊急'
