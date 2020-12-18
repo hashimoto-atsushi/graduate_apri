@@ -19,5 +19,4 @@ class SupportProgram < ApplicationRecord
   def kick_off_date_not_before_today
     errors.add(:kick_off_date, :aftertomorrow) if kick_off_date.nil? || kick_off_date < Date.today
   end
-
 end
