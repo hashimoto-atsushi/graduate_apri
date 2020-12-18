@@ -50,7 +50,7 @@
     <p><b><%= t('view.detail_reports.actual_kickoff_date') %>:&emsp;</b><%= @detail_report.actual_kickoff_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
   </div>
   <div class="col-xs-3">
-    <p><b><%= t('view.support_programs.closed') %>:&emsp;</b><%= @detail_report.support_program.closed %></p>
+    <p><b><%= t('view.support_programs.closed') %>:&emsp;</b><%= @detail_report.support_program.closed_i18n %></p>
   </div>
   <div class="col-xs-3">
     <p><b><%= t('view.detail_reports.actual_complete_date') %>:&emsp;</b><%= @detail_report.actual_complete_date.strftime(t('datetime.prompts.year_manth_day')) %></p>
