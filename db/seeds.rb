@@ -276,7 +276,7 @@ end
         ordered_date: "2019-11-#{n + 1}",
         ordered_price: 4000 + n,
         actual_kickoff_date: "2020-02-#{n + 1}",
-        actual_complete_date: "2020-02-#{n + 20}",
+        actual_complete_date: "2020-02-#{n + 19}",
         service_detail: "電源ユニットの交換作業#{n + 1}",
         results: "一部、部品に不良があり、別電源ユニットで対応しました#{n + 1}。",
         evaluation: 1,
