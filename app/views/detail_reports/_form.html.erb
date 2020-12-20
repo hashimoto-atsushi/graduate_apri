@@ -44,7 +44,7 @@
        </div>
        <div class="field form-group col-xs-3">
          <%= form.label t('view.detail_reports.ordered_date') + t('view.all.input_before'), class:"control-label" %>
-         <%= form.date_field :ordered_date, value: Time.now.strftime("%Y-%m-%d"), class: "form-control" %>
+         <%= form.date_field :ordered_date, value: Time.now.strftime("%Y-%m-%d"), max: Date.current, class: "form-control" %>
        </div>
        <div class="field form-group col-xs-3">
          <%= form.label t('view.detail_reports.ordered_price'), class:"control-label" %>
@@ -58,7 +58,7 @@
          </div>
          <div class="field">
            <%= form.label t('view.detail_reports.actual_kickoff_date') + t('view.all.input_before'), class:"control-label" %>
-           <%= form.date_field :actual_kickoff_date, value: Time.now.strftime("%Y-%m-%d"), class: "form-control" %>
+           <%= form.date_field :actual_kickoff_date, value: Time.now.strftime("%Y-%m-%d"), max: Date.current, class: "form-control" %>
          </div>
        </div>
        <div class="field form-group col-xs-4">
@@ -67,7 +67,7 @@
          </div>
          <div class="field">
            <%= form.label t('view.detail_reports.actual_complete_date') + t('view.all.input_before'), class:"control-label" %>
-           <%= form.date_field :actual_complete_date, value: Time.now.strftime("%Y-%m-%d"), class: "form-control" %>
+           <%= form.date_field :actual_complete_date, value: Time.now.strftime("%Y-%m-%d"), max: Date.current, class: "form-control" %>
          </div>
        </div>
      </div>

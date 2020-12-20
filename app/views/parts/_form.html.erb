@@ -40,15 +40,15 @@
   <div class="row">
     <div class="field form-group col-xs-3">
       <%= form.label t('view.parts.release_date'), class:"control-label" %>
-      <%= form.date_field :release_date, value: Time.now.strftime("%Y-%m-%d"), class: "form-control" %>
+      <%= form.date_field :release_date, value: Time.now.strftime("%Y-%m-%d"), min: Date.current, class: "form-control" %>
     </div>
     <div class="field form-group col-xs-3">
       <%= form.label t('view.parts.end_of_production'), class:"control-label" %>
-      <%= form.date_field :end_of_production, value: Time.now.strftime("%Y-%m-%d"), class: "form-control" %>
+      <%= form.date_field :end_of_production, value: Time.now.strftime("%Y-%m-%d"), min: Date.current, class: "form-control" %>
     </div>
     <div class="field form-group col-xs-3">
       <%= form.label t('view.parts.end_of_service'), class:"control-label" %>
-      <%= form.date_field :end_of_service, value: Time.now.strftime("%Y-%m-%d"), class: "form-control" %>
+      <%= form.date_field :end_of_service, value: Time.now.strftime("%Y-%m-%d"), min: Date.current, class: "form-control" %>
     </div>
   </div>
   <div class="actions create-new">
