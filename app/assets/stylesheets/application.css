@@ -39,6 +39,8 @@ td {
   min-height: 100vh;
   position: relative;
   box-sizing: border-box;
+  width: 1600px;
+  overflow: hidden;
 }
 
 .footer{
