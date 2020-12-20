@@ -87,7 +87,7 @@
   </div>
   <div class="field form-group col-xs-3">
     <%= form.label t('view.boss_check_comments.confirmation_date') + t('view.all.input_after'), class:"control-label" %>
-    <%= form.date_field :confirmation_date, class: "form-control" %>
+    <%= form.date_field :confirmation_date, value: Time.now.strftime("%Y-%m-%d"), class: "form-control" %>
   </div>
 </div>
 <div class="row">

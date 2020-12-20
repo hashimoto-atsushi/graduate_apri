@@ -27,7 +27,7 @@
   <div class="row">
     <div class="field form-group col-xs-4">
       <%= form.label t('view.installed_products.installed_date') %>
-      <%= form.date_field :installed_date, class: "form-control" %>
+      <%= form.date_field :installed_date, value: Time.now.strftime("%Y-%m-%d"), class: "form-control" %>
     </div>
     <div class="field form-group col-xs-4">
       <%= form.label t('view.installed_products.discount_price') %>
