@@ -249,8 +249,8 @@ ja:
   view:
     all:
       error_explanations: '件のエラーがあります'
-      input_after: '(注意:本日以降を入力)'
-      input_before: '(注意: 本日以前を入力)'
+      input_after: '(本日以降を入力)'
+      input_before: '(本日以前を入力)'
     layouts:
       to_top: 'トップページ'
       admin: 'システム部管理ページ'
