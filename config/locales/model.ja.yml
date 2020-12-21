@@ -27,7 +27,7 @@ ja:
       customer:
         id: 'ID'
         customer_number: '顧客番号'
-        customer: '顧客名'
+        name: '顧客名'
         profession: '業種'
         customer_in_charge: '顧客先 担当者'
         department: '部署(顧客先)'
