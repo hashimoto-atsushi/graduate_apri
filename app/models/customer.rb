@@ -4,7 +4,8 @@ class Customer < ApplicationRecord
   has_many :support_programs, dependent: :destroy
   validates :customer_number, presence: true,
                             uniqueness: true,
-                                length: { maximum: 16 }
+                                length: { maximum: 16 },
+                          numericality: {only_integer: true, greater_than_or_equal_to: 0}                        
   validates :name, presence: true,
                      length: { maximum: 32 }
   validates :phone_number, presence: true,
