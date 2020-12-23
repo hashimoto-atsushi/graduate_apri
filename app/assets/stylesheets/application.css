@@ -34,12 +34,16 @@ td {
   font-size: 1.4rem;
 }
 
+main {
+  width: 1600px;
+}
+
 /* header-main-footer範囲 */
 .h-m-f-container {
   min-height: 100vh;
   position: relative;
   box-sizing: border-box;
-  width: 1600px;
+  width: auto;
   overflow: hidden;
 }
 
@@ -74,8 +78,8 @@ td {
 /* ナビバーの画像 */
 .navbar-brand>img {
   position: absolute;
-  top: -26px;
-  left: 22px;
+  top: -22px;
+  left: 24px;
   height: 150px;
   padding: 0;
   width: 150px;
@@ -162,19 +166,24 @@ textarea.form-control {
 .cover-image-login {
   float: left;
   position: absolute;
-  top: 250px;
-  left:150px;
+  top: 210px;
+  left:280px;
 }
 
 .cover-image-login img {
-  width: 350px;
+  width: 500px;
 }
 /* ログイン画面の入力部 */
 .login-top {
   margin: 120px 0 0 0;
   padding: 0 0 0 200px;
-  width: 70%;
+  width: 50%;
   float: right;
+  position: absolute;
+  top: 130px;
+  left:720px;
+
+
 }
 /* 新規作成画面の画像 */
 .cover-image-new {
