@@ -45,6 +45,9 @@
             <div class="actions">
               <%= f.submit t('view.users.log_in'), class:"btn btn-primary"%>
             </div>
+            <div>
+             <%= link_to 'ゲストログイン（閲覧用）', top_guest_sign_in_path, method: :post, class:"btn btn-success create-new" %>
+            </div>
           </div>
           <div class="panel-fotter">
             <%= render "devise/shared/links"%>

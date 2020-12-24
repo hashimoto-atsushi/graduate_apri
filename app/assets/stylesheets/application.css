@@ -27,11 +27,11 @@ p {
 }
 
 th {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 td {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 main {
@@ -180,8 +180,8 @@ textarea.form-control {
   width: 50%;
   float: right;
   position: absolute;
-  top: 145px;
-  left:720px;
+  top: 120px;
+  left:780px;
 
 
 }
@@ -190,7 +190,7 @@ textarea.form-control {
   float: left;
   margin-top: 80px;
   position: absolute;
-  top: 150px;
+  top: 135px;
   left:270px;
 }
 

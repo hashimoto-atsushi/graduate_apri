@@ -2,7 +2,7 @@ class InstalledProductsController < ApplicationController
   before_action :set_installed_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_action :sales_and_admin_login, only: [:create, :update, :destroy]
-  PER = 12
+  PER = 10
 
   def index
     @search = InstalledProduct.search(params[:q])

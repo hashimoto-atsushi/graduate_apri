@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount LetterOpenerWeb::Engine, at: "/inbox" 
+  mount LetterOpenerWeb::Engine, at: "/inbox"
 
   devise_scope :user do
   root :to => "devise/sessions#new"
@@ -57,16 +57,12 @@ Rails.application.routes.draw do
 
   resources :detail_reports, only:[:index, :edit, :show, :update, :destroy, :create]
 
-
   resources :boss_check_comments, only:[:index, :edit, :show, :update, :destroy, :create]
-
-
 
   resources :sales_check_comments, only:[:index, :edit, :show, :update, :destroy, :create]
 
-
-
   get 'allsupports/index'
   get 'top/index'
+  post '/top/guest_sign_in', to: 'top#new_guest'
 
 end
