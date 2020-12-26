@@ -36,6 +36,7 @@ td {
 
 main {
   width: 1600px;
+  min-height: 768px;
 }
 
 /* header-main-footer範囲 */
